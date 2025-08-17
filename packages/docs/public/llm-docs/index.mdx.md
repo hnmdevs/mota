@@ -68,6 +68,6 @@ Become part of a growing community of developers and automation enthusiasts!
 
 - 💬 **Join our Discord:** Connect with the Mota team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
 - 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motadev/mota).
-- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motadev)](https://twitter.com/motadev)
+- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@imoogle)](https://twitter.com/motadev)
 
 We're excited to see what you'll build with Mota!

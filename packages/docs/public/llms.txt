@@ -2129,7 +2129,7 @@ export const handler: Handlers['OpenAiApi'] = async (req, { traceId, logger, emi
 ## Consuming stream on the browser
 
 ```
-npm install @motadev/stream-client-react
+npm install @imoogle/stream-client-react
 ```
 
 Then add the provider to the root of your project
@@ -2175,7 +2175,7 @@ Here's an example of a step test:
 
 ```typescript
 // my-step.step.test.ts
-import { createTestContext } from '@motadev/testing'
+import { createTestContext } from '@imoogle/testing'
 import { handler } from './my-step.step'
 
 describe('MyStep', () => {
@@ -2194,7 +2194,7 @@ describe('MyStep', () => {
 })
 ```
 
-In this example, we use the `createTestContext` function from `@motadev/testing` to create a test context with mocked `emit` and `done` functions. We then call the step's `handler` function with test input and the mocked context. Finally, we assert that the `emit` function was called with the expected event type and data.
+In this example, we use the `createTestContext` function from `@imoogle/testing` to create a test context with mocked `emit` and `done` functions. We then call the step's `handler` function with test input and the mocked context. Finally, we assert that the `emit` function was called with the expected event type and data.
 
 ### Flow Tests
 
@@ -2204,7 +2204,7 @@ Here's an example of a flow test:
 
 ```typescript
 // my-flow.test.ts
-import { createTestFlow } from '@motadev/testing'
+import { createTestFlow } from '@imoogle/testing'
 import { handler as stepAHandler } from './step-a.step'
 import { handler as stepBHandler } from './step-b.step'
 
@@ -2224,7 +2224,7 @@ describe('MyFlow', () => {
 })
 ```
 
-In this example, we use the `createTestFlow` function from `@motadev/testing` to create a test flow with the specified steps. We then execute the flow with test input and assert that the final result matches the expected output.
+In this example, we use the `createTestFlow` function from `@imoogle/testing` to create a test flow with the specified steps. We then execute the flow with test input and assert that the final result matches the expected output.
 
 ## Running Tests Locally
 
@@ -3296,7 +3296,7 @@ Become part of a growing community of developers and automation enthusiasts!
 
 - 💬 **Join our Discord:** Connect with the Mota team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
 - 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motadev/mota).
-- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motadev)](https://twitter.com/motadev)
+- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@imoogle)](https://twitter.com/motadev)
 
 We're excited to see what you'll build with Mota!
 
@@ -4609,7 +4609,7 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
 ## 📦 Dependencies
 
 ### Node.js Dependencies
-- **@motadev/core**, **@motadev/workbench**, **mota**: Mota framework
+- **@imoogle/core**, **@imoogle/workbench**, **mota**: Mota framework
 - **googleapis**, **google-auth-library**: Google API integration
 - **gmail-api-parse-message-ts**: Gmail message parsing
 - **axios**: HTTP client
@@ -4948,7 +4948,7 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
 ## 📦 Dependencies
 
 ### Node.js Dependencies
-- **@motadev/core**, **@motadev/workbench**, **mota**: Mota framework
+- **@imoogle/core**, **@imoogle/workbench**, **mota**: Mota framework
 - **googleapis**, **google-auth-library**: Google API integration
 - **gmail-api-parse-message-ts**: Gmail message parsing
 - **axios**: HTTP client
@@ -5836,7 +5836,7 @@ Become part of a growing community of developers and automation enthusiasts!
 
 - 💬 **Join our Discord:**  Connect with the Mota team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
 - 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motadev/mota).
-- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motadev)](https://twitter.com/motadev)
+- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@imoogle)](https://twitter.com/motadev)
 
 We're excited to see what you'll build with Mota!
 

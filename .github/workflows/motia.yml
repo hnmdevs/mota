@@ -30,7 +30,7 @@ jobs:
 
       - name: Setup playground python environment
         run: |
-          pnpm -r --filter @motadev/core exec pnpm python-setup
+          pnpm -r --filter @imoogle/core exec pnpm python-setup
           cd playground
           pnpm python-setup
 

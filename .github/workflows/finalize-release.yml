@@ -68,27 +68,27 @@ jobs:
 
       - name: Promote packages to latest
         run: |
-          npm dist-tag add @motadev/core@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motadev/workbench@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motadev/stream-client@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motadev/stream-client-browser@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motadev/stream-client-node@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motadev/stream-client-react@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @imoogle/core@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @imoogle/workbench@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @imoogle/stream-client@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @imoogle/stream-client-browser@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @imoogle/stream-client-node@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @imoogle/stream-client-react@${{ needs.prepare.outputs.version }} latest
           npm dist-tag add mota@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motadev/test@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motadev/ui@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @imoogle/test@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @imoogle/ui@${{ needs.prepare.outputs.version }} latest
 
       - name: Remove pre-release tag
         run: |
-          npm dist-tag rm @motadev/core pre-release || true
-          npm dist-tag rm @motadev/workbench pre-release || true
-          npm dist-tag rm @motadev/stream-client pre-release || true
-          npm dist-tag rm @motadev/stream-client-browser pre-release || true
-          npm dist-tag rm @motadev/stream-client-node pre-release || true
-          npm dist-tag rm @motadev/stream-client-react pre-release || true
+          npm dist-tag rm @imoogle/core pre-release || true
+          npm dist-tag rm @imoogle/workbench pre-release || true
+          npm dist-tag rm @imoogle/stream-client pre-release || true
+          npm dist-tag rm @imoogle/stream-client-browser pre-release || true
+          npm dist-tag rm @imoogle/stream-client-node pre-release || true
+          npm dist-tag rm @imoogle/stream-client-react pre-release || true
           npm dist-tag rm mota pre-release || true
-          npm dist-tag rm @motadev/test pre-release || true
-          npm dist-tag rm @motadev/ui pre-release || true
+          npm dist-tag rm @imoogle/test pre-release || true
+          npm dist-tag rm @imoogle/ui pre-release || true
 
   create-github-release:
     needs: [prepare, promote-to-latest]
@@ -129,13 +129,13 @@ jobs:
           $CHANGELOG
 
           ## Package Versions
-          - @motadev/core@${{ needs.prepare.outputs.version }}
-          - @motadev/workbench@${{ needs.prepare.outputs.version }}
-          - @motadev/stream-client-browser@${{ needs.prepare.outputs.version }}
-          - @motadev/stream-client-react@${{ needs.prepare.outputs.version }}
+          - @imoogle/core@${{ needs.prepare.outputs.version }}
+          - @imoogle/workbench@${{ needs.prepare.outputs.version }}
+          - @imoogle/stream-client-browser@${{ needs.prepare.outputs.version }}
+          - @imoogle/stream-client-react@${{ needs.prepare.outputs.version }}
           - mota@${{ needs.prepare.outputs.version }}
-          - @motadev/test@${{ needs.prepare.outputs.version }}
-          - @motadev/ui@${{ needs.prepare.outputs.version }}
+          - @imoogle/test@${{ needs.prepare.outputs.version }}
+          - @imoogle/ui@${{ needs.prepare.outputs.version }}
 
           ## Installation
           \`\`\`bash
@@ -190,7 +190,7 @@ jobs:
 
       - name: Set version on all packages
         run: |
-          pnpm -r --filter "@motadev/*" exec pnpm version ${{ needs.prepare.outputs.version }} --no-git-tag-version
+          pnpm -r --filter "@imoogle/*" exec pnpm version ${{ needs.prepare.outputs.version }} --no-git-tag-version
           pnpm -r --filter mota exec pnpm version ${{ needs.prepare.outputs.version }} --no-git-tag-version
 
       - name: Commit version changes

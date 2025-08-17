@@ -1,5 +1,5 @@
-@import "@motiadev/ui/styles.css";
-@import "@motiadev/ui/globals.css";
+@import "@imoogle/ui/styles.css";
+@import "@imoogle/ui/globals.css";
 @import 'tw-animate-css';
 @config "../tailwind.config.js";
 

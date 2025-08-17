@@ -1,6 +1,6 @@
 import React from 'react'
 import { BaseNode, NoopNodeProps } from 'mota/workbench'
-import { Button } from '@motadev/ui'
+import { Button } from '@imoogle/ui'
 
 /**
  * For more information on how to override UI nodes, check documentation https://www.mota.dev/docs/workbench/ui-steps

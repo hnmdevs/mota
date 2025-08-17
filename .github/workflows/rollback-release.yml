@@ -88,24 +88,24 @@ jobs:
       - name: Remove pre-release packages from NPM
         run: |
           npm unpublish mota@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motadev/workbench@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motadev/stream-client-react@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motadev/stream-client-browser@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motadev/test@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motadev/core@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motadev/ui@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/workbench@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/stream-client-react@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/stream-client-browser@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/test@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/core@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/ui@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
 
       - name: Remove pre-release tags
         run: |
           npm dist-tag rm mota pre-release || true
-          npm dist-tag rm @motadev/workbench pre-release || true
-          npm dist-tag rm @motadev/stream-client-react pre-release || true
-          npm dist-tag rm @motadev/stream-client-browser pre-release || true
-          npm dist-tag rm @motadev/stream-client-node pre-release || true
-          npm dist-tag rm @motadev/stream-client pre-release || true
-          npm dist-tag rm @motadev/test pre-release || true
-          npm dist-tag rm @motadev/core pre-release || true
-          npm dist-tag rm @motadev/ui pre-release || true
+          npm dist-tag rm @imoogle/workbench pre-release || true
+          npm dist-tag rm @imoogle/stream-client-react pre-release || true
+          npm dist-tag rm @imoogle/stream-client-browser pre-release || true
+          npm dist-tag rm @imoogle/stream-client-node pre-release || true
+          npm dist-tag rm @imoogle/stream-client pre-release || true
+          npm dist-tag rm @imoogle/test pre-release || true
+          npm dist-tag rm @imoogle/core pre-release || true
+          npm dist-tag rm @imoogle/ui pre-release || true
 
       - name: Delete Git tag
         run: |
@@ -168,7 +168,7 @@ jobs:
 
             **Related Workflow Run:** https://github.com/${{ github.repository }}/actions/runs/${{ needs.prepare.outputs.triggered_by }}
 
-            cc: @motadev/core-team`;
+            cc: @imoogle/core-team`;
 
             try {
               const issue = await github.rest.issues.create({
@@ -216,7 +216,7 @@ jobs:
 
             **Related Workflow Run:** https://github.com/${{ github.repository }}/actions/runs/${{ needs.prepare.outputs.triggered_by }}
 
-            cc: @motadev/core-team`;
+            cc: @imoogle/core-team`;
 
             try {
               const issue = await github.rest.issues.create({

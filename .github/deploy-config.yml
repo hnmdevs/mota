@@ -2,21 +2,21 @@
 # This file centralizes deploy settings and package information
 
 packages:
-  - name: '@motadev/core'
+  - name: '@imoogle/core'
     critical: true
-  - name: '@motadev/workbench'
+  - name: '@imoogle/workbench'
     critical: true
-  - name: '@motadev/stream-client'
+  - name: '@imoogle/stream-client'
     critical: false
-  - name: '@motadev/stream-client-browser'
+  - name: '@imoogle/stream-client-browser'
     critical: false
-  - name: '@motadev/stream-client-node'
+  - name: '@imoogle/stream-client-node'
     critical: false
-  - name: '@motadev/stream-client-react'
+  - name: '@imoogle/stream-client-react'
     critical: false
   - name: 'mota'
     critical: true
-  - name: '@motadev/test'
+  - name: '@imoogle/test'
     critical: false
 
 npm_tags:
@@ -33,7 +33,7 @@ environments:
 
 notifications:
   teams:
-    - '@motadev/core-team'
+    - '@imoogle/core-team'
   labels:
     success: ['release', 'deployed']
     failure: ['release-failure', 'high-priority', 'bug']

@@ -19,7 +19,7 @@ Here's an example of a step test:
 
 ```typescript
 // my-step.step.test.ts
-import { createTestContext } from '@motadev/testing'
+import { createTestContext } from '@imoogle/testing'
 import { handler } from './my-step.step'
 
 describe('MyStep', () => {
@@ -38,7 +38,7 @@ describe('MyStep', () => {
 })
 ```
 
-In this example, we use the `createTestContext` function from `@motadev/testing` to create a test context with mocked `emit` and `done` functions. We then call the step's `handler` function with test input and the mocked context. Finally, we assert that the `emit` function was called with the expected event type and data.
+In this example, we use the `createTestContext` function from `@imoogle/testing` to create a test context with mocked `emit` and `done` functions. We then call the step's `handler` function with test input and the mocked context. Finally, we assert that the `emit` function was called with the expected event type and data.
 
 ### Flow Tests
 
@@ -48,7 +48,7 @@ Here's an example of a flow test:
 
 ```typescript
 // my-flow.test.ts
-import { createTestFlow } from '@motadev/testing'
+import { createTestFlow } from '@imoogle/testing'
 import { handler as stepAHandler } from './step-a.step'
 import { handler as stepBHandler } from './step-b.step'
 
@@ -68,7 +68,7 @@ describe('MyFlow', () => {
 })
 ```
 
-In this example, we use the `createTestFlow` function from `@motadev/testing` to create a test flow with the specified steps. We then execute the flow with test input and assert that the final result matches the expected output.
+In this example, we use the `createTestFlow` function from `@imoogle/testing` to create a test flow with the specified steps. We then execute the flow with test input and assert that the final result matches the expected output.
 
 ## Running Tests Locally
 

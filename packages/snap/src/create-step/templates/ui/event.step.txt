@@ -1,6 +1,6 @@
 import React from 'react'
 import { BaseNode, NoopNodeProps } from 'mota/workbench'
-import { Button } from '@motadev/ui'
+import { Button } from '@imoogle/ui'
 
 export const Node: React.FC<EventNodeProps> = ({ data }) => {
   const doSomething = () => {

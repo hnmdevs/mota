@@ -172,7 +172,7 @@ export const handler: Handlers['OpenAiApi'] = async (req, { traceId, logger, emi
 ## Consuming stream on the browser
 
 ```
-npm install @motadev/stream-client-react
+npm install @imoogle/stream-client-react
 ```
 
 Then add the provider to the root of your project

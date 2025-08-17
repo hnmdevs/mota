@@ -291,7 +291,7 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
 ## 📦 Dependencies
 
 ### Node.js Dependencies
-- **@motadev/core**, **@motadev/workbench**, **mota**: Mota framework
+- **@imoogle/core**, **@imoogle/workbench**, **mota**: Mota framework
 - **googleapis**, **google-auth-library**: Google API integration
 - **gmail-api-parse-message-ts**: Gmail message parsing
 - **axios**: HTTP client

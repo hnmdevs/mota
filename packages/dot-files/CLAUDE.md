@@ -461,13 +461,13 @@ ctx.logger.debug('Details', { rawInput: input.to_h })
 
 ## Testing
 
-- **Framework**: Jest (`@motiadev/testing`) for TS/JS. Use CLI `emit` or `curl` for Python/Ruby testing.
+- **Framework**: Jest (`@imoogle/testing`) for TS/JS. Use CLI `emit` or `curl` for Python/Ruby testing.
 - **Command**: Include `curl` or `npx motia emit` with sample data.
 
 **Example Test (TS)**:
 
 ```typescript
-import { createTestContext } from '@motiadev/testing'
+import { createTestContext } from '@imoogle/testing'
 import { handler } from './my-step.step'
 
 describe('MyStep', () => {
