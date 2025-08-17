@@ -33,13 +33,13 @@ const dmMono = DM_Mono({
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? 'GTM-P6672CSW'
 const ASSET_VERSION = process.env.NEXT_PUBLIC_ASSET_VERSION ?? '2'
 
-const metaTitle = 'Motia - Unified Backend Framework for APIs, Events and AI Agents'
+const metaTitle = 'Mota - Unified Backend Framework for APIs, Events and AI Agents'
 const metaDescription =
-  'Multi-language cloud functions runtime for API endpoints, background jobs, and agentic workflows using Motia Steps. Preview them in the Workbench, ship to zero-config infrastructure, and monitor in the Cloud.'
+  'Multi-language cloud functions runtime for API endpoints, background jobs, and agentic workflows using Mota Steps. Preview them in the Workbench, ship to zero-config infrastructure, and monitor in the Cloud.'
 
 export async function generateMetadata(_props: never, _parent: ResolvingMetadata): Promise<Metadata> {
   const h = await headers()
-  const host = h.get('x-forwarded-host') ?? h.get('host') ?? 'motia.dev'
+  const host = h.get('x-forwarded-host') ?? h.get('host') ?? 'mota.imoogle.com'
   const proto = host.startsWith('localhost') ? 'http' : 'https'
   const base = `${proto}://${host}`
 
@@ -49,7 +49,7 @@ export async function generateMetadata(_props: never, _parent: ResolvingMetadata
     metadataBase: new URL(base),
     title: {
       default: metaTitle,
-      template: '%s | motia',
+      template: '%s | mota',
     },
     description: metaDescription,
     keywords: [
@@ -64,7 +64,7 @@ export async function generateMetadata(_props: never, _parent: ResolvingMetadata
       type: 'website',
       url: base,
       locale: 'en_US',
-      siteName: 'Motia',
+      siteName: 'Mota',
       title: metaTitle,
       description: metaDescription,
       images: [
@@ -90,8 +90,8 @@ export async function generateMetadata(_props: never, _parent: ResolvingMetadata
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@motiadev',
-      creator: '@motiadev',
+      site: '@imoogle',
+      creator: '@imoogle',
       title: metaTitle,
       description: metaDescription,
       images: [ogImage],
@@ -128,18 +128,18 @@ export async function generateMetadata(_props: never, _parent: ResolvingMetadata
 
       // Additional Twitter tags for better iOS compatibility
       'twitter:url': base,
-      'twitter:domain': 'motia.dev',
+      'twitter:domain': 'mota.imoogle.com',
       'twitter:image:alt': metaTitle,
 
       // iOS Safari specific
       'format-detection': 'telephone=no',
-      'apple-mobile-web-app-title': 'Motia',
+      'apple-mobile-web-app-title': 'Mota',
       'apple-mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-status-bar-style': 'black-translucent',
 
       // PWA related
       'theme-color': '#18181b',
-      'application-name': 'motia',
+      'application-name': 'mota',
       'mobile-web-app-capable': 'yes',
       'msapplication-TileColor': '#18181b',
 
@@ -173,8 +173,8 @@ export default function RootLayout({
             '@type': 'WebSite',
             name: metaTitle,
             description: metaDescription,
-            url: 'https://motia.dev',
-            image: ['https://motia.dev/og-image-updated.jpg'],
+            url: 'https://mota.imoogle.com',
+            image: ['https://mota.imoogle.com/og-image-updated.jpg'],
           })}
         </script>
       </head>
@@ -183,7 +183,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${dmMono.variable} ${tasaExplorer.variable} w-screen overflow-x-hidden antialiased`}
       >
         <PlausibleProvider
-          domain="motia.dev"
+          domain="mota.imoogle.com"
           customDomain="https://plausible.io"
           scriptProps={{
             src: 'https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js',

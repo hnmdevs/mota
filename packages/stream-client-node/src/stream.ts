@@ -1,4 +1,4 @@
-import { Stream as StreamClient } from '@motiadev/stream-client'
+import { Stream as StreamClient } from '@imoogle/stream-client'
 import { StreamSocketAdapter } from './stream-adapter'
 
 export class Stream extends StreamClient {

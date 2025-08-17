@@ -1,6 +1,6 @@
-# @motiadev/stream-client
+# @imoogle/stream-client
 
 This is a Core project used by
 
-- [@motiadev/stream-client-browser](https://www.npmjs.com/package/@motiadev/stream-client-browser)
-- [@motiadev/stream-client-node](https://www.npmjs.com/package/@motiadev/stream-client-node)
+- [@imoogle/stream-client-browser](https://www.npmjs.com/package/@imoogle/stream-client-browser)
+- [@imoogle/stream-client-node](https://www.npmjs.com/package/@imoogle/stream-client-node)

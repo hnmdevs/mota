@@ -1,6 +1,6 @@
 {
-  "name": "@motiadev/stream-client-react",
-  "description": "Motia Stream Client React Package – Responsible for managing streams of data.",
+  "name": "@imoogle/stream-client-react",
+  "description": "Mota Stream Client React Package – Responsible for managing streams of data.",
   "version": "0.5.9-beta.117",
   "license": "MIT",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
     "react": "^19.1.0"
   },
   "dependencies": {
-    "@motiadev/stream-client-browser": "workspace:*"
+    "@imoogle/stream-client-browser": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19.0.7",

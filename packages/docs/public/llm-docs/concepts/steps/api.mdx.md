@@ -2,7 +2,7 @@
 title: API Step
 ---
 
-An **API step** is exposed as an HTTP endpoint that acts as an entry point into your sequence of steps, or **flow**. It allows external systems or clients to trigger and interact with your flows through a REST API interface. Like any Motia Step, an API Step can be configured to emit events or wait for events to occur.
+An **API step** is exposed as an HTTP endpoint that acts as an entry point into your sequence of steps, or **flow**. It allows external systems or clients to trigger and interact with your flows through a REST API interface. Like any Mota Step, an API Step can be configured to emit events or wait for events to occur.
 
 ## Config
 
@@ -44,7 +44,7 @@ The following properties are specific to the API Step, in addition to the [commo
 <Tabs items={['TypeScript', 'JavaScript', 'Python']}>
   <Tab value="TypeScript">
     ```typescript
-    import { ApiRouteConfig, Handlers } from 'motia'
+    import { ApiRouteConfig, Handlers } from 'mota'
     import { z } from 'zod'
 
     export const config: ApiRouteConfig = {
@@ -191,7 +191,7 @@ Middleware functions receive:
 ### Example Middleware Usage
 
 ```typescript
-import { ApiMiddleware } from 'motia'
+import { ApiMiddleware } from 'mota'
 
 // Logging middleware
 const loggingMiddleware: ApiMiddleware = async (req, ctx, next) => {
@@ -246,7 +246,7 @@ export const handler = async (req, ctx) => {
 You can create your own middleware functions:
 
 ```typescript
-import { ApiMiddleware } from 'motia'
+import { ApiMiddleware } from 'mota'
 
 // Request modification middleware
 const requestModifierMiddleware: ApiMiddleware = async (req, ctx, next) => {
@@ -266,7 +266,7 @@ const responseModifierMiddleware: ApiMiddleware = async (req, ctx, next) => {
   // Modify the response before returning it
   response.headers = {
     ...response.headers,
-    'x-powered-by': 'Motia',
+    'x-powered-by': 'Mota',
   }
 
   return response
@@ -323,7 +323,7 @@ const rateLimiterMiddleware: ApiMiddleware = (() => {
 <Tabs items={['TypeScript', 'JavaScript', 'Python']}>
   <Tab value="TypeScript">
     ```typescript
-      import { ApiRouteConfig, Handlers } from 'motia'
+      import { ApiRouteConfig, Handlers } from 'mota'
       import { z } from 'zod'
 
       export const config: ApiRouteConfig = {
@@ -388,7 +388,7 @@ const rateLimiterMiddleware: ApiMiddleware = (() => {
   <Tab value="Python">
     ```python
     from typing import Any, Dict, Callable
-    from motia import ApiMiddleware
+    from mota import ApiMiddleware
     from datetime import datetime
     import time
 
@@ -415,7 +415,7 @@ const rateLimiterMiddleware: ApiMiddleware = (() => {
         # Modify the response before returning it
         response['headers'] = {
             **response.get('headers', {}),
-            'x-powered-by': 'Motia'
+            'x-powered-by': 'Mota'
         }
 
         return response

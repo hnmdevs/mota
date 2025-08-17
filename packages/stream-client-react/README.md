@@ -1,28 +1,28 @@
-# @motiadev/stream-client-react
+# @imoogle/stream-client-react
 
-Motia Stream Client React Package – Responsible for managing streams of data in React applications.
+Mota Stream Client React Package – Responsible for managing streams of data in React applications.
 
-For more information about Motia Streams, please refer to the [Motia Streams documentation](https://motia.dev/docs).
+For more information about Mota Streams, please refer to the [Mota Streams documentation](https://motia.dev/docs).
 
 ## Overview
 
-`@motiadev/stream-client-react` provides a set of React utilities and hooks for integrating Motia's real-time streaming capabilities into your React applications. It enables you to subscribe to individual stream items, groups, and handle real-time events with idiomatic React patterns.
+`@imoogle/stream-client-react` provides a set of React utilities and hooks for integrating Mota's real-time streaming capabilities into your React applications. It enables you to subscribe to individual stream items, groups, and handle real-time events with idiomatic React patterns.
 
 ---
 
 ## Installation
 
 ```bash
-npm install @motiadev/stream-client-react
+npm install @imoogle/stream-client-react
 ```
 
 ## Exports
 
 - **Stream, StreamItemSubscription, StreamGroupSubscription**  
-  (Re-exported from `@motiadev/stream-client-browser`)
-- **MotiaStreamProvider**  
+  (Re-exported from `@imoogle/stream-client-browser`)
+- **MotaStreamProvider**  
   React provider for initializing and supplying the stream context.
-- **useMotiaStream**  
+- **useMotaStream**  
   Hook to access the current stream instance from context.
 - **useStreamItem**  
   Hook to subscribe to a single stream item.
@@ -33,36 +33,36 @@ npm install @motiadev/stream-client-react
 
 ## Usage
 
-### 1. MotiaStreamProvider
+### 1. MotaStreamProvider
 
-Wrap your application (or a subtree) with `MotiaStreamProvider` to initialize the stream and provide it via context.
+Wrap your application (or a subtree) with `MotaStreamProvider` to initialize the stream and provide it via context.
 
 ```tsx
-import { MotiaStreamProvider } from '@motiadev/stream-client-react'
+import { MotaStreamProvider } from '@imoogle/stream-client-react'
 
 const App = () => {
   return (
-    <MotiaStreamProvider address="wss://your-stream-server">
+    <MotaStreamProvider address="wss://your-stream-server">
       <App />
-    </MotiaStreamProvider>
+    </MotaStreamProvider>
   )
 }
 ```
 
 **Props:**
 
-- `address` (string): The WebSocket address of your Motia stream server.
+- `address` (string): The WebSocket address of your Mota stream server.
 
 ---
 
-### 2. useMotiaStream
+### 2. useMotaStream
 
 Access the current stream instance anywhere within the provider.
 
 ```tsx
-import { useMotiaStream } from '@motiadev/stream-client-react'
+import { useMotaStream } from '@imoogle/stream-client-react'
 
-const { stream } = useMotiaStream()
+const { stream } = useMotaStream()
 ```
 
 ---
@@ -72,7 +72,7 @@ const { stream } = useMotiaStream()
 Subscribe to a single item in a stream and receive real-time updates.
 
 ```tsx
-import { useStreamItem } from '@motiadev/stream-client-react'
+import { useStreamItem } from '@imoogle/stream-client-react'
 
 const { data, event } = useStreamItem<{ name: string }>({
   /**
@@ -96,7 +96,7 @@ const { data, event } = useStreamItem<{ name: string }>({
 Subscribe to a group of items in a stream.
 
 ```tsx
-import { useStreamGroup } from '@motiadev/stream-client-react'
+import { useStreamGroup } from '@imoogle/stream-client-react'
 
 const { data, event } = useStreamGroup<{ name: string }>({
   /**
@@ -120,7 +120,7 @@ const { data, event } = useStreamGroup<{ name: string }>({
 Attach custom event listeners to a stream subscription.
 
 ```tsx
-import { useStreamEventHandler } from '@motiadev/stream-client-react'
+import { useStreamEventHandler } from '@imoogle/stream-client-react'
 
 useStreamEventHandler(
   {
@@ -140,13 +140,13 @@ useStreamEventHandler(
 
 ## API Reference
 
-### MotiaStreamProvider
+### MotaStreamProvider
 
 - **Props:**
   - `address: string` – WebSocket address for the stream server.
   - `children: React.ReactNode`
 
-### useMotiaStream
+### useMotaStream
 
 - Returns `{ stream }` from context.
 
@@ -171,7 +171,7 @@ useStreamEventHandler(
 ## Example
 
 ```tsx
-import { MotiaStreamProvider, useStreamItem, useStreamEventHandler } from '@motiadev/stream-client-react'
+import { MotaStreamProvider, useStreamItem, useStreamEventHandler } from '@imoogle/stream-client-react'
 
 function UserComponent({ userId }) {
   const { data, event } = useStreamItem<{ name: string }>({
@@ -194,9 +194,9 @@ function UserComponent({ userId }) {
 
 export default function App() {
   return (
-    <MotiaStreamProvider address="wss://your-stream-server">
+    <MotaStreamProvider address="wss://your-stream-server">
       <UserComponent userId="user-123" />
-    </MotiaStreamProvider>
+    </MotaStreamProvider>
   )
 }
 ```
@@ -205,9 +205,9 @@ export default function App() {
 
 ## Notes
 
-- All hooks must be used within a `MotiaStreamProvider`.
-- The library is designed to work seamlessly with Motia's event-driven architecture.
-- For advanced stream management, refer to the [@motiadev/stream-client-browser](https://www.npmjs.com/package/@motiadev/stream-client-browser) documentation.
+- All hooks must be used within a `MotaStreamProvider`.
+- The library is designed to work seamlessly with Mota's event-driven architecture.
+- For advanced stream management, refer to the [@imoogle/stream-client-browser](https://www.npmjs.com/package/@imoogle/stream-client-browser) documentation.
 
 ## License
 

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { DialogTitle } from '@headlessui/react'
 import { useFormStatus } from 'react-dom'
 
-import motiaLogoWhiteFull from '@/public/images/logoFull.png'
+import motaLogoWhiteFull from '@/public/images/logoFull.png'
 import ButtonPrimary from './ButtonPrimary'
 import { chevronRightCircle } from './Icons'
 import { FormState } from '../hooks/useEarlyAccessForm'
@@ -22,7 +22,7 @@ const FormSubmitButton: React.FC = () => {
     <ButtonPrimary type="submit" disabled={pending}>
       {pending ? 'Submitting...' : (
         <>
-          Get early access to Motia Cloud {chevronRightCircle}
+          Get early access to Mota Cloud {chevronRightCircle}
         </>
       )}
     </ButtonPrimary>
@@ -31,9 +31,9 @@ const FormSubmitButton: React.FC = () => {
 
 const EarlyAccessFormContent: React.FC<Props> = ({ formAction, errors, title }) => (
   <form action={formAction}>
-    <Image src={motiaLogoWhiteFull} alt="Motia" className="mx-auto w-[120px]" />
+    <Image src={motaLogoWhiteFull} alt="Mota" className="mx-auto w-[120px]" />
     <DialogTitle className="font-tasa pt-[20px] text-center text-[16px] text-white">
-      {title || 'Get early access to motia cloud today.'}
+      {title || 'Get early access to mota cloud today.'}
     </DialogTitle>
     <div className="flex flex-col gap-[12px] pt-[60px] pb-[40px]">
       <div>

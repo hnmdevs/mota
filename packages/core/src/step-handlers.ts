@@ -1,15 +1,15 @@
 import { callStepFile } from './call-step-file'
 import { globalLogger } from './logger'
-import { Motia } from './motia'
+import { Mota } from './mota'
 import { Event, EventConfig, Step } from './types'
 
-export type MotiaEventManager = {
+export type MotaEventManager = {
   createHandler: (step: Step<EventConfig>) => void
   removeHandler: (step: Step<EventConfig>) => void
 }
 
-export const createStepHandlers = (motia: Motia): MotiaEventManager => {
-  const eventSteps = motia.lockedData.eventSteps()
+export const createStepHandlers = (mota: Mota): MotaEventManager => {
+  const eventSteps = mota.lockedData.eventSteps()
 
   globalLogger.debug(`[step handler] creating step handlers for ${eventSteps.length} steps`)
 
@@ -26,7 +26,7 @@ export const createStepHandlers = (motia: Motia): MotiaEventManager => {
     globalLogger.debug('[step handler] establishing step subscriptions', { filePath, step: step.config.name })
 
     subscribes.forEach((subscribe) => {
-      motia.eventManager.subscribe({
+      mota.eventManager.subscribe({
         filePath,
         event: subscribe,
         handlerName: step.config.name,
@@ -38,7 +38,7 @@ export const createStepHandlers = (motia: Motia): MotiaEventManager => {
           globalLogger.debug('[step handler] received event', { event: removeLogger(event), step: name })
 
           try {
-            await callStepFile({ step, data, traceId, tracer, logger }, motia)
+            await callStepFile({ step, data, traceId, tracer, logger }, mota)
 
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
           } catch (error: any) {
@@ -55,7 +55,7 @@ export const createStepHandlers = (motia: Motia): MotiaEventManager => {
     const { subscribes } = config
 
     subscribes.forEach((subscribe) => {
-      motia.eventManager.unsubscribe({ filePath, event: subscribe })
+      mota.eventManager.unsubscribe({ filePath, event: subscribe })
     })
   }
 

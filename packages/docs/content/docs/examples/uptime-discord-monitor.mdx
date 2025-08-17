@@ -1,12 +1,12 @@
 ---
-title: 'Real-Time Uptime Monitoring: Building a Resilient Website Monitor with Motia'
+title: 'Real-Time Uptime Monitoring: Building a Resilient Website Monitor with Mota'
 ---
 
 In today's modern era, website uptime is critical for business success. Whether you're monitoring a personal blog or enterprise applications, you need a reliable system that can detect outages, send alerts, and provide visibility into your site's health. Traditional monitoring solutions often involve complex infrastructure and vendor lock-in, but there's a better way.
 
-This comprehensive guide explores how to build a production-ready uptime monitoring system using Motia's event-driven architecture. We'll cover:
+This comprehensive guide explores how to build a production-ready uptime monitoring system using Mota's event-driven architecture. We'll cover:
 
-1.  **Event-Driven Monitoring**: How Motia's `steps` create a scalable, maintainable monitoring pipeline.
+1.  **Event-Driven Monitoring**: How Mota's `steps` create a scalable, maintainable monitoring pipeline.
 2.  **Building the Architecture**: A detailed walkthrough of our five-component monitoring system.
 3.  **Smart Alerting**: Implementing rate limiting and status change detection to prevent spam.
 
@@ -18,14 +18,14 @@ Let's build a monitoring system that actually works for you.
 
 <div className="my-8">![Uptime Monitor Architecture](./../img/uptime-monitor-architecture.png)</div>
 
-At its core, our uptime monitoring system solves a fundamental challenge: how do you continuously monitor multiple websites without creating a brittle, monolithic application? Traditional monitoring tools often suffer from tight coupling, making them difficult to scale and customize. Our Motia-powered solution breaks this down into discrete, event-driven components that each handle a specific aspect of monitoring.
+At its core, our uptime monitoring system solves a fundamental challenge: how do you continuously monitor multiple websites without creating a brittle, monolithic application? Traditional monitoring tools often suffer from tight coupling, making them difficult to scale and customize. Our Mota-powered solution breaks this down into discrete, event-driven components that each handle a specific aspect of monitoring.
 
 The magic happens through the integration of proven technologies and patterns:
 
 -   **[Cron-Based Scheduling](https://en.wikipedia.org/wiki/Cron)**: Configurable check intervals using familiar cron expressions
 -   **[Discord Webhooks](https://discord.com/developers/docs/resources/webhook)**: Instant notifications with rich formatting
 -   **[Token Bucket Rate Limiting](https://en.wikipedia.org/wiki/Token_bucket)**: Intelligent alert throttling to prevent spam
--   **[Motia Framework](https://motia.dev)**: Event-driven orchestration with built-in observability
+-   **[Mota Framework](https://mota.dev)**: Event-driven orchestration with built-in observability
 
 Instead of a monolithic monitoring daemon, we get a resilient architecture where each component can be scaled, modified, or replaced independently.
 
@@ -130,7 +130,7 @@ Our application consists of five specialized steps, each handling a specific par
           method: 'GET',
           signal: controller.signal,
           headers: {
-            'User-Agent': 'Motia-Uptime-Monitor/1.0',
+            'User-Agent': 'Mota-Uptime-Monitor/1.0',
             'Accept': '*/*',
             'Cache-Control': 'no-cache'
           },
@@ -338,7 +338,7 @@ Our application consists of five specialized steps, each handling a specific par
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'User-Agent': 'Motia-Uptime-Monitor/1.0'
+            'User-Agent': 'Mota-Uptime-Monitor/1.0'
           },
           body: JSON.stringify(message)
         })
@@ -544,7 +544,7 @@ Our application consists of five specialized steps, each handling a specific par
     // File-based persistent storage for site status
     import { readFileSync, writeFileSync, existsSync } from 'fs'
 
-    const STORE_FILE = join(process.cwd(), '.motia', 'status-store.json')
+    const STORE_FILE = join(process.cwd(), '.mota', 'status-store.json')
 
     export function updateLastStatus(result) {
       // Validate input
@@ -582,9 +582,9 @@ Our application consists of five specialized steps, each handling a specific par
 
 ## Explore the Workbench
 
-The Motia Workbench provides a visual representation of your monitoring pipeline, making it easy to understand the event flow and debug issues in real-time.
+The Mota Workbench provides a visual representation of your monitoring pipeline, making it easy to understand the event flow and debug issues in real-time.
 
-<div className="my-8">![Uptime Monitor in Motia Workbench](./../img/uptime-monitor.gif)</div>
+<div className="my-8">![Uptime Monitor in Mota Workbench](./../img/uptime-monitor.gif)</div>
 
 You can monitor real-time status checks, view Discord alert logs, and trace the execution of each step directly in the Workbench interface. This makes development and debugging significantly easier compared to traditional monitoring solutions.
 
@@ -670,7 +670,7 @@ Create a Discord webhook to receive alerts:
 
 ### Run the Monitoring System
 
-Start the Motia development server to begin monitoring your websites.
+Start the Mota development server to begin monitoring your websites.
 
 ```shell
 npm run dev
@@ -872,7 +872,7 @@ Want to explore the complete monitoring implementation? Check out the full sourc
         <p className="text-gray-600 mb-4">Access the full implementation with event steps, utility libraries, Discord integration, and production-ready configuration.</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <a 
-            href="https://github.com/MotiaDev/motia-examples/tree/main/examples/motia-uptime-monitor" 
+            href="https://github.com/MotaDev/mota-examples/tree/main/examples/mota-uptime-monitor" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-md transition-colors duration-200"
@@ -883,7 +883,7 @@ Want to explore the complete monitoring implementation? Check out the full sourc
             View Monitor Example
           </a>
           <a 
-            href="https://github.com/MotiaDev/motia-examples" 
+            href="https://github.com/MotaDev/mota-examples" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-md transition-colors duration-200"
@@ -923,4 +923,4 @@ From here, you can extend the system by:
 
 The event-driven architecture makes all of these extensions straightforward to implement without disrupting the existing monitoring pipeline.
 
-Ready to build monitoring infrastructure that scales with your business? Start building with Motia today!
+Ready to build monitoring infrastructure that scales with your business? Start building with Mota today!

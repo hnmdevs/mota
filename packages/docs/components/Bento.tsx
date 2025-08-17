@@ -23,7 +23,7 @@ const BentoLayout: React.FC = () => (
         <Image src={bentoSectionTitleIcon} alt="Features" />
       </SectionAppearAnimation>
       <Title className="w-[650px] max-w-full max-lg:text-center max-md:w-[470px]">
-        Create workflows with the simplicity of Motia Steps
+        Create workflows with the simplicity of Mota Steps
       </Title>
       <p className="w-[600px] max-w-full text-[17px] text-white opacity-60 max-lg:text-center">
         <TextAppearBlur delay={0.25}>

@@ -38,7 +38,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 - **Real-time Financial Analysis**: Combines multiple data sources for comprehensive insights
 - **AI-Powered Insights**: Leverages OpenAI GPT-4 for intelligent market analysis
-- **Event-Driven Architecture**: Built on Motia's robust event system for reliable processing
+- **Event-Driven Architecture**: Built on Mota's robust event system for reliable processing
 - **Web Search Integration**: Aggregates latest market news and analysis
 - **Financial Data Integration**: Real-time stock and company information
 - **Persistent Storage**: Stores analysis results for future reference
@@ -57,7 +57,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone https://github.com/MotaDev/mota-examples
    cd examples/finance-agent
    ```
 
@@ -136,7 +136,7 @@ Response:
    pnpm dev
    ```
 
-2. Access the Motia Workbench:
+2. Access the Mota Workbench:
    ```
    http://localhost:3000
    ```
@@ -149,7 +149,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Mota Framework](https://mota.dev) for the event-driven workflow engine
 - [Alpha Vantage](https://www.alphavantage.co/) for financial data
 - [SerperDev](https://serper.dev/) for web search capabilities
 - [OpenAI](https://platform.openai.com/) for AI analysis 

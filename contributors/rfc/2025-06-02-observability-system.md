@@ -1,18 +1,18 @@
-# RFC: Observability System for Motia Framework
+# RFC: Observability System for Mota Framework
 
 ## Status
 - **RFC Date**: 2025-06-02
 - **Status**: Implemented
 - **Authors**: Ytallo Layon
-- **Reviewers**: Motia Team
+- **Reviewers**: Mota Team
 
 ## Summary
 
-This RFC proposes implementing an observability system for Motia that provides comprehensive tracing and real-time monitoring through an intuitive horizontal timeline interface. The system will enable users to track execution traces, monitor performance, and debug issues with detailed insights into their workflow executions, focusing on Motia-specific concepts like **States**, **Emit events**, **Streams**, and **step interactions** through a clean, horizontal visualization.
+This RFC proposes implementing an observability system for Mota that provides comprehensive tracing and real-time monitoring through an intuitive horizontal timeline interface. The system will enable users to track execution traces, monitor performance, and debug issues with detailed insights into their workflow executions, focusing on Mota-specific concepts like **States**, **Emit events**, **Streams**, and **step interactions** through a clean, horizontal visualization.
 
 ## Background
 
-Currently, Motia provides basic logging capabilities through:
+Currently, Mota provides basic logging capabilities through:
 - Terminal-based logs during development
 - Real-time log streaming in the Workbench
 - Basic analytics tracking for internal telemetry
@@ -30,7 +30,7 @@ However, users lack intuitive observability into their workflow executions, maki
 1. **Horizontal Timeline Visualization**: Intuitive left-to-right timeline showing step execution over time
 2. **Comprehensive Trace Tracking**: Track execution traces with clean step-by-step progression
 3. **Cross-Trace Correlation**: Link related traces across multiple triggers for logical flow visualization
-4. **Motia Operations Monitoring**: Track state, emit, and stream operations within each step
+4. **Mota Operations Monitoring**: Track state, emit, and stream operations within each step
 5. **Real-time Flow Status**: Live status indicators in the Workbench showing active executions
 6. **Enhanced Logging Integration**: Leverage existing logging infrastructure with structured events
 7. **Persistent Trace Storage**: Store recent traces (last 50) with efficient retrieval
@@ -75,7 +75,7 @@ Order Flow → [API: Create] → [Event: Process] → [API: Confirm] → [Event:
 
 #### 2. Manual Correlation
 - **Context API**: `await context.correlate('business_process_id')`
-- **HTTP Headers**: `X-Motia-Correlation-Id` for API calls
+- **HTTP Headers**: `X-Mota-Correlation-Id` for API calls
 
 #### 3. Logical Flow Visualization
 ```
@@ -95,7 +95,7 @@ Chat Session: user_123_thread_abc (3 traces, 2 min duration)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        Motia Core System                       │
+│                        Mota Core System                       │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  ┌─────────────────┐    ┌──────────────────┐    ┌────────────┐ │
@@ -510,7 +510,7 @@ Live Status ──────────► Timeline Animation
 
 ### Developer Experience
 - **Intuitive Timeline**: Natural left-to-right execution flow visualization
-- **Operation Visibility**: Clear visual indicators for Motia operations
+- **Operation Visibility**: Clear visual indicators for Mota operations
 - **Quick Navigation**: Fast filtering and search capabilities
 - **Mobile Support**: Responsive design for all device sizes
 
@@ -528,4 +528,4 @@ Live Status ──────────► Timeline Animation
 
 ## Conclusion
 
-This observability system provides comprehensive visibility into Motia workflows through an intuitive horizontal timeline interface. By leveraging the existing logging infrastructure and focusing on clean, performant UI components, we can deliver powerful debugging and monitoring capabilities with minimal complexity and overhead. The architecture prioritizes simplicity, performance, and developer experience while providing the essential observability features needed for complex workflow debugging. 
+This observability system provides comprehensive visibility into Mota workflows through an intuitive horizontal timeline interface. By leveraging the existing logging infrastructure and focusing on clean, performant UI components, we can deliver powerful debugging and monitoring capabilities with minimal complexity and overhead. The architecture prioritizes simplicity, performance, and developer experience while providing the essential observability features needed for complex workflow debugging. 

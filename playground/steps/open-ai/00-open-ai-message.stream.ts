@@ -1,4 +1,4 @@
-import { StreamConfig } from 'motia'
+import { StreamConfig } from 'mota'
 import { z } from 'zod'
 
 export const messageSchema = z.object({

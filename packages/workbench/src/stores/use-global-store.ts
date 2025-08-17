@@ -33,7 +33,7 @@ export const useGlobalStore = create(
       selectLogId: (logId) => set(select(logId, 'selectedLogId')),
     }),
     {
-      name: 'motia-global-storage',
+      name: 'mota-global-storage',
       storage: createJSONStorage(() => localStorage),
     },
   ),

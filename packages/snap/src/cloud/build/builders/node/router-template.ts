@@ -1,4 +1,4 @@
-import type { ApiRouteConfig, ApiRouteHandler } from '@motiadev/core'
+import type { ApiRouteConfig, ApiRouteHandler } from '@imoogle/core'
 // {{imports}}
 
 type RouterPath = {

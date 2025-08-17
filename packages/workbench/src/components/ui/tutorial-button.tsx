@@ -1,7 +1,7 @@
-import { MotiaTutorial, TutorialConfig } from '@motiadev/tutorial'
-import { Button } from '@motiadev/ui'
+import { MotaTutorial, TutorialConfig } from '@imoogle/tutorial'
+import { Button } from '@imoogle/ui'
 import { Book } from 'lucide-react'
-import { useStreamItem } from '@motiadev/stream-client-react'
+import { useStreamItem } from '@imoogle/stream-client-react'
 import { FlowConfigResponse } from '@/types/flow'
 import { FC, useCallback, useEffect, useState } from 'react'
 import { useFlowStore } from '@/stores/use-flow-store'
@@ -11,7 +11,7 @@ export const TutorialButton: FC = () => {
   const [isTutorialFlowMissing, setIsTutorialFlowMissing] = useState(true)
   const selectFlowId = useFlowStore((state) => state.selectFlowId)
   const { data: flowConfig } = useStreamItem<FlowConfigResponse>({
-    streamName: '__motia.flowsConfig',
+    streamName: '__mota.flowsConfig',
     groupId: 'default',
     id: 'basic-tutorial',
   })
@@ -27,7 +27,7 @@ export const TutorialButton: FC = () => {
       }
 
       selectFlowId('basic-tutorial')
-      MotiaTutorial.start(config)
+      MotaTutorial.start(config)
 
       if (resetState) {
         const url = new URL(window.location.href)
@@ -47,7 +47,7 @@ export const TutorialButton: FC = () => {
     setIsTutorialFlowMissing(false)
     startTutorial()
 
-    return () => MotiaTutorial.close()
+    return () => MotaTutorial.close()
   }, [flowConfig, startTutorial])
 
   if (import.meta.env.VITE_MOTIA_TUTORIAL_DISABLED) {
@@ -72,10 +72,10 @@ export const TutorialButton: FC = () => {
         content={
           <div className="flex flex-col gap-4 p-4 max-w-[320px]">
             <p className="text-sm wrap-break-word p-0 m-0">
-              In order to start the tutorial, you need to download the tutorial steps using the Motia CLI. In your
+              In order to start the tutorial, you need to download the tutorial steps using the Mota CLI. In your
               terminal execute:
             </p>
-            <pre className="text-sm font-bold">motia generate tutorial-flow</pre>
+            <pre className="text-sm font-bold">mota generate tutorial-flow</pre>
           </div>
         }
       >

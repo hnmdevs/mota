@@ -1,5 +1,5 @@
-import { isApiStep, LockedData } from '@motiadev/core'
-import { NoPrinter } from '@motiadev/core/dist/src/printer'
+import { isApiStep, LockedData } from '@imoogle/core'
+import { NoPrinter } from '@imoogle/core/dist/src/printer'
 import fs from 'fs'
 import { collectFlows, getStepFiles } from '../../generate-locked-data'
 import { Builder, StepsConfigFile } from '../build/builder'

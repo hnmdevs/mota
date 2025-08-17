@@ -4,19 +4,19 @@ import {
   isCronStep,
   isEventStep,
   LockedData,
-  MotiaEventManager,
-  MotiaServer,
+  MotaEventManager,
+  MotaServer,
   Step,
   trackEvent,
-} from '@motiadev/core'
-import type { Stream } from '@motiadev/core/dist/src/types-stream'
+} from '@imoogle/core'
+import type { Stream } from '@imoogle/core/dist/src/types-stream'
 import path from 'path'
 import { Watcher } from './watcher'
 
 export const createDevWatchers = (
   lockedData: LockedData,
-  server: MotiaServer,
-  eventHandler: MotiaEventManager,
+  server: MotaServer,
+  eventHandler: MotaEventManager,
   cronManager: CronManager,
 ) => {
   const stepDir = path.join(process.cwd(), 'steps')

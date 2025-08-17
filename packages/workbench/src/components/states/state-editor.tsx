@@ -1,4 +1,4 @@
-import { Button } from '@motiadev/ui'
+import { Button } from '@imoogle/ui'
 import { AlertCircle, Check, Loader2, Save } from 'lucide-react'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { JsonEditor } from '../endpoints/json-editor'
@@ -32,7 +32,7 @@ export const StateEditor: React.FC<Props> = ({ state }) => {
       setIsRequestLoading(true)
       setSaveStatus('idle')
 
-      const response = await fetch('/motia/state', {
+      const response = await fetch('/mota/state', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

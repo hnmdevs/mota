@@ -1,31 +1,31 @@
  ---
- description: Basic concepts for creating Motia steps
+ description: Basic concepts for creating Mota steps
  globs: 
  alwaysApply: false
  ---
- # Motia Steps Reference
+ # Mota Steps Reference
 
-Steps are the fundamental building blocks of Motia workflows. Each step is designed to handle a specific piece of business logic, triggered by an event or an API call, or run on a schedule.
+Steps are the fundamental building blocks of Mota workflows. Each step is designed to handle a specific piece of business logic, triggered by an event or an API call, or run on a schedule.
 
 ## Step Types
-Motia supports several types of steps, each tailored for different purposes:
+Mota supports several types of steps, each tailored for different purposes:
 
 -   **API Steps**: Expose HTTP endpoints (e.g., RESTful APIs) that can initiate or interact with workflows. They handle incoming HTTP requests and can emit events.
 -   **Event Steps**: The most common type of step. They subscribe to topics, process incoming event data, execute business logic, and can emit new events to other topics, chaining workflow operations.
 -   **Cron Steps**: Scheduled tasks that run based on cron expressions. Useful for periodic jobs like generating reports, data synchronization, or sending out scheduled notifications.
 -   **NOOP Steps** (No Operation): These steps don't execute any custom logic. They are used for workflow connections, testing, manual trigger points, or as placeholders, aiding in workflow visualization and structure.
--   **UI Steps**: Allow for custom visual components in the Motia Workbench, providing richer UIs for monitoring and interacting with specific steps.
+-   **UI Steps**: Allow for custom visual components in the Mota Workbench, providing richer UIs for monitoring and interacting with specific steps.
 
 ## Basic Step Structure
 
-Regardless of the specific type (API, Event, Cron), every functional Motia step (excluding NOOPs in terms of handlers) generally consists of two main parts:
+Regardless of the specific type (API, Event, Cron), every functional Mota step (excluding NOOPs in terms of handlers) generally consists of two main parts:
 
 1.  **Configuration (`config`)**: An exported object that defines the step's properties, such as its type, name, what topics it subscribes to (if any), what topics it emits to, input data schemas (for validation), and which flows it belongs to.
-2.  **Handler Function (`handler`)**: An exported asynchronous function that contains the actual business logic for the step. It receives input data (if applicable) and a context object providing access to Motia functionalities (like emitting events, logging, and state management).
+2.  **Handler Function (`handler`)**: An exported asynchronous function that contains the actual business logic for the step. It receives input data (if applicable) and a context object providing access to Mota functionalities (like emitting events, logging, and state management).
 
 **TypeScript Example (Illustrative Event Step):**
 ```typescript
-// Import necessary types from Motia. Actual imports might vary based on step type.
+// Import necessary types from Mota. Actual imports might vary based on step type.
 // e.g., import { EventConfig, FlowContext, Handlers } from 'motia';
 // import { z } from 'zod'; // For schema validation with Zod
 
@@ -50,7 +50,7 @@ export const config = {
 // 2. Handler: Contains the business logic executed when the step is triggered.
 // The signature varies slightly based on step type (e.g., API steps receive an HTTP request object).
 // 'input' is the validated data from the triggering event or API request body.
-// 'context' provides access to Motia utilities (emit, logger, state, traceId).
+// 'context' provides access to Mota utilities (emit, logger, state, traceId).
 export const handler = async (input: any, context: any) => { // Replace 'any' with specific types
   // Your business logic here...
   context.logger.info('Processing input data...', { inputData: input, traceId: context.traceId });
@@ -84,7 +84,7 @@ config = {
 
 # 2. Handler (as an async function)
 # 'input_payload' is the data from the triggering event.
-# 'ctx' (context) provides access to Motia utilities.
+# 'ctx' (context) provides access to Mota utilities.
 async def handler(input_payload, ctx):
     ctx.logger.info(f"Python step received: {input_payload}", trace_id=ctx.trace_id)
     
@@ -101,7 +101,7 @@ async def handler(input_payload, ctx):
 **Ruby Conceptual Equivalent:**
 ```ruby
 # 1. Configuration (as a method returning a Hash)
-def self.config # Or simply `config` depending on how Motia loads Ruby steps
+def self.config # Or simply `config` depending on how Mota loads Ruby steps
   {
     type: 'event',
     name: 'my_ruby_step',
@@ -115,7 +115,7 @@ end
 
 # 2. Handler (as a method)
 # 'input_payload' is the data from the triggering event.
-# 'motia_context' provides access to Motia utilities.
+# 'motia_context' provides access to Mota utilities.
 def self.handler(input_payload, motia_context) # Or simply `handler`
   motia_context.logger.info("Ruby step received: #{input_payload.inspect}", trace_id: motia_context.trace_id)
   
@@ -139,11 +139,11 @@ Consistent naming helps in organizing and understanding your project:
 
 -   **Descriptive Step Names**: Choose names that clearly indicate the step's function (e.g., `process-payment`, `send-user-notification`, `generate-daily-report`).
 -   **File Naming**: Use kebab-case for step filenames (e.g., `my-cool-step.step.ts`).
--   **Extension**: Include `.step` before the language extension in the filename (e.g., `process-user.step.ts`, `data-validator.step.py`, `report-generator.step.rb`). This helps Motia identify step files.
+-   **Extension**: Include `.step` before the language extension in the filename (e.g., `process-user.step.ts`, `data-validator.step.py`, `report-generator.step.rb`). This helps Mota identify step files.
 
 ## Context Object
 
-Every step handler function receives a `context` object (often named `ctx` in Python or `context` in Ruby) as its second argument (after the `input` data, if any). This object is your gateway to interacting with the Motia runtime and provides several essential utilities:
+Every step handler function receives a `context` object (often named `ctx` in Python or `context` in Ruby) as its second argument (after the `input` data, if any). This object is your gateway to interacting with the Mota runtime and provides several essential utilities:
 
 ```typescript
 // TypeScript: Destructuring the context object for common utilities.
@@ -160,7 +160,7 @@ Every step handler function receives a `context` object (often named `ctx` in Py
     -   _Python_: `ctx.logger.info(f"Processing user: {user_id}"); ctx.logger.error("DB connection failed", exc_info=True)`
     -   _Ruby_: `context.logger.info("Processing order #{order_id}"); context.logger.error("API call failed: #{error.message}")`
 
--   **`state`**: An object providing methods (`get`, `set`, `delete`, `clear`) to interact with Motia's state management system. State is scoped by `traceId`, meaning data stored by one flow instance is isolated from others.
+-   **`state`**: An object providing methods (`get`, `set`, `delete`, `clear`) to interact with Mota's state management system. State is scoped by `traceId`, meaning data stored by one flow instance is isolated from others.
     -   _TypeScript_: `await state.set(traceId, 'userPreferences', prefs); const userPrefs = await state.get(traceId, 'userPreferences');`
     -   _Python_: `await ctx.state.set(ctx.trace_id, "user_prefs", prefs); user_prefs = await ctx.state.get(ctx.trace_id, "user_prefs")`
     -   _Ruby_: `context.state.set(context.trace_id, :user_prefs, prefs); user_prefs = context.state.get(context.trace_id, :user_prefs)`
@@ -188,7 +188,7 @@ This template provides a basic structure for creating a new Event Step in TypeSc
 
 **TypeScript:**
 ```typescript
-// Import necessary Motia types and Zod for schema validation.
+// Import necessary Mota types and Zod for schema validation.
 import { EventConfig, Handlers, FlowContext } from 'motia';
 import { z } from 'zod';
 

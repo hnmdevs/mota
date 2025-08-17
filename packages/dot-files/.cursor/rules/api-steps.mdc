@@ -1,8 +1,8 @@
 ---
 <<<<<<< HEAD
-description: How to create basic API Steps in Motia
+description: How to create basic API Steps in Mota
 =======
-description: What are Motia API Steps and a Typescript example
+description: What are Mota API Steps and a Typescript example
 globs: 
 alwaysApply: false
 ---
@@ -13,7 +13,7 @@ API Steps expose HTTP endpoints that can trigger workflows and emit events.
 ## Basic API Step Pattern
 ```typescript
 // Import necessary types and libraries
-import { ApiRouteConfig, Handlers } from 'motia'; // Core Motia types for API steps
+import { ApiRouteConfig, Handlers } from 'motia'; // Core Mota types for API steps
 import { z } from 'zod'; // Zod library for data validation
 
 // Define the configuration for the API Step
@@ -44,7 +44,7 @@ export const config: ApiRouteConfig = {
 // The second argument is the context object, providing access to 'emit' (for sending messages) and 'logger'.
 export const handler: Handlers['create-user'] = async (req, { emit, logger }) => {
   // Destructure the validated request body. Zod validation happens before the handler is called.
-  // If validation fails, Motia automatically sends a 400 Bad Request response.
+  // If validation fails, Mota automatically sends a 400 Bad Request response.
   const { name, email } = req.body;
   
   // Use the logger for structured logging. It's good practice to log key events or data.

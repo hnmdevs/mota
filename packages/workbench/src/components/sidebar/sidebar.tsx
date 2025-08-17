@@ -1,4 +1,4 @@
-import { Panel, type PanelProps } from '@motiadev/ui'
+import { Panel, type PanelProps } from '@imoogle/ui'
 import { createPortal } from 'react-dom'
 import { FC, useEffect, useMemo } from 'react'
 import { useResizable } from 'react-use-resizable'

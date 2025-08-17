@@ -1,10 +1,10 @@
-# Motia Docker
+# Mota Docker
 
 <p align="center">
 <img src="./assets/motia-docker.png" alt="motia docker">
 </p>
 
-This repository contains the Dockerfile and related files for building the motia-docker image, which can be used to run a Motia application in a Docker container. It provides all of the required dependencies to run a Motia application inside a Docker container.
+This repository contains the Dockerfile and related files for building the motia-docker image, which can be used to run a Mota application in a Docker container. It provides all of the required dependencies to run a Mota application inside a Docker container.
 
 ## Usage
 
@@ -24,7 +24,7 @@ COPY . .
 
 # Enable the following lines if you are using python steps!!!
 # Setup python steps dependencies
-# RUN npx motia@latest install
+# RUN npx mota@latest install
 
 # Expose outside access to the motia project
 EXPOSE 3000
@@ -43,7 +43,7 @@ You can use the `templates/.dockerignore.sample` file as a template for your `.d
 docker build -t motia-app .
 ```
 
-## Run your Motia application
+## Run your Mota application
 
 Once you've built your image, you can run it using the following command:
 
@@ -53,7 +53,7 @@ docker run -it --rm -p 3000:3000 motia-app
 
 > Replace the port and the name of your image accordingly this is just an example
 
-You are set to go! Your Motia application should now be running inside a Docker container, you can access it at `http://localhost:3000` (replace the port if you used a different one).
+You are set to go! Your Mota application should now be running inside a Docker container, you can access it at `http://localhost:3000` (replace the port if you used a different one).
 
 ## Contributing
 

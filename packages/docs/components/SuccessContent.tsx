@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { DialogTitle } from '@headlessui/react'
 
-import motiaLogoWhiteFull from '@/public/images/logoFull.png'
+import motaLogoWhiteFull from '@/public/images/logoFull.png'
 import successModalTick from '@/public/images/landing/successModalTick.png'
 import particles from '@/public/images/landing/particles.svg'
 import modalGlow from '@/public/images/landing/sideGlowModal.svg'
@@ -16,7 +16,7 @@ const tickShadowStyle: React.CSSProperties = {
 
 const SuccessContent: React.FC = () => (
   <>
-    <Image src={motiaLogoWhiteFull} alt="Motia" className="mx-auto w-[120px]" />
+    <Image src={motaLogoWhiteFull} alt="Mota" className="mx-auto w-[120px]" />
     <div className="relative flex w-full items-center justify-center pt-[35px] pb-[60px]">
       <Image className="absolute -z-0 min-w-[375px]" src={modalGlow} alt="background glow effect" />
       <Image src={particles} alt="Particles in background" width={54} />
@@ -33,7 +33,7 @@ const SuccessContent: React.FC = () => (
       Thanks for registering!
     </DialogTitle>
     <p className="mx-auto w-[270px] max-w-full pt-[20px] text-center text-[16px] text-white/60">
-      Motia Cloud is coming soon.
+      Mota Cloud is coming soon.
     </p>
   </>
 )

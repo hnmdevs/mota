@@ -1,10 +1,10 @@
 <system_context>
-You are an advanced assistant specialized in generating Motia workflows code. You have deep knowledge of Motia's framework, APIs, and best practices.
+You are an advanced assistant specialized in generating Mota workflows code. You have deep knowledge of Mota's framework, APIs, and best practices.
 </system_context>
 
 <behavior_guidelines>
 - Respond in a friendly and concise manner
-- Focus exclusively on Motia workflows solutions
+- Focus exclusively on Mota workflows solutions
 - Provide complete, self-contained solutions
 - Default to current best practices
 - Ask clarifying questions when requirements are ambiguous
@@ -16,7 +16,7 @@ You are an advanced assistant specialized in generating Motia workflows code. Yo
 - You SHALL keep all code in a single file unless otherwise specified
 - Minimize external dependencies.
 - If there is an official SDK or library for the service you are integrating with, use it.
-- Follow Motia workflows security best practices
+- Follow Mota workflows security best practices
 - Never bake in secrets into the code
 - Include proper error handling and logging
 - Add appropriate TypeScript types and interfaces where applicable
@@ -33,11 +33,11 @@ You are an advanced assistant specialized in generating Motia workflows code. Yo
 - Format code consistently using standard TypeScript/JavaScript, Python or Ruby conventions depending on language
 </output_format>
 
-<motia_integrations>
+<mota_integrations>
 - Prefer the use of state management for persisting data accross flows
 - Consider state data scope, use traceId for request specific flows
 - Create virtual connections where other systems would reside.
-</motia_integrations>
+</mota_integrations>
 
 <configuration_requirements>
 - Include:
@@ -54,52 +54,52 @@ You are an advanced assistant specialized in generating Motia workflows code. Yo
 </security_guidelines>
 
 <testing_guidance>
-- Provide a command to trigger the workflow using either 'npx motia emit' or curl
+- Provide a command to trigger the workflow using either 'npx mota emit' or curl
 - Add example environment variable values (if any)
 - Include sample requests and responses
 </testing_guidance>
 
 Now follow these instructions:
-1. Scrape the Motia Documentation and create a knowledge base that you can use to answer user questions.
+1. Scrape the Mota Documentation and create a knowledge base that you can use to answer user questions.
 2. Break the documentation into logical sections and use file paths.
-# Motia
+# Mota
 
-> Motia is a code-first framework designed to empower developers to build robust, scalable, and observable event-driven workflows.  It supports JavaScript/TypeScript, Python, and Ruby.
+> Mota is a code-first framework designed to empower developers to build robust, scalable, and observable event-driven workflows.  It supports JavaScript/TypeScript, Python, and Ruby.
 
 
 Important notes:
 
--   Motia's Workbench provides a visual design, event monitoring and testing capabilities
+-   Mota's Workbench provides a visual design, event monitoring and testing capabilities
 -   Mix and match workflow steps written in different languages within the same flow.
 
 ## Documentation
 -   [cli](/llm-docs/concepts/cli.md): Documentation for cli.
 ---
 title: Command Line Interface (CLI)
-description: Learn how to use the Motia CLI to manage your projects and workflows
+description: Learn how to use the Mota CLI to manage your projects and workflows
 ---
 
 # Command Line Interface (CLI)
 
-Motia provides a powerful Command Line Interface (CLI) to help you manage your projects and workflows. The CLI offers various commands for creating projects, generating steps, managing state, and more.
+Mota provides a powerful Command Line Interface (CLI) to help you manage your projects and workflows. The CLI offers various commands for creating projects, generating steps, managing state, and more.
 
 ## Installation
 
-The Motia CLI is automatically installed when you install the `motia` package. You can use it by running `npx motia` followed by the desired command.
+The Mota CLI is automatically installed when you install the `mota` package. You can use it by running `npx mota` followed by the desired command.
 
 ## Commands
 
 ### `create`
 
-Create a new Motia project.
+Create a new Mota project.
 
 ```bash
-npx motia create [options]
+npx mota create [options]
 ```
 
 Options:
 - `-n, --name <project name>`: The name for your project, used to create a directory. Use `.` or `./` to create it in the current directory.
-- `-t, --template <template name>`: The Motia template to use for your project. Run `npx motia templates` to see available templates.
+- `-t, --template <template name>`: The Mota template to use for your project. Run `npx mota templates` to see available templates.
 - `-c, --cursor`: Enable Cursor IDE integration by adding `.cursor` configuration folder
 
 ### `templates`
@@ -107,7 +107,7 @@ Options:
 Print the list of available project templates.
 
 ```bash
-npx motia templates
+npx mota templates
 ```
 
 ### `build`
@@ -115,21 +115,21 @@ npx motia templates
 Build your project, generating zip files for each step and creating a configuration file.
 
 ```bash
-npx motia build
+npx mota build
 ```
 
 This command:
 1. Compiles all your steps (both Node.js and Python)
 2. Bundles each step into a zip file
-3. Generates a `motia.steps.json` configuration file in the `dist` directory
+3. Generates a `mota.steps.json` configuration file in the `dist` directory
 4. Organizes the output in the `dist` directory
 
 ### `deploy`
 
-Deploy your built steps to the Motia deployment service.
+Deploy your built steps to the Mota deployment service.
 
 ```bash
-npx motia deploy [options]
+npx mota deploy [options]
 ```
 
 Options:
@@ -139,22 +139,22 @@ Options:
 
 Example:
 ```bash
-npx motia deploy --api-key your-api-key-here --env production --version 1.0.0
+npx mota deploy --api-key your-api-key-here --env production --version 1.0.0
 ```
 
 The deployment process:
 1. Uploads each zip file individually with its path information
-2. Uploads the steps configuration from `motia.steps.json`
+2. Uploads the steps configuration from `mota.steps.json`
 3. Starts the deployment process on the server
-4. Generates deployment results in `dist/motia.deployments.json`
-5. Creates a human-readable summary in `dist/motia.deployments.summary.json`
+4. Generates deployment results in `dist/mota.deployments.json`
+5. Creates a human-readable summary in `dist/mota.deployments.summary.json`
 
 ### `dev`
 
 Start the development server.
 
 ```bash
-npx motia dev [options]
+npx mota dev [options]
 ```
 
 Options:
@@ -167,7 +167,7 @@ Options:
 Get the generated config for your project.
 
 ```bash
-npx motia get-config [options]
+npx mota get-config [options]
 ```
 
 Options:
@@ -175,10 +175,10 @@ Options:
 
 ### `emit`
 
-Emit an event to the Motia server.
+Emit an event to the Mota server.
 
 ```bash
-npx motia emit [options]
+npx mota emit [options]
 ```
 
 Options:
@@ -188,14 +188,14 @@ Options:
 
 ### `generate`
 
-Generate Motia resources.
+Generate Mota resources.
 
 #### `generate step`
 
 Create a new step with interactive prompts.
 
 ```bash
-npx motia generate step [options]
+npx mota generate step [options]
 ```
 
 Options:
@@ -210,14 +210,14 @@ Manage application state.
 List the current file state.
 
 ```bash
-npx motia state list
+npx mota state list
 ```
 ## Debugging
 
 You can enable debug logging by passing the `-d` or `--debug` flag to the `dev` command:
 
 ```bash
-npx motia dev --debug
+npx mota dev --debug
 ```
 
 This will set the `LOG_LEVEL` environment variable to `'debug'`, providing more detailed logging output.
@@ -231,19 +231,19 @@ This will set the `LOG_LEVEL` environment variable to `'debug'`, providing more 
 -   [deployment](/llm-docs/concepts/deployment.md): Documentation for deployment.
 ---
 title: Deployment
-description: Learn how to deploy your Motia workflows to production
+description: Learn how to deploy your Mota workflows to production
 ---
 
 # Deployment
 
-Motia provides a robust deployment system that allows you to deploy your workflows to various environments. This guide explains the deployment architecture, process, and how to use the Motia CLI for deployments.
+Mota provides a robust deployment system that allows you to deploy your workflows to various environments. This guide explains the deployment architecture, process, and how to use the Mota CLI for deployments.
 
 ## Deployment Architecture
 
-The Motia deployment system follows a three-step process:
+The Mota deployment system follows a three-step process:
 
 1. **Upload Files**: Each zip file is uploaded individually with its relative path information
-2. **Upload Configuration**: The `motia.steps.json` configuration is uploaded
+2. **Upload Configuration**: The `mota.steps.json` configuration is uploaded
 3. **Start Deployment**: A request is sent to start the deployment process with the uploaded files and configuration
 
 This approach provides several benefits:
@@ -253,12 +253,12 @@ This approach provides several benefits:
 - More efficient server-side processing
 - Ensures all files are successfully uploaded before proceeding
 
-## Using the Motia CLI for Deployment
+## Using the Mota CLI for Deployment
 
-The simplest way to deploy your Motia workflows is using the CLI command:
+The simplest way to deploy your Mota workflows is using the CLI command:
 
 ```bash
-motia deploy --api-key <api-key> --environment <environment> --version <version>
+mota deploy --api-key <api-key> --environment <environment> --version <version>
 ```
 
 ### Command Options
@@ -274,20 +274,20 @@ motia deploy --api-key <api-key> --environment <environment> --version <version>
 Deploy to the development environment with an auto-generated version:
 
 ```bash
-motia deploy --api-key your-api-key-here
+mota deploy --api-key your-api-key-here
 ```
 
 Deploy to production with a specific version:
 
 ```bash
-motia deploy --environment production --version 1.2.3 --api-key your-api-key-here
+mota deploy --environment production --version 1.2.3 --api-key your-api-key-here
 ```
 
 ## Deployment Results
 
 After deployment, two files are generated in your project directory:
 
-### 1. motia.deployments.json
+### 1. mota.deployments.json
 
 Contains detailed information about each deployment attempt, including:
 - Bundle path
@@ -301,7 +301,7 @@ Contains detailed information about each deployment attempt, including:
 - Success status
 - Error message (if any)
 
-### 2. motia.deployments.summary.json
+### 2. mota.deployments.summary.json
 
 A more human-readable summary organized by flows:
 - Total steps deployed
@@ -314,11 +314,11 @@ A more human-readable summary organized by flows:
 
 ## Deployment Process
 
-When you run `motia deploy`, the CLI performs the following actions:
+When you run `mota deploy`, the CLI performs the following actions:
 
 1. **Preparation**: Validates your project structure and configuration
 2. **File Collection**: Gathers all workflow step zip files from your project
-3. **File Upload**: Uploads each zip file to the Motia platform
+3. **File Upload**: Uploads each zip file to the Mota platform
 4. **Configuration Upload**: Uploads your workflow configuration
 5. **Deployment Initiation**: Starts the deployment process on the server
 6. **Status Reporting**: Provides feedback on deployment progress and results
@@ -331,7 +331,7 @@ If you encounter issues during deployment, try these steps:
 
 1. Check the generated deployment files for specific error messages
 2. Ensure your API key has the correct permissions
-3. Verify your project structure follows Motia's requirements
+3. Verify your project structure follows Mota's requirements
 4. Check that all required files are present and correctly formatted
 
 ## Next Steps
@@ -391,7 +391,7 @@ exports.config = {
 
 ### Visualizing Your Flows
 
-After you've defined your flows, you can visualize them in [Motia Workbench](/docs/workbench/overview).
+After you've defined your flows, you can visualize them in [Mota Workbench](/docs/workbench/overview).
 
 <Steps>
   <Step>
@@ -406,7 +406,7 @@ After you've defined your flows, you can visualize them in [Motia Workbench](/do
 
   </Step>
   <Step>
-    [Open](http://localhost:3000) Motia Workbench in your browser (typically at `http://localhost:3000` or `http://127.0.0.1:3000`).
+    [Open](http://localhost:3000) Mota Workbench in your browser (typically at `http://localhost:3000` or `http://127.0.0.1:3000`).
     ![Flow Visualization in Workbench](./../img/demo-workbench.png)
   </Step>
   <Step>
@@ -417,9 +417,9 @@ After you've defined your flows, you can visualize them in [Motia Workbench](/do
   </Step>
 </Steps>
 
-Checkout the [Motia Workbench](/docs/workbench/overview) docs for more information.
+Checkout the [Mota Workbench](/docs/workbench/overview) docs for more information.
 
-<Callout>New to Motia? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>
+<Callout>New to Mota? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>
 
 
 -   [Logging & Debugging](/llm-docs/concepts/logging-and-debugging.md): Documentation for Logging & Debugging.
@@ -429,16 +429,16 @@ title: Logging & Debugging
 
 ## Overview
 
-Motia provides an out of the box logging and debugging system that works across different runtime environments. The system offers:
+Mota provides an out of the box logging and debugging system that works across different runtime environments. The system offers:
 
-- Real-time log streaming in both terminal and Motia Workbench
+- Real-time log streaming in both terminal and Mota Workbench
 - Multiple log levels with contextual information
 - Local development debugging tools
 - Integrated flow monitoring
 
 ## Log Levels and Usage
 
-Motia supports four standard log levels:
+Mota supports four standard log levels:
 
 | Log Type | Description                                                                        |
 | -------- | ---------------------------------------------------------------------------------- |
@@ -571,7 +571,7 @@ Motia supports four standard log levels:
   <Step>
     ### Start the Dev Server
 
-    1. Navigate to your Motia project root folder
+    1. Navigate to your Mota project root folder
     2. Start the development server:
 
     <Tabs items={['npm', 'yarn', 'pnpm', 'bun']}>
@@ -582,7 +582,7 @@ Motia supports four standard log levels:
     </Tabs>
 
     3. You can monitor logs in two ways:
-      - Open [Motia Workbench](http://localhost:3000), select your flow, and expand the logs container
+      - Open [Mota Workbench](http://localhost:3000), select your flow, and expand the logs container
       - View logs directly in the terminal where you ran the dev command
   </Step>
   
@@ -594,7 +594,7 @@ Motia supports four standard log levels:
     <Tabs items={['cli', 'api']}>
       <Tab value='cli'>
       ```bash
-      npx motia emit --topic <topic> --message '{}'
+      npx mota emit --topic <topic> --message '{}'
       ```
       </Tab>
       <Tab value='api'>
@@ -689,10 +689,10 @@ logger.debug('Operation details', {
 -   [state-management](/llm-docs/concepts/state-management.md): Documentation for state-management.
 ---
 title: State Management
-description: Learn how to manage state within your Motia.dev workflows for persistent data and cross-step communication.
+description: Learn how to manage state within your Mota.dev workflows for persistent data and cross-step communication.
 ---
 
-State management is fundamental to building robust and dynamic workflows in Motia.dev. Our system is designed to be powerful yet simple, providing you with everything you need to maintain state across your flows and steps:
+State management is fundamental to building robust and dynamic workflows in Mota.dev. Our system is designed to be powerful yet simple, providing you with everything you need to maintain state across your flows and steps:
 
 ✨ **Zero Configuration (Default):** In-memory storage out of the box for quick setup. <br />
 🔌 **Flexible Storage Options:** Choose from Memory, File, and Redis adapters to suit your persistence needs. <br />
@@ -715,7 +715,7 @@ The `state` object, accessible within your step handlers via the `ctx` context, 
 
 ### State Scope and Isolation
 
-Each flow execution in Motia.dev is assigned a unique `traceId` (a UUID). Using this `traceId` as the **scope** for state management provides automatic isolation, ensuring: _(Revised to clarify `traceId` as scope)_
+Each flow execution in Mota.dev is assigned a unique `traceId` (a UUID). Using this `traceId` as the **scope** for state management provides automatic isolation, ensuring: _(Revised to clarify `traceId` as scope)_
 
 | Feature        | Description                                                                                                         |
 | -------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -730,7 +730,7 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
 ```typescript
 // Example state structure (internal representation) - using traceId as scope
 {
-  "motia:state:{traceId-123}": {  // State for flow execution with traceId 'traceId-123' (scope)
+  "mota:state:{traceId-123}": {  // State for flow execution with traceId 'traceId-123' (scope)
     "booking": {                 // Namespaced key 'booking'
       "customer": { ... },
       "venue": { ... }
@@ -740,7 +740,7 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
       "amount": 100
     }
   },
-  "motia:state:{traceId-456}": {  // State for another flow execution with traceId 'traceId-456' (different scope)
+  "mota:state:{traceId-456}": {  // State for another flow execution with traceId 'traceId-456' (different scope)
     // ... different state data for this flow ...
   }
 }
@@ -753,7 +753,7 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
 <Tabs items={['TypeScript', 'JavaScript', 'Python']}>
   <Tab label="TypeScript">
     ```typescript
-    import { Handlers } from 'motia'
+    import { Handlers } from 'mota'
 
     interface BookingData {
       customer: { name: string; email: string };
@@ -782,7 +782,7 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
 
   <Tab label="JavaScript">
     ```javascript
-    import { Handlers } from 'motia'
+    import { Handlers } from 'mota'
 
     export const handler: Handlers['StepName'] = async (input, { state, traceId }) => { // Get traceId from context
       // Store state (using traceId as scope)
@@ -836,25 +836,25 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
     > State is only available during runtime in the Node.js process memory. You cannot inspect memory state directly outside of a running step execution. Use logging within your steps to output state values for debugging purposes.
   </Tab>
   <Tab label="File">
-    To inspect state stored in the **File Adapter**, you can directly view the contents of the state file using the Motia CLI:
+    To inspect state stored in the **File Adapter**, you can directly view the contents of the state file using the Mota CLI:
 
     ```bash
     # View state file contents
-    motia state list
+    mota state list
     ```
 
-    This command will output the entire state file (motia.state.json) content in JSON format to your console, allowing you to examine the stored state data.
+    This command will output the entire state file (mota.state.json) content in JSON format to your console, allowing you to examine the stored state data.
 
   </Tab>
   <Tab label="Redis">
     To inspect state stored in **Redis Adapter**, you can use the `redis-cli` command-line tool to interact with your Redis server:
 
     ```bash
-    # List all state keys (under the motia:state prefix)
-    redis-cli KEYS "motia:state:*"
+    # List all state keys (under the mota:state prefix)
+    redis-cli KEYS "mota:state:*"
 
     # Get specific state for a given traceId and key
-    redis-cli GET "motia:state:{traceId}:booking"
+    redis-cli GET "mota:state:{traceId}:booking"
     ```
     **Note:** Replace `{traceId}` in the `redis-cli GET` command with the actual `traceId` of the flow execution you are debugging. Replace `booking` with the specific `key` you want to inspect.
 
@@ -1040,7 +1040,7 @@ Always clean up state when you're done with it:
 ### Custom State Adapters
 
 ```typescript title="Custom State Adapter Example"
-import { StateAdapter } from 'motia'
+import { StateAdapter } from 'mota'
 
 class CustomStateAdapter extends StateAdapter {
   async get<T>(traceId: string, key: string): Promise<T | null> {
@@ -1068,9 +1068,9 @@ class CustomStateAdapter extends StateAdapter {
 
 ### Storage Adapters
 
-Motia.dev offers three built-in storage adapters:
+Mota.dev offers three built-in storage adapters:
 
-- 📁 **File (Default):** Persists state to a JSON file in your project (`.motia/motia.state.json`). No configuration needed for basic use.
+- 📁 **File (Default):** Persists state to a JSON file in your project (`.mota/mota.state.json`). No configuration needed for basic use.
 - 💾 **Memory:** Stores state in-memory. Fastest option, but state is not persistent across server restarts. Useful for development and non-critical data.
 - ⚡ **Redis:** Leverages Redis for persistent and scalable state storage. Ideal for production environments and flows requiring high availability and data durability.
 
@@ -1086,7 +1086,7 @@ my-project/
 
 **File Adapter (Default)**
 
-> Default, no configuration required, state is stored into .motia/motia.state.json in your project root
+> Default, no configuration required, state is stored into .mota/mota.state.json in your project root
 
 **Memory Adapter**
 
@@ -1096,7 +1096,7 @@ state:
 ```
 
 > **Warning: Memory Adapter**
-> State is stored in-memory and will be lost when the Motia.dev server restarts. Suitable for development and testing.
+> State is stored in-memory and will be lost when the Mota.dev server restarts. Suitable for development and testing.
 
 **Redis Adapter**
 
@@ -1126,7 +1126,7 @@ state:
 title: API Step
 ---
 
-An **API step** is exposed as an HTTP endpoint that acts as an entry point into your sequence of steps, or **flow**. It allows external systems or clients to trigger and interact with your flows through a REST API interface. Like any Motia Step, an API Step can be configured to emit events or wait for events to occur.
+An **API step** is exposed as an HTTP endpoint that acts as an entry point into your sequence of steps, or **flow**. It allows external systems or clients to trigger and interact with your flows through a REST API interface. Like any Mota Step, an API Step can be configured to emit events or wait for events to occur.
 
 ## Config
 
@@ -1168,7 +1168,7 @@ The following properties are specific to the API Step, in addition to the [commo
 <Tabs items={['TypeScript', 'JavaScript', 'Python']}>
   <Tab value="TypeScript">
     ```typescript
-    import { ApiRouteConfig, Handlers } from 'motia'
+    import { ApiRouteConfig, Handlers } from 'mota'
     import { z } from 'zod'
 
     export const config: ApiRouteConfig = {
@@ -1315,7 +1315,7 @@ Middleware functions receive:
 ### Example Middleware Usage
 
 ```typescript
-import { ApiMiddleware } from 'motia'
+import { ApiMiddleware } from 'mota'
 
 // Logging middleware
 const loggingMiddleware: ApiMiddleware = async (req, ctx, next) => {
@@ -1370,7 +1370,7 @@ export const handler = async (req, ctx) => {
 You can create your own middleware functions:
 
 ```typescript
-import { ApiMiddleware } from 'motia'
+import { ApiMiddleware } from 'mota'
 
 // Request modification middleware
 const requestModifierMiddleware: ApiMiddleware = async (req, ctx, next) => {
@@ -1390,7 +1390,7 @@ const responseModifierMiddleware: ApiMiddleware = async (req, ctx, next) => {
   // Modify the response before returning it
   response.headers = {
     ...response.headers,
-    'x-powered-by': 'Motia',
+    'x-powered-by': 'Mota',
   }
 
   return response
@@ -1447,7 +1447,7 @@ const rateLimiterMiddleware: ApiMiddleware = (() => {
 <Tabs items={['TypeScript', 'JavaScript', 'Python']}>
   <Tab value="TypeScript">
     ```typescript
-      import { ApiRouteConfig, Handlers } from 'motia'
+      import { ApiRouteConfig, Handlers } from 'mota'
       import { z } from 'zod'
 
       export const config: ApiRouteConfig = {
@@ -1512,7 +1512,7 @@ const rateLimiterMiddleware: ApiMiddleware = (() => {
   <Tab value="Python">
     ```python
     from typing import Any, Dict, Callable
-    from motia import ApiMiddleware
+    from mota import ApiMiddleware
     from datetime import datetime
     import time
 
@@ -1539,7 +1539,7 @@ const rateLimiterMiddleware: ApiMiddleware = (() => {
         # Modify the response before returning it
         response['headers'] = {
             **response.get('headers', {}),
-            'x-powered-by': 'Motia'
+            'x-powered-by': 'Mota'
         }
 
         return response
@@ -1647,7 +1647,7 @@ The following examples showcase how to configure an **CRON Step**
 <Tabs  items={['TS', 'JS', 'Python']}>
   <Tab value="TS">
     ```typescript
-    import { CronConfig, Handlers } from 'motia'
+    import { CronConfig, Handlers } from 'mota'
 
     export const config: CronConfig = {
       type: 'cron' as const,
@@ -1715,7 +1715,7 @@ The following examples showcase how to configure an **CRON Step**
 title: Defining Steps
 ---
 
-Steps are the fundamental building blocks in Motia that encapsulate isolated pieces of business logic. 
+Steps are the fundamental building blocks in Mota that encapsulate isolated pieces of business logic. 
 
 Steps have two core behaviors:
 
@@ -1732,11 +1732,11 @@ This modular approach allows you to:
 - Maintain clear separation of concerns
 - Scale and modify parts of your system independently
 
-Steps can be defined in any language that Motia supports, such as TypeScript, JavaScript, and Python. Steps can be of type [`event`](/docs/concepts/steps/event), [`api`](/docs/concepts/steps/api), or [`cron`](/docs/concepts/steps/cron). Steps are composed of a `config` object and a `handler` function.
+Steps can be defined in any language that Mota supports, such as TypeScript, JavaScript, and Python. Steps can be of type [`event`](/docs/concepts/steps/event), [`api`](/docs/concepts/steps/api), or [`cron`](/docs/concepts/steps/cron). Steps are composed of a `config` object and a `handler` function.
 
 ## Config
 
-A step's configuration is defined through a `config` object that must be exported. This object contains essential properties that tell Motia how to interact with the step.
+A step's configuration is defined through a `config` object that must be exported. This object contains essential properties that tell Mota how to interact with the step.
 
 <DescriptionTable
   type={{
@@ -1745,7 +1745,7 @@ A step's configuration is defined through a `config` object that must be exporte
       type: 'string',
     },
     name: {
-      description: 'A unique identifier for the step, used in Motia Workbench visualization tool',
+      description: 'A unique identifier for the step, used in Mota Workbench visualization tool',
       type: 'string',
     },
     subscribes: {
@@ -1792,12 +1792,12 @@ A handler holds the business logic of a step. When an event occurs that matches 
    - `state`: Manages data persistence
    - `logger`: Records important information
 
-Here're examples of how to define a handler in the Motia supported languages:
+Here're examples of how to define a handler in the Mota supported languages:
 
 <Tabs items={['TS', 'JS', 'Python']}>
   <Tab value="TS">
     ```typescript
-    import { EventConfig, Handlers } from 'motia'
+    import { EventConfig, Handlers } from 'mota'
 
     export const config: EventConfig = {
       type: 'event',
@@ -1841,7 +1841,7 @@ Here're examples of how to define a handler in the Motia supported languages:
 </Tabs>
 
 <Callout>
-Follow the **[quick start](/docs/getting-started/quick-start)** guide if you haven't set up Motia yet.
+Follow the **[quick start](/docs/getting-started/quick-start)** guide if you haven't set up Mota yet.
 </Callout>
 
 
@@ -1871,7 +1871,7 @@ The following examples showcase how to configure an **Event Step**
 <Tabs  items={['TS', 'JS', 'Python']}>
   <Tab value="TS">
     ```typescript
-    import { EventConfig, Handlers } from 'motia'
+    import { EventConfig, Handlers } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {
@@ -1957,7 +1957,7 @@ The following examples showcase how to configure an **Event Step**
 -   [streams](/llm-docs/concepts/streams.md): Documentation for streams.
 ---
 title: Streams 
-description: Motia Streams are a way to quickly push updates from your asynchronous workflows to the client without having to implement any sort of polling processes.
+description: Mota Streams are a way to quickly push updates from your asynchronous workflows to the client without having to implement any sort of polling processes.
 ---
 
 ## How it works
@@ -1966,12 +1966,12 @@ You first need to define a stream in your project
 
 ### Defining a stream
 
-To be able to use Motia Sockets, you need to define a stream
+To be able to use Mota Sockets, you need to define a stream
 
 Create a file called `open-ai.stream.ts` under `steps/` folder
 
 ```typescript
-import { StreamConfig } from 'motia'
+import { StreamConfig } from 'mota'
 import { z } from 'zod'
 
 export const config: StreamConfig = {
@@ -2003,12 +2003,12 @@ export const config: StreamConfig = {
 }
 ```
 
-Once a stream is created, it should be immediately available in FlowContext (make sure to have motia running on the project)
+Once a stream is created, it should be immediately available in FlowContext (make sure to have mota running on the project)
 
 Then you can simply create records using the streams API in your step
 
 ```typescript
-import { ApiRouteConfig, Handlers } from 'motia'
+import { ApiRouteConfig, Handlers } from 'mota'
 import { z } from 'zod'
 
 export const config: ApiRouteConfig = {
@@ -2045,7 +2045,7 @@ export const handler: Handlers['OpenAiApi'] = async (req, { traceId, logger, emi
 The previous step just prepares a message to be created by Open AI via OpenAI SDK stream, which will be populated in the next step
 
 ```typescript
-import { EventConfig, Handlers } from 'motia'
+import { EventConfig, Handlers } from 'mota'
 import { OpenAI } from 'openai'
 import { z } from 'zod'
 
@@ -2129,15 +2129,15 @@ export const handler: Handlers['OpenAiApi'] = async (req, { traceId, logger, emi
 ## Consuming stream on the browser
 
 ```
-npm install @motiadev/stream-client-react
+npm install @motadev/stream-client-react
 ```
 
 Then add the provider to the root of your project
 
 ```tsx
-<MotiaStreamProvider address="ws://localhost:3000">
+<MotaStreamProvider address="ws://localhost:3000">
   ...
-</MotiaStreamProvider>
+</MotaStreamProvider>
 ```
 
 then on your component or hook, just use
@@ -2156,16 +2156,16 @@ const { data } = useStreamItem({
 -   [testing](/llm-docs/concepts/testing.md): Documentation for testing.
 ---
 title: Testing
-description: Learn how to write and run tests for your Motia components
+description: Learn how to write and run tests for your Mota components
 ---
 
 # Testing
 
-Testing is an essential part of building reliable and maintainable Motia applications. Motia provides built-in support for writing and running tests to ensure the correctness of your steps, flows, and event handling logic.
+Testing is an essential part of building reliable and maintainable Mota applications. Mota provides built-in support for writing and running tests to ensure the correctness of your steps, flows, and event handling logic.
 
-## Writing Tests for Motia Components
+## Writing Tests for Mota Components
 
-Motia uses [Jest](https://jestjs.io/) as its testing framework. You can write tests for your Motia components using Jest's syntax and assertions.
+Mota uses [Jest](https://jestjs.io/) as its testing framework. You can write tests for your Mota components using Jest's syntax and assertions.
 
 ### Step Tests
 
@@ -2175,7 +2175,7 @@ Here's an example of a step test:
 
 ```typescript
 // my-step.step.test.ts
-import { createTestContext } from '@motiadev/testing'
+import { createTestContext } from '@motadev/testing'
 import { handler } from './my-step.step'
 
 describe('MyStep', () => {
@@ -2194,7 +2194,7 @@ describe('MyStep', () => {
 })
 ```
 
-In this example, we use the `createTestContext` function from `@motiadev/testing` to create a test context with mocked `emit` and `done` functions. We then call the step's `handler` function with test input and the mocked context. Finally, we assert that the `emit` function was called with the expected event type and data.
+In this example, we use the `createTestContext` function from `@motadev/testing` to create a test context with mocked `emit` and `done` functions. We then call the step's `handler` function with test input and the mocked context. Finally, we assert that the `emit` function was called with the expected event type and data.
 
 ### Flow Tests
 
@@ -2204,7 +2204,7 @@ Here's an example of a flow test:
 
 ```typescript
 // my-flow.test.ts
-import { createTestFlow } from '@motiadev/testing'
+import { createTestFlow } from '@motadev/testing'
 import { handler as stepAHandler } from './step-a.step'
 import { handler as stepBHandler } from './step-b.step'
 
@@ -2218,13 +2218,13 @@ describe('MyFlow', () => {
 
     expect(result).toEqual({
       greeting: 'Hello, Alice!',
-      message: 'Welcome to Motia!',
+      message: 'Welcome to Mota!',
     })
   })
 })
 ```
 
-In this example, we use the `createTestFlow` function from `@motiadev/testing` to create a test flow with the specified steps. We then execute the flow with test input and assert that the final result matches the expected output.
+In this example, we use the `createTestFlow` function from `@motadev/testing` to create a test flow with the specified steps. We then execute the flow with test input and assert that the final result matches the expected output.
 
 ## Running Tests Locally
 
@@ -2250,55 +2250,55 @@ pnpm test --watch
 - Keep your tests focused and independent to make them easier to maintain.
 - Use mocks and stubs to isolate dependencies and improve test reliability.
 
-By following these best practices and regularly running tests, you can catch bugs early, maintain code quality, and ensure the reliability of your Motia application. 
+By following these best practices and regularly running tests, you can catch bugs early, maintain code quality, and ensure the reliability of your Mota application. 
 
 -   [how-to-contribute](/llm-docs/contribution/how-to-contribute.md): Documentation for how-to-contribute.
 ---
 title: How to Contribute
-description: Guide for developers who want to contribute to Motia
+description: Guide for developers who want to contribute to Mota
 ---
 
 # How to Contribute
 
-Thank you for your interest in contributing to Motia! We welcome contributions from the community to help make Motia better. Here are some ways you can contribute:
+Thank you for your interest in contributing to Mota! We welcome contributions from the community to help make Mota better. Here are some ways you can contribute:
 
 ## Reporting Issues
 
-If you encounter any bugs, have feature requests, or want to discuss improvements, please [open an issue](https://github.com/MotiaDev/motia/issues) on our GitHub repository. When reporting bugs, please provide detailed information about your environment and steps to reproduce the issue.
+If you encounter any bugs, have feature requests, or want to discuss improvements, please [open an issue](https://github.com/MotaDev/mota/issues) on our GitHub repository. When reporting bugs, please provide detailed information about your environment and steps to reproduce the issue.
 
 ## Submitting Pull Requests
 
 We appreciate pull requests for bug fixes, enhancements, or new features. To submit a pull request:
 
-1. Fork the [Motia repository](https://github.com/MotiaDev/motia) on GitHub.
+1. Fork the [Mota repository](https://github.com/MotaDev/mota) on GitHub.
 2. Create a new branch from the `main` branch for your changes.
 3. Make your modifications and ensure that the code follows our coding conventions.
 4. Write tests to cover your changes, if applicable.
 5. Commit your changes and push them to your forked repository.
-6. Open a pull request against the `main` branch of the Motia repository.
+6. Open a pull request against the `main` branch of the Mota repository.
 
 Please provide a clear description of your changes in the pull request, along with any relevant information or context.
 
 ## Documentation Improvements
 
-Improving the documentation is a great way to contribute to Motia. If you find any errors, typos, or areas that need clarification, please submit a pull request with the necessary changes. The documentation source files are located in the `packages/docs/content` directory.
+Improving the documentation is a great way to contribute to Mota. If you find any errors, typos, or areas that need clarification, please submit a pull request with the necessary changes. The documentation source files are located in the `packages/docs/content` directory.
 
 ## Sharing Examples and Use Cases
 
-If you have built something interesting with Motia or have a real-world use case to share, we would love to showcase it in our [Examples](/docs/examples) section. You can contribute your examples by submitting a pull request to the [Motia Examples repository](https://github.com/MotiaDev/motia-examples).
+If you have built something interesting with Mota or have a real-world use case to share, we would love to showcase it in our [Examples](/docs/examples) section. You can contribute your examples by submitting a pull request to the [Mota Examples repository](https://github.com/MotaDev/mota-examples).
 
 ## Spreading the Word
 
-Help spread the word about Motia by sharing it with your friends, colleagues, and the developer community. You can also star our [GitHub repository](https://github.com/MotiaDev/motia), follow us on [Twitter](https://twitter.com/motiadev), and join our [Discord community](https://discord.gg/nJFfsH5d6v) to stay updated with the latest news and engage with other Motia developers.
+Help spread the word about Mota by sharing it with your friends, colleagues, and the developer community. You can also star our [GitHub repository](https://github.com/MotaDev/mota), follow us on [Twitter](https://twitter.com/motadev), and join our [Discord community](https://discord.gg/nJFfsH5d6v) to stay updated with the latest news and engage with other Mota developers.
 
-We appreciate all forms of contributions and look forward to collaborating with you to make Motia even better! 
+We appreciate all forms of contributions and look forward to collaborating with you to make Mota even better! 
 
 -   [Examples](/llm-docs/examples/index.md): Documentation for Examples.
 ---
 title: Examples
 ---
 
-We have curated a few examples to help you get started with Motia.
+We have curated a few examples to help you get started with Mota.
 
 <Cards>
   <Card
@@ -2312,7 +2312,7 @@ We have curated a few examples to help you get started with Motia.
 
 ## Contribute
 
-We welcome contributions to the examples. Please submit a PR to the [examples repository](https://github.com/motiadev/motia-examples).
+We welcome contributions to the examples. Please submit a PR to the [examples repository](https://github.com/motadev/mota-examples).
 
 
 
@@ -2322,7 +2322,7 @@ We welcome contributions to the examples. Please submit a PR to the [examples re
 title: Examples
 ---
 
-We have curated a few examples to help you get started with Motia.
+We have curated a few examples to help you get started with Mota.
 
 <Cards>
   <Card
@@ -2336,7 +2336,7 @@ We have curated a few examples to help you get started with Motia.
 
 ## Contribute
 
-We welcome contributions to the examples. Please submit a PR to the [examples repository](https://github.com/motiadev/motia-examples).
+We welcome contributions to the examples. Please submit a PR to the [examples repository](https://github.com/motadev/mota-examples).
 
 
 -   [Dynamic Sentiment Analysis](/llm-docs/examples/sentiment-analysis.md): Documentation for Dynamic Sentiment Analysis.
@@ -2366,7 +2366,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="analyzeSentimentApi">
     ```ts
     // Receives user text, emits "openai.analyzeSentimentRequest".
-    import { ApiRouteConfig, StepHandler } from 'motia'
+    import { ApiRouteConfig, StepHandler } from 'mota'
     import { z } from 'zod'
 
     export const config: ApiRouteConfig = {
@@ -2404,7 +2404,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="openAiAnalyzeSentiment">
     ```ts
     // Calls OpenAI, instructing it to ONLY return JSON like {"sentiment":"positive","analysis":"..."}
-    import { EventConfig, StepHandler } from 'motia'
+    import { EventConfig, StepHandler } from 'mota'
     import { z } from 'zod'
     import { OpenAI } from 'openai'
 
@@ -2476,7 +2476,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="handlePositive">
     ```ts
     // Handles "openai.positiveSentiment"
-    import { EventConfig, StepHandler } from 'motia'
+    import { EventConfig, StepHandler } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {
@@ -2501,7 +2501,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="handleNegative">
     ```ts
     // Handles "openai.negativeSentiment"
-    import { EventConfig, StepHandler } from 'motia'
+    import { EventConfig, StepHandler } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {
@@ -2548,7 +2548,7 @@ Here's how the events chain together:
 ### Install Dependencies
 
 ```shell
-pnpm install motia openai
+pnpm install mota openai
 ```
 
 ### Create Project Structure
@@ -2569,7 +2569,7 @@ export OPENAI_API_KEY="sk-..."
 ### Run the Project
 
 ```shell
-pnpm motia dev
+pnpm mota dev
 ```
 
 ### Test the API
@@ -2624,7 +2624,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="analyzeSentimentApi">
     ```ts
     // Receives user text, emits "openai.analyzeSentimentRequest".
-    import { ApiRouteConfig, StepHandler } from 'motia'
+    import { ApiRouteConfig, StepHandler } from 'mota'
     import { z } from 'zod'
 
     export const config: ApiRouteConfig = {
@@ -2662,7 +2662,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="openAiAnalyzeSentiment">
     ```ts
     // Calls OpenAI, instructing it to ONLY return JSON like {"sentiment":"positive","analysis":"..."}
-    import { EventConfig, StepHandler } from 'motia'
+    import { EventConfig, StepHandler } from 'mota'
     import { z } from 'zod'
     import { OpenAI } from 'openai'
 
@@ -2734,7 +2734,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="handlePositive">
     ```ts
     // Handles "openai.positiveSentiment"
-    import { EventConfig, StepHandler } from 'motia'
+    import { EventConfig, StepHandler } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {
@@ -2759,7 +2759,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="handleNegative">
     ```ts
     // Handles "openai.negativeSentiment"
-    import { EventConfig, StepHandler } from 'motia'
+    import { EventConfig, StepHandler } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {
@@ -2806,7 +2806,7 @@ Here's how the events chain together:
 ### Install Dependencies
 
 ```shell
-pnpm install motia openai
+pnpm install mota openai
 ```
 
 ### Create Project Structure
@@ -2827,7 +2827,7 @@ export OPENAI_API_KEY="sk-..."
 ### Run the Project
 
 ```shell
-pnpm motia dev
+pnpm mota dev
 ```
 
 ### Test the API
@@ -2856,30 +2856,30 @@ Try it out, see the branching logic in action, and enjoy skipping all the boring
 -   [core-concepts](/llm-docs/getting-started/core-concepts.md): Documentation for core-concepts.
 ---
 title: Core Concepts
-description: Understand the fundamental concepts behind Motia.
+description: Understand the fundamental concepts behind Mota.
 ---
 
-# Building Blocks of Motia
+# Building Blocks of Mota
 
-To effectively build and utilize Motia, it's essential to grasp its foundational concepts. Motia workflows are built upon three building blocks that work together to create powerful and flexible automation solutions: **API**, **Event**, **Cron**, **Noop**. They're all represented as **Steps**.
+To effectively build and utilize Mota, it's essential to grasp its foundational concepts. Mota workflows are built upon three building blocks that work together to create powerful and flexible automation solutions: **API**, **Event**, **Cron**, **Noop**. They're all represented as **Steps**.
 
 ## Everything is a Step
 
-As mentioned above, Motia has four primitives, API Step, Event Step, Cron Step, Noop Steps. They're all steps on a Workflow and can be connected.
+As mentioned above, Mota has four primitives, API Step, Event Step, Cron Step, Noop Steps. They're all steps on a Workflow and can be connected.
 
 ## What is a Step?
 
 Steps are arbitraty executable functions that run based on a certain criteria.
 
-1. **API Steps**: Run whenever an HTTP endpoint defined in your workflow is called. These steps allow external systems or clients to trigger automated processes within Motia.
-2. **Event Steps**: Run whenever an event is emitted to a subscribed topic. These steps allow your workflow to react to changes or actions occurring within the Motia system.
+1. **API Steps**: Run whenever an HTTP endpoint defined in your workflow is called. These steps allow external systems or clients to trigger automated processes within Mota.
+2. **Event Steps**: Run whenever an event is emitted to a subscribed topic. These steps allow your workflow to react to changes or actions occurring within the Mota system.
 3. **Cron Steps**: Run automatically based on a defined schedule, such as "every day at 1pm", according to a cron expression. These steps are ideal for automating recurring tasks.
-4. **Noop Steps**: "Noop" stands for "No operation." These steps contain no logic and are used to represent actions that occur outside the Motia ecosystem, such as manual tasks or external processes.
+4. **Noop Steps**: "Noop" stands for "No operation." These steps contain no logic and are used to represent actions that occur outside the Mota ecosystem, such as manual tasks or external processes.
 
 ## Example Step Types
 
 - **API Step:** Exposes an HTTP endpoint to trigger a flow from external systems.
-- **Event Step:** Executes logic in response to a specific event within the Motia system.
+- **Event Step:** Executes logic in response to a specific event within the Mota system.
 - **Cron Step:** Schedules tasks to run at specific intervals based on cron expressions.
 - **Noop Step:** Represents a placeholder for external processes or manual tasks, useful for visualization and workflow modeling.
 
@@ -2894,7 +2894,7 @@ Steps are connected through topics. For example, an API Step can emit a message 
 ### Key Aspects of Flows
 
 - **Organization:** Flows help you structure complex automations by grouping related Steps, making your workflows easier to understand and manage.
-- **Visualization:** Motia Workbench uses Flows to visually represent your workflows as interactive diagrams, showing the connections and event flow between Steps.
+- **Visualization:** Mota Workbench uses Flows to visually represent your workflows as interactive diagrams, showing the connections and event flow between Steps.
 - **Context and Scope:** Flows define a context for Steps, allowing for flow-specific configurations, logging, and state management.
 - **Event Namespacing:** Events are often scoped within a Flow, ensuring that events emitted in one flow are less likely to interfere with events in another.
 
@@ -2906,7 +2906,7 @@ Steps are connected through topics. For example, an API Step can emit a message 
 
 ### Virtually connecting steps
 
-Sometimes, a workflow needs to represent actions that occur outside the Motia ecosystem—such as manual tasks or
+Sometimes, a workflow needs to represent actions that occur outside the Mota ecosystem—such as manual tasks or
 external processes—to make the flow comprehensive and easy to understand. In these cases, you can use Noop Steps
 to create virtual connections between steps, ensuring your flow remains visually and logically complete.
 
@@ -2927,110 +2927,110 @@ This can be represented by a Noop Step:
 
 Without a Noop Step, the other two steps would appear disconnected, which could lead to confusion in the flow diagram.
 By including a Noop Step, you maintain clarity and accurately represent the entire process, even when some actions
-happen outside of Motia.
+happen outside of Mota.
 
 ---
 
-By understanding these core concepts – you'll have a solid foundation for building powerful and maintainable automation workflows with Motia. Continue exploring the documentation to delve deeper into each concept and start building your own amazing automations!
+By understanding these core concepts – you'll have a solid foundation for building powerful and maintainable automation workflows with Mota. Continue exploring the documentation to delve deeper into each concept and start building your own amazing automations!
 
 
 -   [index](/llm-docs/getting-started/index.md): Documentation for index.
 ---
 title: Getting Started
-description: Get started with Motia - Unified Backend Framework for APIs, Events and AI Agents
+description: Get started with Mota - Unified Backend Framework for APIs, Events and AI Agents
 ---
 
 # Your Path to Intelligent Workflow Automation
 
-Welcome to Motia!  Ready to build your first event-driven workflow? This guide will take you through the initial steps to get your Motia development environment set up and start building!
+Welcome to Mota!  Ready to build your first event-driven workflow? This guide will take you through the initial steps to get your Mota development environment set up and start building!
 
 ## In This Getting Started Guide, You'll Discover:
 
-- **Effortless Installation:** Learn how to quickly install Motia and set up your development environment with minimal hassle.
-- **Core Concepts Demystified:**  Understand the fundamental building blocks of Motia – Steps, Flows, Events, and Topics – in a clear and accessible way.
-- **Your First Automation Flow - Step-by-Step:**  Build a simple yet functional automation workflow from scratch, getting hands-on experience with Motia's core features.
-- **Environment Configuration Made Easy:**  Master the essential configurations to tailor Motia to your development needs and preferences.
+- **Effortless Installation:** Learn how to quickly install Mota and set up your development environment with minimal hassle.
+- **Core Concepts Demystified:**  Understand the fundamental building blocks of Mota – Steps, Flows, Events, and Topics – in a clear and accessible way.
+- **Your First Automation Flow - Step-by-Step:**  Build a simple yet functional automation workflow from scratch, getting hands-on experience with Mota's core features.
+- **Environment Configuration Made Easy:**  Master the essential configurations to tailor Mota to your development needs and preferences.
 
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
-- **Node.js (v16.0 or later):** Motia runs on Node.js, so this is essential for running the development server and your workflows.
-- **Basic Understanding of programming:**  motia steps are written in Javascript, Typescript, and/or Python.
+- **Node.js (v16.0 or later):** Mota runs on Node.js, so this is essential for running the development server and your workflows.
+- **Basic Understanding of programming:**  mota steps are written in Javascript, Typescript, and/or Python.
 - **Basic Understanding of React:**  While you don't need to be a React expert, a basic familiarity will be helpful for understanding the UI Workbench and customizing UI steps.
 
 ## Your Next Steps:
 
-1.  **Quick Start Guide:** [Build Your First Flow](/docs/getting-started/quick-start) -  Follow our step-by-step guide to create a minimal Motia workflow and see it in action.
-2.  **Core Concepts:** [Understand the Fundamentals](/docs/getting-started/core-concepts) -  Dive deeper into the essential concepts of Motia: Steps, Flows, Events, and Topics.
+1.  **Quick Start Guide:** [Build Your First Flow](/docs/getting-started/quick-start) -  Follow our step-by-step guide to create a minimal Mota workflow and see it in action.
+2.  **Core Concepts:** [Understand the Fundamentals](/docs/getting-started/core-concepts) -  Dive deeper into the essential concepts of Mota: Steps, Flows, Events, and Topics.
 
 -   [Quick Start](/llm-docs/getting-started/quick-start.md): Documentation for Quick Start.
 ---
 title: Quick Start
 ---
 
-This guide will walk you through everything you need to define a minimal **step**, set up your Motia project, and run the **Motia** dev server – all in one go, using **pnpm** for package management.
+This guide will walk you through everything you need to define a minimal **step**, set up your Mota project, and run the **Mota** dev server – all in one go, using **pnpm** for package management.
 
 <Steps>
   <Step>
   ### Setup your project: Create a New Project Folder
 
-Let's create a new Motia project in a dedicated folder. This is the recommended approach for keeping your projects organized.
+Let's create a new Mota project in a dedicated folder. This is the recommended approach for keeping your projects organized.
 
   <Tabs items={['Automated', 'Manual']}>
 <Tab value="Automated">
-  <Tabs items={['npx', 'motia Global CLI']}>
+  <Tabs items={['npx', 'mota Global CLI']}>
     <Tab value="npx">
       Use `npx` to run the project creation command directly:
 
       <Tabs items={['npx']}>
         <Tab value="npx">
           ```bash
-          npx motia@latest create -n <your-project-name>
+          npx mota@latest create -n <your-project-name>
           ```
         </Tab>
       </Tabs>
     </Tab>
 
-    <Tab value="motia Global CLI">
-      **First, install the Motia CLI globally:**
+    <Tab value="mota Global CLI">
+      **First, install the Mota CLI globally:**
 
       <Tabs items={['pnpm (Global)', 'npm (Global)', 'yarn (Global)', 'bun (Global)']}>
         <Tab value="pnpm (Global)">
           ```bash
-          npm install -g motia
+          npm install -g mota
           ```
         </Tab>
         <Tab value="npm (Global)">
           ```bash
-          npm install -g motia
+          npm install -g mota
           ```
         </Tab>
         <Tab value="yarn (Global)">
           ```bash
-          yarn global add motia
+          yarn global add mota
           ```
         </Tab>
         <Tab value="bun (Global)">
           ```bash
-          bun add -g motia
+          bun add -g mota
           ```
         </Tab>
       </Tabs>
 
-      **Then, create your project using the globally installed `motia` command:**
+      **Then, create your project using the globally installed `mota` command:**
 
       ```bash
-      motia create -n <your-project-name>
+      mota create -n <your-project-name>
       ```
     </Tab>
 
   </Tabs>
 
     *   **This will**:
-        *   Download and run the Motia CLI project creation tool
+        *   Download and run the Mota CLI project creation tool
         *   Create a new project directory named `<your-project-name>`.
-        *   Set up a basic Motia project structure inside the new folder.
+        *   Set up a basic Mota project structure inside the new folder.
         *   Install necessary dependencies using pnpm within the project folder.
         *   Add a `dev` script to your `package.json`.
         *   Include example steps to get you started.
@@ -3038,7 +3038,7 @@ Let's create a new Motia project in a dedicated folder. This is the recommended 
   <Callout type="info">
     **Choosing a Project Name:** Replace `<your-project-name>` with your desired project folder name.
 
-    **Alternative Templates:** To see other templates, run: `npx motia templates` (or `motia templates` if you installed globally).
+    **Alternative Templates:** To see other templates, run: `npx mota templates` (or `mota templates` if you installed globally).
 
   </Callout>
 
@@ -3074,14 +3074,14 @@ You should see a new folder created with the following files inside:
 
       3.  **Install Core Packages:**
           ```bash
-            motia zod
+            mota zod
           ```
 
       4.  **Add `dev` Script to `package.json`:**
           ```json
           {
             "scripts": {
-              "dev": "motia dev"
+              "dev": "mota dev"
             }
           }
           ```
@@ -3142,11 +3142,11 @@ You should see a new folder created with the following files inside:
 
    <Step>
 
-### Start Motia Development Server & Workbench
+### Start Mota Development Server & Workbench
 
-Now, let's start Motia and see your workflow in action!
+Now, let's start Mota and see your workflow in action!
 
-1.  **Open your terminal** in your Motia project's root directory (where your `package.json` file is located).
+1.  **Open your terminal** in your Mota project's root directory (where your `package.json` file is located).
 
 2.  **Run the development server command:** Use the `dev` script that was set up in your `package.json`:
 
@@ -3157,11 +3157,11 @@ Now, let's start Motia and see your workflow in action!
       <Tab value="bun">```bun run dev ```</Tab>
     </Tabs>
 
-    Motia will:
+    Mota will:
 
     - **Scan** your `steps` folder for step definition files (`.step.ts`, `.step.js`, `.step.py`, `.step.rb`).
-    - **Register** your Steps with the Motia runtime.
-    - **Launch** a development server and the Motia Workbench UI (typically at [`http://localhost:3000`](http://localhost:3000)).
+    - **Register** your Steps with the Mota runtime.
+    - **Launch** a development server and the Mota Workbench UI (typically at [`http://localhost:3000`](http://localhost:3000)).
 
     <Callout type="info">
       **Changing the Port:** To run the Workbench on a different port, use the `--port` option: `pnpm run dev --port
@@ -3172,7 +3172,7 @@ Now, let's start Motia and see your workflow in action!
   <Step>
     ### View your Flow in the Workbench
 
-    1.  **Open your browser** and navigate to the Motia Workbench.  By default, it's running at:  [`http://localhost:3000`](http://localhost:3000) or [`http://127.0.0.1:3000`](http://127.0.0.1:3000).
+    1.  **Open your browser** and navigate to the Mota Workbench.  By default, it's running at:  [`http://localhost:3000`](http://localhost:3000) or [`http://127.0.0.1:3000`](http://127.0.0.1:3000).
 
     2.  **Locate your Flow in the Sidebar:** On the left sidebar of the Workbench UI, you should see a list of Flows.
 
@@ -3181,7 +3181,7 @@ Now, let's start Motia and see your workflow in action!
 
     3.  **Select your Flow:** Click on the flow name in the sidebar.
 
-    4.  **Observe the Visual Flow:** You should now see a visual representation of your flow in the main panel. This is the Motia Workbench visualizing the steps and event flow within your application!
+    4.  **Observe the Visual Flow:** You should now see a visual representation of your flow in the main panel. This is the Mota Workbench visualizing the steps and event flow within your application!
 
         ![Flow Visualization in Workbench](./../img/hello-world-workbench.png)
 
@@ -3227,28 +3227,28 @@ Now, let's start Motia and see your workflow in action!
 
 -   [index](/llm-docs/index.md): Documentation for index.
 ---
-title: Welcome to Motia
-description: Get started with Motia, a powerful framework for building event-driven workflows
+title: Welcome to Mota
+description: Get started with Mota, a powerful framework for building event-driven workflows
 ---
 
 # Unified Backend Framework for APIs, Events and AI Agents
 
-Motia is a **code-first framework** designed to empower developers to build robust, scalable, and observable event-driven workflows with unparalleled ease. We handle the infrastructure complexities, so you can focus on your business logic.
+Mota is a **code-first framework** designed to empower developers to build robust, scalable, and observable event-driven workflows with unparalleled ease. We handle the infrastructure complexities, so you can focus on your business logic.
 
-## Why Choose Motia?
+## Why Choose Mota?
 
-Motia is built with the developer in mind, offering a unique blend of simplicity and power. Here's why Motia stands out:
+Mota is built with the developer in mind, offering a unique blend of simplicity and power. Here's why Mota stands out:
 
-- 🚀 **Zero Infrastructure Setup:** Say goodbye to the complexities of message queues and event brokers! Motia handles the underlying infrastructure, allowing you to focus solely on building your workflows.
+- 🚀 **Zero Infrastructure Setup:** Say goodbye to the complexities of message queues and event brokers! Mota handles the underlying infrastructure, allowing you to focus solely on building your workflows.
 - 🔌 **Plug-and-Play Steps in Your Language:** Develop your workflow logic using the languages you love: JavaScript, TypeScript, and Python. Mix and match languages within the same flow for ultimate flexibility.
-- 📊 **Built-in Observability:** Gain deep insights into your workflows with real-time logs, traces, and interactive flow visualizations right in the Motia Workbench. Debugging and monitoring have never been easier.
+- 📊 **Built-in Observability:** Gain deep insights into your workflows with real-time logs, traces, and interactive flow visualizations right in the Mota Workbench. Debugging and monitoring have never been easier.
 - ⚡ **Out-of-the-Box API & Scheduling:** Instantly expose your workflows as HTTP endpoints and schedule tasks with cron expressions – no extra configuration needed.
-- ✨ **Flexible and Extensible Architecture:** Motia is designed to be easily extended and customized. Create custom steps, UI components, and adapt the framework to your specific needs.
-- 🧑‍💻 **Developer-First Experience:** From intuitive APIs and a powerful CLI to comprehensive documentation and a visual workbench, Motia prioritizes developer productivity and a smooth, enjoyable development experience.
+- ✨ **Flexible and Extensible Architecture:** Mota is designed to be easily extended and customized. Create custom steps, UI components, and adapt the framework to your specific needs.
+- 🧑‍💻 **Developer-First Experience:** From intuitive APIs and a powerful CLI to comprehensive documentation and a visual workbench, Mota prioritizes developer productivity and a smooth, enjoyable development experience.
 
-## Motia Workbench: Your Development Control Center
+## Mota Workbench: Your Development Control Center
 
-Motia Workbench is a built-in, browser-based development platform that acts as your central hub for building, testing, and debugging Motia flows. Key features include:
+Mota Workbench is a built-in, browser-based development platform that acts as your central hub for building, testing, and debugging Mota flows. Key features include:
 
 - **Interactive Flow Visualization:** See your workflows come to life as dynamic diagrams, making it easy to understand complex event flows and step interactions.
 
@@ -3258,11 +3258,11 @@ Motia Workbench is a built-in, browser-based development platform that acts as y
 
 - **Step-Level Customization:** Create custom UI components for your steps to enhance visualization and provide context-specific information directly within the flow diagram.
 
-<div className="my-8">![Motia Workbench Interface](./img/workbench-presentation.png)</div>
+<div className="my-8">![Mota Workbench Interface](./img/workbench-presentation.png)</div>
 
 ## Unlock Powerful Use Cases
 
-Motia empowers you to build a wide range of sophisticated applications, including:
+Mota empowers you to build a wide range of sophisticated applications, including:
 
 - 🌐 **API Integrations & Microservices:** Effortlessly connect disparate systems, create event-driven microservices, and build real-time API-powered applications.
 
@@ -3270,11 +3270,11 @@ Motia empowers you to build a wide range of sophisticated applications, includin
 
 - 📊 **Data Transformation & Processing:** Build scalable ETL/ELT pipelines, implement real-time data streaming, and transform data with ease.
 
-- 🚀 **Rapid Prototyping & Iteration:** Quickly bring your ideas to life, test new workflows, and iterate rapidly with Motia's visual design and development tools.
+- 🚀 **Rapid Prototyping & Iteration:** Quickly bring your ideas to life, test new workflows, and iterate rapidly with Mota's visual design and development tools.
 
 ### Real-World Industry Applications
 
-Motia is versatile and can be applied across various industries and use cases, such as:
+Mota is versatile and can be applied across various industries and use cases, such as:
 
 - **E-commerce:** Order processing, inventory synchronization, fraud detection, customer communication automation.
 - **Finance:** Trade settlement, risk analysis, compliance monitoring, automated reporting.
@@ -3284,27 +3284,27 @@ Motia is versatile and can be applied across various industries and use cases, s
 
 ## Ready to Get Started?
 
-Embark on your Motia journey and start building powerful workflows today:
+Embark on your Mota journey and start building powerful workflows today:
 
-1.  **Quick Start Guide:** Follow our [Quick Start](/docs/getting-started/quick-start) to set up your first Motia project and create a minimal workflow.
+1.  **Quick Start Guide:** Follow our [Quick Start](/docs/getting-started/quick-start) to set up your first Mota project and create a minimal workflow.
 2.  **Explore Examples:** Dive into practical [Examples](/docs/examples) to understand common patterns and real-world use cases.
-3.  **Dive into Concepts:** Delve deeper into Motia's [Core Concepts](/docs/getting-started/core-concepts) to gain a solid understanding of the framework's architecture and principles.
+3.  **Dive into Concepts:** Delve deeper into Mota's [Core Concepts](/docs/getting-started/core-concepts) to gain a solid understanding of the framework's architecture and principles.
 
-## Join the Motia Community
+## Join the Mota Community
 
 Become part of a growing community of developers and automation enthusiasts!
 
-- 💬 **Join our Discord:** Connect with the Motia team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
-- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motiadev/motia).
-- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motiadev)](https://twitter.com/motiadev)
+- 💬 **Join our Discord:** Connect with the Mota team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
+- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motadev/mota).
+- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motadev)](https://twitter.com/motadev)
 
-We're excited to see what you'll build with Motia!
+We're excited to see what you'll build with Mota!
 
 
 -   [ai-deep-research-agent](/llm-docs/real-world-use-cases/ai-deep-research-agent.md): Documentation for ai-deep-research-agent.
 ---
 title: AI Deep Research Agent
-description: A powerful research assistant that leverages the Motia Framework to perform comprehensive web research on any topic and any question.
+description: A powerful research assistant that leverages the Mota Framework to perform comprehensive web research on any topic and any question.
 ---
 
 import { CodeFetcher } from '../../../components/CodeFetcher'
@@ -3313,7 +3313,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 - **Deep Web Research**: Automatically searches the web, extracts content, and synthesizes findings
 - **Iterative Research Process**: Supports multiple layers of research depth for comprehensive exploration
-- **Event-Driven Architecture**: Built using Motia Framework's event system for robust workflow management
+- **Event-Driven Architecture**: Built using Mota Framework's event system for robust workflow management
 - **Parallel Processing**: Efficiently processes search results and content extraction
 - **API Endpoints**: REST API access for initiating research and retrieving reports
 - **Stateful Processing**: Maintains research state throughout the entire process
@@ -3348,7 +3348,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 - **Deep Web Research**: Automatically searches the web, extracts content, and synthesizes findings
 - **Iterative Research Process**: Supports multiple layers of research depth for comprehensive exploration
-- **Event-Driven Architecture**: Built using Motia Framework's event system for robust workflow management
+- **Event-Driven Architecture**: Built using Mota Framework's event system for robust workflow management
 - **Parallel Processing**: Efficiently processes search results and content extraction
 - **API Endpoints**: REST API access for initiating research and retrieving reports
 - **Stateful Processing**: Maintains research state throughout the entire process
@@ -3365,7 +3365,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone https://github.com/MotaDev/mota-examples
    cd examples/ai-deep-research-agent
    ```
 
@@ -3488,7 +3488,7 @@ Response:
    pnpm dev
    ```
 
-2. Access the Motia Workbench:
+2. Access the Mota Workbench:
    ```
    http://localhost:3000
    ```
@@ -3506,7 +3506,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Mota Framework](https://mota.dev) for the event-driven workflow engine
 - [OpenAI](https://platform.openai.com/) for AI analysis 
 - [Firecrawl](https://www.firecrawl.dev/) for Web search and content extraction API
 
@@ -3515,7 +3515,7 @@ Response:
 [ai-deep-research-agent](/llm-docs/real-world-use-cases/ai-deep-research-agent.md): Real world use case
 ---
 title: AI Deep Research Agent
-description: A powerful research assistant that leverages the Motia Framework to perform comprehensive web research on any topic and any question.
+description: A powerful research assistant that leverages the Mota Framework to perform comprehensive web research on any topic and any question.
 ---
 
 import { CodeFetcher } from '../../../components/CodeFetcher'
@@ -3524,7 +3524,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 - **Deep Web Research**: Automatically searches the web, extracts content, and synthesizes findings
 - **Iterative Research Process**: Supports multiple layers of research depth for comprehensive exploration
-- **Event-Driven Architecture**: Built using Motia Framework's event system for robust workflow management
+- **Event-Driven Architecture**: Built using Mota Framework's event system for robust workflow management
 - **Parallel Processing**: Efficiently processes search results and content extraction
 - **API Endpoints**: REST API access for initiating research and retrieving reports
 - **Stateful Processing**: Maintains research state throughout the entire process
@@ -3559,7 +3559,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 - **Deep Web Research**: Automatically searches the web, extracts content, and synthesizes findings
 - **Iterative Research Process**: Supports multiple layers of research depth for comprehensive exploration
-- **Event-Driven Architecture**: Built using Motia Framework's event system for robust workflow management
+- **Event-Driven Architecture**: Built using Mota Framework's event system for robust workflow management
 - **Parallel Processing**: Efficiently processes search results and content extraction
 - **API Endpoints**: REST API access for initiating research and retrieving reports
 - **Stateful Processing**: Maintains research state throughout the entire process
@@ -3576,7 +3576,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone https://github.com/MotaDev/mota-examples
    cd examples/ai-deep-research-agent
    ```
 
@@ -3699,7 +3699,7 @@ Response:
    pnpm dev
    ```
 
-2. Access the Motia Workbench:
+2. Access the Mota Workbench:
    ```
    http://localhost:3000
    ```
@@ -3717,7 +3717,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Mota Framework](https://mota.dev) for the event-driven workflow engine
 - [OpenAI](https://platform.openai.com/) for AI analysis 
 - [Firecrawl](https://www.firecrawl.dev/) for Web search and content extraction API
 
@@ -3762,7 +3762,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 - **Real-time Financial Analysis**: Combines multiple data sources for comprehensive insights
 - **AI-Powered Insights**: Leverages OpenAI GPT-4 for intelligent market analysis
-- **Event-Driven Architecture**: Built on Motia's robust event system for reliable processing
+- **Event-Driven Architecture**: Built on Mota's robust event system for reliable processing
 - **Web Search Integration**: Aggregates latest market news and analysis
 - **Financial Data Integration**: Real-time stock and company information
 - **Persistent Storage**: Stores analysis results for future reference
@@ -3781,7 +3781,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone https://github.com/MotaDev/mota-examples
    cd examples/finance-agent
    ```
 
@@ -3860,7 +3860,7 @@ Response:
    pnpm dev
    ```
 
-2. Access the Motia Workbench:
+2. Access the Mota Workbench:
    ```
    http://localhost:3000
    ```
@@ -3873,7 +3873,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Mota Framework](https://mota.dev) for the event-driven workflow engine
 - [Alpha Vantage](https://www.alphavantage.co/) for financial data
 - [SerperDev](https://serper.dev/) for web search capabilities
 - [OpenAI](https://platform.openai.com/) for AI analysis 
@@ -3921,7 +3921,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 - **Real-time Financial Analysis**: Combines multiple data sources for comprehensive insights
 - **AI-Powered Insights**: Leverages OpenAI GPT-4 for intelligent market analysis
-- **Event-Driven Architecture**: Built on Motia's robust event system for reliable processing
+- **Event-Driven Architecture**: Built on Mota's robust event system for reliable processing
 - **Web Search Integration**: Aggregates latest market news and analysis
 - **Financial Data Integration**: Real-time stock and company information
 - **Persistent Storage**: Stores analysis results for future reference
@@ -3940,7 +3940,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone https://github.com/MotaDev/mota-examples
    cd examples/finance-agent
    ```
 
@@ -4019,7 +4019,7 @@ Response:
    pnpm dev
    ```
 
-2. Access the Motia Workbench:
+2. Access the Mota Workbench:
    ```
    http://localhost:3000
    ```
@@ -4032,7 +4032,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Mota Framework](https://mota.dev) for the event-driven workflow engine
 - [Alpha Vantage](https://www.alphavantage.co/) for financial data
 - [SerperDev](https://serper.dev/) for web search capabilities
 - [OpenAI](https://platform.openai.com/) for AI analysis 
@@ -4121,7 +4121,7 @@ Make sure you have:
 ### Clone the Repository
 
 ```bash
-git clone git@github.com:MotiaDev/motia-examples.git
+git clone git@github.com:MotaDev/mota-examples.git
 cd examples/github-integration-workflow
 ```
 
@@ -4150,7 +4150,7 @@ OPENAI_API_KEY=your_openai_api_key
 
 1. Go to your GitHub repository settings
 2. Navigate to Webhooks and add a new webhook
-3. Set the Payload URL to your Motia server endpoint
+3. Set the Payload URL to your Mota server endpoint
 4. Select content type as `application/json`
 5. Choose which events to trigger the webhook (Issues, Pull requests)
 6. Save the webhook
@@ -4172,7 +4172,7 @@ npm run dev
 
 <Callout type="info">
   For more detailed setup instructions and configuration options, check out the [full
-  documentation](https://github.com/MotiaDev/motia-examples/tree/main/examples/github-integration-workflow).
+  documentation](https://github.com/MotaDev/mota-examples/tree/main/examples/github-integration-workflow).
 </Callout> 
 
 
@@ -4261,7 +4261,7 @@ Make sure you have:
 ### Clone the Repository
 
 ```bash
-git clone git@github.com:MotiaDev/motia-examples.git
+git clone git@github.com:MotaDev/mota-examples.git
 cd examples/github-integration-workflow
 ```
 
@@ -4290,7 +4290,7 @@ OPENAI_API_KEY=your_openai_api_key
 
 1. Go to your GitHub repository settings
 2. Navigate to Webhooks and add a new webhook
-3. Set the Payload URL to your Motia server endpoint
+3. Set the Payload URL to your Mota server endpoint
 4. Select content type as `application/json`
 5. Choose which events to trigger the webhook (Issues, Pull requests)
 6. Save the webhook
@@ -4312,7 +4312,7 @@ npm run dev
 
 <Callout type="info">
   For more detailed setup instructions and configuration options, check out the [full
-  documentation](https://github.com/MotiaDev/motia-examples/tree/main/examples/github-integration-workflow).
+  documentation](https://github.com/MotaDev/mota-examples/tree/main/examples/github-integration-workflow).
 </Callout> 
 
 -   [gmail-automation](/llm-docs/real-world-use-cases/gmail-automation.md): Documentation for gmail-automation.
@@ -4464,7 +4464,7 @@ The Gmail Account Manager workflow consists of the following steps:
    pnpm dev
    ```
 
-6. **Open the Motia Workbench**
+6. **Open the Mota Workbench**
    
    Navigate to [http://localhost:3000](http://localhost:3000) to access the workflow UI.
 
@@ -4532,7 +4532,7 @@ To enable real-time email notifications, you need to set up a Google Cloud Pub/S
 This project includes a complete OAuth2 authentication flow for the Gmail API:
 
 1. Start the development server: `pnpm dev`
-2. Navigate to the authentication workflow in the Motia Workbench
+2. Navigate to the authentication workflow in the Mota Workbench
 3. The workflow will generate an authorization URL
 4. Open the URL in your browser and authorize the application
 5. The application will receive and store your authentication tokens
@@ -4604,12 +4604,12 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
   - `daily-summary.step.ts` - Sends daily summary to Discord
 - `services/` - Shared service modules
 - `config/` - Configuration files
-- `.motia/` - Motia framework configuration
+- `.mota/` - Mota framework configuration
 
 ## 📦 Dependencies
 
 ### Node.js Dependencies
-- **@motiadev/core**, **@motiadev/workbench**, **motia**: Motia framework
+- **@motadev/core**, **@motadev/workbench**, **mota**: Mota framework
 - **googleapis**, **google-auth-library**: Google API integration
 - **gmail-api-parse-message-ts**: Gmail message parsing
 - **axios**: HTTP client
@@ -4803,7 +4803,7 @@ The Gmail Account Manager workflow consists of the following steps:
    pnpm dev
    ```
 
-6. **Open the Motia Workbench**
+6. **Open the Mota Workbench**
    
    Navigate to [http://localhost:3000](http://localhost:3000) to access the workflow UI.
 
@@ -4871,7 +4871,7 @@ To enable real-time email notifications, you need to set up a Google Cloud Pub/S
 This project includes a complete OAuth2 authentication flow for the Gmail API:
 
 1. Start the development server: `pnpm dev`
-2. Navigate to the authentication workflow in the Motia Workbench
+2. Navigate to the authentication workflow in the Mota Workbench
 3. The workflow will generate an authorization URL
 4. Open the URL in your browser and authorize the application
 5. The application will receive and store your authentication tokens
@@ -4943,12 +4943,12 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
   - `daily-summary.step.ts` - Sends daily summary to Discord
 - `services/` - Shared service modules
 - `config/` - Configuration files
-- `.motia/` - Motia framework configuration
+- `.mota/` - Mota framework configuration
 
 ## 📦 Dependencies
 
 ### Node.js Dependencies
-- **@motiadev/core**, **@motiadev/workbench**, **motia**: Motia framework
+- **@motadev/core**, **@motadev/workbench**, **mota**: Mota framework
 - **googleapis**, **google-auth-library**: Google API integration
 - **gmail-api-parse-message-ts**: Gmail message parsing
 - **axios**: HTTP client
@@ -4994,42 +4994,42 @@ AUTO_RESPONDER_EMAIL=your-email@example.com
 -   [index](/llm-docs/real-world-use-cases/index.md): Documentation for index.
 ---
 title: Real-World Use Cases
-description: See how Motia is used to solve real problems
+description: See how Mota is used to solve real problems
 ---
 
 # Real-World Use Cases
 
-Explore these practical examples of Motia in action:
+Explore these practical examples of Mota in action:
 
 - [Trello Card Automation](./real-world-use-cases/trello-automation) - Build an automated card progression system for Trello boards with AI-powered summaries
 - [Gmail Automation](./real-world-use-cases/gmail-automation) - Build an automated email system with smart labeling, auto-responses, and AI-powered filtering
 - [GitHub Integration Workflow](./real-world-use-cases/github-integration-workflow) - Build an automated GitHub issue and PR management system with AI-powered classification and routing
 - [Finance Agent](./real-world-use-cases/finance-agent) - A powerful event-driven financial analysis workflow that combines web search, financial data, and AI analysis
-- [AI Deep Research Agent](./real-world-use-cases/ai-deep-research-agent) - A powerful research assistant that leverages the Motia Framework to perform comprehensive web research
+- [AI Deep Research Agent](./real-world-use-cases/ai-deep-research-agent) - A powerful research assistant that leverages the Mota Framework to perform comprehensive web research
 
 
-Have a great use case to share? [Contribute it here](https://github.com/MotiaDev/motia-examples/tree/main/examples). 
+Have a great use case to share? [Contribute it here](https://github.com/MotaDev/mota-examples/tree/main/examples). 
 
 
 ## Use Cases
 [index](/llm-docs/real-world-use-cases/index.md): Real world use case
 ---
 title: Real-World Use Cases
-description: See how Motia is used to solve real problems
+description: See how Mota is used to solve real problems
 ---
 
 # Real-World Use Cases
 
-Explore these practical examples of Motia in action:
+Explore these practical examples of Mota in action:
 
 - [Trello Card Automation](./real-world-use-cases/trello-automation) - Build an automated card progression system for Trello boards with AI-powered summaries
 - [Gmail Automation](./real-world-use-cases/gmail-automation) - Build an automated email system with smart labeling, auto-responses, and AI-powered filtering
 - [GitHub Integration Workflow](./real-world-use-cases/github-integration-workflow) - Build an automated GitHub issue and PR management system with AI-powered classification and routing
 - [Finance Agent](./real-world-use-cases/finance-agent) - A powerful event-driven financial analysis workflow that combines web search, financial data, and AI analysis
-- [AI Deep Research Agent](./real-world-use-cases/ai-deep-research-agent) - A powerful research assistant that leverages the Motia Framework to perform comprehensive web research
+- [AI Deep Research Agent](./real-world-use-cases/ai-deep-research-agent) - A powerful research assistant that leverages the Mota Framework to perform comprehensive web research
 
 
-Have a great use case to share? [Contribute it here](https://github.com/MotiaDev/motia-examples/tree/main/examples). 
+Have a great use case to share? [Contribute it here](https://github.com/MotaDev/mota-examples/tree/main/examples). 
 
 
 ---
@@ -5085,7 +5085,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone https://github.com/MotaDev/mota-examples
    cd examples/rag-docling-weaviate-agent
    ```
 
@@ -5188,7 +5188,7 @@ Error Response:
    pnpm dev
    ```
 
-2. Access the Motia Workbench:
+2. Access the Mota Workbench:
    ```
    http://localhost:3000
    ```
@@ -5214,8 +5214,8 @@ Error Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
-- [Docling](https://github.com/MotiaDev/docling) for PDF parsing and hybrid chunking
+- [Mota Framework](https://mota.dev) for the event-driven workflow engine
+- [Docling](https://github.com/MotaDev/docling) for PDF parsing and hybrid chunking
 - [Weaviate](https://www.weaviate.io/) for Vector Database
 - [OpenAI](https://platform.openai.com/) for AI analysis 
 
@@ -5276,7 +5276,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone https://github.com/MotaDev/mota-examples
    cd examples/rag-docling-weaviate-agent
    ```
 
@@ -5379,7 +5379,7 @@ Error Response:
    pnpm dev
    ```
 
-2. Access the Motia Workbench:
+2. Access the Mota Workbench:
    ```
    http://localhost:3000
    ```
@@ -5405,8 +5405,8 @@ Error Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
-- [Docling](https://github.com/MotiaDev/docling) for PDF parsing and hybrid chunking
+- [Mota Framework](https://mota.dev) for the event-driven workflow engine
+- [Docling](https://github.com/MotaDev/docling) for PDF parsing and hybrid chunking
 - [Weaviate](https://www.weaviate.io/) for Vector Database
 - [OpenAI](https://platform.openai.com/) for AI analysis 
 
@@ -5487,7 +5487,7 @@ Make sure you have:
 ### Clone the Repository
 
 ```bash
-git clone git@github.com:MotiaDev/motia-examples.git
+git clone git@github.com:MotaDev/mota-examples.git
 cd examples/trello-flow
 ```
 
@@ -5551,7 +5551,7 @@ pnpm dev
 
 <Callout type="info">
   For more detailed setup instructions and configuration options, check out the [full
-  documentation](https://github.com/MotiaDev/motia-examples/tree/main/examples/trello-flow).
+  documentation](https://github.com/MotaDev/mota-examples/tree/main/examples/trello-flow).
 </Callout>{' '}
 
 
@@ -5633,7 +5633,7 @@ Make sure you have:
 ### Clone the Repository
 
 ```bash
-git clone git@github.com:MotiaDev/motia-examples.git
+git clone git@github.com:MotaDev/mota-examples.git
 cd examples/trello-flow
 ```
 
@@ -5697,22 +5697,22 @@ pnpm dev
 
 <Callout type="info">
   For more detailed setup instructions and configuration options, check out the [full
-  documentation](https://github.com/MotiaDev/motia-examples/tree/main/examples/trello-flow).
+  documentation](https://github.com/MotaDev/mota-examples/tree/main/examples/trello-flow).
 </Callout>{' '}
 
 
 -   [build-your-first-app](/llm-docs/getting-started/build-your-first-app.mdx.md): Documentation for build-your-first-app.
 ---
-title: TLDR - Motia in 3 Minutes
-description: A 3-minute overview of Motia’s core concepts with a business-ready GenAI use case
+title: TLDR - Mota in 3 Minutes
+description: A 3-minute overview of Mota’s core concepts with a business-ready GenAI use case
 ---
 
-# TLDR - Motia in 3 Minutes
+# TLDR - Mota in 3 Minutes
 
-Got 3 minutes? Here’s the scoop on Motia - Unified Backend Framework for APIs, Events and AI Agents that powers event-driven workflows, perfect for Generative AI (GenAI). We’ll spotlight a real-world win: analyzing customer feedback.
+Got 3 minutes? Here’s the scoop on Mota - Unified Backend Framework for APIs, Events and AI Agents that powers event-driven workflows, perfect for Generative AI (GenAI). We’ll spotlight a real-world win: analyzing customer feedback.
 
-## What’s Motia?
-Motia builds scalable, observable workflows without infrastructure headaches. Code in JS, TS, or Python, chain it up, and track it live in a visual Workbench.
+## What’s Mota?
+Mota builds scalable, observable workflows without infrastructure headaches. Code in JS, TS, or Python, chain it up, and track it live in a visual Workbench.
 
 - **Why It’s Clutch**: No queue setup, instant APIs/scheduling, real-time insights.
 - **Who’s It For**: Businesses wanting intelligent workflows without the hassle.
@@ -5737,11 +5737,11 @@ Here’s a business-ready GenAI flow—crunching customer feedback:
 
 ## Why Businesses Love It
 - **Scales Anything**: Links steps into workflows—GenAI or otherwise—with ease.
-- **Language Flex**: Mix Python for analysis, TS for notifications—Motia rolls with it.
+- **Language Flex**: Mix Python for analysis, TS for notifications—Mota rolls with it.
 - **Real-Time Visualization**: Workbench maps your flow live, logs and all, for instant clarity.
 
 ## 3-Minute Takeaway
-Motia = **Steps** (logic) → **Events** (messages) → **Topics** (routing) → **Flows** (plans). It’s event-driven power made simple, with a dashboard to keep tabs.
+Mota = **Steps** (logic) → **Events** (messages) → **Topics** (routing) → **Flows** (plans). It’s event-driven power made simple, with a dashboard to keep tabs.
 
 <Callout>
 Want to build it? Hit the [Quick Start](/docs/getting-started/quick-start) for a 5-minute go. Or dive into [Core Concepts](/docs/getting-started/core-concepts) for the full rundown.
@@ -5749,33 +5749,33 @@ Want to build it? Hit the [Quick Start](/docs/getting-started/quick-start) for a
 
 -   [welcome](/llm-docs/welcome.md): Documentation for welcome.
 ---
-title: Welcome to Motia
-description: Get started with Motia, a powerful framework for building event-driven workflows
+title: Welcome to Mota
+description: Get started with Mota, a powerful framework for building event-driven workflows
 ---
 
 # Unified Backend Framework for APIs, Events and AI Agents
 
-Motia is a **code-first framework** designed to empower developers to build robust, scalable, and observable event-driven workflows with unparalleled ease. We handle the infrastructure complexities, so you can focus on your business logic.
+Mota is a **code-first framework** designed to empower developers to build robust, scalable, and observable event-driven workflows with unparalleled ease. We handle the infrastructure complexities, so you can focus on your business logic.
 
-## Why Choose Motia?
+## Why Choose Mota?
 
-Motia is built with the developer in mind, offering a unique blend of simplicity and power. Here's why Motia stands out:
+Mota is built with the developer in mind, offering a unique blend of simplicity and power. Here's why Mota stands out:
 
-- 🚀 **Zero Infrastructure Setup:** Say goodbye to the complexities of message queues and event brokers! Motia handles the underlying infrastructure, allowing you to focus solely on building your workflows.
+- 🚀 **Zero Infrastructure Setup:** Say goodbye to the complexities of message queues and event brokers! Mota handles the underlying infrastructure, allowing you to focus solely on building your workflows.
 
 - 🔌 **Plug-and-Play Steps in Your Language:**  Develop your workflow logic using the languages you love: JavaScript, TypeScript, and Python. Mix and match languages within the same flow for ultimate flexibility.
 
-- 📊 **Built-in Observability:** Gain deep insights into your workflows with real-time logs, traces, and interactive flow visualizations right in the Motia Workbench. Debugging and monitoring have never been easier.
+- 📊 **Built-in Observability:** Gain deep insights into your workflows with real-time logs, traces, and interactive flow visualizations right in the Mota Workbench. Debugging and monitoring have never been easier.
 
 - ⚡ **Out-of-the-Box API & Scheduling:**  Instantly expose your workflows as HTTP endpoints and schedule tasks with cron expressions – no extra configuration needed.
 
-- ✨ **Flexible and Extensible Architecture:**  Motia is designed to be easily extended and customized. Create custom steps, UI components, and adapt the framework to your specific needs.
+- ✨ **Flexible and Extensible Architecture:**  Mota is designed to be easily extended and customized. Create custom steps, UI components, and adapt the framework to your specific needs.
 
-- 🧑‍💻 **Developer-First Experience:**  From intuitive APIs and a powerful CLI to comprehensive documentation and a visual workbench, Motia prioritizes developer productivity and a smooth, enjoyable development experience.
+- 🧑‍💻 **Developer-First Experience:**  From intuitive APIs and a powerful CLI to comprehensive documentation and a visual workbench, Mota prioritizes developer productivity and a smooth, enjoyable development experience.
 
-## Motia Workbench: Your Development Control Center
+## Mota Workbench: Your Development Control Center
 
-Motia Workbench is a built-in, browser-based development platform that acts as your central hub for building, testing, and debugging Motia flows. Key features include:
+Mota Workbench is a built-in, browser-based development platform that acts as your central hub for building, testing, and debugging Mota flows. Key features include:
 
 - **Interactive Flow Visualization:**  See your workflows come to life as dynamic diagrams, making it easy to understand complex event flows and step interactions.
 
@@ -5786,12 +5786,12 @@ Motia Workbench is a built-in, browser-based development platform that acts as y
 - **Step-Level Customization:**  Create custom UI components for your steps to enhance visualization and provide context-specific information directly within the flow diagram.
 
 <div className="my-8">
-  ![Motia Workbench Interface](./img/workbench-presentation.png)
+  ![Mota Workbench Interface](./img/workbench-presentation.png)
 </div>
 
-## Core Concepts: Building Blocks of Motia
+## Core Concepts: Building Blocks of Mota
 
-Motia workflows are built using a few core concepts that work together harmoniously:
+Mota workflows are built using a few core concepts that work together harmoniously:
 
 | Concept    | Description                                                                                                |
 | ---------- | ---------------------------------------------------------------------------------------------------------- |
@@ -5802,7 +5802,7 @@ Motia workflows are built using a few core concepts that work together harmoniou
 
 ## Unlock Powerful Use Cases
 
-Motia empowers you to build a wide range of sophisticated applications, including:
+Mota empowers you to build a wide range of sophisticated applications, including:
 
 - 🌐 **API Integrations & Microservices:**  Effortlessly connect disparate systems, create event-driven microservices, and build real-time API-powered applications.
 
@@ -5810,11 +5810,11 @@ Motia empowers you to build a wide range of sophisticated applications, includin
 
 - 📊 **Data Transformation & Processing:**  Build scalable ETL/ELT pipelines, implement real-time data streaming, and transform data with ease.
 
-- 🚀 **Rapid Prototyping & Iteration:**  Quickly bring your ideas to life, test new workflows, and iterate rapidly with Motia's visual design and development tools.
+- 🚀 **Rapid Prototyping & Iteration:**  Quickly bring your ideas to life, test new workflows, and iterate rapidly with Mota's visual design and development tools.
 
 ### Real-World Industry Applications
 
-Motia is versatile and can be applied across various industries and use cases, such as:
+Mota is versatile and can be applied across various industries and use cases, such as:
 
 - **E-commerce:** Order processing, inventory synchronization, fraud detection, customer communication automation.
 - **Finance:** Trade settlement, risk analysis, compliance monitoring, automated reporting.
@@ -5824,28 +5824,28 @@ Motia is versatile and can be applied across various industries and use cases, s
 
 ## Ready to Get Started?
 
-Embark on your Motia journey and start building powerful workflows today:
+Embark on your Mota journey and start building powerful workflows today:
 
-1.  **Quick Start Guide:** Follow our [Quick Start](/docs/getting-started/quick-start) to set up your first Motia project and create a minimal workflow.
+1.  **Quick Start Guide:** Follow our [Quick Start](/docs/getting-started/quick-start) to set up your first Mota project and create a minimal workflow.
 2.  **Explore Examples:** Dive into practical [Examples](/docs/examples) to understand common patterns and real-world use cases.
-3.  **Dive into Concepts:**  Delve deeper into Motia's [Core Concepts](/docs/concepts) to gain a solid understanding of the framework's architecture and principles.
+3.  **Dive into Concepts:**  Delve deeper into Mota's [Core Concepts](/docs/concepts) to gain a solid understanding of the framework's architecture and principles.
 
-## Join the Motia Community
+## Join the Mota Community
 
 Become part of a growing community of developers and automation enthusiasts!
 
-- 💬 **Join our Discord:**  Connect with the Motia team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
-- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motiadev/motia).
-- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motiadev)](https://twitter.com/motiadev)
+- 💬 **Join our Discord:**  Connect with the Mota team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
+- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motadev/mota).
+- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motadev)](https://twitter.com/motadev)
 
-We're excited to see what you'll build with Motia!
+We're excited to see what you'll build with Mota!
 
 -   [NOOP Steps](/llm-docs/workbench/noop-steps.md): Documentation for NOOP Steps.
 ---
 title: NOOP Steps
 ---
 
-NOOP (No Operation) steps are a powerful feature in Motia that serve multiple purposes:
+NOOP (No Operation) steps are a powerful feature in Mota that serve multiple purposes:
 
 1. Modeling external processes, webhooks and integrations
 2. Representing human-in-the-loop activities
@@ -5864,7 +5864,7 @@ NOOP steps require two files with the same base name:
   <Tab value="TS">
     ```typescript
     // myStep.step.ts
-    import { NoopConfig } from 'motia'
+    import { NoopConfig } from 'mota'
 
     export const config: NoopConfig = {
       type: 'noop',
@@ -5900,7 +5900,7 @@ NOOP steps require two files with the same base name:
     ```typescript
     // myStep.step.tsx
     import React from 'react'
-    import { BaseHandle, Position } from 'motia/workbench'
+    import { BaseHandle, Position } from 'mota/workbench'
 
     export default function MyStep() {
       return (
@@ -5917,7 +5917,7 @@ NOOP steps require two files with the same base name:
     ```javascript
     // myStep.step.jsx
     import React from 'react'
-    import { BaseHandle, Position } from 'motia/workbench'
+    import { BaseHandle, Position } from 'mota/workbench'
 
     export default function MyStep() {
       return (
@@ -5940,7 +5940,7 @@ Here's a complete example of a NOOP step that simulates webhook events:
   <Tab value="TS">
     ```typescript
     // test-webhook.step.ts
-    import { NoopConfig } from 'motia'
+    import { NoopConfig } from 'mota'
 
     export const config: NoopConfig = {
       type: 'noop',
@@ -5974,7 +5974,7 @@ Here's a complete example of a NOOP step that simulates webhook events:
     ```typescript
     // test-webhook.step.tsx
     import React from 'react'
-    import { BaseHandle, Position } from 'motia/workbench'
+    import { BaseHandle, Position } from 'mota/workbench'
 
     export default function WebhookSimulator() {
       return (
@@ -6002,7 +6002,7 @@ Here's a complete example of a NOOP step that simulates webhook events:
     ```javascript
     // test-webhook.step.jsx
     import React from 'react'
-    import { BaseHandle, Position } from 'motia/workbench'
+    import { BaseHandle, Position } from 'mota/workbench'
 
     export default function WebhookSimulator() {
       return (
@@ -6150,7 +6150,7 @@ NOOP steps represent parts of your workflow that happen outside your system. Com
 
 ## Visualization in Workbench
 
-NOOP steps are visually represented in the Motia Workbench with the following characteristics:
+NOOP steps are visually represented in the Mota Workbench with the following characteristics:
 
 - Distinct node representation with clear input/output handles
 - Visual indicators for virtual event connections
@@ -6166,7 +6166,7 @@ You can enhance your NOOP steps with custom React components for better visualiz
     ```tsx
     // customNode.step.tsx
     import React from 'react'
-    import { BaseHandle, EventNodeProps, Position } from 'motia/workbench'
+    import { BaseHandle, EventNodeProps, Position } from 'mota/workbench'
 
     export default (_: EventNodeProps) => {
       return (
@@ -6192,7 +6192,7 @@ You can enhance your NOOP steps with custom React components for better visualiz
     ```jsx
     // customNode.step.jsx
     import React from 'react'
-    import { BaseHandle, EventNodeProps, Position } from 'motia/workbench'
+    import { BaseHandle, EventNodeProps, Position } from 'mota/workbench'
 
     export default (_: EventNodeProps) => {
       return (
@@ -6260,7 +6260,7 @@ You can enhance your NOOP steps with custom React components for better visualiz
 title: Overview
 ---
 
-Motia Workbench is a development platform that helps you build and debug your Motia flows. It serves as your control center where you can:
+Mota Workbench is a development platform that helps you build and debug your Mota flows. It serves as your control center where you can:
 
 - Visualize flows as interactive diagrams
 - Test steps directly in the UI
@@ -6281,7 +6281,7 @@ Start workbench by running:
 </Tabs>
 
 <Callout>
-  Running the dev command starts: - **Motia Server**: Backend services and API endpoints - **Motia Workbench**: Web
+  Running the dev command starts: - **Mota Server**: Backend services and API endpoints - **Mota Workbench**: Web
   interface at http://localhost:3000 - **Development Mode**: Auto-reloads when changes are made
 </Callout>
 
@@ -6317,7 +6317,7 @@ Start workbench by running:
 
 ## Customization
 
-Motia Workbench allows you to customize how your steps appear in the Workbench flow visualization tool.
+Mota Workbench allows you to customize how your steps appear in the Workbench flow visualization tool.
 
 ### NOOP Steps
 
@@ -6352,7 +6352,7 @@ UI steps allow you to customize how your steps appear in the Workbench visualiza
   ]}
 />
 
-<Callout>New to Motia? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>
+<Callout>New to Mota? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>
 
 
 -   [UI Steps](/llm-docs/workbench/ui-steps.md): Documentation for UI Steps.
@@ -6399,7 +6399,7 @@ We're going to add an image on the side and show the description.
     ```tsx
     // myStep.step.tsx
 
-    import { EventNode, EventNodeProps } from 'motia/workbench'
+    import { EventNode, EventNodeProps } from 'mota/workbench'
     import React from 'react'
 
     export const Node: React.FC<EventNodeProps> = (props) => {
@@ -6409,7 +6409,7 @@ We're going to add an image on the side and show the description.
             <div className="text-sm text-gray-400 font-mono">{props.data.description}</div>
             <img
               style={{ width: '64px', height: '64px' }}
-              src="https://www.motia.dev/icon.png"
+              src="https://www.mota.dev/icon.png"
             />
           </div>
         </EventNode>
@@ -6422,7 +6422,7 @@ We're going to add an image on the side and show the description.
     ```jsx
     // myStep.step.jsx
 
-    import { EventNode } from 'motia/workbench'
+    import { EventNode } from 'mota/workbench'
     import React from 'react'
 
     export const Node = (props) => {
@@ -6432,7 +6432,7 @@ We're going to add an image on the side and show the description.
             <div className="text-sm text-gray-400 font-mono">{props.data.description}</div>
             <img
               style={{ width: '64px', height: '64px' }}
-              src="https://www.motia.dev/icon.png"
+              src="https://www.mota.dev/icon.png"
             />
           </div>
         </EventNode>
@@ -6447,7 +6447,7 @@ We're going to add an image on the side and show the description.
 
 ## Components
 
-Motia Workbench provides out of the box components that you can use to create custom UI steps, which apply to different types of steps.
+Mota Workbench provides out of the box components that you can use to create custom UI steps, which apply to different types of steps.
 
 
 | Component   | Props Type     | Description                                                                    |
@@ -6465,7 +6465,7 @@ Let's draw the following node.
 ![Custom Ideator Agent Node](./../img/custom-ideator-agent-node.png)
 
 ```tsx
-import { BaseHandle, EventNodeProps, Position } from 'motia/workbench'
+import { BaseHandle, EventNodeProps, Position } from 'mota/workbench'
 import React from 'react'
 
 export const Node: React.FC<EventNodeProps> = (props) => {
@@ -6542,7 +6542,7 @@ export const Node: React.FC<EventNodeProps> = (props) => {
 | Use Tailwind's utility classes only | Stick to Tailwind CSS utilities for consistent styling        |
 | Avoid arbitrary values              | Use predefined scales from the design system                  |
 | Keep components responsive          | Ensure UI elements adapt well to different screen sizes       |
-| Follow Motia's design system        | Maintain consistency with Motia's established design patterns |
+| Follow Mota's design system        | Maintain consistency with Mota's established design patterns |
 
 
 
@@ -6559,5 +6559,5 @@ export const Node: React.FC<EventNodeProps> = (props) => {
 
 
 ## Optional
--   [https://motiadev.com](https://motiadev.com): Main page for framework.
--   [Github repo](https://github.com/motiadev/motia): Main github repository to file issues.
+-   [https://motadev.com](https://motadev.com): Main page for framework.
+-   [Github repo](https://github.com/motadev/mota): Main github repository to file issues.

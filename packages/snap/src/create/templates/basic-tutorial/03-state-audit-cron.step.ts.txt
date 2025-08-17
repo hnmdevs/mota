@@ -1,4 +1,4 @@
-import { CronConfig, Handlers } from 'motia'
+import { CronConfig, Handlers } from 'mota'
 
 export const config: CronConfig = {
   type: 'cron' as const,

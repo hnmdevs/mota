@@ -7,15 +7,15 @@ export const createApiStep = (config: Partial<ApiRouteConfig> = {}, filePath?: s
   config: {
     type: 'api',
     name: 'Start Event',
-    description: 'Start the Motia Server Example flow',
-    path: '/api/motia-server-example',
+    description: 'Start the Mota Server Example flow',
+    path: '/api/mota-server-example',
     method: 'POST',
     emits: ['ws-server-example.start'],
-    flows: ['motia-server'],
+    flows: ['mota-server'],
     ...config,
   },
   version: '1',
-  filePath: filePath ?? path.join(process.cwd(), '/playground/steps/motiaServerExample/startServerExample.step.ts'),
+  filePath: filePath ?? path.join(process.cwd(), '/playground/steps/motaServerExample/startServerExample.step.ts'),
 })
 
 export const createEventStep = (config: Partial<EventConfig> = {}, filePath?: string): Step<EventConfig> => ({
@@ -25,11 +25,11 @@ export const createEventStep = (config: Partial<EventConfig> = {}, filePath?: st
     subscribes: ['ws-server-example.start'],
     emits: ['ws-server-example.processed'],
     input: zodToJsonSchema(z.object({})) as never,
-    flows: ['motia-server'],
+    flows: ['mota-server'],
     ...config,
   },
   version: '1',
-  filePath: filePath ?? path.join(process.cwd(), '/playground/steps/motiaServerExample/processor.step.ts'),
+  filePath: filePath ?? path.join(process.cwd(), '/playground/steps/motaServerExample/processor.step.ts'),
 })
 
 export const createCronStep = (config: Partial<CronConfig> = {}, filePath?: string): Step<CronConfig> => ({
@@ -38,11 +38,11 @@ export const createCronStep = (config: Partial<CronConfig> = {}, filePath?: stri
     name: 'Cron Job',
     cron: '* * * * *',
     emits: [],
-    flows: ['motia-server'],
+    flows: ['mota-server'],
     ...config,
   },
   version: '1',
-  filePath: filePath ?? path.join(process.cwd(), '/playground/steps/motiaServerExample/cronJob.step.ts'),
+  filePath: filePath ?? path.join(process.cwd(), '/playground/steps/motaServerExample/cronJob.step.ts'),
 })
 
 export const createNoopStep = (config: Partial<NoopConfig> = {}, filePath?: string): Step<NoopConfig> => ({
@@ -51,9 +51,9 @@ export const createNoopStep = (config: Partial<NoopConfig> = {}, filePath?: stri
     name: 'Noop',
     virtualEmits: ['noop-event'],
     virtualSubscribes: ['noop-subscription'],
-    flows: ['motia-server'],
+    flows: ['mota-server'],
     ...config,
   },
   version: '1',
-  filePath: filePath ?? path.join(process.cwd(), '/playground/steps/motiaServerExample/noop.step.ts'),
+  filePath: filePath ?? path.join(process.cwd(), '/playground/steps/motaServerExample/noop.step.ts'),
 })

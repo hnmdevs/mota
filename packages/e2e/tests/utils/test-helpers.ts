@@ -3,19 +3,19 @@ import { Page, expect } from '@playwright/test'
 export class TestHelpers {
   constructor(private page: Page) {}
 
-  async waitForMotiaApplication() {
+  async waitForMotaApplication() {
     await this.page.waitForLoadState('networkidle')
     await expect(this.page.locator('body')).toBeVisible()
   }
 
   async navigateToWorkbench() {
     await this.page.goto('/flow/default')
-    await this.waitForMotiaApplication()
+    await this.waitForMotaApplication()
   }
 
   async navigateToDocs() {
     await this.page.goto('/docs')
-    await this.waitForMotiaApplication()
+    await this.waitForMotaApplication()
   }
 
   async createApiRequest(endpoint: string, method: string = 'GET', body?: any) {
@@ -56,13 +56,13 @@ export class TestHelpers {
 
   async getLogs() {
     return await this.page.evaluate(() => {
-      return (globalThis as any).motiaLogs || []
+      return (globalThis as any).motaLogs || []
     })
   }
 
   async clearLogs() {
     await this.page.evaluate(() => {
-      ;(globalThis as any).motiaLogs = []
+      ;(globalThis as any).motaLogs = []
     })
   }
 

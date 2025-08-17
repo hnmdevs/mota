@@ -5,7 +5,7 @@ import heroBackgroundRays from '@/public/images/landing/heroBackgroundRays.svg'
 import smoke from '@/public/images/landing/smoke.webp'
 import { ScaleAnimation } from './ScaleAnimation'
 import bgHeroDashboard from '@/public/images/landing/bgHeroDashboard.png'
-import motiaCode from '@/public/images/landing/motiaHeroCode.webp'
+import motaCode from '@/public/images/landing/motaHeroCode.webp'
 import ParticlesBackground from './Particles'
 import RiveAnimation from './RiveAnimation'
 import { Alignment, Fit } from '@rive-app/react-webgl2'
@@ -22,7 +22,7 @@ export default function Hero() {
           <Title>Polyglot backend framework that unifies API, Background Jobs & AI Agents</Title>
 
           <p className="w-[520px] max-w-full text-[17px] font-light text-white opacity-80">
-            Motia is the single backend runtime where API endpoints, background jobs, scheduled tasks, and AI agents{' '}
+            Mota is the single backend runtime where API endpoints, background jobs, scheduled tasks, and AI agents{' '}
             <span className="font-bold">written in any language</span>, are all unified in workflows, with full
             observability, scalability and resiliency. Build, automate, and evolve all on one platform with{' '}
             <span className="font-bold">one command line</span> to quickly <span className="font-bold">deploy</span> to
@@ -33,7 +33,7 @@ export default function Hero() {
         <SectionAppearAnimation delay={0.5}>
           <div className="mt-[60px] flex w-fit max-w-full flex-wrap-reverse items-center justify-center gap-[16px] max-md:w-full max-sm:mt-[30px] md:gap-[8px]">
             <CopyNPX />
-            <ModalCTA variant="secondary" text="Sign up for Motia Cloud Beta" />
+            <ModalCTA variant="secondary" text="Sign up for Mota Cloud Beta" />
           </div>
         </SectionAppearAnimation>
       </div>
@@ -90,12 +90,12 @@ export default function Hero() {
               width={500}
               priority={true}
               className="w-full max-w-[380px] object-contain object-top-left"
-              src={motiaCode}
+              src={motaCode}
               alt="Code Snippet"
             />
             <RiveAnimation
               className="fade-right aspect-[350/489] max-h-[600px] w-full max-w-[500px] grow"
-              src="/rive/motiaHero.riv"
+              src="/rive/motaHero.riv"
               fit={Fit.Cover}
               alignment={Alignment.TopLeft}
             />

@@ -1,14 +1,14 @@
 ---
-title: TLDR - Motia in 3 Minutes
-description: A 3-minute overview of Motia’s core concepts with a business-ready GenAI use case
+title: TLDR - Mota in 3 Minutes
+description: A 3-minute overview of Mota’s core concepts with a business-ready GenAI use case
 ---
 
-# TLDR - Motia in 3 Minutes
+# TLDR - Mota in 3 Minutes
 
-Got 3 minutes? Here’s the scoop on Motia - Unified Backend Framework for APIs, Events and AI Agents that powers event-driven workflows, perfect for Generative AI (GenAI). We’ll spotlight a real-world win: analyzing customer feedback.
+Got 3 minutes? Here’s the scoop on Mota - Unified Backend Framework for APIs, Events and AI Agents that powers event-driven workflows, perfect for Generative AI (GenAI). We’ll spotlight a real-world win: analyzing customer feedback.
 
-## What’s Motia?
-Motia builds scalable, observable workflows without infrastructure headaches. Code in JS, TS, or Python, chain it up, and track it live in a visual Workbench.
+## What’s Mota?
+Mota builds scalable, observable workflows without infrastructure headaches. Code in JS, TS, or Python, chain it up, and track it live in a visual Workbench.
 
 - **Why It’s Clutch**: No queue setup, instant APIs/scheduling, real-time insights.
 - **Who’s It For**: Businesses wanting intelligent workflows without the hassle.
@@ -33,11 +33,11 @@ Here’s a business-ready GenAI flow—crunching customer feedback:
 
 ## Why Businesses Love It
 - **Scales Anything**: Links steps into workflows—GenAI or otherwise—with ease.
-- **Language Flex**: Mix Python for analysis, TS for notifications—Motia rolls with it.
+- **Language Flex**: Mix Python for analysis, TS for notifications—Mota rolls with it.
 - **Real-Time Visualization**: Workbench maps your flow live, logs and all, for instant clarity.
 
 ## 3-Minute Takeaway
-Motia = **Steps** (logic) → **Events** (messages) → **Topics** (routing) → **Flows** (plans). It’s event-driven power made simple, with a dashboard to keep tabs.
+Mota = **Steps** (logic) → **Events** (messages) → **Topics** (routing) → **Flows** (plans). It’s event-driven power made simple, with a dashboard to keep tabs.
 
 <Callout>
 Want to build it? Hit the [Quick Start](/docs/getting-started/quick-start) for a 5-minute go. Or dive into [Core Concepts](/docs/getting-started/core-concepts) for the full rundown.

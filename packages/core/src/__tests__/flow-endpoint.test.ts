@@ -9,25 +9,25 @@ import { generateFlow } from '../helper/flows-helper'
 const mockFlowSteps: Step[] = [
   createApiStep({
     name: 'Start Event',
-    description: 'Start the Motia Server Example flow',
-    path: '/api/motia-server-example',
+    description: 'Start the Mota Server Example flow',
+    path: '/api/mota-server-example',
     method: 'POST',
     emits: ['ws-server-example.start'],
-    flows: ['motia-server'],
+    flows: ['mota-server'],
   }),
   createEventStep({
     name: 'Processor',
     subscribes: ['ws-server-example.start'],
     emits: ['ws-server-example.processed'],
     input: zodToJsonSchema(z.object({})) as never,
-    flows: ['motia-server'],
+    flows: ['mota-server'],
   }),
   createEventStep({
     name: 'Finalizer',
     subscribes: ['ws-server-example.processed'],
     emits: [],
     input: zodToJsonSchema(z.object({})) as never,
-    flows: ['motia-server'],
+    flows: ['mota-server'],
   }),
 ]
 
@@ -36,7 +36,7 @@ describe('flowEndpoint', () => {
     const lockedData = new LockedData(process.cwd(), 'memory', new NoPrinter())
     mockFlowSteps.forEach((step) => lockedData.createStep(step, { disableTypeCreation: true }))
 
-    const result = generateFlow('motia-server', lockedData.flows['motia-server'].steps)
+    const result = generateFlow('mota-server', lockedData.flows['mota-server'].steps)
     expect(result.steps.map((step) => step.name)).toEqual(['Start Event', 'Processor', 'Finalizer'])
   })
 })

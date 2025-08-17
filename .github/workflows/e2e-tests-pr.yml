@@ -52,7 +52,7 @@ jobs:
           cd packages/e2e
           pnpm exec playwright install chromium
           pnpm exec playwright install-deps
-          npx motia install
+          npx mota install
 
       - name: Clean previous test artifacts
         run: |

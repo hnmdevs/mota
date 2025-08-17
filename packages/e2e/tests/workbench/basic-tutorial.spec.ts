@@ -3,14 +3,14 @@ import { WorkbenchPage } from '../page-objects'
 
 test.use({ viewport: { width: 1920, height: 1080 } })
 
-test.describe('Motia Basic Tutorial - Workbench', () => {
+test.describe('Mota Basic Tutorial - Workbench', () => {
   let workbench: WorkbenchPage
 
   test.beforeEach(async ({ page }) => {
     workbench = new WorkbenchPage(page)
 
     await page.addInitScript(() => {
-      localStorage.removeItem('motia-tutorial-skipped')
+      localStorage.removeItem('mota-tutorial-skipped')
       let currentFlowStorage: {
         state?: {
           selectedFlowId?: string
@@ -18,13 +18,13 @@ test.describe('Motia Basic Tutorial - Workbench', () => {
       } = {}
 
       try {
-        currentFlowStorage = JSON.parse(localStorage.getItem('motia-flow-storage') ?? '{}')
+        currentFlowStorage = JSON.parse(localStorage.getItem('mota-flow-storage') ?? '{}')
       } catch {
-        console.error('Failed to parse motia-flow-storage')
+        console.error('Failed to parse mota-flow-storage')
       }
 
       localStorage.setItem(
-        'motia-flow-storage',
+        'mota-flow-storage',
         JSON.stringify({
           ...currentFlowStorage,
           state: {
@@ -108,7 +108,7 @@ test.describe('Motia Basic Tutorial - Workbench', () => {
 
   test('tutorial button shoud override the skip tutorial setting', async ({ page }) => {
     await page.addInitScript(() => {
-      localStorage.setItem('motia-tutorial-skipped', 'true')
+      localStorage.setItem('mota-tutorial-skipped', 'true')
     })
 
     await workbench.open()

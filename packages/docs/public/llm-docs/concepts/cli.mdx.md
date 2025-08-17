@@ -1,29 +1,29 @@
 ---
 title: Command Line Interface (CLI)
-description: Learn how to use the Motia CLI to manage your projects and workflows
+description: Learn how to use the Mota CLI to manage your projects and workflows
 ---
 
 # Command Line Interface (CLI)
 
-Motia provides a powerful Command Line Interface (CLI) to help you manage your projects and workflows. The CLI offers various commands for creating projects, generating steps, managing state, and more.
+Mota provides a powerful Command Line Interface (CLI) to help you manage your projects and workflows. The CLI offers various commands for creating projects, generating steps, managing state, and more.
 
 ## Installation
 
-The Motia CLI is automatically installed when you install the `motia` package. You can use it by running `npx motia` followed by the desired command.
+The Mota CLI is automatically installed when you install the `mota` package. You can use it by running `npx mota` followed by the desired command.
 
 ## Commands
 
 ### `create`
 
-Create a new Motia project.
+Create a new Mota project.
 
 ```bash
-npx motia create [options]
+npx mota create [options]
 ```
 
 Options:
 - `-n, --name <project name>`: The name for your project, used to create a directory. Use `.` or `./` to create it in the current directory.
-- `-t, --template <template name>`: The Motia template to use for your project. Run `npx motia templates` to see available templates.
+- `-t, --template <template name>`: The Mota template to use for your project. Run `npx mota templates` to see available templates.
 - `-c, --cursor`: Enable Cursor IDE integration by adding `.cursor` configuration folder
 
 ### `templates`
@@ -31,7 +31,7 @@ Options:
 Print the list of available project templates.
 
 ```bash
-npx motia templates
+npx mota templates
 ```
 
 ### `build`
@@ -39,21 +39,21 @@ npx motia templates
 Build your project, generating zip files for each step and creating a configuration file.
 
 ```bash
-npx motia build
+npx mota build
 ```
 
 This command:
 1. Compiles all your steps (both Node.js and Python)
 2. Bundles each step into a zip file
-3. Generates a `motia.steps.json` configuration file in the `dist` directory
+3. Generates a `mota.steps.json` configuration file in the `dist` directory
 4. Organizes the output in the `dist` directory
 
 ### `deploy`
 
-Deploy your built steps to the Motia deployment service.
+Deploy your built steps to the Mota deployment service.
 
 ```bash
-npx motia deploy [options]
+npx mota deploy [options]
 ```
 
 Options:
@@ -63,22 +63,22 @@ Options:
 
 Example:
 ```bash
-npx motia deploy --api-key your-api-key-here --env production --version 1.0.0
+npx mota deploy --api-key your-api-key-here --env production --version 1.0.0
 ```
 
 The deployment process:
 1. Uploads each zip file individually with its path information
-2. Uploads the steps configuration from `motia.steps.json`
+2. Uploads the steps configuration from `mota.steps.json`
 3. Starts the deployment process on the server
-4. Generates deployment results in `dist/motia.deployments.json`
-5. Creates a human-readable summary in `dist/motia.deployments.summary.json`
+4. Generates deployment results in `dist/mota.deployments.json`
+5. Creates a human-readable summary in `dist/mota.deployments.summary.json`
 
 ### `dev`
 
 Start the development server.
 
 ```bash
-npx motia dev [options]
+npx mota dev [options]
 ```
 
 Options:
@@ -91,7 +91,7 @@ Options:
 Get the generated config for your project.
 
 ```bash
-npx motia get-config [options]
+npx mota get-config [options]
 ```
 
 Options:
@@ -99,10 +99,10 @@ Options:
 
 ### `emit`
 
-Emit an event to the Motia server.
+Emit an event to the Mota server.
 
 ```bash
-npx motia emit [options]
+npx mota emit [options]
 ```
 
 Options:
@@ -112,14 +112,14 @@ Options:
 
 ### `generate`
 
-Generate Motia resources.
+Generate Mota resources.
 
 #### `generate step`
 
 Create a new step with interactive prompts.
 
 ```bash
-npx motia generate step [options]
+npx mota generate step [options]
 ```
 
 Options:
@@ -134,14 +134,14 @@ Manage application state.
 List the current file state.
 
 ```bash
-npx motia state list
+npx mota state list
 ```
 ## Debugging
 
 You can enable debug logging by passing the `-d` or `--debug` flag to the `dev` command:
 
 ```bash
-npx motia dev --debug
+npx mota dev --debug
 ```
 
 This will set the `LOG_LEVEL` environment variable to `'debug'`, providing more detailed logging output.

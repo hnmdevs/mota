@@ -6,7 +6,7 @@ const GitHubStarButton = ({ className = '' }) => {
 
   useEffect(() => {
     // Fetch star count from GitHub API
-    fetch('https://api.github.com/repos/MotiaDev/motia')
+    fetch('https://api.github.com/repos/MotaDev/mota')
       .then((response) => response.json())
       .then((data) => {
         setStarCount(data.stargazers_count)
@@ -18,7 +18,7 @@ const GitHubStarButton = ({ className = '' }) => {
 
   return (
     <a
-      href="https://github.com/MotiaDev/motia"
+      href="https://github.com/MotaDev/mota"
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center gap-1.5 rounded-md border border-gray-600 bg-white px-3 py-0.5 text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 ${className}`}

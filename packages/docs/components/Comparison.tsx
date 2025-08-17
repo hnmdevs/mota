@@ -7,7 +7,7 @@ import {
   codeIcon,
   greenThumb,
   mlFocusedIcon,
-  motiaLogoWhite,
+  motaLogoWhite,
   noCodeIcon,
   redCross,
   redThumb,
@@ -26,7 +26,7 @@ type TableHeaders = {
 }
 const tableHeaders: TableHeaders = {
   features: { text: 'Features', icon: <></> },
-  motia: { text: 'Motia', icon: motiaLogoWhite },
+  mota: { text: 'Mota', icon: motaLogoWhite },
   noCode: { text: 'No-Code', icon: noCodeIcon },
   agentBased: { text: 'Agent Based', icon: agentBasedIcon },
   mlFocused: { text: 'ML-Focused', icon: mlFocusedIcon },
@@ -49,7 +49,7 @@ export const pricingTableColumns: pricingTableColumns = {
     { text: 'Agentic Support', icon: <></> },
     { text: 'Long-term Maintainability', icon: <></> },
   ],
-  motia: [
+  mota: [
     { icon: blueTick, text: 'Full flexibility with code' },
     { icon: blueTick, text: 'JS, TS, Python, Ruby' },
     { icon: blueTick, text: 'Built-in workbench' },

@@ -1,6 +1,6 @@
 import path from 'path'
 import { trackEvent } from './analytics/utils'
-import { Motia } from './motia'
+import { Mota } from './mota'
 import { ProcessManager } from './process-communication/process-manager'
 import { Event, Step } from './types'
 import { BaseStreamItem } from './types-stream'
@@ -56,13 +56,13 @@ type CallStepFileOptions = {
   tracer: Tracer
 }
 
-export const callStepFile = <TData>(options: CallStepFileOptions, motia: Motia): Promise<TData | undefined> => {
+export const callStepFile = <TData>(options: CallStepFileOptions, mota: Mota): Promise<TData | undefined> => {
   const { step, traceId, data, tracer, logger, contextInFirstArg = false } = options
 
   const flows = step.config.flows
 
   return new Promise((resolve, reject) => {
-    const streamConfig = motia.lockedData.getStreams()
+    const streamConfig = mota.lockedData.getStreams()
     const streams = Object.keys(streamConfig).map((name) => ({ name }))
     const jsonData = JSON.stringify({ data, flows, traceId, contextInFirstArg, streams })
     const { runner, command, args } = getLanguageBasedRunner(step.filePath)
@@ -100,7 +100,7 @@ export const callStepFile = <TData>(options: CallStepFileOptions, motia: Motia):
             tracer.end({
               message: err.message,
               code: err.code,
-              stack: err.stack?.replace(new RegExp(`${motia.lockedData.baseDir}/`), ''),
+              stack: err.stack?.replace(new RegExp(`${mota.lockedData.baseDir}/`), ''),
             })
           } else {
             tracer.end()
@@ -110,27 +110,27 @@ export const callStepFile = <TData>(options: CallStepFileOptions, motia: Motia):
 
         processManager.handler<StateGetInput, unknown>('state.get', async (input) => {
           tracer.stateOperation('get', input)
-          return motia.state.get(input.traceId, input.key)
+          return mota.state.get(input.traceId, input.key)
         })
 
         processManager.handler<StateSetInput, unknown>('state.set', async (input) => {
           tracer.stateOperation('set', { traceId: input.traceId, key: input.key, value: true })
-          return motia.state.set(input.traceId, input.key, input.value)
+          return mota.state.set(input.traceId, input.key, input.value)
         })
 
         processManager.handler<StateDeleteInput, unknown>('state.delete', async (input) => {
           tracer.stateOperation('delete', input)
-          return motia.state.delete(input.traceId, input.key)
+          return mota.state.delete(input.traceId, input.key)
         })
 
         processManager.handler<StateClearInput, void>('state.clear', async (input) => {
           tracer.stateOperation('clear', input)
-          return motia.state.clear(input.traceId)
+          return mota.state.clear(input.traceId)
         })
 
         processManager.handler<StateStreamGetInput>(`state.getGroup`, (input) => {
           tracer.stateOperation('getGroup', input)
-          return motia.state.getGroup(input.groupId)
+          return mota.state.getGroup(input.groupId)
         })
 
         processManager.handler<TData, void>('result', async (input) => {
@@ -142,11 +142,11 @@ export const callStepFile = <TData>(options: CallStepFileOptions, motia: Motia):
 
           if (!isAllowedToEmit(step, input.topic)) {
             tracer.emitOperation(input.topic, input.data, false)
-            return motia.printer.printInvalidEmit(step, input.topic)
+            return mota.printer.printInvalidEmit(step, input.topic)
           }
 
           tracer.emitOperation(input.topic, input.data, true)
-          return motia.eventManager.emit({ ...input, traceId, flows, logger, tracer }, step.filePath)
+          return mota.eventManager.emit({ ...input, traceId, flows, logger, tracer }, step.filePath)
         })
 
         Object.entries(streamConfig).forEach(([name, streamFactory]) => {

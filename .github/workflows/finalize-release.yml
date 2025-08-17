@@ -68,27 +68,27 @@ jobs:
 
       - name: Promote packages to latest
         run: |
-          npm dist-tag add @motiadev/core@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motiadev/workbench@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motiadev/stream-client@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motiadev/stream-client-browser@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motiadev/stream-client-node@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motiadev/stream-client-react@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add motia@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motiadev/test@${{ needs.prepare.outputs.version }} latest
-          npm dist-tag add @motiadev/ui@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @motadev/core@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @motadev/workbench@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @motadev/stream-client@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @motadev/stream-client-browser@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @motadev/stream-client-node@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @motadev/stream-client-react@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add mota@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @motadev/test@${{ needs.prepare.outputs.version }} latest
+          npm dist-tag add @motadev/ui@${{ needs.prepare.outputs.version }} latest
 
       - name: Remove pre-release tag
         run: |
-          npm dist-tag rm @motiadev/core pre-release || true
-          npm dist-tag rm @motiadev/workbench pre-release || true
-          npm dist-tag rm @motiadev/stream-client pre-release || true
-          npm dist-tag rm @motiadev/stream-client-browser pre-release || true
-          npm dist-tag rm @motiadev/stream-client-node pre-release || true
-          npm dist-tag rm @motiadev/stream-client-react pre-release || true
-          npm dist-tag rm motia pre-release || true
-          npm dist-tag rm @motiadev/test pre-release || true
-          npm dist-tag rm @motiadev/ui pre-release || true
+          npm dist-tag rm @motadev/core pre-release || true
+          npm dist-tag rm @motadev/workbench pre-release || true
+          npm dist-tag rm @motadev/stream-client pre-release || true
+          npm dist-tag rm @motadev/stream-client-browser pre-release || true
+          npm dist-tag rm @motadev/stream-client-node pre-release || true
+          npm dist-tag rm @motadev/stream-client-react pre-release || true
+          npm dist-tag rm mota pre-release || true
+          npm dist-tag rm @motadev/test pre-release || true
+          npm dist-tag rm @motadev/ui pre-release || true
 
   create-github-release:
     needs: [prepare, promote-to-latest]
@@ -129,17 +129,17 @@ jobs:
           $CHANGELOG
 
           ## Package Versions
-          - @motiadev/core@${{ needs.prepare.outputs.version }}
-          - @motiadev/workbench@${{ needs.prepare.outputs.version }}
-          - @motiadev/stream-client-browser@${{ needs.prepare.outputs.version }}
-          - @motiadev/stream-client-react@${{ needs.prepare.outputs.version }}
-          - motia@${{ needs.prepare.outputs.version }}
-          - @motiadev/test@${{ needs.prepare.outputs.version }}
-          - @motiadev/ui@${{ needs.prepare.outputs.version }}
+          - @motadev/core@${{ needs.prepare.outputs.version }}
+          - @motadev/workbench@${{ needs.prepare.outputs.version }}
+          - @motadev/stream-client-browser@${{ needs.prepare.outputs.version }}
+          - @motadev/stream-client-react@${{ needs.prepare.outputs.version }}
+          - mota@${{ needs.prepare.outputs.version }}
+          - @motadev/test@${{ needs.prepare.outputs.version }}
+          - @motadev/ui@${{ needs.prepare.outputs.version }}
 
           ## Installation
           \`\`\`bash
-          npm install motia@${{ needs.prepare.outputs.version }}
+          npm install mota@${{ needs.prepare.outputs.version }}
           \`\`\`
 
           **Full Changelog**: https://github.com/${{ github.repository }}/compare/$PREVIOUS_TAG..${{ needs.prepare.outputs.tag_name }}
@@ -157,7 +157,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: '${{ needs.prepare.outputs.tag_name }}',
-              name: 'Motia ${{ needs.prepare.outputs.version }}',
+              name: 'Mota ${{ needs.prepare.outputs.version }}',
               body: releaseNotes,
               draft: false,
               prerelease: false
@@ -190,8 +190,8 @@ jobs:
 
       - name: Set version on all packages
         run: |
-          pnpm -r --filter "@motiadev/*" exec pnpm version ${{ needs.prepare.outputs.version }} --no-git-tag-version
-          pnpm -r --filter motia exec pnpm version ${{ needs.prepare.outputs.version }} --no-git-tag-version
+          pnpm -r --filter "@motadev/*" exec pnpm version ${{ needs.prepare.outputs.version }} --no-git-tag-version
+          pnpm -r --filter mota exec pnpm version ${{ needs.prepare.outputs.version }} --no-git-tag-version
 
       - name: Commit version changes
         run: |

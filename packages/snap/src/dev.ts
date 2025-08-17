@@ -6,7 +6,7 @@ import {
   createStateAdapter,
   getProjectIdentifier,
   trackEvent,
-} from '@motiadev/core'
+} from '@imoogle/core'
 import path from 'path'
 import { flush } from '@amplitude/analytics-node'
 import { generateLockedData, getStepFiles } from './generate-locked-data'
@@ -57,12 +57,12 @@ export const dev = async (
   const eventManager = createEventManager()
   const state = createStateAdapter({
     adapter: 'default',
-    filePath: path.join(baseDir, '.motia'),
+    filePath: path.join(baseDir, '.mota'),
   })
 
   const config = { isVerbose }
-  const motiaServer = createServer(lockedData, eventManager, state, config)
-  const watcher = createDevWatchers(lockedData, motiaServer, motiaServer.motiaEventManager, motiaServer.cronManager)
+  const motaServer = createServer(lockedData, eventManager, state, config)
+  const watcher = createDevWatchers(lockedData, motaServer, motaServer.motaEventManager, motaServer.cronManager)
 
   // Initialize mermaid generator
   if (enableMermaid) {
@@ -73,9 +73,9 @@ export const dev = async (
 
   watcher.init()
 
-  stateEndpoints(motiaServer, state)
+  stateEndpoints(motaServer, state)
 
-  motiaServer.server.listen(port, hostname)
+  motaServer.server.listen(port, hostname)
   console.log('🚀 Server ready and listening on port', port)
   console.log(`🔗 Open http://${hostname}:${port}/ to open workbench 🛠️`)
 
@@ -92,15 +92,15 @@ export const dev = async (
 
   const { applyMiddleware } = process.env.__MOTIA_DEV_MODE__
     ? // eslint-disable-next-line @typescript-eslint/no-require-imports
-      require('@motiadev/workbench/middleware')
+      require('@imoogle/workbench/middleware')
     : // eslint-disable-next-line @typescript-eslint/no-require-imports
-      require('@motiadev/workbench/dist/middleware')
-  await applyMiddleware(motiaServer.app)
+      require('@imoogle/workbench/dist/middleware')
+  await applyMiddleware(motaServer.app)
 
   // 6) Gracefully shut down on SIGTERM
   process.on('SIGTERM', async () => {
     trackEvent('dev_server_shutdown', { reason: 'SIGTERM' })
-    motiaServer.server.close()
+    motaServer.server.close()
     await watcher.stop()
     await flush().promise
     process.exit(0)
@@ -108,7 +108,7 @@ export const dev = async (
 
   process.on('SIGINT', async () => {
     trackEvent('dev_server_shutdown', { reason: 'SIGINT' })
-    motiaServer.server.close()
+    motaServer.server.close()
     await watcher.stop()
     await flush().promise
     process.exit(0)

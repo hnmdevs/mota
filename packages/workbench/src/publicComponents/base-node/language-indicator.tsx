@@ -1,5 +1,5 @@
 import { EventNodeData } from '@/types/flow'
-import { cn } from '@motiadev/ui'
+import { cn } from '@imoogle/ui'
 import { FC } from 'react'
 
 type Props = { language: EventNodeData['language']; className?: string; size?: number; showLabel?: boolean }

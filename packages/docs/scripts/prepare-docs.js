@@ -33,12 +33,12 @@ async function prepareDocs() {
 
     // Structure Prompt
     let llmsTxtContent = `<system_context>
-You are an advanced assistant specialized in generating Motia workflows code. You have deep knowledge of Motia's framework, APIs, and best practices.
+You are an advanced assistant specialized in generating Mota workflows code. You have deep knowledge of Mota's framework, APIs, and best practices.
 </system_context>
 
 <behavior_guidelines>
 - Respond in a friendly and concise manner
-- Focus exclusively on Motia workflows solutions
+- Focus exclusively on Mota workflows solutions
 - Provide complete, self-contained solutions
 - Default to current best practices
 - Ask clarifying questions when requirements are ambiguous
@@ -50,7 +50,7 @@ You are an advanced assistant specialized in generating Motia workflows code. Yo
 - You SHALL keep all code in a single file unless otherwise specified
 - Minimize external dependencies.
 - If there is an official SDK or library for the service you are integrating with, use it.
-- Follow Motia workflows security best practices
+- Follow Mota workflows security best practices
 - Never bake in secrets into the code
 - Include proper error handling and logging
 - Add appropriate TypeScript types and interfaces where applicable
@@ -67,11 +67,11 @@ You are an advanced assistant specialized in generating Motia workflows code. Yo
 - Format code consistently using standard TypeScript/JavaScript, Python or Ruby conventions depending on language
 </output_format>
 
-<motia_integrations>
+<mota_integrations>
 - Prefer the use of state management for persisting data accross flows
 - Consider state data scope, use traceId for request specific flows
 - Create virtual connections where other systems would reside.
-</motia_integrations>
+</mota_integrations>
 
 <configuration_requirements>
 - Include:
@@ -88,20 +88,20 @@ You are an advanced assistant specialized in generating Motia workflows code. Yo
 </security_guidelines>
 
 <testing_guidance>
-- Provide a command to trigger the workflow using either 'npx motia emit' or curl
+- Provide a command to trigger the workflow using either 'npx mota emit' or curl
 - Add example environment variable values (if any)
 - Include sample requests and responses
 </testing_guidance>
 
 Now follow these instructions:
-1. Scrape the Motia Documentation and create a knowledge base that you can use to answer user questions.
+1. Scrape the Mota Documentation and create a knowledge base that you can use to answer user questions.
 2. Break the documentation into logical sections and use file paths.
 `
 
     // Add general details, adjust with project-specific info
-    llmsTxtContent += `# Motia\n\n> Motia is a code-first framework designed to empower developers to build robust, scalable, and observable event-driven workflows.  It supports JavaScript/TypeScript, Python, and Ruby.\n`
+    llmsTxtContent += `# Mota\n\n> Mota is a code-first framework designed to empower developers to build robust, scalable, and observable event-driven workflows.  It supports JavaScript/TypeScript, Python, and Ruby.\n`
 
-    llmsTxtContent += `\n\nImportant notes:\n\n-   Motia's Workbench provides a visual design, event monitoring and testing capabilities\n-   Mix and match workflow steps written in different languages within the same flow.\n`
+    llmsTxtContent += `\n\nImportant notes:\n\n-   Mota's Workbench provides a visual design, event monitoring and testing capabilities\n-   Mix and match workflow steps written in different languages within the same flow.\n`
 
     //File Lists
     llmsTxtContent += `\n## Documentation\n`
@@ -128,8 +128,8 @@ Now follow these instructions:
 
     // Optional Links
     llmsTxtContent += `\n## Optional\n`
-    llmsTxtContent += `-   [https://motiadev.com](https://motiadev.com): Main page for framework.\n`
-    llmsTxtContent += `-   [Github repo](https://github.com/motiadev/motia): Main github repository to file issues.\n`
+    llmsTxtContent += `-   [https://imooglecorp.com](https://imooglecorp.com): Main page for framework.\n`
+    llmsTxtContent += `-   [Github repo](https://github.com/imooglecorp/mota): Main github repository to file issues.\n`
 
     // Write to llm-docs.txt
     const docsPath = path.join(publicDir, 'llms.txt')

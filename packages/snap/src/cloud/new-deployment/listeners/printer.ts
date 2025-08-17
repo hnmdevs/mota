@@ -1,5 +1,5 @@
 import colors from 'colors'
-import { Printer } from '@motiadev/core/dist/src/printer'
+import { Printer } from '@imoogle/core/dist/src/printer'
 import { CLIOutputManager } from '../../cli-output-manager'
 import { BuildStepConfig } from '../../build/builder'
 import { projectDir } from '../constants'

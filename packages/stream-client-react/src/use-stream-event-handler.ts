@@ -1,4 +1,4 @@
-import { StreamSubscription } from '@motiadev/stream-client-browser'
+import { StreamSubscription } from '@imoogle/stream-client-browser'
 import { DependencyList, useEffect } from 'react'
 
 type UseStreamEventHandler = {

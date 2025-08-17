@@ -24,7 +24,7 @@ async def handler(input, context):
   # Avoid usage of console.log, use logger instead
   context.logger.info('Step 02 – Pushing message content to state', { "input": input })
 
-  message = 'Welcome to motia!'
+  message = 'Welcome to mota!'
 
   # Persist content on state to be used by other steps
   # or in other workflows later

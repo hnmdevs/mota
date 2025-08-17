@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { useMotiaStream } from './use-motia-stream'
-import { StreamSubscription } from '@motiadev/stream-client-browser'
+import { useMotaStream } from './use-mota-stream'
+import { StreamSubscription } from '@imoogle/stream-client-browser'
 
 export type StreamGroupArgs<TData extends { id: string }> = {
   streamName: string
@@ -28,7 +28,7 @@ export type StreamGroupArgs<TData extends { id: string }> = {
  * ```
  */
 export const useStreamGroup = <TData extends { id: string }>(args?: StreamGroupArgs<TData>) => {
-  const { stream } = useMotiaStream()
+  const { stream } = useMotaStream()
   const [data, setData] = useState<TData[]>([])
   const [event, setEvent] = useState<StreamSubscription | null>(null)
 

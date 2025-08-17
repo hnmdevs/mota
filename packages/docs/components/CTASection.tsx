@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import RiveAnimation from './RiveAnimation'
-import motiaPlaque from '@/public/images/landing/motiaPlaque.png'
+import motaPlaque from '@/public/images/landing/motaPlaque.png'
 import { Alignment, Fit } from '@rive-app/react-webgl2'
 import Title from './Title'
 import SectionAppearAnimation from './SectionAppearAnimation'
@@ -54,7 +54,7 @@ export default function CTASection() {
       </div>
       <ModalForm isOpen={isOpen} onClose={() => setOpen(false)} />
       <SectionAppearAnimation className="relative top-[175px] z-1 h-[150px] w-[150px] bg-black">
-        <Image width={150} src={motiaPlaque} alt="Motia" />
+        <Image width={150} src={motaPlaque} alt="Mota" />
       </SectionAppearAnimation>
 
       <SectionAppearAnimation className="fade-sides relative z-1 -mb-[25px] flex items-center mix-blend-plus-lighter">
@@ -88,7 +88,7 @@ export default function CTASection() {
         delay={0.35}
       >
         <CopyNPX />
-        <ModalCTA variant="secondary" text="Sign up for Motia Cloud Beta" />
+        <ModalCTA variant="secondary" text="Sign up for Mota Cloud Beta" />
       </SectionAppearAnimation>
     </div>
   )

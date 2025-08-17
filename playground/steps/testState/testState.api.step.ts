@@ -1,4 +1,4 @@
-import { ApiRouteConfig, Handlers } from 'motia'
+import { ApiRouteConfig, Handlers } from 'mota'
 import { z } from 'zod'
 
 export const config: ApiRouteConfig = {
@@ -13,7 +13,7 @@ export const config: ApiRouteConfig = {
 }
 
 export const handler: Handlers['TestStateApiTrigger'] = async (req, { logger, emit }) => {
-  logger.info('[Test motia state] triggering api step', req)
+  logger.info('[Test mota state] triggering api step', req)
 
   await emit({
     topic: 'test-state-python',

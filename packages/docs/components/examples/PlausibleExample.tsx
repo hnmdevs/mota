@@ -20,7 +20,7 @@ export function PlausibleExample() {
         </button>
 
         <button
-          onClick={() => trackDownload('motia-docs.pdf', 'button')}
+          onClick={() => trackDownload('mota-docs.pdf', 'button')}
           className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
         >
           Track Download
@@ -34,7 +34,7 @@ export function PlausibleExample() {
         </button>
 
         <button
-          onClick={() => trackPurchase(29.99, 'USD', 'Motia Pro')}
+          onClick={() => trackPurchase(29.99, 'USD', 'Mota Pro')}
           className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600"
         >
           Track Purchase

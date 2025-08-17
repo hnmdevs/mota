@@ -1,7 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test'
-import { MotiaApplicationPage } from './MotiaApplicationPage'
+import { MotaApplicationPage } from './MotaApplicationPage'
 
-export class EndpointPage extends MotiaApplicationPage {
+export class EndpointPage extends MotaApplicationPage {
   readonly firstEndpointItem: Locator
   readonly callTab: Locator
   readonly detailsTab: Locator

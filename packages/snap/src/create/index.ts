@@ -35,7 +35,7 @@ const installRequiredDependencies = async (packageManager: string, rootDir: stri
     pnpm: 'pnpm add',
   }[packageManager]
 
-  const dependencies = [`motia@${version}`, 'zod@3.24.4'].join(' ')
+  const dependencies = [`mota@${version}`, 'zod@3.24.4'].join(' ')
   const devDependencies = ['ts-node@10.9.2', 'typescript@5.7.3', '@types/react@18.3.18'].join(' ')
 
   try {
@@ -128,15 +128,15 @@ export const create = async ({ projectName, template, cursorEnabled, context }: 
       name: projectName,
       description: '',
       scripts: {
-        postinstall: 'motia install',
-        dev: 'motia dev',
-        'dev:debug': 'motia dev --verbose',
-        'generate-types': 'motia generate-types',
-        build: 'motia build',
-        clean: 'rm -rf dist node_modules python_modules .motia .mermaid',
-        //'generate:config': 'motia get-config --output ./', TODO: doesnt work at the moment
+        postinstall: 'mota install',
+        dev: 'mota dev',
+        'dev:debug': 'mota dev --verbose',
+        'generate-types': 'mota generate-types',
+        build: 'mota build',
+        clean: 'rm -rf dist node_modules python_modules .mota .mermaid',
+        //'generate:config': 'mota get-config --output ./', TODO: doesnt work at the moment
       },
-      keywords: ['motia'],
+      keywords: ['mota'],
     }
 
     fs.writeFileSync(path.join(rootDir, 'package.json'), JSON.stringify(packageJsonContent, null, 2))
@@ -153,10 +153,10 @@ export const create = async ({ projectName, template, cursorEnabled, context }: 
     }
 
     if (!packageJson.scripts.dev) {
-      packageJson.scripts.dev = 'motia dev'
+      packageJson.scripts.dev = 'mota dev'
     } else {
       packageJson.scripts.olddev = packageJson.scripts.dev
-      packageJson.scripts.dev = 'motia dev'
+      packageJson.scripts.dev = 'mota dev'
       context.log('dev-command-already-exists', (message) =>
         message.tag('warning').append('dev command already exists in package.json'),
       )
@@ -206,7 +206,7 @@ export const create = async ({ projectName, template, cursorEnabled, context }: 
       'python_modules',
       '.venv',
       'venv',
-      '.motia',
+      '.mota',
       '.mermaid',
       'dist',
       '*.pyc',
@@ -254,7 +254,7 @@ export const create = async ({ projectName, template, cursorEnabled, context }: 
   if (template === 'python') {
     if (!checkIfFileExists(rootDir, 'requirements.txt')) {
       const requirementsContent = [
-        // TODO: motia PyPi package
+        // TODO: mota PyPi package
         // Add other Python dependencies as needed
       ].join('\n')
 

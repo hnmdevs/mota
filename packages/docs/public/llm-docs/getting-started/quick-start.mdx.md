@@ -2,68 +2,68 @@
 title: Quick Start
 ---
 
-This guide will walk you through everything you need to define a minimal **step**, set up your Motia project, and run the **Motia** dev server – all in one go, using **pnpm** for package management.
+This guide will walk you through everything you need to define a minimal **step**, set up your Mota project, and run the **Mota** dev server – all in one go, using **pnpm** for package management.
 
 <Steps>
   <Step>
   ### Setup your project: Create a New Project Folder
 
-Let's create a new Motia project in a dedicated folder. This is the recommended approach for keeping your projects organized.
+Let's create a new Mota project in a dedicated folder. This is the recommended approach for keeping your projects organized.
 
   <Tabs items={['Automated', 'Manual']}>
 <Tab value="Automated">
-  <Tabs items={['npx', 'motia Global CLI']}>
+  <Tabs items={['npx', 'mota Global CLI']}>
     <Tab value="npx">
       Use `npx` to run the project creation command directly:
 
       <Tabs items={['npx']}>
         <Tab value="npx">
           ```bash
-          npx motia@latest create -n <your-project-name>
+          npx mota@latest create -n <your-project-name>
           ```
         </Tab>
       </Tabs>
     </Tab>
 
-    <Tab value="motia Global CLI">
-      **First, install the Motia CLI globally:**
+    <Tab value="mota Global CLI">
+      **First, install the Mota CLI globally:**
 
       <Tabs items={['pnpm (Global)', 'npm (Global)', 'yarn (Global)', 'bun (Global)']}>
         <Tab value="pnpm (Global)">
           ```bash
-          npm install -g motia
+          npm install -g mota
           ```
         </Tab>
         <Tab value="npm (Global)">
           ```bash
-          npm install -g motia
+          npm install -g mota
           ```
         </Tab>
         <Tab value="yarn (Global)">
           ```bash
-          yarn global add motia
+          yarn global add mota
           ```
         </Tab>
         <Tab value="bun (Global)">
           ```bash
-          bun add -g motia
+          bun add -g mota
           ```
         </Tab>
       </Tabs>
 
-      **Then, create your project using the globally installed `motia` command:**
+      **Then, create your project using the globally installed `mota` command:**
 
       ```bash
-      motia create -n <your-project-name>
+      mota create -n <your-project-name>
       ```
     </Tab>
 
   </Tabs>
 
     *   **This will**:
-        *   Download and run the Motia CLI project creation tool
+        *   Download and run the Mota CLI project creation tool
         *   Create a new project directory named `<your-project-name>`.
-        *   Set up a basic Motia project structure inside the new folder.
+        *   Set up a basic Mota project structure inside the new folder.
         *   Install necessary dependencies using pnpm within the project folder.
         *   Add a `dev` script to your `package.json`.
         *   Include example steps to get you started.
@@ -71,7 +71,7 @@ Let's create a new Motia project in a dedicated folder. This is the recommended 
   <Callout type="info">
     **Choosing a Project Name:** Replace `<your-project-name>` with your desired project folder name.
 
-    **Alternative Templates:** To see other templates, run: `npx motia templates` (or `motia templates` if you installed globally).
+    **Alternative Templates:** To see other templates, run: `npx mota templates` (or `mota templates` if you installed globally).
 
   </Callout>
 
@@ -107,14 +107,14 @@ You should see a new folder created with the following files inside:
 
       3.  **Install Core Packages:**
           ```bash
-            motia zod
+            mota zod
           ```
 
       4.  **Add `dev` Script to `package.json`:**
           ```json
           {
             "scripts": {
-              "dev": "motia dev"
+              "dev": "mota dev"
             }
           }
           ```
@@ -175,11 +175,11 @@ You should see a new folder created with the following files inside:
 
    <Step>
 
-### Start Motia Development Server & Workbench
+### Start Mota Development Server & Workbench
 
-Now, let's start Motia and see your workflow in action!
+Now, let's start Mota and see your workflow in action!
 
-1.  **Open your terminal** in your Motia project's root directory (where your `package.json` file is located).
+1.  **Open your terminal** in your Mota project's root directory (where your `package.json` file is located).
 
 2.  **Run the development server command:** Use the `dev` script that was set up in your `package.json`:
 
@@ -190,11 +190,11 @@ Now, let's start Motia and see your workflow in action!
       <Tab value="bun">```bun run dev ```</Tab>
     </Tabs>
 
-    Motia will:
+    Mota will:
 
     - **Scan** your `steps` folder for step definition files (`.step.ts`, `.step.js`, `.step.py`, `.step.rb`).
-    - **Register** your Steps with the Motia runtime.
-    - **Launch** a development server and the Motia Workbench UI (typically at [`http://localhost:3000`](http://localhost:3000)).
+    - **Register** your Steps with the Mota runtime.
+    - **Launch** a development server and the Mota Workbench UI (typically at [`http://localhost:3000`](http://localhost:3000)).
 
     <Callout type="info">
       **Changing the Port:** To run the Workbench on a different port, use the `--port` option: `pnpm run dev --port
@@ -205,7 +205,7 @@ Now, let's start Motia and see your workflow in action!
   <Step>
     ### View your Flow in the Workbench
 
-    1.  **Open your browser** and navigate to the Motia Workbench.  By default, it's running at:  [`http://localhost:3000`](http://localhost:3000) or [`http://127.0.0.1:3000`](http://127.0.0.1:3000).
+    1.  **Open your browser** and navigate to the Mota Workbench.  By default, it's running at:  [`http://localhost:3000`](http://localhost:3000) or [`http://127.0.0.1:3000`](http://127.0.0.1:3000).
 
     2.  **Locate your Flow in the Sidebar:** On the left sidebar of the Workbench UI, you should see a list of Flows.
 
@@ -214,7 +214,7 @@ Now, let's start Motia and see your workflow in action!
 
     3.  **Select your Flow:** Click on the flow name in the sidebar.
 
-    4.  **Observe the Visual Flow:** You should now see a visual representation of your flow in the main panel. This is the Motia Workbench visualizing the steps and event flow within your application!
+    4.  **Observe the Visual Flow:** You should now see a visual representation of your flow in the main panel. This is the Mota Workbench visualizing the steps and event flow within your application!
 
         ![Flow Visualization in Workbench](./../img/hello-world-workbench.png)
 

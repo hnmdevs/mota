@@ -1,4 +1,4 @@
-import { ApiRouteConfig, Step } from '@motiadev/core'
+import { ApiRouteConfig, Step } from '@imoogle/core'
 import { spawn } from 'child_process'
 import fs from 'fs'
 import path from 'path'

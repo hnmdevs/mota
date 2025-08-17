@@ -1,4 +1,4 @@
-name: Motia CI
+name: Mota CI
 
 permissions:
   contents: write
@@ -30,7 +30,7 @@ jobs:
 
       - name: Setup playground python environment
         run: |
-          pnpm -r --filter @motiadev/core exec pnpm python-setup
+          pnpm -r --filter @motadev/core exec pnpm python-setup
           cd playground
           pnpm python-setup
 

@@ -1,14 +1,14 @@
 ---
-title: 'Dynamic Workflows: Building a Sentiment Analyzer with Motia'
+title: 'Dynamic Workflows: Building a Sentiment Analyzer with Mota'
 ---
 
-<div className="my-8">![motia workbench for sentiment analysis](./../img/sentimental-analysis.png)</div>
+<div className="my-8">![mota workbench for sentiment analysis](./../img/sentimental-analysis.png)</div>
 
-In modern application development, workflows are rarely linear. Whether you're building a simple "prompt => response" system or a complex, multi-stage data processing pipeline, you often need your application to make decisions and route data dynamically. This is where the power of event-driven architecture shines, and where the Motia framework provides a clear path forward.
+In modern application development, workflows are rarely linear. Whether you're building a simple "prompt => response" system or a complex, multi-stage data processing pipeline, you often need your application to make decisions and route data dynamically. This is where the power of event-driven architecture shines, and where the Mota framework provides a clear path forward.
 
 This guide explores how to build a dynamic sentiment analysis application that uses an LLM to determine how to proceed. We'll cover:
 
-1.  **The Motia Philosophy**: How `steps` as a core primitive simplify complex architectures.
+1.  **The Mota Philosophy**: How `steps` as a core primitive simplify complex architectures.
 2.  **Building the Workflow**: A step-by-step guide to creating the four key components of our application.
 3.  **Visualizing the Flow**: How events chain together to create a cohesive, dynamic system.
 4.  **Hands-On with the API**: How to run and test your new sentiment analyzer.
@@ -19,11 +19,11 @@ Let's dive in.
 
 ## A Step at a Time
 
-<div className="my-8">![motia workbench for sentiment analysis](./../img/sentimental-analyzer-workbench.png)</div>
+<div className="my-8">![mota workbench for sentiment analysis](./../img/sentimental-analyzer-workbench.png)</div>
 
-At the heart of the Motia framework is a simple but powerful idea: the **`step`**. A step is a self-contained, independent unit of logic that listens for an event, performs a task, and, optionally, emits a new event. This concept is the core primitive that allows you to break down even the most complex architectures into a series of simple, manageable components.
+At the heart of the Mota framework is a simple but powerful idea: the **`step`**. A step is a self-contained, independent unit of logic that listens for an event, performs a task, and, optionally, emits a new event. This concept is the core primitive that allows you to break down even the most complex architectures into a series of simple, manageable components.
 
-Instead of a monolithic application where business logic is tightly coupled, Motia encourages a decoupled, event-driven approach. This has several key advantages:
+Instead of a monolithic application where business logic is tightly coupled, Mota encourages a decoupled, event-driven approach. This has several key advantages:
 
 -   **Clarity**: Each step has a single responsibility, making the application easier to understand and reason about.
 -   **Scalability**: Steps can be scaled independently, so you can allocate resources where they're needed most.
@@ -51,7 +51,7 @@ Our application will be composed of four steps. Let's explore each one.
 
     ```ts
     // Receives user text, emits "openai.analyzeSentimentRequest".
-    import { Handlers } from 'motia'
+    import { Handlers } from 'mota'
     import { z } from 'zod'
 
     export const config = {
@@ -92,7 +92,7 @@ Our application will be composed of four steps. Let's explore each one.
 
     ```ts
     // Calls OpenAI, instructing it to ONLY return JSON like {"sentiment":"positive","analysis":"..."}
-    import { Handlers } from 'motia'
+    import { Handlers } from 'mota'
     import { z } from 'zod'
     import { OpenAI } from 'openai'
 
@@ -174,7 +174,7 @@ Our application will be composed of four steps. Let's explore each one.
 
     ```ts
     // Handles "openai.positiveSentiment"
-    import { Handlers } from 'motia'
+    import { Handlers } from 'mota'
     import { z } from 'zod'
 
     export const config = {
@@ -202,7 +202,7 @@ Our application will be composed of four steps. Let's explore each one.
 
     ```ts
     // Handles "openai.negativeSentiment"
-    import { Handlers } from 'motia'
+    import { Handlers } from 'mota'
     import { z } from 'zod'
 
     export const config = {
@@ -265,7 +265,7 @@ export OPENAI_API_KEY="sk-..."
 
 ### Run the Project
 
-Start the Motia development server.
+Start the Mota development server.
 
 ```shell
 npm run dev
@@ -316,7 +316,7 @@ Want to explore the complete implementation? Check out the full source code and 
         <p className="text-gray-600 mb-4">Get hands-on with the complete source code, configuration files, and additional examples to accelerate your learning.</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <a 
-            href="https://github.com/MotiaDev/motia-examples/tree/main/examples/sentimental-analysis" 
+            href="https://github.com/MotaDev/mota-examples/tree/main/examples/sentimental-analysis" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-colors duration-200"
@@ -327,7 +327,7 @@ Want to explore the complete implementation? Check out the full source code and 
             View Sentiment Example
           </a>
           <a 
-            href="https://github.com/MotiaDev/motia-examples" 
+            href="https://github.com/MotaDev/mota-examples" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-md transition-colors duration-200"
@@ -344,8 +344,8 @@ Want to explore the complete implementation? Check out the full source code and 
 
 ## Conclusion: The Power of a Simple Primitive
 
-This sentiment analysis application is a powerful demonstration of the Motia philosophy. By embracing the `step` as a core primitive, we've turned a potentially complex, branching workflow into a series of simple, understandable, and scalable components.
+This sentiment analysis application is a powerful demonstration of the Mota philosophy. By embracing the `step` as a core primitive, we've turned a potentially complex, branching workflow into a series of simple, understandable, and scalable components.
 
-This is just the beginning. From here, you can extend the application by adding new steps to handle neutral sentiment, send notifications, or store results in a database. The event-driven architecture of Motia makes it easy to add new functionality without disrupting the existing flow.
+This is just the beginning. From here, you can extend the application by adding new steps to handle neutral sentiment, send notifications, or store results in a database. The event-driven architecture of Mota makes it easy to add new functionality without disrupting the existing flow.
 
-We encourage you to explore, experiment, and see for yourself how Motia can simplify your most complex backend challenges. Happy coding!
+We encourage you to explore, experiment, and see for yourself how Mota can simplify your most complex backend challenges. Happy coding!

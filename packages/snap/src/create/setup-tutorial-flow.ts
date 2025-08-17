@@ -12,12 +12,12 @@ type Args = {
 export const createTutorialFlow = async ({ context }: Args) => {
   const rootDir = process.cwd()
 
-  if (!checkIfFileExists(rootDir, 'motia-workbench.json')) {
+  if (!checkIfFileExists(rootDir, 'mota-workbench.json')) {
     context.log('invalid-project', (message) =>
       message
         .tag('failed')
         .append(
-          'In order to setup the Motia tutorial you need to be in a valid Motia project, motia-workbench.json not found, if this is not a Motia project you can create one using the motia create cli command.',
+          'In order to setup the Mota tutorial you need to be in a valid Mota project, mota-workbench.json not found, if this is not a Mota project you can create one using the mota create cli command.',
         ),
     )
     return

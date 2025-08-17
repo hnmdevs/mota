@@ -1,4 +1,4 @@
-import { getStepConfig, getStreamConfig, LockedData, Printer } from '@motiadev/core'
+import { getStepConfig, getStreamConfig, LockedData, Printer } from '@imoogle/core'
 import { randomUUID } from 'crypto'
 import { globSync } from 'glob'
 import path from 'path'

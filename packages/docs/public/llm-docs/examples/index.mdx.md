@@ -2,7 +2,7 @@
 title: Examples
 ---
 
-We have curated a few examples to help you get started with Motia.
+We have curated a few examples to help you get started with Mota.
 
 <Cards>
   <Card
@@ -21,4 +21,4 @@ We have curated a few examples to help you get started with Motia.
 
 ## Contribute
 
-We welcome contributions to the examples. Please submit a PR to the [examples repository](https://github.com/motiadev/motia-examples).
+We welcome contributions to the examples. Please submit a PR to the [examples repository](https://github.com/motadev/mota-examples).

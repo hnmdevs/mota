@@ -81,7 +81,7 @@ test.describe('CLI Validation', () => {
 
   test('should start development server', async ({ page }) => {
     await page.goto('/')
-    await helpers.waitForMotiaApplication()
+    await helpers.waitForMotaApplication()
     
     await expect(page.locator('body')).toBeVisible()
     

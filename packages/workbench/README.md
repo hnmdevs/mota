@@ -1,10 +1,10 @@
-# @motiadev/workbench
+# @imoogle/workbench
 
-A web-based interface for building, visualizing, and managing Motia workflows.
+A web-based interface for building, visualizing, and managing Mota workflows.
 
 ## Overview
 
-`@motiadev/workbench` provides a powerful visual interface for Motia workflows, offering:
+`@imoogle/workbench` provides a powerful visual interface for Mota workflows, offering:
 
 - Flow visualization with interactive diagrams
 - Real-time log monitoring
@@ -14,19 +14,19 @@ A web-based interface for building, visualizing, and managing Motia workflows.
 ## Installation
 
 ```bash
-npm install @motiadev/workbench
+npm install @imoogle/workbench
 # or
-yarn add @motiadev/workbench
+yarn add @imoogle/workbench
 # or
-pnpm add @motiadev/workbench
+pnpm add @imoogle/workbench
 ```
 
 ## Usage
 
-The Workbench is automatically integrated when you run a Motia project in development mode:
+The Workbench is automatically integrated when you run a Mota project in development mode:
 
 ```bash
-npx motia dev
+npx mota dev
 ```
 
 This starts the development server and makes the Workbench available at `http://localhost:3000` by default.
@@ -60,7 +60,7 @@ import {
   NoopNode, 
   BaseNode, 
   BaseHandle 
-} from '@motiadev/workbench'
+} from '@imoogle/workbench'
 ```
 
 ### Node Components
@@ -76,7 +76,7 @@ import {
 You can customize the appearance and behavior of the Workbench by creating custom node components:
 
 ```typescript
-import { BaseNode, Position } from '@motiadev/workbench'
+import { BaseNode, Position } from '@imoogle/workbench'
 
 export const CustomNode = ({ data, ...props }) => {
   return (
@@ -102,4 +102,4 @@ export const CustomNode = ({ data, ...props }) => {
 
 ## License
 
-This package is part of the Motia framework and is licensed under the same terms.
+This package is part of the Mota framework and is licensed under the same terms.

@@ -1,4 +1,4 @@
-import { EventConfig, Handlers } from 'motia'
+import { EventConfig, Handlers } from 'mota'
 import { z } from 'zod'
 import equal from 'deep-equal'
 
@@ -16,14 +16,14 @@ export const config: EventConfig = {
 }
 
 export const handler: Handlers['TestStateCheck'] = async (input, { traceId, logger, state }) => {
-  logger.info('[Test motia state with TS] received check-state-change event', input)
+  logger.info('[Test mota state with TS] received check-state-change event', input)
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const value = await state.get<any>(traceId, input.key)
 
   if (!equal(value.data, input.expected, { strict: true })) {
-    logger.error(`[Test motia state with TS] state value is not as expected`, { value, expected: input.expected })
+    logger.error(`[Test mota state with TS] state value is not as expected`, { value, expected: input.expected })
   } else {
-    logger.info(`[Test motia state with TS] state value is as expected 🏁 🟢`)
+    logger.info(`[Test mota state with TS] state value is as expected 🏁 🟢`)
   }
 }

@@ -1,4 +1,4 @@
-import { CollapsiblePanel, CollapsiblePanelGroup, TabsContent, TabsList, TabsTrigger } from '@motiadev/ui'
+import { CollapsiblePanel, CollapsiblePanelGroup, TabsContent, TabsList, TabsTrigger } from '@imoogle/ui'
 import { ReactFlowProvider } from '@xyflow/react'
 import { analytics } from '@/lib/analytics'
 import { File, GanttChart, Link2, LogsIcon } from 'lucide-react'

@@ -13,7 +13,7 @@ if (fs.existsSync(dockerfilePath)) {
 
 // Dockerfile content as specified
 const dockerfileContent = `# Specify platform to match your target architecture
-FROM --platform=linux/arm64 motiadev/motia-docker:latest
+FROM --platform=linux/arm64 imooglecorp/mota-docker:latest
 
 # Install Dependencies
 COPY package*.json ./
@@ -24,9 +24,9 @@ COPY . .
 
 # Enable the following lines if you are using python steps!!!
 # # Setup python steps dependencies
-# RUN npx motia@latest install
+# RUN npx mota@latest install
 
-# Expose outside access to the motia project
+# Expose outside access to the mota project
 EXPOSE 3000
 
 # Run your application

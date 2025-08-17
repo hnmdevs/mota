@@ -1,4 +1,4 @@
-import { EventConfig, Handlers } from 'motia'
+import { EventConfig, Handlers } from 'mota'
 import { z } from 'zod'
 
 export const config: EventConfig = {
@@ -34,7 +34,7 @@ export const handler: Handlers['SetStateChange'] = async (input, { traceId, logg
    */
   logger.info('Step 02 – Pushing message content to state', { input })
 
-  const message = 'Welcome to motia!'
+  const message = 'Welcome to mota!'
 
   /**
    * Persist content on state to be used by other steps

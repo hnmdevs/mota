@@ -22,7 +22,7 @@ export const useFlowStore = create(
         }),
     }),
     {
-      name: 'motia-flow-storage',
+      name: 'mota-flow-storage',
       storage: createJSONStorage(() => localStorage),
     },
   ),

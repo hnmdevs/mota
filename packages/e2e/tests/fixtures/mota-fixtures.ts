@@ -1,19 +1,19 @@
 import { test as base } from '@playwright/test'
-import { MotiaApplicationPage, WorkbenchPage, LogsPage, ApiHelpers } from '../page-objects'
+import { MotaApplicationPage, WorkbenchPage, LogsPage, ApiHelpers } from '../page-objects'
 import { TracesPage } from '../page-objects/TracesPage'
 
-export type MotiaContext = {
-  motiaApp: MotiaApplicationPage
+export type MotaContext = {
+  motaApp: MotaApplicationPage
   workbench: WorkbenchPage
   logsPage: LogsPage
   tracesPage: TracesPage
   api: ApiHelpers
 }
 
-export const test = base.extend<MotiaContext>({
-  motiaApp: async ({ page }, use) => {
-    const motiaApp = new MotiaApplicationPage(page)
-    await use(motiaApp)
+export const test = base.extend<MotaContext>({
+  motaApp: async ({ page }, use) => {
+    const motaApp = new MotaApplicationPage(page)
+    await use(motaApp)
   },
 
   workbench: async ({ page }, use) => {

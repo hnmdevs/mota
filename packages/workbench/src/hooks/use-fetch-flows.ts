@@ -1,6 +1,6 @@
 import { useFlowStore } from '@/stores/use-flow-store'
 import { FlowResponse } from '@/types/flow'
-import { useStreamGroup } from '@motiadev/stream-client-react'
+import { useStreamGroup } from '@imoogle/stream-client-react'
 import { useEffect } from 'react'
 
 export const useFetchFlows = () => {
@@ -9,7 +9,7 @@ export const useFetchFlows = () => {
   const selectedFlowId = useFlowStore((state) => state.selectedFlowId)
 
   const { data: flows } = useStreamGroup<FlowResponse>({
-    streamName: '__motia.flows',
+    streamName: '__mota.flows',
     groupId: 'default',
   })
 

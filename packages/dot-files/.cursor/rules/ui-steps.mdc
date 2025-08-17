@@ -5,30 +5,30 @@ alwaysApply: false
 ---
 # UI Steps Guide
 
-UI Steps allow you to create custom, visually appealing representations of your workflow steps within the Motia Workbench. This is achieved by providing a React component that defines the custom rendering for a step.
+UI Steps allow you to create custom, visually appealing representations of your workflow steps within the Mota Workbench. This is achieved by providing a React component that defines the custom rendering for a step.
 
 ## Example
 
-The following example demonstrates a simple custom UI for an event node. You would typically place this code in a file associated with your step, and Motia's Workbench would discover and use it to render the step.
+The following example demonstrates a simple custom UI for an event node. You would typically place this code in a file associated with your step, and Mota's Workbench would discover and use it to render the step.
 
 ```typescript
 // Import React for creating the component.
 import React from 'react';
 // Import EventNode and EventNodeProps from 'motia/workbench'.
-// EventNode is a base component provided by Motia for rendering step nodes,
+// EventNode is a base component provided by Mota for rendering step nodes,
 // which you can wrap or customize.
 // EventNodeProps defines the properties your custom UI component will receive.
 import { EventNode, type EventNodeProps } from 'motia/workbench';
 
 /**
  * CustomStepUI is a React functional component that defines the custom UI
- * for a specific step in the Motia Workbench.
+ * for a specific step in the Mota Workbench.
  *
  * @param props - The properties passed to the component. `EventNodeProps` includes:
  *                `data`: Contains information about the step instance, such as its
  *                        name, status, any associated data from the workflow, etc.
  *                        The exact shape of `data` might vary based on the step type
- *                        and the information Motia Workbench provides.
+ *                        and the information Mota Workbench provides.
  *                Other props for styling and interaction might also be available.
  */
 export default function CustomStepUI({ data }: EventNodeProps) {
@@ -74,12 +74,12 @@ export default function CustomStepUI({ data }: EventNodeProps) {
   );
 }
 
-// How Motia discovers this custom UI:
+// How Mota discovers this custom UI:
 // Typically, you might name this file similarly to your step definition file,
 // perhaps with a `.ui.tsx` extension (e.g., `my-processing-step.ui.tsx` if your
-// step definition is `my-processing-step.step.ts`). Motia's Workbench would then
+// step definition is `my-processing-step.step.ts`). Mota's Workbench would then
 // have a mechanism to look for such associated UI component files.
-// The exact discovery mechanism depends on Motia's specific conventions and project setup.
+// The exact discovery mechanism depends on Mota's specific conventions and project setup.
 ```
 This example shows:
 -   Importing necessary components and types from `motia/workbench`.

@@ -1,4 +1,4 @@
-import { createEventManager, createServer, createStateAdapter } from '@motiadev/core'
+import { createEventManager, createServer, createStateAdapter } from '@imoogle/core'
 import path from 'path'
 import { generateLockedData, getStepFiles } from './generate-locked-data'
 import { stateEndpoints } from './dev/state-endpoints'
@@ -27,31 +27,31 @@ export const start = async (port: number, hostname: string, disableVerbose: bool
   const eventManager = createEventManager()
   const state = createStateAdapter({
     adapter: 'default',
-    filePath: path.join(baseDir, '.motia'),
+    filePath: path.join(baseDir, '.mota'),
   })
 
   const config = { isVerbose }
-  const motiaServer = createServer(lockedData, eventManager, state, config)
+  const motaServer = createServer(lockedData, eventManager, state, config)
 
-  motiaServer.server.listen(port, hostname)
+  motaServer.server.listen(port, hostname)
   console.log('🚀 Server ready and listening on port', port)
   console.log(`🔗 Open http://${hostname}:${port}/ to open workbench 🛠️`)
 
   if (!process.env.MOTIA_DOCKER_DISABLE_WORKBENCH) {
-    stateEndpoints(motiaServer, state)
+    stateEndpoints(motaServer, state)
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const { applyMiddleware } = require('@motiadev/workbench/dist/middleware')
-    await applyMiddleware(motiaServer.app)
+    const { applyMiddleware } = require('@imoogle/workbench/dist/middleware')
+    await applyMiddleware(motaServer.app)
   }
 
   // 6) Gracefully shut down on SIGTERM
   process.on('SIGTERM', async () => {
-    motiaServer.server.close()
+    motaServer.server.close()
     process.exit(0)
   })
 
   process.on('SIGINT', async () => {
-    motiaServer.server.close()
+    motaServer.server.close()
     process.exit(0)
   })
 }

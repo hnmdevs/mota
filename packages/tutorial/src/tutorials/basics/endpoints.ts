@@ -8,7 +8,7 @@ export const endpointsSteps: TutorialStep[] = [
     elementXpath: `//button[@data-testid="endpoints-link"]`,
     segmentId,
     title: 'Endpoints',
-    description: `Now that we've looked at Motia primitives, let's trigger the api step from the <b>endpoints</b> section in Workbench.<br/><br/> 💡 All of your API steps declare http endpoints that can be reviewed and tested from the <b>endpoints</b> section in Workbench.`,
+    description: `Now that we've looked at Mota primitives, let's trigger the api step from the <b>endpoints</b> section in Workbench.<br/><br/> 💡 All of your API steps declare http endpoints that can be reviewed and tested from the <b>endpoints</b> section in Workbench.`,
     id: uuidv4(),
     clickSelectorBeforeNext: `//button[@data-testid="endpoints-link"]`,
     useKeyDownEventOnClickBeforeNext: true,

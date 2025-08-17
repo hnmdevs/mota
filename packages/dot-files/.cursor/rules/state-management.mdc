@@ -3,9 +3,9 @@ description: State management between steps
 globs: 
 alwaysApply: false
 ---
-# Motia State Management
+# Mota State Management
 
-State management in Motia allows data to be persisted and shared between steps within a single workflow execution (flow instance), identified by a unique `traceId`.
+State management in Mota allows data to be persisted and shared between steps within a single workflow execution (flow instance), identified by a unique `traceId`.
 
 ## Core Concepts
 
@@ -137,7 +137,7 @@ Configure storage adapters in `config.yml` (or `config.yaml`) in your project ro
 
 ```
 my-motia-project/
-├── config.yml       # Motia configuration file
+├── config.yml       # Mota configuration file
 └── steps/
     ├── step-1.ts
     └── step-2.ts

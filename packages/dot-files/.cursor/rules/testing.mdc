@@ -3,32 +3,32 @@ description: How to add step and flow tests
 globs: 
 alwaysApply: false
 ---
-# Motia Testing Guide
+# Mota Testing Guide
 
-This guide explains how to set up and write tests for your Motia steps (Event Steps, API Steps, etc.) using Jest and the `@motiadev/test` utility.
+This guide explains how to set up and write tests for your Mota steps (Event Steps, API Steps, etc.) using Jest and the `@imoogle/test` utility.
 
 ## Setup
 
 First, ensure you have the necessary development dependencies installed in your project:
 ```bash
-# Installs @motiadev/test for Motia-specific testing utilities,
+# Installs @imoogle/test for Mota-specific testing utilities,
 # Jest as the testing framework,
 # and @types/jest for TypeScript type definitions for Jest.
-pnpm add -D @motiadev/test jest @types/jest
+pnpm add -D @imoogle/test jest @types/jest
 ```
 _You might also need to configure Jest in your `package.json` (e.g., by adding a `jest` section or a `test` script like `"test": "jest"`) or a dedicated `jest.config.js` file to specify test file patterns, transformations (e.g., using `ts-jest` for TypeScript), etc._
 
 ## Core Testing Patterns
 
-The `@motiadev/test` package provides `createMockContext`, a crucial utility that generates a mock version of the Motia execution context (`{ emit, state, logger, ... }`). This allows you to test your step handlers in isolation without needing a full Motia environment.
+The `@imoogle/test` package provides `createMockContext`, a crucial utility that generates a mock version of the Mota execution context (`{ emit, state, logger, ... }`). This allows you to test your step handlers in isolation without needing a full Mota environment.
 
 ### 1. Testing Event Steps
 
 Event steps are typically asynchronous functions that receive an input payload and a context object. They perform some logic, potentially interact with state, and may emit new events.
 
 ```typescript
-// Import createMockContext from the Motia testing library.
-import { createMockContext } from '@motiadev/test';
+// Import createMockContext from the Mota testing library.
+import { createMockContext } from '@imoogle/test';
 // Import the handler function of the event step you are testing.
 // Replace './your-event-step-module' and 'handler' with your actual file path and handler export.
 // e.g., import { handler as processDataHandler } from '../steps/02-process-data.step';
@@ -119,14 +119,14 @@ API steps handle incoming HTTP requests. Tests should simulate these requests an
 
 ```typescript
 // Import createMockContext.
-import { createMockContext } from '@motiadev/test';
+import { createMockContext } from '@imoogle/test';
 // Import the handler for the API step you are testing.
 // Replace './your-api-step-module' and 'handler' with your actual file path and handler export.
 // e.g., import { handler as createUserApiHandler } from '../steps/01-create-user.api';
 
 // ---- Example API Step Handler (for context) ----
 /*
-import { ApiContext, ApiRequest } from 'motia'; // Assuming these types from your Motia setup
+import { ApiContext, ApiRequest } from 'motia'; // Assuming these types from your Mota setup
 
 interface CreateUserInput {
   username: string;
@@ -137,7 +137,7 @@ export const exampleApiHandler = async (req: ApiRequest<CreateUserInput>, { emit
   if (req.method !== 'POST') {
     return { status: 405, body: { error: 'Method Not Allowed' } };
   }
-  // Assume bodySchema validation is handled by Motia before this handler is called for valid requests.
+  // Assume bodySchema validation is handled by Mota before this handler is called for valid requests.
   // For direct handler testing, you might need to mock or bypass this if testing invalid schema cases.
   const { username, email } = req.body;
 
@@ -240,12 +240,12 @@ describe('UserCreationAPIEndpoint', () => {
     *   **Descriptive test names**: Use `it` (or `test`) with clear, concise descriptions of what each test case verifies (e.g., `it('should return a 401 error for invalid credentials', () => { ... });`).
     *   **Test happy paths and error cases**: Ensure you test both successful execution scenarios with valid inputs and various error conditions (e.g., invalid input, missing data, failures in dependencies, unexpected exceptions).
     *   **Mock external services**: If your step interacts with external services (databases, third-party APIs), mock these dependencies. Jest's `jest.mock('./path/to/module')` is excellent for this. This isolates your step's logic and makes tests faster and more reliable.
-    *   **Test state management**: If your step reads from or writes to Motia's state, explicitly test these interactions using the mock `state` object from `createMockContext`.
+    *   **Test state management**: If your step reads from or writes to Mota's state, explicitly test these interactions using the mock `state` object from `createMockContext`.
 
-2.  **Common Patterns in Motia Testing**:
+2.  **Common Patterns in Mota Testing**:
 
 ```typescript
-import { createMockContext } from '@motiadev/test';
+import { createMockContext } from '@imoogle/test';
 // Assume 'handlerThatMightError' and 'handlerThatUsesState' are imported from your step files.
 
 // ---- Example Handlers for Best Practices (for context) ----

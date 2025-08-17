@@ -1,6 +1,6 @@
 import { useStateStream } from '@/components/endpoints/hooks/use-state-stream'
 import { useThemeStore } from '@/stores/use-theme-store'
-import { Panel } from '@motiadev/ui'
+import { Panel } from '@imoogle/ui'
 import { XCircle } from 'lucide-react'
 import { FC, useMemo } from 'react'
 import ReactJson from 'react18-json-view'

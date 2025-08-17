@@ -73,7 +73,7 @@ Make sure you have:
 ### Clone the Repository
 
 ```bash
-git clone git@github.com:MotiaDev/motia-examples.git
+git clone git@github.com:MotaDev/mota-examples.git
 cd examples/trello-flow
 ```
 
@@ -137,5 +137,5 @@ pnpm dev
 
 <Callout type="info">
   For more detailed setup instructions and configuration options, check out the [full
-  documentation](https://github.com/MotiaDev/motia-examples/tree/main/examples/trello-flow).
+  documentation](https://github.com/MotaDev/mota-examples/tree/main/examples/trello-flow).
 </Callout>{' '}

@@ -1,13 +1,13 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import { printMotiaDockerIntro } from './utils/print-intro'
+import { printMotaDockerIntro } from './utils/print-intro'
 import { promiseExec } from './utils/promised-exec'
 import { buildDockerImage } from './utils/build-docker-image'
 import { identifyUser } from '../utils/analytics'
-import { getProjectIdentifier, trackEvent } from '@motiadev/core'
+import { getProjectIdentifier, trackEvent } from '@imoogle/core'
 
 export const run = async (hostPort = 3000, projectName?: string, skipBuild?: boolean): Promise<void> => {
-  printMotiaDockerIntro()
+  printMotaDockerIntro()
 
   identifyUser()
 

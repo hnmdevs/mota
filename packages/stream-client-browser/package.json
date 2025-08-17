@@ -1,6 +1,6 @@
 {
-  "name": "@motiadev/stream-client-browser",
-  "description": "Motia Stream Client Package – Responsible for managing streams of data.",
+  "name": "@imoogle/stream-client-browser",
+  "description": "Mota Stream Client Package – Responsible for managing streams of data.",
   "version": "0.5.9-beta.117",
   "license": "MIT",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "uuid": "^11.1.0",
-    "@motiadev/stream-client": "workspace:*"
+    "@imoogle/stream-client": "workspace:*"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",

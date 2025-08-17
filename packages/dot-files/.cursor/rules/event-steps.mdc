@@ -1,11 +1,11 @@
 ---
-description: Event Steps are fundamental to Motia workflows. They handle asynchronous events, perform business logic, and can emit new events to trigger subsequent steps. They subscribe to topics and process the data from incoming events.
+description: Event Steps are fundamental to Mota workflows. They handle asynchronous events, perform business logic, and can emit new events to trigger subsequent steps. They subscribe to topics and process the data from incoming events.
 globs: 
 alwaysApply: false
 ---
 # Event Steps Guide
 
-Event Steps are fundamental to Motia workflows. They handle asynchronous events, perform business logic, and can emit new events to trigger subsequent steps. They subscribe to topics and process the data from incoming events.
+Event Steps are fundamental to Mota workflows. They handle asynchronous events, perform business logic, and can emit new events to trigger subsequent steps. They subscribe to topics and process the data from incoming events.
 
 ## Basic Event Step Pattern
 
@@ -13,7 +13,7 @@ This pattern shows the essential structure of an Event Step: a configuration obj
 
 **TypeScript Example:**
 ```typescript
-// Import necessary types from Motia and Zod for schema validation.
+// Import necessary types from Mota and Zod for schema validation.
 import { EventConfig, Handlers, FlowContext } from 'motia'; // Assuming FlowContext is part of Handlers or globally available
 import { z } from 'zod';
 
@@ -39,7 +39,7 @@ export const config: EventConfig<typeof UserCreatedInputSchema> = {
   // 'emits' is an array of topic names this step can publish events to after processing.
   emits: ['user.processed', 'user.activation.failed'], // Can emit success or failure events
   // 'input' links to the Zod schema for validating the incoming event data.
-  // Motia will automatically validate the event data against this schema before calling the handler.
+  // Mota will automatically validate the event data against this schema before calling the handler.
   input: UserCreatedInputSchema,
   // 'flows' is an array of flow names this step is part of, helping to organize workflows.
   flows: ['user-management-flow']
@@ -48,7 +48,7 @@ export const config: EventConfig<typeof UserCreatedInputSchema> = {
 // Define the handler function that contains the business logic for this step.
 // Handlers['process-user-registration'] links this handler to the configuration by its name.
 // 'input' is the validated event data (typed according to UserCreatedInputSchema).
-// 'context' provides access to Motia functionalities like 'emit', 'logger', and 'state'.
+// 'context' provides access to Mota functionalities like 'emit', 'logger', and 'state'.
 export const handler: Handlers['process-user-registration'] = async (input, { emit, logger, state, traceId }: FlowContext) => {
   // Destructure the validated input data for easier access.
   const { name, email, id } = input;
@@ -95,7 +95,7 @@ export const handler: Handlers['process-user-registration'] = async (input, { em
 **Python Example:**
 ```python
 # Python equivalent for the basic event step pattern.
-# Assuming a similar Motia context and capabilities exist in Python.
+# Assuming a similar Mota context and capabilities exist in Python.
 
 # Configuration for the Event Step as a Python dictionary.
 config = {
@@ -105,7 +105,7 @@ config = {
     "subscribes": ["user.created.py"],  # Topic this step listens to.
     "emits": ["user.processed.py", "user.activation.failed.py"],  # Topics this step can publish to.
     # Input validation in Python might be handled by a library like Pydantic,
-    # or Motia may provide its own schema validation mechanism.
+    # or Mota may provide its own schema validation mechanism.
     # For this example, we assume input is a dictionary and accessed directly.
     # "input_schema": { ... Pydantic or other schema definition ... }
     "flows": ["user-management-flow-py"]
@@ -113,7 +113,7 @@ config = {
 
 # The handler function in Python.
 # 'input_data' is the incoming event payload.
-# 'ctx' (context) provides access to Motia functionalities like emit, logger, state.
+# 'ctx' (context) provides access to Mota functionalities like emit, logger, state.
 async def handler(input_data, ctx):
     user_id = input_data.get("id")
     user_name = input_data.get("name")
@@ -170,7 +170,7 @@ end
 
 # The handler function in Ruby.
 # 'input_data' is the incoming event payload (likely a Hash).
-# 'context' provides access to Motia functionalities.
+# 'context' provides access to Mota functionalities.
 def handler(input_data, context)
   user_id = input_data[:id]
   user_name = input_data[:name]

@@ -8,7 +8,7 @@ export const eventSteps: TutorialStep[] = [
     elementXpath: `//div[@data-testid="node-processfoodorder"]`,
     segmentId,
     title: 'Event Step',
-    description: `Now that we have an entry point in our flow, let's focus on subscribing to a <b>topic</b> and performing a specific task.<br/><br/> For this we will look at the <b>event</b> step.<br/><br/><b>Event</b> steps are an essential primitive for Motia's event driven architecture.<br/><br/>Let's dive deeper into the anatomy of an event step by taking a look at the code visualization tool.<br/><br/> 💡 <b>Event</b> steps can only be triggered internally, through topic subscriptions.`,
+    description: `Now that we have an entry point in our flow, let's focus on subscribing to a <b>topic</b> and performing a specific task.<br/><br/> For this we will look at the <b>event</b> step.<br/><br/><b>Event</b> steps are an essential primitive for Mota's event driven architecture.<br/><br/>Let's dive deeper into the anatomy of an event step by taking a look at the code visualization tool.<br/><br/> 💡 <b>Event</b> steps can only be triggered internally, through topic subscriptions.`,
     id: uuidv4(),
     clickSelectorBeforeNext: `//button[@data-testid="open-code-preview-button-processfoodorder"]`,
     waitForSelector: `//span[contains(text(), "config")]/..`,
@@ -38,7 +38,7 @@ export const eventSteps: TutorialStep[] = [
     elementXpath: `(//span[contains(text(), 'state')])[4]/..`,
     segmentId,
     title: 'Storing Data in State',
-    description: `Let's take a closer look at storing data in state.<br/><br/> By now you are familiar with emitting and subscribing, but another core feature from from Motia's ecosystem is <b>state management</b>. Motia provides out of the box a file based state management, but you can customize this by configuring a <a href="https://www.motia.dev/docs/concepts/state-management#storage-adapters" target="_blank">storage adapter</a> to persist state in-memory or Redis.<br/><br/> In this example we are persisting the result of a third party http request in <b>state</b>, scoping it to a group id named "orders".<br/><br/> 💡 We recommend you check out our <a href="https://www.motia.dev/docs/concepts/state-management#best-practices" target="_blank">best practices</a> for <a href="https://www.motia.dev/docs/concepts/state-management" target="_blank">state management</a>.`,
+    description: `Let's take a closer look at storing data in state.<br/><br/> By now you are familiar with emitting and subscribing, but another core feature from from Mota's ecosystem is <b>state management</b>. Mota provides out of the box a file based state management, but you can customize this by configuring a <a href="https://www.mota.imoogle.com/docs/concepts/state-management#storage-adapters" target="_blank">storage adapter</a> to persist state in-memory or Redis.<br/><br/> In this example we are persisting the result of a third party http request in <b>state</b>, scoping it to a group id named "orders".<br/><br/> 💡 We recommend you check out our <a href="https://www.mota.imoogle.com/docs/concepts/state-management#best-practices" target="_blank">best practices</a> for <a href="https://www.mota.imoogle.com/docs/concepts/state-management" target="_blank">state management</a>.`,
     id: uuidv4(),
   },
 ]

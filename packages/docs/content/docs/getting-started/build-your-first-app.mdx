@@ -1,15 +1,15 @@
 ---
-title: Build Your First Motia App
-description: Build your first multi-language Motia app in minutes. This guide walks you through creating, running, and understanding a Motia app using JavaScript, TypeScript, and Python.
+title: Build Your First Mota App
+description: Build your first multi-language Mota app in minutes. This guide walks you through creating, running, and understanding a Mota app using JavaScript, TypeScript, and Python.
 ---
 
-# Build Your First Motia App
+# Build Your First Mota App
 
-**Get up and running with Motia in just a few minutes!** This guide shows you how to create a Motia app that connects JavaScript, TypeScript, and Python as steps.
+**Get up and running with Mota in just a few minutes!** This guide shows you how to create a Mota app that connects JavaScript, TypeScript, and Python as steps.
 
 ## What You'll Build
 
-A simple data processing Motia app:
+A simple data processing Mota app:
 - **TypeScript** API endpoint receives data with validation
 - **TypeScript** bridges and notifies with proper types
 - **Python** processes the data with proper logging
@@ -17,35 +17,35 @@ A simple data processing Motia app:
 
 All connected automatically with zero configuration and strict type safety.
 
-## Step 1: Create Your Motia App
+## Step 1: Create Your Mota App
 
 ```bash
-# Create a new Motia app
-npx motia@latest create -i
+# Create a new Mota app
+npx mota@latest create -i
 ```
-![Create App Command](/docs-images/motia-build-your-app-1.gif)
+![Create App Command](/docs-images/mota-build-your-app-1.gif)
 
 ```bash
 # Change directory to my-app
 cd my-app
 ```
-![run dev command](/docs-images/motia-build-your-app-2.png)
+![run dev command](/docs-images/mota-build-your-app-2.png)
 
 ```bash
 ### Start the development environment
-npx motia dev
+npx mota dev
 ```
-![run starter app](/docs-images/motia-build-your-app.gif)
+![run starter app](/docs-images/mota-build-your-app.gif)
 
 
-✅ That's it! You now have a working Motia app with a visual debugger at `http://localhost:3000`
+✅ That's it! You now have a working Mota app with a visual debugger at `http://localhost:3000`
 
 ## Step 2: Add Your Logic Steps
 
 ### TypeScript API Endpoint (App Starter)
 // File: 01-starter.step.ts
 ```typescript
-import { Handlers } from 'motia'
+import { Handlers } from 'mota'
 import { z } from 'zod'
 import { StartAppRequest, StartAppResponse, AppData } from '../types'
 
@@ -123,7 +123,7 @@ export const handler: Handlers['appStarter'] = async (req, { logger, emit, trace
 ### TypeScript Bridge Step
 // File: 02-bridge.step.ts
 ```typescript
-import { Handlers } from 'motia'
+import { Handlers } from 'mota'
 import { AppData, ProcessedResult } from '../types'
 
 // Bridge step to connect app starter to Python processing
@@ -179,7 +179,7 @@ async def handler(input_data, context):
     
     Args:
         input_data: ProcessedResult with original_id, processed_at, result, confidence, model_version
-        context: Motia context with emit, logger, etc.
+        context: Mota context with emit, logger, etc.
     """
     try:
         # Validate required fields
@@ -209,19 +209,19 @@ async def handler(input_data, context):
 
         context.logger.info("🐍 Event emitted successfully", { "id": python_result['id'] })
 
-        # Return the payload so Motia passes it along automatically
+        # Return the payload so Mota passes it along automatically
         return python_result
         
     except Exception as e:
         context.logger.error(f"🐍 Error processing data: {str(e)}")
-        # Re-raise the exception to let Motia handle it
+        # Re-raise the exception to let Mota handle it
         raise
 ```
 
 ### TypeScript Notification Step
 // File: notify.step.ts
 ```typescript
-import { Handlers } from 'motia'
+import { Handlers } from 'mota'
 import { PythonResult, NotificationData } from '../types'
 
 export const config = {
@@ -259,7 +259,7 @@ export const handler: Handlers['NotificationHandler'] = async (input, { logger, 
 ### TypeScript Finalizer Step
 // File: 04-final.step.ts
 ```typescript
-import { Handlers } from 'motia'
+import { Handlers } from 'mota'
 import { NotificationData, AppSummary } from '../types'
 
 // Final step to complete the app - TypeScript
@@ -358,7 +358,7 @@ export const handler = async (input, { logger, emit }) => {
 
 ## What Happens Next?
 
-![motia-build-your-app](/docs-images/motia-build-your-app-2.gif)
+![mota-build-your-app](/docs-images/mota-build-your-app-2.gif)
 
 Watch in the **Workbench** (`http://localhost:3000`) as your data flows through:
 
@@ -379,7 +379,7 @@ All languages working together in one unified system with:
 
 ## Deploy and Extend
 
-**You just built a production-ready multi-language Motia app!**
+**You just built a production-ready multi-language Mota app!**
 
 Extend your app:
 - Add scheduled jobs with `cron` steps
@@ -387,7 +387,7 @@ Extend your app:
 - Connect to databases, APIs, and external services
 - Scale to handle millions of requests
 
-Ready to deploy? Check out [Motia Cloud deployment](/docs/concepts/deployment/motia-cloud) for one-click production deployments.
+Ready to deploy? Check out [Mota Cloud deployment](/docs/concepts/deployment/mota-cloud) for one-click production deployments.
 
 <Callout>
 **Ready to build more?** Check out our [Getting Started Guide](/docs/getting-started/quick-start) for more details.
@@ -395,4 +395,4 @@ Ready to deploy? Check out [Motia Cloud deployment](/docs/concepts/deployment/mo
 
 ---
 
-**The bottom line:** Motia eliminates the complexity of managing separate runtimes. Write each piece in the best language for the job, and Motia handles the rest.
+**The bottom line:** Mota eliminates the complexity of managing separate runtimes. Write each piece in the best language for the job, and Mota handles the rest.

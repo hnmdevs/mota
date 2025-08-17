@@ -1,4 +1,4 @@
-# Deploy Flow Diagram - Motia Framework
+# Deploy Flow Diagram - Mota Framework
 
 ```mermaid
 graph TD

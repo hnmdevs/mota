@@ -19,18 +19,18 @@ program
   .command('version')
   .description('Display detailed version information')
   .action(() => {
-    console.log(`Motia CLI v${version}`)
+    console.log(`Mota CLI v${version}`)
     process.exit(0)
   })
 
 program
   .command('create')
-  .description('Create a new motia project')
+  .description('Create a new mota project')
   .option(
     '-n, --name <project name>',
     'The name for your project, used to create a directory, use ./ or . to create it under the existing directory',
   )
-  .option('-t, --template <template name>', 'The motia template name to use for your project')
+  .option('-t, --template <template name>', 'The mota template name to use for your project')
   .option('-c, --cursor', 'Copy .cursor folder from template')
   .option('-i, --interactive', 'Use interactive prompts to create project')
   .option('-y, --skip-confirmation', 'Skip confirmation prompt')
@@ -42,7 +42,7 @@ program
         const disableTutorial = await inquirer.prompt({
           type: 'confirm',
           name: 'disableTutorial',
-          message: 'Do you wish to disable the motia tutorial?',
+          message: 'Do you wish to disable the mota tutorial?',
           default: false,
         })
 
@@ -111,7 +111,7 @@ program
 
 program
   .command('start')
-  .description('Start a server to run your Motia project')
+  .description('Start a server to run your Mota project')
   .option('-p, --port <port>', 'The port to run the server on', `${defaultPort}`)
   .option('-H, --host [host]', 'The host address for the server', `${defaultHost}`)
   .option('-v, --disable-verbose', 'Disable verbose logging')
@@ -130,7 +130,7 @@ program
 
 program
   .command('emit')
-  .description('Emit an event to the Motia server')
+  .description('Emit an event to the Mota server')
   .requiredOption('--topic <topic>', 'Event topic/type to emit')
   .requiredOption('--message <message>', 'Event payload as JSON string')
   .option('-p, --port <number>', 'Port number (default: 3000)')
@@ -160,7 +160,7 @@ program
     }
   })
 
-const generate = program.command('generate').description('Generate motia resources')
+const generate = program.command('generate').description('Generate mota resources')
 
 generate
   .command('step')
@@ -175,7 +175,7 @@ generate
 
 generate
   .command('tutorial-flow')
-  .description('Download the tutorial flow into an existing motia project')
+  .description('Download the tutorial flow into an existing mota project')
   .action(
     handler(async (_, context) => {
       const { createTutorialFlow } = require('./create/setup-tutorial-flow')
@@ -184,11 +184,11 @@ generate
     }),
   )
 
-const docker = program.command('docker').description('Motia docker commands')
+const docker = program.command('docker').description('Mota docker commands')
 
 docker
   .command('setup')
-  .description('Setup a motia-docker for your project')
+  .description('Setup a mota-docker for your project')
   .action(async () => {
     const { setup } = require('./docker/setup')
     await setup()

@@ -1,4 +1,4 @@
-import { Event, EventManager, Handler, SubscribeConfig } from '@motiadev/core'
+import { Event, EventManager, Handler, SubscribeConfig } from '@imoogle/core'
 
 interface TestEventManager extends EventManager {
   waitEvents(): Promise<void>

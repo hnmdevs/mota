@@ -1,9 +1,9 @@
 from typing import Any, List, Optional
-from motia_type_definitions import HandlerResult
-from motia_rpc import RpcSender
-from motia_rpc_state_manager import RpcStateManager
-from motia_logger import Logger
-from motia_dot_dict import DotDict
+from mota_type_definitions import HandlerResult
+from mota_rpc import RpcSender
+from mota_rpc_state_manager import RpcStateManager
+from mota_logger import Logger
+from mota_dot_dict import DotDict
 
 class Context:
     def __init__(

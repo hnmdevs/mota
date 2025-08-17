@@ -1,4 +1,4 @@
-import { ApiRouteConfig, Handlers } from 'motia'
+import { ApiRouteConfig, Handlers } from 'mota'
 import { z } from 'zod'
 import { petStoreService } from './services/pet-store'
 

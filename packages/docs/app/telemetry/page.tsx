@@ -22,7 +22,7 @@ export default function TelemetryPage() {
             Usage Analytics
           </Title>
           <p className="text-center text-[20px] text-white/80 leading-[140%] font-sans mt-[24px]">
-            Motia collects <span className={gradientText}>fully anonymized</span> usage analytics to improve developer experience. Your participation is completely voluntary and can be disabled at any time.
+            Mota collects <span className={gradientText}>fully anonymized</span> usage analytics to improve developer experience. Your participation is completely voluntary and can be disabled at any time.
           </p>
         </div>
         <div className="my-[72px] h-[1px] w-full bg-white/20"></div>
@@ -31,7 +31,7 @@ export default function TelemetryPage() {
           <section className={normalText}>
             <h2 className={headingText}>Why do we collect usage data?</h2>
             <p>
-              Since launching Motia, we&apos;re seeing incredible adoption across diverse development teams and use cases. However, understanding how developers actually use <span className={gradientText}>Motia in real-world scenarios</span> has been challenging to assess through traditional feedback channels alone.
+              Since launching Mota, we&apos;re seeing incredible adoption across diverse development teams and use cases. However, understanding how developers actually use <span className={gradientText}>Mota in real-world scenarios</span> has been challenging to assess through traditional feedback channels alone.
             </p>
           </section>
 
@@ -43,24 +43,24 @@ export default function TelemetryPage() {
 
           <section className={normalText}>
             <p>
-              <span className={gradientText}>Anonymous usage analytics allows us to understand feature adoption patterns</span>, identify performance bottlenecks, and discover common pain points across our entire user base. This data-driven approach helps us prioritize improvements that benefit the most developers and ensures Motia continues evolving in the right direction.
+              <span className={gradientText}>Anonymous usage analytics allows us to understand feature adoption patterns</span>, identify performance bottlenecks, and discover common pain points across our entire user base. This data-driven approach helps us prioritize improvements that benefit the most developers and ensures Mota continues evolving in the right direction.
             </p>
           </section>
 
           <section className={normalText}>
             <h2 className={headingText}>What information is collected?</h2>
             <p>
-              We collect basic usage metrics and performance data to understand how Motia is being used. All data is anonymized and aggregated before analysis. Specifically, we track:
+              We collect basic usage metrics and performance data to understand how Mota is being used. All data is anonymized and aggregated before analysis. Specifically, we track:
             </p>
           </section>
 
           <section className={normalText}>
             <ul className="list-disc space-y-[20px] ml-[20px]">
               <li>
-                <span className={gradientTextBlue}>Command Usage:</span> Patterns for <code className="bg-white/10 px-2 py-1 rounded text-white/90">motia build</code>, <code className="bg-white/10 px-2 py-1 rounded text-white/90">motia dev</code>, <code className="bg-white/10 px-2 py-1 rounded text-white/90">motia cloud deploy</code>
+                <span className={gradientTextBlue}>Command Usage:</span> Patterns for <code className="bg-white/10 px-2 py-1 rounded text-white/90">mota build</code>, <code className="bg-white/10 px-2 py-1 rounded text-white/90">mota dev</code>, <code className="bg-white/10 px-2 py-1 rounded text-white/90">mota cloud deploy</code>
               </li>
               <li>
-                <span className={gradientTextBlue}>Version & Updates:</span> Motia version and update frequency tracking
+                <span className={gradientTextBlue}>Version & Updates:</span> Mota version and update frequency tracking
               </li>
               <li>
                 <span className={gradientTextBlue}>System Environment:</span> CPU count, OS type, CI/CD detection (anonymized)
@@ -114,13 +114,13 @@ export default function TelemetryPage() {
           <section className={normalText}>
             <h2 className={headingText}>How is this data used?</h2>
             <p>
-              The analytics data helps us make informed decisions about <span className={gradientText}>Motia&apos;s development roadmap</span>. We use this information internally to identify which features are most valuable, detect performance regressions, understand common workflows, and measure the impact of improvements.
+              The analytics data helps us make informed decisions about <span className={gradientText}>Mota&apos;s development roadmap</span>. We use this information internally to identify which features are most valuable, detect performance regressions, understand common workflows, and measure the impact of improvements.
             </p>
           </section>
 
           <section className={normalText}>
             <p>
-              We may share aggregated, non-identifiable insights publicly to demonstrate <span className={gradientTextBlue}>Motia&apos;s growth and adoption trends</span>. This helps the broader development community understand how modern development tools are being used.
+              We may share aggregated, non-identifiable insights publicly to demonstrate <span className={gradientTextBlue}>Mota&apos;s growth and adoption trends</span>. This helps the broader development community understand how modern development tools are being used.
             </p>
           </section>
 
@@ -136,10 +136,10 @@ export default function TelemetryPage() {
 
           <section className={normalText}>
             <p>
-              <span className={gradientTextBlue}>When analytics is disabled, no data is collected or transmitted.</span> Motia will function identically with analytics disabled.
+              <span className={gradientTextBlue}>When analytics is disabled, no data is collected or transmitted.</span> Mota will function identically with analytics disabled.
             </p>
             <p className="mt-[20px]">
-              To verify your analytics status, you can manually go to this address: <code className="bg-white/10 px-2 py-1 rounded text-white/90">localhost:3000/motia/analytics/status</code>
+              To verify your analytics status, you can manually go to this address: <code className="bg-white/10 px-2 py-1 rounded text-white/90">localhost:3000/mota/analytics/status</code>
             </p>
             <p className="mt-[20px]">
               If analytics is disabled, you&apos;ll see: <code className="bg-white/10 px-2 py-1 rounded text-white/90">{`{"analyticsEnabled":false}`}</code>
@@ -147,7 +147,7 @@ export default function TelemetryPage() {
           </section>
           <section className={`${normalText} mt-[-30px]`} >
             <p>
-              We believe great developer tools are shaped by real-world usage, but only with your consent. Your privacy matters, and your feedback, whether explicit or anonymous, helps Motia become better for everyone.
+              We believe great developer tools are shaped by real-world usage, but only with your consent. Your privacy matters, and your feedback, whether explicit or anonymous, helps Mota become better for everyone.
             </p>
           </section>
           <p className="mt-[16px] text-[16px] text-white/40">

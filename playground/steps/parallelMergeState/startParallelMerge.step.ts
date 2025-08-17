@@ -1,4 +1,4 @@
-import { ApiRouteConfig, Handlers, ApiMiddleware } from 'motia'
+import { ApiRouteConfig, Handlers, ApiMiddleware } from 'mota'
 
 const timingMiddleware: ApiMiddleware = async (_, ctx, next) => {
   const start = Date.now()

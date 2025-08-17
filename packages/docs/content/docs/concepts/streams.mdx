@@ -1,6 +1,6 @@
 ---
 title: Streams 
-description: Motia Streams are a way to quickly push updates from your asynchronous workflows to the client without having to implement any sort of polling processes.
+description: Mota Streams are a way to quickly push updates from your asynchronous workflows to the client without having to implement any sort of polling processes.
 ---
 
 ## How it works
@@ -9,12 +9,12 @@ You first need to define a stream in your project
 
 ### Defining a stream
 
-To be able to use Motia Sockets, you need to define a stream
+To be able to use Mota Sockets, you need to define a stream
 
 Create a file called `open-ai.stream.ts` under `steps/` folder
 
 ```typescript
-import { StreamConfig } from 'motia'
+import { StreamConfig } from 'mota'
 import { z } from 'zod'
 
 export const config: StreamConfig = {
@@ -46,12 +46,12 @@ export const config: StreamConfig = {
 }
 ```
 
-Once a stream is created, it should be immediately available in FlowContext (make sure to have motia running on the project)
+Once a stream is created, it should be immediately available in FlowContext (make sure to have mota running on the project)
 
 Then you can simply create records using the streams API in your step
 
 ```typescript
-import { ApiRouteConfig, Handlers } from 'motia'
+import { ApiRouteConfig, Handlers } from 'mota'
 import { z } from 'zod'
 
 export const config: ApiRouteConfig = {
@@ -88,7 +88,7 @@ export const handler: Handlers['OpenAiApi'] = async (req, { traceId, logger, emi
 The previous step just prepares a message to be created by Open AI via OpenAI SDK stream, which will be populated in the next step
 
 ```typescript
-import { EventConfig, Handlers } from 'motia'
+import { EventConfig, Handlers } from 'mota'
 import { OpenAI } from 'openai'
 import { z } from 'zod'
 
@@ -172,15 +172,15 @@ export const handler: Handlers['OpenAiApi'] = async (req, { traceId, logger, emi
 ## Consuming stream on the browser
 
 ```
-npm install @motiadev/stream-client-react
+npm install @motadev/stream-client-react
 ```
 
 Then add the provider to the root of your project
 
 ```tsx
-<MotiaStreamProvider address="ws://localhost:3000">
+<MotaStreamProvider address="ws://localhost:3000">
   ...
-</MotiaStreamProvider>
+</MotaStreamProvider>
 ```
 
 then on your component or hook, just use

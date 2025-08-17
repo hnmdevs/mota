@@ -1,10 +1,10 @@
-import { MotiaStream } from '../types-stream'
+import { MotaStream } from '../types-stream'
 import { Trace, TraceGroup } from './types'
 
 export class TraceManager {
   constructor(
-    private readonly traceStream: MotiaStream<Trace>,
-    private readonly traceGroupStream: MotiaStream<TraceGroup>,
+    private readonly traceStream: MotaStream<Trace>,
+    private readonly traceGroupStream: MotaStream<TraceGroup>,
     private readonly traceGroup: TraceGroup,
     private readonly trace: Trace,
   ) {

@@ -7,7 +7,7 @@ export interface StreamConfig {
   baseConfig:
     | { storageType: 'default' }
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    | { storageType: 'custom'; factory: () => MotiaStream<any> }
+    | { storageType: 'custom'; factory: () => MotaStream<any> }
 }
 
 export type StateStreamEventChannel = { groupId: string; id?: string }
@@ -22,7 +22,7 @@ export type Stream<TConfig extends StreamConfig = StreamConfig> = {
   factory: StreamFactory<unknown>
 }
 
-export interface MotiaStream<TData> {
+export interface MotaStream<TData> {
   get(groupId: string, id: string): Promise<BaseStreamItem<TData> | null>
   set(groupId: string, id: string, data: TData): Promise<BaseStreamItem<TData>>
   delete(groupId: string, id: string): Promise<BaseStreamItem<TData> | null>

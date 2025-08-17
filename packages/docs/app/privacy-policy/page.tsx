@@ -22,7 +22,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </Title>
           <p className="text-center text-[20px] text-white/80 leading-[140%] font-sans mt-[24px]">
-            Your privacy is fundamental to how we build Motia. This policy explains how we <span className={gradientText}>collect, use, and protect</span> your information.
+            Your privacy is fundamental to how we build Mota. This policy explains how we <span className={gradientText}>collect, use, and protect</span> your information.
           </p>
         </div>
         <div className="my-[72px] h-[1px] w-full bg-white/20"></div>
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
           <section className={normalText}>
             <h2 className={headingText}>Account Information</h2>
             <p>
-              When you create a Motia account, we collect:
+              When you create a Mota account, we collect:
             </p>
             <ul className="list-disc space-y-[12px] ml-[20px] mt-[16px]">
               <li><span className={gradientTextBlue}>Basic Profile Data:</span> Email address, name, and account details and preferences</li>
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
           <section className={normalText}>
             <h2 className={headingText}>Usage Analytics</h2>
             <p>
-              To improve Motia, we collect <span className={gradientText}>completely anonymized usage analytics</span>. This includes command usage patterns, performance metrics, and error frequencies. All analytics data is aggregated and cannot be traced back to individual users.
+              To improve Mota, we collect <span className={gradientText}>completely anonymized usage analytics</span>. This includes command usage patterns, performance metrics, and error frequencies. All analytics data is aggregated and cannot be traced back to individual users.
             </p>
             <p className="mt-[16px]">
               You can disable analytics collection at any time. More details on this in our <a href='/telemetry' className="text-[#5AC5FF] hover:text-white underline">Telemetry page</a>.
@@ -96,7 +96,7 @@ export default function PrivacyPage() {
               We use the information we collect to:
             </p>
             <ul className="list-disc space-y-[12px] ml-[20px] mt-[16px]">
-              <li>Provide, maintain, and improve Motia services</li>
+              <li>Provide, maintain, and improve Mota services</li>
               <li>Process transactions and send related information</li>
               <li>Send technical notices, updates, and support messages</li>
               <li>Respond to your comments, questions, and customer service requests</li>
@@ -147,14 +147,14 @@ export default function PrivacyPage() {
           <section className={normalText}>
             <h2 className={headingText}>International Data Transfers</h2>
             <p>
-              Motia operates globally, and your information may be transferred to and processed in countries other than your own. <span className={gradientText}>We ensure appropriate safeguards</span> are in place for international transfers, including standard contractual clauses and adequacy decisions.
+              Mota operates globally, and your information may be transferred to and processed in countries other than your own. <span className={gradientText}>We ensure appropriate safeguards</span> are in place for international transfers, including standard contractual clauses and adequacy decisions.
             </p>
           </section>
 
           <section className={normalText}>
             <h2 className={headingText}>Children&apos;s Privacy</h2>
             <p>
-              Motia is not intended for use by children under 13 years of age. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us immediately.
+              Mota is not intended for use by children under 13 years of age. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us immediately.
             </p>
           </section>
 
@@ -170,7 +170,7 @@ export default function PrivacyPage() {
               Privacy isn&apos;t just a policy for us, it&apos;s a core value. We believe developers should have <span className={gradientText}>complete control over their data</span> and clear understanding of how it&apos;s used to improve the tools they rely on.
             </p>
             <p className="mt-[20px]">
-              Questions about this privacy policy or your data? Contact at <span className={gradientTextBlue}>mike@motia.dev</span>
+              Questions about this privacy policy or your data? Contact at <span className={gradientTextBlue}>mike@mota.imoogle.com</span>
             </p>
             <p className="mt-[16px] text-[16px] text-white/40">
               Last updated: July 2025

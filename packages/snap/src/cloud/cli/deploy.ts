@@ -10,7 +10,7 @@ import { loadEnvData } from '../new-deployment/utils/load-env-data'
 
 cloudCli
   .command('deploy')
-  .description('Deploy a new version to Motia Cloud')
+  .description('Deploy a new version to Mota Cloud')
   .requiredOption('-k, --api-key <key>', 'The API key for authentication', process.env.MOTIA_API_KEY)
   .requiredOption('-v, --version-name <version>', 'The version to deploy')
   .option('-p, --project-id <id>', 'Project ID')

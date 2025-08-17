@@ -1,13 +1,13 @@
 ---
-title: 'Intelligent Document Processing: Building a RAG Agent with Motia, Docling & Weaviate'
+title: 'Intelligent Document Processing: Building a RAG Agent with Mota, Docling & Weaviate'
 ---
 
-In the era of AI-powered applications, the ability to extract insights from documents is crucial. Whether you're building a knowledge base, a research assistant, or a customer support system, you need to transform static PDFs into queryable, intelligent systems. This is where Retrieval-Augmented Generation (RAG) architecture shines, and where the Motia framework provides an elegant solution.
+In the era of AI-powered applications, the ability to extract insights from documents is crucial. Whether you're building a knowledge base, a research assistant, or a customer support system, you need to transform static PDFs into queryable, intelligent systems. This is where Retrieval-Augmented Generation (RAG) architecture shines, and where the Mota framework provides an elegant solution.
 
 This comprehensive guide explores how to build a production-ready RAG system that intelligently processes PDFs and answers questions about their content. We'll cover:
 
 1.  **The RAG Architecture**: Understanding how document processing, vector storage, and AI generation work together.
-2.  **Motia's Event-Driven Approach**: How `steps` create a scalable, maintainable RAG pipeline.
+2.  **Mota's Event-Driven Approach**: How `steps` create a scalable, maintainable RAG pipeline.
 3.  **Building the Workflow**: A detailed walkthrough of our polyglot processing pipeline.
 4.  **Advanced Features**: Real-time progress tracking, error handling, and production considerations.
 5.  **Hands-On Testing**: How to ingest documents and query your knowledge base.
@@ -18,16 +18,16 @@ Let's transform your documents into an intelligent AI assistant.
 
 ## The Power of Intelligent Document Processing
 
-<div className="my-8">![RAG Workflow in Motia Workbench](./../img/rag-docling-weaviate-agent.png)</div>
+<div className="my-8">![RAG Workflow in Mota Workbench](./../img/rag-docling-weaviate-agent.png)</div>
 
 
-At its core, our RAG agent solves a fundamental challenge: how do you make unstructured documents searchable and queryable by AI? Traditional approaches often involve complex, monolithic systems that are difficult to scale and maintain. Our Motia-powered solution breaks this down into discrete, event-driven steps that each handle a specific aspect of the pipeline.
+At its core, our RAG agent solves a fundamental challenge: how do you make unstructured documents searchable and queryable by AI? Traditional approaches often involve complex, monolithic systems that are difficult to scale and maintain. Our Mota-powered solution breaks this down into discrete, event-driven steps that each handle a specific aspect of the pipeline.
 
 The magic happens through the integration of three powerful technologies:
 
 -   **[Docling](https://github.com/docling-project/docling)**: Advanced PDF parsing with intelligent chunking that preserves document structure
 -   **[Weaviate](https://weaviate.io/)**: Cloud-native vector database with built-in OpenAI integration
--   **[Motia](https://motia.dev)**: Event-driven framework that orchestrates the entire pipeline
+-   **[Mota](https://mota.dev)**: Event-driven framework that orchestrates the entire pipeline
 
 Instead of a brittle, tightly-coupled system, we get a resilient architecture where each component can be scaled, modified, or replaced independently.
 
@@ -55,7 +55,7 @@ Our application consists of seven specialized steps, each handling a specific pa
     The entry point for document ingestion. This API endpoint receives a folder path, kicks off the processing pipeline, and returns immediately with a tracking ID for real-time progress monitoring.
 
     ```ts
-    import { Handlers } from 'motia'
+    import { Handlers } from 'mota'
     import { z } from 'zod'
     import { v4 as uuidv4 } from 'uuid'
 
@@ -101,7 +101,7 @@ Our application consists of seven specialized steps, each handling a specific pa
 
     ```ts
     import weaviate, { WeaviateClient, vectorizer, generative } from 'weaviate-client'
-    import { EventConfig, Handlers } from 'motia'
+    import { EventConfig, Handlers } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {
@@ -168,7 +168,7 @@ Our application consists of seven specialized steps, each handling a specific pa
     ```ts
     import { readdir } from 'fs/promises'
     import { join, resolve, basename } from 'path'
-    import { EventConfig, Handlers } from 'motia'
+    import { EventConfig, Handlers } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {
@@ -332,7 +332,7 @@ Our application consists of seven specialized steps, each handling a specific pa
 
     ```ts
     import weaviate from 'weaviate-client'
-    import { EventConfig, Handlers } from 'motia'
+    import { EventConfig, Handlers } from 'mota'
     import { z } from 'zod'
 
     const ChunkSchema = z.object({
@@ -429,7 +429,7 @@ Our application consists of seven specialized steps, each handling a specific pa
 
     ```ts
     import weaviate from 'weaviate-client'
-    import { Handlers } from 'motia'
+    import { Handlers } from 'mota'
     import { z } from 'zod'
 
     const RAGResponse = z.object({
@@ -528,9 +528,9 @@ Our application consists of seven specialized steps, each handling a specific pa
 
 ## Explore the Workbench
 
-The Motia Workbench provides a visual representation of your RAG pipeline, making it easy to understand the flow and debug any issues.
+The Mota Workbench provides a visual representation of your RAG pipeline, making it easy to understand the flow and debug any issues.
 
-<div className="my-8">![RAG Workflow in Motia Workbench](./../img/rag-example.gif)</div>
+<div className="my-8">![RAG Workflow in Mota Workbench](./../img/rag-example.gif)</div>
 
 You can monitor real-time processing, view logs, and trace the execution of each step directly in the Workbench interface. This makes development and debugging significantly easier compared to traditional monolithic approaches.
 
@@ -584,7 +584,7 @@ WEAVIATE_API_KEY="your-weaviate-api-key"
 
 ### Run the Project
 
-Start the Motia development server to begin processing documents.
+Start the Mota development server to begin processing documents.
 
 ```shell
 npm run dev
@@ -704,7 +704,7 @@ Want to explore the complete RAG implementation? Check out the full source code,
         <p className="text-gray-600 mb-4">Access the full source code for this RAG agent, including Python processing scripts, TypeScript orchestration, and production configuration.</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <a 
-            href="https://github.com/MotiaDev/motia-examples/tree/main/examples/rag-docling-weaviate-agent" 
+            href="https://github.com/MotaDev/mota-examples/tree/main/examples/rag-docling-weaviate-agent" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md transition-colors duration-200"
@@ -715,7 +715,7 @@ Want to explore the complete RAG implementation? Check out the full source code,
             View RAG Example
           </a>
           <a 
-            href="https://github.com/MotiaDev/motia-examples" 
+            href="https://github.com/MotaDev/mota-examples" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-md transition-colors duration-200"
@@ -732,9 +732,9 @@ Want to explore the complete RAG implementation? Check out the full source code,
 
 ## Conclusion: The Future of Document Intelligence
 
-This RAG system demonstrates the power of combining best-in-class technologies with Motia's event-driven architecture. By breaking down complex document processing into discrete, manageable steps, we've created a system that's not only powerful but also maintainable and scalable.
+This RAG system demonstrates the power of combining best-in-class technologies with Mota's event-driven architecture. By breaking down complex document processing into discrete, manageable steps, we've created a system that's not only powerful but also maintainable and scalable.
 
-The polyglot nature of the solution: Python for document processing, TypeScript for orchestration, shows how Motia enables you to use the right tool for each job without sacrificing integration or maintainability.
+The polyglot nature of the solution: Python for document processing, TypeScript for orchestration, shows how Mota enables you to use the right tool for each job without sacrificing integration or maintainability.
 
 From here, you can extend the system by:
 - Adding support for other document formats (Word, PowerPoint, etc.)
@@ -745,4 +745,4 @@ From here, you can extend the system by:
 
 The event-driven architecture makes all of these extensions straightforward to implement without disrupting the existing pipeline.
 
-Ready to transform your documents into intelligent, queryable knowledge bases? Start building with Motia today!
+Ready to transform your documents into intelligent, queryable knowledge bases? Start building with Mota today!

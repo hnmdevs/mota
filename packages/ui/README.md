@@ -1,6 +1,6 @@
-# @motiadev/ui
+# @imoogle/ui
 
-A modern React UI components library built with shadcn/ui, designed for the Motia ecosystem.
+A modern React UI components library built with shadcn/ui, designed for the Mota ecosystem.
 
 ## Features
 
@@ -18,18 +18,18 @@ Since this is a workspace package, you can add it as a dependency using the work
 ```json
 {
   "dependencies": {
-    "@motiadev/ui": "workspace:*"
+    "@imoogle/ui": "workspace:*"
   }
 }
 ```
 
 Or 
 ```bash
-npm install @motiadev/ui
+npm install @imoogle/ui
 # or
-yarn add @motiadev/ui
+yarn add @imoogle/ui
 # or
-pnpm add @motiadev/ui
+pnpm add @imoogle/ui
 ```
 
 ### Peer Dependencies
@@ -45,14 +45,14 @@ npm install react react-dom
 Import the components and styles you need:
 
 ```tsx
-import { Button, Card, CardHeader, CardTitle, CardContent } from '@motiadev/ui'
-import '@motiadev/ui/styles.css'
+import { Button, Card, CardHeader, CardTitle, CardContent } from '@imoogle/ui'
+import '@imoogle/ui/styles.css'
 
 function App() {
   return (
     <Card className="w-[350px]">
       <CardHeader>
-        <CardTitle>Welcome to Motia UI</CardTitle>
+        <CardTitle>Welcome to Mota UI</CardTitle>
       </CardHeader>
       <CardContent>
         <Button>Get Started</Button>
@@ -67,7 +67,7 @@ function App() {
 The components use CSS variables for theming. Add these to your CSS:
 
 ```css
-@import '@motiadev/ui/globals.css';
+@import '@imoogle/ui/globals.css';
 ```
 
 Or set up your own theme variables:
@@ -89,7 +89,7 @@ Or set up your own theme variables:
 A utility function for merging class names with Tailwind CSS classes.
 
 ```tsx
-import { cn } from '@motiadev/ui'
+import { cn } from '@imoogle/ui'
 
 const className = cn(
   "base-classes",

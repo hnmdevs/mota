@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { EventConfig, Handlers } from 'motia'
+import { EventConfig, Handlers } from 'mota'
 import { ParallelMergeStep } from './parallelMerge.types'
 
 export const config: EventConfig = {

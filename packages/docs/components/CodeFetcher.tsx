@@ -14,7 +14,7 @@ interface CodeFetcherProps {
   repo?: string;
 }
 
-export const CodeFetcher = ({ value, tab, fileExtension = 'ts', path, branch = "main", repo = "MotiaDev/motia-examples" }: CodeFetcherProps) => {
+export const CodeFetcher = ({ value, tab, fileExtension = 'ts', path, branch = "main", repo = "MotaDev/mota-examples" }: CodeFetcherProps) => {
   const fileName = `${value}.step.${fileExtension}`
   const filePath = `${path}/${fileName}`
   const { code, loading, error } = useGitHubCode({

@@ -1,4 +1,4 @@
-import { NoopConfig } from 'motia'
+import { NoopConfig } from 'mota'
 
 /**
  * NOOP Steps don"t hold any logic in code. They are a way
@@ -9,7 +9,7 @@ import { NoopConfig } from 'motia'
  * node with a play button to allow you to trigger the first
  * API step in this flow.
  *
- * For more information, refer to the documentation: https://www.motia.dev/docs/workbench/noop-steps
+ * For more information, refer to the documentation: https://www.mota.imoogle.com/docs/workbench/noop-steps
  */
 export const config: NoopConfig = {
   type: 'noop',

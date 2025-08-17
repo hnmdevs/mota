@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, BadgeProps } from '@motiadev/ui'
+import { Badge, BadgeProps } from '@imoogle/ui'
 
 const map: Record<string, BadgeProps['variant']> = {
   info: 'info',

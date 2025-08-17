@@ -13,10 +13,10 @@ import { generateTraceId } from './generate-trace-id'
 import { isApiStep } from './guards'
 import { LockedData } from './locked-data'
 import { BaseLoggerFactory } from './logger-factory'
-import { Motia } from './motia'
+import { Mota } from './mota'
 import { createTracerFactory } from './observability/tracer'
 import { createSocketServer } from './socket-server'
-import { createStepHandlers, MotiaEventManager } from './step-handlers'
+import { createStepHandlers, MotaEventManager } from './step-handlers'
 import { systemSteps } from './steps'
 import { apiEndpoints } from './streams/api-endpoints'
 import { Log, LogsStream } from './streams/logs-stream'
@@ -29,12 +29,12 @@ import {
   InternalStateManager,
   Step,
 } from './types'
-import { BaseStreamItem, MotiaStream, StateStreamEvent, StateStreamEventChannel } from './types-stream'
+import { BaseStreamItem, MotaStream, StateStreamEvent, StateStreamEventChannel } from './types-stream'
 import { globalLogger } from './logger'
 import { Printer } from './printer'
 import { stepEndpoint } from './step-endpoint'
 
-export type MotiaServer = {
+export type MotaServer = {
   app: Express
   server: http.Server
   socketServer: WsServer
@@ -42,10 +42,10 @@ export type MotiaServer = {
   removeRoute: (step: Step<ApiRouteConfig>) => void
   addRoute: (step: Step<ApiRouteConfig>) => void
   cronManager: CronManager
-  motiaEventManager: MotiaEventManager
+  motaEventManager: MotaEventManager
 }
 
-type MotiaServerConfig = {
+type MotaServerConfig = {
   isVerbose: boolean
   printer?: Printer
 }
@@ -54,8 +54,8 @@ export const createServer = (
   lockedData: LockedData,
   eventManager: EventManager,
   state: InternalStateManager,
-  config: MotiaServerConfig,
-): MotiaServer => {
+  config: MotaServerConfig,
+): MotaServer => {
   const printer = config.printer ?? new Printer(process.cwd())
   const app = express()
   const server = http.createServer(app)
@@ -68,7 +68,7 @@ export const createServer = (
 
       if (stream) {
         const result = await stream().get(groupId, id)
-        delete result?.__motia // deleting because we don't need it in the socket
+        delete result?.__mota // deleting because we don't need it in the socket
         return result
       }
     },
@@ -79,14 +79,14 @@ export const createServer = (
       if (stream) {
         const result = stream ? await stream().getGroup(groupId) : []
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        return result.map(({ __motia, ...rest }) => rest)
+        return result.map(({ __mota, ...rest }) => rest)
       }
     },
   })
 
   lockedData.applyStreamWrapper((streamName, stream) => {
-    return (): MotiaStream<BaseStreamItem> => {
-      const main = stream() as MotiaStream<BaseStreamItem>
+    return (): MotaStream<BaseStreamItem> => {
+      const main = stream() as MotaStream<BaseStreamItem>
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const wrapObject = (groupId: string, id: string, object: any) => {
         if (!object) {
@@ -95,7 +95,7 @@ export const createServer = (
 
         return {
           ...object,
-          __motia: { type: 'state-stream', streamName, groupId, id },
+          __mota: { type: 'state-stream', streamName, groupId, id },
         }
       }
 
@@ -147,10 +147,10 @@ export const createServer = (
   })
 
   const logStream = lockedData.createStream<Log>({
-    filePath: '__motia.logs',
+    filePath: '__mota.logs',
     hidden: true,
     config: {
-      name: '__motia.logs',
+      name: '__mota.logs',
       baseConfig: { storageType: 'custom', factory: () => new LogsStream() },
       schema: null as never,
     },
@@ -159,17 +159,17 @@ export const createServer = (
   const allSteps = [...systemSteps, ...lockedData.activeSteps]
   const loggerFactory = new BaseLoggerFactory(config.isVerbose, logStream)
   const tracerFactory = createTracerFactory(lockedData)
-  const motia: Motia = { loggerFactory, eventManager, state, lockedData, printer, tracerFactory }
+  const mota: Mota = { loggerFactory, eventManager, state, lockedData, printer, tracerFactory }
 
-  const cronManager = setupCronHandlers(motia)
-  const motiaEventManager = createStepHandlers(motia)
+  const cronManager = setupCronHandlers(mota)
+  const motaEventManager = createStepHandlers(mota)
 
   const asyncHandler = (step: Step<ApiRouteConfig>) => {
     return async (req: Request, res: Response) => {
       const traceId = generateTraceId()
       const { name: stepName, flows } = step.config
       const logger = loggerFactory.create({ traceId, flows, stepName })
-      const tracer = await motia.tracerFactory.createTracer(traceId, step, logger)
+      const tracer = await mota.tracerFactory.createTracer(traceId, step, logger)
 
       logger.debug('[API] Received request, processing step', { path: req.path })
 
@@ -181,7 +181,7 @@ export const createServer = (
       }
 
       try {
-        const result = await callStepFile<ApiResponse>({ data, step, logger, tracer, traceId }, motia)
+        const result = await callStepFile<ApiResponse>({ data, step, logger, tracer, traceId }, mota)
 
         trackEvent('api_call_success', { stepName })
 
@@ -273,5 +273,5 @@ export const createServer = (
     socketServer.close()
   }
 
-  return { app, server, socketServer, close, removeRoute, addRoute, cronManager, motiaEventManager }
+  return { app, server, socketServer, close, removeRoute, addRoute, cronManager, motaEventManager }
 }

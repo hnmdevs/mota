@@ -2,7 +2,7 @@
 title: Defining Steps
 ---
 
-Steps are the fundamental building blocks in Motia that encapsulate isolated pieces of business logic. 
+Steps are the fundamental building blocks in Mota that encapsulate isolated pieces of business logic. 
 
 Steps have two core behaviors:
 
@@ -19,11 +19,11 @@ This modular approach allows you to:
 - Maintain clear separation of concerns
 - Scale and modify parts of your system independently
 
-Steps can be defined in any language that Motia supports, such as TypeScript, JavaScript, and Python. Steps can be of type [`event`](/docs/concepts/steps/event), [`api`](/docs/concepts/steps/api), or [`cron`](/docs/concepts/steps/cron). Steps are composed of a `config` object and a `handler` function.
+Steps can be defined in any language that Mota supports, such as TypeScript, JavaScript, and Python. Steps can be of type [`event`](/docs/concepts/steps/event), [`api`](/docs/concepts/steps/api), or [`cron`](/docs/concepts/steps/cron). Steps are composed of a `config` object and a `handler` function.
 
 ## Config
 
-A step's configuration is defined through a `config` object that must be exported. This object contains essential properties that tell Motia how to interact with the step.
+A step's configuration is defined through a `config` object that must be exported. This object contains essential properties that tell Mota how to interact with the step.
 
 <DescriptionTable
   type={{
@@ -32,7 +32,7 @@ A step's configuration is defined through a `config` object that must be exporte
       type: 'string',
     },
     name: {
-      description: 'A unique identifier for the step, used in Motia Workbench visualization tool',
+      description: 'A unique identifier for the step, used in Mota Workbench visualization tool',
       type: 'string',
     },
     subscribes: {
@@ -79,12 +79,12 @@ A handler holds the business logic of a step. When an event occurs that matches 
    - `state`: Manages data persistence
    - `logger`: Records important information
 
-Here're examples of how to define a handler in the Motia supported languages:
+Here're examples of how to define a handler in the Mota supported languages:
 
 <Tabs items={['TS', 'JS', 'Python']}>
   <Tab value="TS">
     ```typescript
-    import { EventConfig, Handlers } from 'motia'
+    import { EventConfig, Handlers } from 'mota'
 
     export const config: EventConfig = {
       type: 'event',
@@ -128,5 +128,5 @@ Here're examples of how to define a handler in the Motia supported languages:
 </Tabs>
 
 <Callout>
-Follow the **[quick start](/docs/getting-started/quick-start)** guide if you haven't set up Motia yet.
+Follow the **[quick start](/docs/getting-started/quick-start)** guide if you haven't set up Mota yet.
 </Callout>

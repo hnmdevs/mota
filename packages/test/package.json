@@ -1,6 +1,6 @@
 {
-  "name": "@motiadev/test",
-  "description": "A testing utility package for Motia workflows that provides tools for mocking, testing, and simulating Motia components.",
+  "name": "@imoogle/test",
+  "description": "A testing utility package for Mota workflows that provides tools for mocking, testing, and simulating Mota components.",
   "version": "0.5.9-beta.117",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,8 +9,8 @@
     "lint": "eslint --config ../../eslint.config.js"
   },
   "peerDependencies": {
-    "@motiadev/core": "workspace:*",
-    "motia": "workspace:*"
+    "@imoogle/core": "workspace:*",
+    "mota": "workspace:*"
   },
   "dependencies": {
     "supertest": "^7.0.0",

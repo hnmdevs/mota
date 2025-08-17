@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-Motia Workbench is a development platform that helps you build and debug your Motia flows. It serves as your control center where you can:
+Mota Workbench is a development platform that helps you build and debug your Mota flows. It serves as your control center where you can:
 
 - Visualize flows as interactive diagrams
 - Test steps directly in the UI
@@ -23,7 +23,7 @@ Start workbench by running:
 </Tabs>
 
 <Callout>
-  Running the dev command starts: - **Motia Server**: Backend services and API endpoints - **Motia Workbench**: Web
+  Running the dev command starts: - **Mota Server**: Backend services and API endpoints - **Mota Workbench**: Web
   interface at http://localhost:3000 - **Development Mode**: Auto-reloads when changes are made
 </Callout>
 
@@ -59,7 +59,7 @@ Start workbench by running:
 
 ## Customization
 
-Motia Workbench allows you to customize how your steps appear in the Workbench flow visualization tool.
+Mota Workbench allows you to customize how your steps appear in the Workbench flow visualization tool.
 
 ### NOOP Steps
 
@@ -94,4 +94,4 @@ UI steps allow you to customize how your steps appear in the Workbench visualiza
   ]}
 />
 
-<Callout>New to Motia? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>
+<Callout>New to Mota? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>

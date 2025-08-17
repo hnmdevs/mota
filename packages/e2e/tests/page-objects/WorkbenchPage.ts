@@ -1,7 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test'
-import { MotiaApplicationPage } from './MotiaApplicationPage'
+import { MotaApplicationPage } from './MotaApplicationPage'
 
-export class WorkbenchPage extends MotiaApplicationPage {
+export class WorkbenchPage extends MotaApplicationPage {
   readonly sidebarContainer: Locator
   readonly logsLink: Locator
   readonly statesLink: Locator
@@ -105,7 +105,7 @@ export class WorkbenchPage extends MotiaApplicationPage {
   async hasWorkbenchFeatures() {
     const workbenchIndicators = [
       this.page.getByText(/workbench/i),
-      this.page.getByText(/motia/i),
+      this.page.getByText(/mota/i),
       this.navigation,
       this.mainContent,
     ]

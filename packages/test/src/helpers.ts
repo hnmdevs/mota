@@ -1,4 +1,4 @@
-import { Logger } from '@motiadev/core'
+import { Logger } from '@imoogle/core'
 import { MockFlowContext, MockLogger } from './types'
 
 export const createMockLogger = () => {

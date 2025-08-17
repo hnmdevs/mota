@@ -1,6 +1,6 @@
 import { expect, type Locator, type Page } from '@playwright/test'
 
-export class MotiaApplicationPage {
+export class MotaApplicationPage {
   readonly page: Page
   readonly body: Locator
   readonly title: Locator
@@ -11,7 +11,7 @@ export class MotiaApplicationPage {
   constructor(page: Page) {
     this.page = page
     this.body = page.locator('body')
-    this.title = page.getByTestId('motia-title')
+    this.title = page.getByTestId('mota-title')
     this.navigation = page.locator('nav')
     this.mainContent = page.locator('main')
     this.logoIcon = page.getByTestId('logo-icon')

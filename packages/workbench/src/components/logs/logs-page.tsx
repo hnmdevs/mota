@@ -5,7 +5,7 @@ import { useLogsStore } from '@/stores/use-logs-store'
 import { useMemo, useState } from 'react'
 import { LogDetail } from './log-detail'
 import { LogLevelDot } from './log-level-dot'
-import { Button, cn, Input } from '@motiadev/ui'
+import { Button, cn, Input } from '@imoogle/ui'
 import { CircleX, Trash } from 'lucide-react'
 
 export const LogsPage = () => {

@@ -1,4 +1,4 @@
-name: Deploy Motia Docker Image
+name: Deploy Mota Docker Image
 
 on:
   workflow_dispatch:
@@ -13,8 +13,8 @@ on:
       - 'packages/docker/Dockerfile'
 
 env:
-  DOCKER_MOTIA_ORG: motiadev
-  DOCKER_IMAGE_NAME: motia
+  DOCKER_MOTIA_ORG: motadev
+  DOCKER_IMAGE_NAME: mota
 
 jobs:
   deploy:

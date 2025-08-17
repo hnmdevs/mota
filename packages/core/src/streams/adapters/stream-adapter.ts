@@ -1,9 +1,9 @@
-import { BaseStreamItem, MotiaStream, StateStreamEvent, StateStreamEventChannel } from '../../types-stream'
+import { BaseStreamItem, MotaStream, StateStreamEvent, StateStreamEventChannel } from '../../types-stream'
 
 /**
  * Interface for stream management adapters
  */
-export abstract class StreamAdapter<TData> implements MotiaStream<TData> {
+export abstract class StreamAdapter<TData> implements MotaStream<TData> {
   abstract get(groupId: string, id: string): Promise<BaseStreamItem<TData> | null>
   abstract set(groupId: string, id: string, data: TData): Promise<BaseStreamItem<TData>>
   abstract delete(groupId: string, id: string): Promise<BaseStreamItem<TData> | null>

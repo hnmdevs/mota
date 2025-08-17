@@ -1,5 +1,5 @@
 import { TraceGroup } from '@/types/observability'
-import { Badge, BadgeProps } from '@motiadev/ui'
+import { Badge, BadgeProps } from '@imoogle/ui'
 import React, { useMemo } from 'react'
 
 type Props = {

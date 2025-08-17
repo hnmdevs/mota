@@ -1,28 +1,28 @@
 ---
 title: Self-Hosted Deployment
-description: Learn how to deploy your Motia project to production using motia-docker
+description: Learn how to deploy your Mota project to production using mota-docker
 ---
 
-We provide a docker image that you can use to deploy your Motia project to production. You can use it as a base image and add your own customizations or use it as is.
+We provide a docker image that you can use to deploy your Mota project to production. You can use it as a base image and add your own customizations or use it as is.
 
-<Callout type="warn">You will need to use the latest version of the motia package **0.5.2-beta.101 or higher**</Callout>
+<Callout type="warn">You will need to use the latest version of the mota package **0.5.2-beta.101 or higher**</Callout>
 
 ## Quick setup
 
 <Steps>
 <Step>
-#### Setup your motia project
+#### Setup your mota project
 
 ```bash
-npx motia@latest docker setup
+npx mota@latest docker setup
 ```
 
 </Step>
 <Step>
-#### Run your motia project inside a container
+#### Run your mota project inside a container
 
 ```bash
-npx motia@latest docker run
+npx mota@latest docker run
 ```
 
   </Step>
@@ -30,7 +30,7 @@ npx motia@latest docker run
 #### You are good to go, your project should be running on localhost under port 3000, for additional options and configuration run
 
 ```bash
-npx motia@latest docker run --help
+npx mota@latest docker run --help
 ```
 
   </Step>
@@ -40,12 +40,12 @@ npx motia@latest docker run --help
 
 ## Using the docker image
 
-You will need to implement your own Dockerfile where you will use the motia-docker image as a base image. Use the following template as a starting point for your Dockerfile:
+You will need to implement your own Dockerfile where you will use the mota-docker image as a base image. Use the following template as a starting point for your Dockerfile:
 
 ```dockerfile
 # NOTE: Some cloud providers will require you to specify the platform to match your target architecture
-# i.e.: AWS Lightsail requires arm64, therefore you update your FROM statement to: FROM --platform=linux/arm64 motiadev/motia:latest
-FROM motiadev/motia:latest
+# i.e.: AWS Lightsail requires arm64, therefore you update your FROM statement to: FROM --platform=linux/arm64 motadev/mota:latest
+FROM motadev/mota:latest
 
 # Install Dependencies
 COPY package*.json ./
@@ -56,9 +56,9 @@ COPY . .
 
 # Enable the following lines if you are using python steps!!!
 # Setup python steps dependencies
-# RUN npx motia@latest install
+# RUN npx mota@latest install
 
-# Expose outside access to the motia project
+# Expose outside access to the mota project
 EXPOSE 3000
 
 # Run your application
@@ -66,7 +66,7 @@ CMD ["npm", "run", "start"]
 ```
 
 <Callout type="info">
-  Depending on the cloud provider you will use to deploy your Motia project, you will need to adjust the exposed ports
+  Depending on the cloud provider you will use to deploy your Mota project, you will need to adjust the exposed ports
   and the command to start your application.
 </Callout>
 
@@ -120,7 +120,7 @@ Thumbs.db
 docker build -t <your-image-name> .
 ```
 
-## Run your Motia application
+## Run your Mota application
 
 Once you've built your image, you can run it using the following command:
 
@@ -128,8 +128,8 @@ Once you've built your image, you can run it using the following command:
 docker run -it --rm -p 3000:3000 <your-image-name>
 ```
 
-## Motia Docker Resources
+## Mota Docker Resources
 
-- [Docker Registry](https://hub.docker.com/r/motiadev/motia)
-- [Github Repo](https://github.com/MotiaDev/motia/packages/docker)
-- [Example Motia project with deployment boilerplate for AWS LightSail and Railway](https://github.com/MotiaDev/motia-examples/tree/main/examples/motia-docker)
+- [Docker Registry](https://hub.docker.com/r/motadev/mota)
+- [Github Repo](https://github.com/MotaDev/mota/packages/docker)
+- [Example Mota project with deployment boilerplate for AWS LightSail and Railway](https://github.com/MotaDev/mota-examples/tree/main/examples/mota-docker)

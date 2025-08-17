@@ -24,7 +24,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="analyzeSentimentApi">
     ```ts
     // Receives user text, emits "openai.analyzeSentimentRequest".
-    import { ApiRouteConfig, StepHandler } from 'motia'
+    import { ApiRouteConfig, StepHandler } from 'mota'
     import { z } from 'zod'
 
     export const config: ApiRouteConfig = {
@@ -62,7 +62,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="openAiAnalyzeSentiment">
     ```ts
     // Calls OpenAI, instructing it to ONLY return JSON like {"sentiment":"positive","analysis":"..."}
-    import { EventConfig, StepHandler } from 'motia'
+    import { EventConfig, StepHandler } from 'mota'
     import { z } from 'zod'
     import { OpenAI } from 'openai'
 
@@ -134,7 +134,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="handlePositive">
     ```ts
     // Handles "openai.positiveSentiment"
-    import { EventConfig, StepHandler } from 'motia'
+    import { EventConfig, StepHandler } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {
@@ -159,7 +159,7 @@ Sometimes you don't just want a **simple** "prompt => response." Instead, you wa
   <Tab value="handleNegative">
     ```ts
     // Handles "openai.negativeSentiment"
-    import { EventConfig, StepHandler } from 'motia'
+    import { EventConfig, StepHandler } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {
@@ -206,7 +206,7 @@ Here's how the events chain together:
 ### Install Dependencies
 
 ```shell
-pnpm install motia openai
+pnpm install mota openai
 ```
 
 ### Create Project Structure
@@ -227,7 +227,7 @@ export OPENAI_API_KEY="sk-..."
 ### Run the Project
 
 ```shell
-pnpm motia dev
+pnpm mota dev
 ```
 
 ### Test the API

@@ -1,4 +1,4 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@motiadev/ui'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@imoogle/ui'
 import { ChevronsUpDown, Workflow } from 'lucide-react'
 import { useFlowStore } from '@/stores/use-flow-store'
 import { useFetchFlows } from '@/hooks/use-fetch-flows'
