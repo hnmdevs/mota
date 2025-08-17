@@ -165,9 +165,9 @@ The following env variables can be defined to override specific features from th
 
 | Env Variable             | Description                                                                                                                                         |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MOTIA_DISABLE_TUTORIAL   | This will disable the tutorial from being shown, and the tutorial question in the `create` command                                                  |
-| MOTIA_ANALYTICS_DISABLED | This will disable the analytics reporting from the tutorial                                                                                         |
-| MOTIA_SKIP_TUTORIAL      | This will skip presenting the tutorial to a user if the response is `N` in the `create` command, this will be set as part of the create boilerplate |
+| MOTA_DISABLE_TUTORIAL   | This will disable the tutorial from being shown, and the tutorial question in the `create` command                                                  |
+| MOTA_ANALYTICS_DISABLED | This will disable the analytics reporting from the tutorial                                                                                         |
+| MOTA_SKIP_TUTORIAL      | This will skip presenting the tutorial to a user if the response is `N` in the `create` command, this will be set as part of the create boilerplate |
 
 ## Examples
 

@@ -37,7 +37,7 @@ export const start = async (port: number, hostname: string, disableVerbose: bool
   console.log('🚀 Server ready and listening on port', port)
   console.log(`🔗 Open http://${hostname}:${port}/ to open workbench 🛠️`)
 
-  if (!process.env.MOTIA_DOCKER_DISABLE_WORKBENCH) {
+  if (!process.env.MOTA_DOCKER_DISABLE_WORKBENCH) {
     stateEndpoints(motaServer, state)
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const { applyMiddleware } = require('@imoogle/workbench/dist/middleware')

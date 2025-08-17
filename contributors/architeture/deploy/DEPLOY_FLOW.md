@@ -161,8 +161,8 @@ git push origin v1.0.1
 ## Required Configuration
 
 ### GitHub Secrets
-- `MOTIA_CI_APP_ID`: App ID for authentication
-- `MOTIA_CI_APP_PRIVATE_KEY`: App private key
+- `MOTA_CI_APP_ID`: App ID for authentication
+- `MOTA_CI_APP_PRIVATE_KEY`: App private key
 - `NPM_TOKEN`: Token for NPM publishing
 
 ### Required Permissions

@@ -90,7 +90,7 @@ export const dev = async (
     environment: process.env.NODE_ENV || 'development',
   })
 
-  const { applyMiddleware } = process.env.__MOTIA_DEV_MODE__
+  const { applyMiddleware } = process.env.__MOTA_DEV_MODE__
     ? // eslint-disable-next-line @typescript-eslint/no-require-imports
       require('@imoogle/workbench/middleware')
     : // eslint-disable-next-line @typescript-eslint/no-require-imports
