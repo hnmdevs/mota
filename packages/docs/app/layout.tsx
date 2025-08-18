@@ -39,7 +39,7 @@ const metaDescription =
 
 export async function generateMetadata(_props: never, _parent: ResolvingMetadata): Promise<Metadata> {
   const h = await headers()
-  const host = h.get('x-forwarded-host') ?? h.get('host') ?? 'motia.dev'
+  const host = h.get('x-forwarded-host') ?? h.get('host') ?? 'localhost:3000'
   const proto = host.startsWith('localhost') ? 'http' : 'https'
   const base = `${proto}://${host}`
 
@@ -90,8 +90,8 @@ export async function generateMetadata(_props: never, _parent: ResolvingMetadata
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@motiadev',
-      creator: '@motiadev',
+      site: '@imoogle',
+      creator: '@imoogle',
       title: metaTitle,
       description: metaDescription,
       images: [ogImage],
@@ -128,7 +128,7 @@ export async function generateMetadata(_props: never, _parent: ResolvingMetadata
 
       // Additional Twitter tags for better iOS compatibility
       'twitter:url': base,
-      'twitter:domain': 'motia.dev',
+      'twitter:domain': 'localhost:3000',
       'twitter:image:alt': metaTitle,
 
       // iOS Safari specific
@@ -173,8 +173,8 @@ export default function RootLayout({
             '@type': 'WebSite',
             name: metaTitle,
             description: metaDescription,
-            url: 'https://motia.dev',
-            image: ['https://motia.dev/og-image-updated.jpg'],
+            url: 'http://localhost:3000',
+            image: ['http://localhost:3000/og-image-updated.jpg'],
           })}
         </script>
       </head>
@@ -183,7 +183,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${dmMono.variable} ${tasaExplorer.variable} w-screen overflow-x-hidden antialiased`}
       >
         <PlausibleProvider
-          domain="motia.dev"
+          domain="localhost:3000"
           customDomain="https://plausible.io"
           scriptProps={{
             src: 'https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js',

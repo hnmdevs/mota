@@ -1,4 +1,4 @@
-![Motia Banner](https://github.com/MotiaDev/motia/raw/main/assets/github-readme-banner.png)
+![Motia Banner](assets/github-readme-banner.png)
 
 **🔥 A Modern Unified Backend Framework for APIs, background jobs, workflows, and Agents 🔥**
 

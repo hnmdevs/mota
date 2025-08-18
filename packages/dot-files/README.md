@@ -19,7 +19,7 @@ This repository provides:
 
 1. Clone this repository
 ```bash
-git clone https://github.com/motia/dot-files.git
+# Contact our team for dot-files
 ```
 
 2. Copy the configuration files to your Motia project
