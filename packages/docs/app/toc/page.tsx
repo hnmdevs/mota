@@ -132,7 +132,7 @@ export default function TermsPage() {
               These terms help us create a safe, productive environment for all developers using Motia. We&apos;re committed to <span className={gradientText}>building tools that empower</span> software engineering teams while respecting your rights and privacy.
             </p>
             <p className="mt-[20px]">
-              Questions about these terms? Contact at <span className={gradientTextBlue}>mike@motia.dev</span>
+              Questions about these terms? Contact at <span className={gradientTextBlue}>support@imoogle.com</span>
             </p>
             <p className="mt-[16px] text-[16px] text-white/40">
               Last updated: July 2025

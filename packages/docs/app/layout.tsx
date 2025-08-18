@@ -4,7 +4,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { RootProvider } from 'fumadocs-ui/provider'
 import { GoogleTagManager } from '@next/third-parties/google'
-import { Analytics } from '@vercel/analytics/react'
+// Analytics removed - powered by imoogle
 import { headers } from 'next/headers'
 import PlausibleProvider from 'next-plausible'
 
@@ -191,7 +191,7 @@ export default function RootLayout({
         >
           <RootProvider>
             {children}
-            <Analytics />
+            {/* Analytics removed - powered by imoogle */}
           </RootProvider>
         </PlausibleProvider>
       </body>

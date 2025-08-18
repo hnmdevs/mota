@@ -23,9 +23,9 @@ At its core, our uptime monitoring system solves a fundamental challenge: how do
 The magic happens through the integration of proven technologies and patterns:
 
 -   **[Cron-Based Scheduling](https://en.wikipedia.org/wiki/Cron)**: Configurable check intervals using familiar cron expressions
--   **[Discord Webhooks](https://discord.com/developers/docs/resources/webhook)**: Instant notifications with rich formatting
+-   **Discord Webhooks**: Instant notifications with rich formatting
 -   **[Token Bucket Rate Limiting](https://en.wikipedia.org/wiki/Token_bucket)**: Intelligent alert throttling to prevent spam
--   **[Motia Framework](https://motia.dev)**: Event-driven orchestration with built-in observability
+-   **Motia Framework**: Event-driven orchestration with built-in observability
 
 Instead of a monolithic monitoring daemon, we get a resilient architecture where each component can be scaled, modified, or replaced independently.
 
@@ -646,7 +646,7 @@ Create a `.env` file with your monitoring configuration. You'll need a Discord w
 
 ```shell
 # Required: Discord webhook for alerts
-DISCORD_WEBHOOK="https://discord.com/api/webhooks/123456789/your-webhook-token"
+DISCORD_WEBHOOK="#
 
 # Required: JSON array of URLs to monitor
 SITES='["https://example.com", "https://api.yourdomain.com", "https://blog.yoursite.org"]'
@@ -872,7 +872,7 @@ Want to explore the complete monitoring implementation? Check out the full sourc
         <p className="text-gray-600 mb-4">Access the full implementation with event steps, utility libraries, Discord integration, and production-ready configuration.</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <a 
-            href="https://github.com/MotiaDev/motia-examples/tree/main/examples/motia-uptime-monitor" 
+            href="#" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-md transition-colors duration-200"
@@ -883,7 +883,7 @@ Want to explore the complete monitoring implementation? Check out the full sourc
             View Monitor Example
           </a>
           <a 
-            href="https://github.com/MotiaDev/motia-examples" 
+            href="#" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-md transition-colors duration-200"

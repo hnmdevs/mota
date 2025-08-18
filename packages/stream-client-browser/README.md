@@ -1,6 +1,6 @@
 # @motiadev/stream-client-browser
 
-Motia Stream Client Package – Responsible for managing real-time [Motia](https://motia.dev) streams of data in browser environments. This package provides a simple, type-safe interface for subscribing to item and group streams over WebSockets, handling live updates, and managing stream state in your web applications.
+Motia Stream Client Package – Responsible for managing real-time [Motia](#) streams of data in browser environments. This package provides a simple, type-safe interface for subscribing to item and group streams over WebSockets, handling live updates, and managing stream state in your web applications.
 
 ## Features
 

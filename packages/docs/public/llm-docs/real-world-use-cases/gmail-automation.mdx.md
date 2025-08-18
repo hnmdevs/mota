@@ -121,7 +121,7 @@ The Gmail Account Manager workflow consists of the following steps:
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/yourusername/gmail-flow.git
+   git clone 
    cd gmail-flow
    ```
 
@@ -244,7 +244,7 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
    - Open your `.env` file
    - Add or update the Discord webhook URL:
      ```
-     DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your-webhook-url
+     DISCORD_WEBHOOK_URL=#
      ```
 
 5. **Test the Webhook**:
@@ -252,7 +252,7 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
      ```bash
      curl -X POST -H "Content-Type: application/json" \
      -d '{"content": "Testing Gmail Account Manager webhook"}' \
-     https://discord.com/api/webhooks/your-webhook-url
+     #
      ```
    - You should see the message appear in your Discord channel
 
@@ -326,7 +326,7 @@ GOOGLE_PUBSUB_TOPIC=projects/your-project-id/topics/gmail-notifications
 HUGGINGFACE_API_TOKEN=your_huggingface_token
 
 # Discord Integration
-DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your-webhook-url
+DISCORD_WEBHOOK_URL=#
 
 # Auto-Responder Configuration
 AUTO_RESPONDER_NAME=Your Name

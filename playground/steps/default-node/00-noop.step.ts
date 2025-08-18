@@ -9,7 +9,7 @@ import { NoopConfig } from 'motia'
  * node with a play button to allow you to trigger the first
  * API step in this flow.
  *
- * For more information, refer to the documentation: https://www.motia.dev/docs/workbench/noop-steps
+ * For more information, refer to the local documentation
  */
 export const config: NoopConfig = {
   type: 'noop',

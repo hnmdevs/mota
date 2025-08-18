@@ -2,7 +2,7 @@
 
 Motia Stream Client React Package – Responsible for managing streams of data in React applications.
 
-For more information about Motia Streams, please refer to the [Motia Streams documentation](https://motia.dev/docs).
+For more information about Motia Streams, please refer to the [Motia Streams documentation](#).
 
 ## Overview
 

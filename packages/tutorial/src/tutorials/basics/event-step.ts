@@ -38,7 +38,7 @@ export const eventSteps: TutorialStep[] = [
     elementXpath: `(//span[contains(text(), 'state')])[4]/..`,
     segmentId,
     title: 'Storing Data in State',
-    description: `Let's take a closer look at storing data in state.<br/><br/> By now you are familiar with emitting and subscribing, but another core feature from from Motia's ecosystem is <b>state management</b>. Motia provides out of the box a file based state management, but you can customize this by configuring a <a href="https://www.motia.dev/docs/concepts/state-management#storage-adapters" target="_blank">storage adapter</a> to persist state in-memory or Redis.<br/><br/> In this example we are persisting the result of a third party http request in <b>state</b>, scoping it to a group id named "orders".<br/><br/> 💡 We recommend you check out our <a href="https://www.motia.dev/docs/concepts/state-management#best-practices" target="_blank">best practices</a> for <a href="https://www.motia.dev/docs/concepts/state-management" target="_blank">state management</a>.`,
+    description: `Let's take a closer look at storing data in state.<br/><br/> By now you are familiar with emitting and subscribing, but another core feature from from Motia's ecosystem is <b>state management</b>. Motia provides out of the box a file based state management, but you can customize this by configuring a storage adapter to persist state in-memory or Redis.<br/><br/> In this example we are persisting the result of a third party http request in <b>state</b>, scoping it to a group id named "orders".<br/><br/> 💡 Check the local documentation for best practices on state management.`,
     id: uuidv4(),
   },
 ]
