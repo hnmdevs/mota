@@ -1,5 +1,5 @@
-import { Step } from '@motiadev/core'
-import { Stream } from '@motiadev/core/dist/src/types-stream'
+import { Step } from '@imoogle/core'
+import { Stream } from '@imoogle/core/dist/src/types-stream'
 import { BuildStepConfig } from '../../build/builder'
 import { ValidationError } from '../utils/validation'
 

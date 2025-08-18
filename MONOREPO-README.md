@@ -1,10 +1,10 @@
-# Motia Monorepo
+# Mota by iMoogle Monorepo
 
-This repository hosts the development of **Motia.js**, a framework for building event-driven business automation flows. The repository is structured to facilitate the iterative development and testing of the core framework and includes a playground environment for real-world use cases.
+This repository hosts the development of **Mota.js**, a framework for building event-driven business automation flows. The repository is structured to facilitate the iterative development and testing of the core framework and includes a playground environment for real-world use cases.
 
 ## Overview
 
-Motia.js aims to simplify the creation and scaling of event-driven flows by:
+Mota.js aims to simplify the creation and scaling of event-driven flows by:
 
 - Providing a **core framework** for defining flows as collections of testable components.
 - Supporting **real-time event handling** with loose coupling between components.
@@ -13,7 +13,7 @@ Motia.js aims to simplify the creation and scaling of event-driven flows by:
 
 ### Aspirational Vision
 
-Motia.js strives to be:
+Mota.js strives to be:
 
 - **Developer-Friendly**: Easy to adopt and extend.
 - **Production-Ready**: Scales gracefully from prototypes to enterprise-grade flows.
@@ -24,7 +24,7 @@ Motia.js strives to be:
 ```
 .
 ├── packages/                   # Core framework and supporting tools
-│   ├── motia/                  # The Motia.js framework
+│   ├── mota/                   # The Mota.js framework
 │   │   ├── src/                # Source code
 │   │   ├── dist/               # Compiled output
 │   │   ├── package.json        # Package metadata
@@ -67,7 +67,7 @@ Motia.js strives to be:
    pnpm install
    ```
 
-3. Install Motia CLI globally:
+3. Install Mota CLI globally:
 
    ```bash
    npm install -g motia
@@ -82,7 +82,7 @@ Motia.js strives to be:
 
 ### Running the Playground
 
-The playground allows you to test and refine flows built using Motia.js.
+The playground allows you to test and refine flows built using Mota.js.
 
 ```bash
 pnpm run dev
@@ -90,8 +90,8 @@ pnpm run dev
 
 This command starts the following services:
 
-- **MotiaCore**: The flow orchestrator.
-- **MotiaServer**: Provides HTTP endpoints for triggering flows.
+- **MotaCore**: The flow orchestrator.
+- **MotaServer**: Provides HTTP endpoints for triggering flows.
 - **Playground UI**: A React-based visualization tool for flows.
 
 ## How to Contribute

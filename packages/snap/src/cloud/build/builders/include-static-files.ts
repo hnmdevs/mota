@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { globSync } from 'glob'
-import { Step } from '@motiadev/core'
+import { Step } from '@imoogle/core'
 import { Builder } from '../builder'
 import { Archiver } from './archiver'
 

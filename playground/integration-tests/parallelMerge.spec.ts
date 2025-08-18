@@ -1,11 +1,11 @@
-import { createMotiaTester } from '@motiadev/test'
+import { createMotaTester } from '@imoogle/test'
 
 const ISO_DATE_REGEX = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z$/
 
 describe('parallelMerge', () => {
-  let server: ReturnType<typeof createMotiaTester>
+  let server: ReturnType<typeof createMotaTester>
 
-  beforeEach(async () => (server = createMotiaTester()))
+  beforeEach(async () => (server = createMotaTester()))
   afterEach(async () => server.close())
 
   it('should run steps concurrently', async () => {

@@ -4,7 +4,7 @@ import { useGitHubCode } from '@/hooks/useGitHubCode'
 import { CodeDisplay, LoadingSkeleton, ErrorDisplay } from './ui/CodeDisplay'
 import { Tab } from 'fumadocs-ui/components/tabs'
 
-const REPO = 'MotiaDev/motia-examples'
+const REPO = 'MotaDev/mota-examples'
 const BRANCH = 'main'
 const BASE_PATH = 'examples/trello-flow/steps'
 

@@ -17,7 +17,7 @@ declare global {
 interface AnalyticsUserData {
   userId: string
   projectId: string
-  motiaVersion: string
+  motaVersion: string
   analyticsEnabled: boolean
 }
 
@@ -25,7 +25,7 @@ class WorkbenchAnalytics {
   private isInitialized = false
   private userIdCache: string | null = null
   private projectIdCache: string | null = null
-  private motiaVersion: string | null = null
+  private motaVersion: string | null = null
 
   constructor() {
     this.initialize()
@@ -41,12 +41,12 @@ class WorkbenchAnalytics {
 
   private async fetchUserData(): Promise<void> {
     try {
-      const response = await fetch('/motia/analytics/user')
+      const response = await fetch('/mota/analytics/user')
       if (response.ok) {
         const data: AnalyticsUserData = await response.json()
         this.userIdCache = data.userId
         this.projectIdCache = data.projectId
-        this.motiaVersion = data.motiaVersion
+        this.motaVersion = data.motaVersion
 
         window.amplitude.setOptOut(!data.analyticsEnabled);
         // Set the user ID in Amplitude to match backend
@@ -64,10 +64,10 @@ class WorkbenchAnalytics {
   }
 
   private generateFallbackUserId(): string {
-    let userId = localStorage.getItem('motia-user-id')
+    let userId = localStorage.getItem('mota-user-id')
     if (!userId) {
       userId = `user-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
-      localStorage.setItem('motia-user-id', userId)
+      localStorage.setItem('mota-user-id', userId)
     }
     return userId
   }
@@ -80,7 +80,7 @@ class WorkbenchAnalytics {
         project_id: this.projectIdCache,
         browser: this.getBrowserInfo(),
         screen_resolution: `${window.screen.width}x${window.screen.height}`,
-        workbench_version: this.motiaVersion,
+        workbench_version: this.motaVersion,
       })
     } catch (error) {
       console.warn('Analytics user identification failed:', error)

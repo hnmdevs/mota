@@ -1,7 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test'
-import { MotiaApplicationPage } from './MotiaApplicationPage'
+import { MotaApplicationPage } from './MotaApplicationPage'
 
-export class TracesPage extends MotiaApplicationPage {
+export class TracesPage extends MotaApplicationPage {
   readonly sidebarContainer: Locator
   readonly tracesContainer: Locator
   readonly traceDetailsContainer: Locator

@@ -1,4 +1,4 @@
-export const printMotiaDockerIntro = () => {
+export const printMotaDockerIntro = () => {
   console.log(
     '\n\n' +
       `

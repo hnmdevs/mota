@@ -62,7 +62,7 @@ const SocialLinks: React.FC = () => {
       </div>
       {/* <div className="mt-4">
         <a
-          href="https://vercel.com/oss?utm_source=motia&utm_campaign=oss"
+          href="https://vercel.com/oss?utm_source=mota&utm_campaign=oss"
           target="_blank"
           rel="noreferrer"
           className="flex items-center gap-2 text-sm text-gray-400"

@@ -2,7 +2,7 @@ import { TracerFactory } from '.'
 import { LockedData } from '../locked-data'
 import { Logger } from '../logger'
 import { Step } from '../types'
-import { MotiaStream } from '../types-stream'
+import { MotaStream } from '../types-stream'
 import { createTrace } from './create-trace'
 import { StreamTracer } from './stream-tracer'
 import { TraceManager } from './trace-manager'
@@ -15,8 +15,8 @@ const MAX_TRACE_GROUPS = process.env.MOTIA_MAX_TRACE_GROUPS //
 
 export class BaseTracerFactory implements TracerFactory {
   constructor(
-    private readonly traceStream: MotiaStream<Trace>,
-    private readonly traceGroupStream: MotiaStream<TraceGroup>,
+    private readonly traceStream: MotaStream<Trace>,
+    private readonly traceGroupStream: MotaStream<TraceGroup>,
   ) {}
 
   private async deleteGroup(group: TraceGroup) {
@@ -63,7 +63,7 @@ export class BaseTracerFactory implements TracerFactory {
 }
 
 export const createTracerFactory = (lockedData: LockedData): TracerFactory => {
-  const traceStreamName = 'motia-trace'
+  const traceStreamName = 'mota-trace'
   const traceStreamAdapter = new TraceStreamAdapter<Trace>(
     lockedData.baseDir,
     traceStreamName,
@@ -79,7 +79,7 @@ export const createTracerFactory = (lockedData: LockedData): TracerFactory => {
     },
   })()
 
-  const traceGroupName = 'motia-trace-group'
+  const traceGroupName = 'mota-trace-group'
   const traceGroupStreamAdapter = new TraceStreamAdapter<TraceGroup>(
     lockedData.baseDir,
     traceGroupName,

@@ -2,14 +2,14 @@
 title: Overview
 ---
 
-Motia Workbench is a development platform that helps you build and debug your Motia flows. It serves as your control center where you can:
+Mota Workbench is a development platform that helps you build and debug your Mota flows. It serves as your control center where you can:
 
 - Visualize flows as interactive diagrams
 - Test steps directly in the UI
 - Monitor real-time logs
 - Debug issues
 
-![Flow Visualization in Workbench](./../img/demo-workbench.png)
+![Flow Visualization in Workbench](./../img/mota-build-your-app.gif)
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ Start workbench by running:
 </Tabs>
 
 <Callout>
-  Running the dev command starts: - **Motia Server**: Backend services and API endpoints - **Motia Workbench**: Web
+  Running the dev command starts: - **Mota Server**: Backend services and API endpoints - **Mota Workbench**: Web
   interface at http://localhost:3000 - **Development Mode**: Auto-reloads when changes are made
 </Callout>
 
@@ -31,6 +31,7 @@ Start workbench by running:
 
 <Steps>
   <Step>
+    
   ### Flow Visualization
   See your entire flow as an interactive diagram:
   - Steps appear as connected nodes
@@ -39,18 +40,29 @@ Start workbench by running:
   - Click any step to see its details
   </Step>
 
-<Step>
-  ### Real-time Testing Test your flows directly in the interface: - Send test requests to API endpoints - Monitor how
-  events flow through steps - Visualize step sequence execution - Inspect data at each stage
-</Step>
-
-<Step>
-  ### Live Logs Monitor your flow execution: ``` [INFO] [payment-flow] Payment received: $50.00 [DEBUG] [payment-flow]
-  Processing payment... ```
-</Step>
+  <Step>
+  
+  ### Real-time Testing 
+  Test your flows directly in the interface: 
+  - Send test requests to API endpoints 
+  - Monitor how events flow through steps 
+  - Visualize step sequence execution 
+  - Inspect data at each stage
+  </Step>
 
   <Step>
-   ### Development Tools
+  
+  ### Live Logs 
+  Monitor your flow execution: 
+  ``` 
+  [INFO] [payment-flow] Payment received: $50.00 [DEBUG] [payment-flow]
+  Processing payment... 
+  ```
+  </Step>
+
+  <Step>
+   
+  ### Development Tools
   - **Hot Reload**: Changes reflect immediately in the UI
   - **Error Handling**: Detailed error messages with contextual debugging information
   - **State Inspector**: Real-time monitoring of state management
@@ -59,7 +71,7 @@ Start workbench by running:
 
 ## Customization
 
-Motia Workbench allows you to customize how your steps appear in the Workbench flow visualization tool.
+Mota Workbench allows you to customize how your steps appear in the Workbench flow visualization tool.
 
 ### NOOP Steps
 
@@ -94,4 +106,4 @@ UI steps allow you to customize how your steps appear in the Workbench visualiza
   ]}
 />
 
-<Callout>New to Motia? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>
+<Callout>New to Mota? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>

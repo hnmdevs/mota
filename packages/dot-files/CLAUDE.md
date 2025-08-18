@@ -1,6 +1,6 @@
-# CLAUDE.md: Complete Guide for Claude Code to Write Motia Workflows
+# CLAUDE.md: Complete Guide for Claude Code to Write Mota Workflows
 
-This guide equips Claude Code to generate Motia workflows, a code-first, event-driven framework supporting TypeScript (TS), JavaScript (JS), Python, and Ruby. It covers all step types, state management, logging, testing, CLI commands, Workbench features, and best practices for creating robust, scalable workflows.
+This guide equips Claude Code to generate Mota workflows, a code-first, event-driven framework supporting TypeScript (TS), JavaScript (JS), Python, and Ruby. It covers all step types, state management, logging, testing, CLI commands, Workbench features, and best practices for creating robust, scalable workflows.
 
 ## Overview
 
@@ -461,13 +461,13 @@ ctx.logger.debug('Details', { rawInput: input.to_h })
 
 ## Testing
 
-- **Framework**: Jest (`@motiadev/testing`) for TS/JS. Use CLI `emit` or `curl` for Python/Ruby testing.
+- **Framework**: Jest (`@imoogle/testing`) for TS/JS. Use CLI `emit` or `curl` for Python/Ruby testing.
 - **Command**: Include `curl` or `npx motia emit` with sample data.
 
 **Example Test (TS)**:
 
 ```typescript
-import { createTestContext } from '@motiadev/testing'
+import { createTestContext } from '@imoogle/testing'
 import { handler } from './my-step.step'
 
 describe('MyStep', () => {

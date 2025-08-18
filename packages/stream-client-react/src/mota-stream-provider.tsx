@@ -1,6 +1,6 @@
-import { Stream } from '@motiadev/stream-client-browser'
+import { Stream } from '@imoogle/stream-client-browser'
 import React, { useEffect, useState } from 'react'
-import { MotiaStreamContext } from './motia-stream-context'
+import { MotaStreamContext } from './mota-stream-context'
 
 type Props = React.PropsWithChildren<{
   /**
@@ -8,14 +8,14 @@ type Props = React.PropsWithChildren<{
    *
    * @example
    * ```tsx
-   * <MotiaStreamProvider address="ws://localhost:3000">
+   * <MotaStreamProvider address="ws://localhost:3000">
    *   <App />
-   * </MotiaStreamProvider>
+   * </MotaStreamProvider>
    */
   address: string
 }>
 
-export const MotiaStreamProvider: React.FC<Props> = ({ children, address }) => {
+export const MotaStreamProvider: React.FC<Props> = ({ children, address }) => {
   const [stream, setStream] = useState<Stream | null>(null)
 
   useEffect(() => {
@@ -25,5 +25,5 @@ export const MotiaStreamProvider: React.FC<Props> = ({ children, address }) => {
     return () => stream.close()
   }, [address])
 
-  return <MotiaStreamContext.Provider value={{ stream }}>{children}</MotiaStreamContext.Provider>
+  return <MotaStreamContext.Provider value={{ stream }}>{children}</MotaStreamContext.Provider>
 }

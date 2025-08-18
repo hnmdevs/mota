@@ -17,17 +17,17 @@
 
 ---
 
-Motia is a modern backend framework that combines APIs, background jobs, event systems, and AI agents into one unified, observable runtime. Stop context-switching between multiple runtimes—build your entire backend with event-driven steps, mixing JavaScript, TypeScript, and Python freely, while keeping shared state, tracing, and deployment simplicity.
+Mota is a modern backend framework that combines APIs, background jobs, event systems, and AI agents into one unified, observable runtime. Stop context-switching between multiple runtimes—build your entire backend with event-driven steps, mixing JavaScript, TypeScript, and Python freely, while keeping shared state, tracing, and deployment simplicity.
 
 ---
 
-## 📝 Motia Documentation
+## 📝 Mota Documentation
 
-Welcome to the source code of [the official Motia docs](http://motia.dev/docs/).
-Motia documentation has been created with [Create Fumadocs](https://github.com/fuma-nama/fumadocs). Join [the Motia community](https://discord.gg/m3XN23Kp) and follow along to see how you can contribute.
+Welcome to the source code of [the official Mota docs](http://motia.dev/docs/).
+Mota documentation has been created with [Create Fumadocs](https://github.com/fuma-nama/fumadocs). Join [the Mota community](https://discord.gg/m3XN23Kp) and follow along to see how you can contribute.
 
-1. Join [the Motia community](https://discord.gg/m3XN23Kp) to ask questions, interact with the core Motia team and your fellow community members! ❤️
-2. Fork the Motia repository and clone your fork to your local machine. 🖥️
+1. Join [the Mota community](https://discord.gg/m3XN23Kp) to ask questions, interact with the core Mota team and your fellow community members! ❤️
+2. Fork the Mota repository and clone your fork to your local machine. 🖥️
 3. Install all the packages in the root directory:
 
    ```bash
@@ -59,7 +59,7 @@ Motia documentation has been created with [Create Fumadocs](https://github.com/f
   - Adding missing sections
   - Clarify a guide or write a tutorial
   - Adding new examples and finding/fixing bugs in existing ones
-- Start by checking out [open issues](https://github.com/MotiaDev/motia/labels/documentation) or suggest your own!
+- Start by checking out [open issues](https://github.com/MotaDev/motia/labels/documentation) or suggest your own!
 - Always make changes in your branch only. And once you're satisfied with the results, raise a PR.
 - Use proper formatting and follow the document style.
 
@@ -77,5 +77,5 @@ resources:
 
 We'd love to hear your ideas or feedback. Don't forget to star this repository!
 
-- X/Twitter -> [@motiadev](https://x.com/motiadev)
+- X/Twitter -> [@imoogle](https://x.com/motiadev)
 - Discord -> [Join the fun!](https://discord.gg/m3XN23Kp)

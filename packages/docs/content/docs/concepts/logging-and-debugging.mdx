@@ -4,16 +4,16 @@ title: Logging & Debugging
 
 ## Overview
 
-Motia provides an out of the box logging and debugging system that works across different runtime environments. The system offers:
+Mota provides an out of the box logging and debugging system that works across different runtime environments. The system offers:
 
-- Real-time log streaming in both terminal and Motia Workbench
+- Real-time log streaming in both terminal and Mota Workbench
 - Multiple log levels with contextual information
 - Local development debugging tools
 - Integrated flow monitoring
 
 ## Log Levels and Usage
 
-Motia supports four standard log levels:
+Mota supports four standard log levels:
 
 | Log Type | Description                                                                        |
 | -------- | ---------------------------------------------------------------------------------- |
@@ -146,7 +146,7 @@ Motia supports four standard log levels:
   <Step>
     ### Start the Dev Server
 
-    1. Navigate to your Motia project root folder
+    1. Navigate to your Mota project root folder
     2. Start the development server:
 
     <Tabs items={['npm', 'yarn', 'pnpm', 'bun']}>
@@ -157,7 +157,7 @@ Motia supports four standard log levels:
     </Tabs>
 
     3. You can monitor logs in two ways:
-      - Open [Motia Workbench](http://localhost:3000), select your flow, and expand the logs container
+      - Open [Mota Workbench](http://localhost:3000), select your flow, and expand the logs container
       - View logs directly in the terminal where you ran the dev command
   </Step>
   
@@ -169,7 +169,7 @@ Motia supports four standard log levels:
     <Tabs items={['cli', 'api']}>
       <Tab value='cli'>
       ```bash
-      npx motia emit --topic <topic> --message '{}'
+      npx mota emit --topic <topic> --message '{}'
       ```
       </Tab>
       <Tab value='api'>

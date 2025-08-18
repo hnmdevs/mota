@@ -5,7 +5,7 @@ export const useGithubStars = () => {
 
   useEffect(() => {
     // Fetch star count from GitHub API
-    fetch('https://api.github.com/repos/MotiaDev/motia')
+    fetch('https://api.github.com/repos/MotaDev/mota')
       .then((response) => response.json())
       .then((data) => {
         setStarCount(data?.stargazers_count ?? 1900)

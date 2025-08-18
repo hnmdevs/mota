@@ -1,4 +1,4 @@
-# RFC: Role-Based Access Control for Motia Streams
+# RFC: Role-Based Access Control for Mota Streams
 
 **Author:** Sergio Marcelino
 **Status:** Ready
@@ -10,7 +10,7 @@
 
 ## Summary
 
-This RFC proposes an RBAC mechanism for the Motia Streams feature. Currently, any client can subscribe to any stream, with no enforcement of access rules. This proposal introduces a pluggable authentication entry point and per-stream authorization checks to enable secure, context-aware stream subscriptions.
+This RFC proposes an RBAC mechanism for the Mota Streams feature. Currently, any client can subscribe to any stream, with no enforcement of access rules. This proposal introduces a pluggable authentication entry point and per-stream authorization checks to enable secure, context-aware stream subscriptions.
 
 ---
 
@@ -26,7 +26,7 @@ This RFC proposes an RBAC mechanism for the Motia Streams feature. Currently, an
 
 ### Client Message Format
 
-Motia Client Library will send a header `Authentication` with the token in the WebSocket connection request.
+Mota Client Library will send a header `Authentication` with the token in the WebSocket connection request.
 
 ```
 Authentication: <token>
@@ -75,7 +75,7 @@ class StreamAuthContext(BaseModel):
     userStatus: Literal["active", "inactive"]
     projectIds: List[str]
 
-# Exports the schema to Motia Framework
+# Exports the schema to Mota Framework
 contextSchema = StreamAuthContext.model_json_schema()
 
 # Function's name needs to be `authenticate`
@@ -85,7 +85,7 @@ async def authenticate(token: str) -> StreamAuthContext | None:
     return None
 ```
 
-Motia framework will automatically create the `StreamAuthContext` object based on the `contextSchema` type inside `types.d.ts` file for the project. From the example above, it should generate the following type:
+Mota framework will automatically create the `StreamAuthContext` object based on the `contextSchema` type inside `types.d.ts` file for the project. From the example above, it should generate the following type:
 
 ```typescript
 interface StreamAuthContext {
@@ -147,7 +147,7 @@ export const config: StreamConfig = {
 }
 ```
 
-### Flow of authentication in Motia Streams client
+### Flow of authentication in Mota Streams client
 
 ```mermaid
 sequenceDiagram
@@ -162,7 +162,7 @@ sequenceDiagram
     Server-->>Client: Connected
 ```
 
-### Flow of subscription in Motia Streams client
+### Flow of subscription in Mota Streams client
 
 ```mermaid
 sequenceDiagram

@@ -1,6 +1,6 @@
 import { ApiEndpoint } from '@/types/endpoint'
-import { Input } from '@motiadev/ui'
-import { Panel } from '@motiadev/ui'
+import { Input } from '@imoogle/ui'
+import { Panel } from '@imoogle/ui'
 import { FC, Fragment, useState } from 'react'
 
 type Props = { endpoint: ApiEndpoint; onChange?: (queryParamsValues: Record<string, string>) => void }

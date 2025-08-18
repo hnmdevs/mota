@@ -59,7 +59,7 @@ export const apiSteps: TutorialStep[] = [
     elementXpath: `(//span[contains(text(), "emits")])[3]/..`,
     segmentId,
     title: 'Event Driven Architecture',
-    description: `Motia allows you to interact between steps or flows through an event driven architecture.<br/><br/> In order to connect your steps during runtime you will use the <b>emits</b> and <br>subscribes</br> attributes.<br/><br/> Through the <b>emits</b>, you can specify a list of topics that your step emits for others to <i>subscribe</i>.`,
+    description: `Mota allows you to interact between steps or flows through an event driven architecture.<br/><br/> In order to connect your steps during runtime you will use the <b>emits</b> and <br>subscribes</br> attributes.<br/><br/> Through the <b>emits</b>, you can specify a list of topics that your step emits for others to <i>subscribe</i>.`,
     id: uuidv4(),
   },
   {
@@ -80,14 +80,14 @@ export const apiSteps: TutorialStep[] = [
     elementXpath: `(//span[contains(text(), "Handlers")])[2]`,
     segmentId,
     title: 'Typed Handlers',
-    description: `If you are using typescript for your steps, Motia will generate type definitions based on your step's config when you are running your project in <b>dev mode</b>.<br/><br/> 💡 You enter dev mode when you execute <i>motia dev</i> from your terminal.`,
+    description: `If you are using typescript for your steps, Mota will generate type definitions based on your step's config when you are running your project in <b>dev mode</b>.<br/><br/> 💡 You enter dev mode when you execute <i>mota dev</i> from your terminal.`,
     id: uuidv4(),
   },
   {
     elementXpath: `(//span[contains(text(), 'logger')])[3]/..`,
     segmentId,
     title: 'Logging',
-    description: `We recommend using the provided <b>logger</b> util in order to guarantee observability through Motia's ecosystem.<br/><br/> You can use logger similar to <i>console.log</i> for js or <i>print</i> for python, but with enhanced utilities, such as being able to provide additional context.<br/><br/> Motia will take care of the rest to provide the best experience to visualize your logs and tie them through tracing.`,
+    description: `We recommend using the provided <b>logger</b> util in order to guarantee observability through Mota's ecosystem.<br/><br/> You can use logger similar to <i>console.log</i> for js or <i>print</i> for python, but with enhanced utilities, such as being able to provide additional context.<br/><br/> Mota will take care of the rest to provide the best experience to visualize your logs and tie them through tracing.`,
     id: uuidv4(),
     runScriptBeforeNext: () => {
       if (monaco) {

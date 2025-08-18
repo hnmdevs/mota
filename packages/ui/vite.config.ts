@@ -28,7 +28,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'MotiaUI',
+      name: 'MotaUI',
       formats: ['es', 'cjs', 'umd'],
       fileName: (format) => `index.${format === 'es' ? 'js' : 'cjs'}`,
     },

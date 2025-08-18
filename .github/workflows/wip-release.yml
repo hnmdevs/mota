@@ -67,8 +67,8 @@ jobs:
 
       - name: Set version on all packages
         run: |
-          pnpm -r --filter "@motiadev/*" exec pnpm version ${{ steps.version.outputs.version }} --no-git-tag-version
-          pnpm -r --filter motia exec pnpm version ${{ steps.version.outputs.version }} --no-git-tag-version
+          pnpm -r --filter "@imoogle/*" exec pnpm version ${{ steps.version.outputs.version }} --no-git-tag-version
+          pnpm -r --filter mota exec pnpm version ${{ steps.version.outputs.version }} --no-git-tag-version
 
       - name: Setup NPM authentication
         env:
@@ -78,13 +78,13 @@ jobs:
 
       - name: Publish packages with custom tag
         run: |
-          pnpm publish -r --filter @motiadev/core --no-git-checks --tag ${{ github.event.inputs.tag }}
-          pnpm publish -r --filter @motiadev/ui --no-git-checks --tag ${{ github.event.inputs.tag }}
-          pnpm publish -r --filter @motiadev/tutorial --no-git-checks --tag ${{ github.event.inputs.tag }}
-          pnpm publish -r --filter @motiadev/workbench --no-git-checks --tag ${{ github.event.inputs.tag }}
-          pnpm publish -r --filter @motiadev/stream-client --no-git-checks --tag ${{ github.event.inputs.tag }}
-          pnpm publish -r --filter @motiadev/stream-client-browser --no-git-checks --tag ${{ github.event.inputs.tag }}
-          pnpm publish -r --filter @motiadev/stream-client-node --no-git-checks --tag ${{ github.event.inputs.tag }}
-          pnpm publish -r --filter @motiadev/stream-client-react --no-git-checks --tag ${{ github.event.inputs.tag }}
-          pnpm publish -r --filter motia --no-git-checks --tag ${{ github.event.inputs.tag }}
-          pnpm publish -r --filter @motiadev/test --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter @imoogle/core --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter @imoogle/ui --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter @imoogle/tutorial --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter @imoogle/workbench --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter @imoogle/stream-client --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter @imoogle/stream-client-browser --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter @imoogle/stream-client-node --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter @imoogle/stream-client-react --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter mota --no-git-checks --tag ${{ github.event.inputs.tag }}
+          pnpm publish -r --filter @imoogle/test --no-git-checks --tag ${{ github.event.inputs.tag }}

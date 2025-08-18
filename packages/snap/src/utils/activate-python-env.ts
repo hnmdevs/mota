@@ -44,6 +44,6 @@ export const activatePythonVenv = ({ baseDir, isVerbose = false, pythonVersion =
     }
   } else {
     internalLogger.error('Python virtual environment not found in python_modules/')
-    internalLogger.error('Please run `motia install` to create a new virtual environment')
+    internalLogger.error('Please run `mota install` to create a new virtual environment')
   }
 }

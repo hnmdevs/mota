@@ -1,15 +1,15 @@
 ---
 title: AI Deep Research Agent
-description: A powerful research assistant that leverages the Motia Framework to perform comprehensive web research on any topic and any question.
+description: A powerful research assistant that leverages the Mota Framework to perform comprehensive web research on any topic and any question.
 ---
 
 import { CodeFetcher } from '../../../components/CodeFetcher'
 
-## Let's build a finance agent that:
+## Let's build a AI Deep Research Agent that:
 
 - **Deep Web Research**: Automatically searches the web, extracts content, and synthesizes findings
 - **Iterative Research Process**: Supports multiple layers of research depth for comprehensive exploration
-- **Event-Driven Architecture**: Built using Motia Framework's event system for robust workflow management
+- **Event-Driven Architecture**: Built using Mota Framework's event system for robust workflow management
 - **Parallel Processing**: Efficiently processes search results and content extraction
 - **API Endpoints**: REST API access for initiating research and retrieving reports
 - **Stateful Processing**: Maintains research state throughout the entire process
@@ -44,7 +44,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 - **Deep Web Research**: Automatically searches the web, extracts content, and synthesizes findings
 - **Iterative Research Process**: Supports multiple layers of research depth for comprehensive exploration
-- **Event-Driven Architecture**: Built using Motia Framework's event system for robust workflow management
+- **Event-Driven Architecture**: Built using Mota Framework's event system for robust workflow management
 - **Parallel Processing**: Efficiently processes search results and content extraction
 - **API Endpoints**: REST API access for initiating research and retrieving reports
 - **Stateful Processing**: Maintains research state throughout the entire process
@@ -61,7 +61,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone https://github.com/MotaDev/mota-examples
    cd examples/ai-deep-research-agent
    ```
 
@@ -184,7 +184,7 @@ Response:
    pnpm dev
    ```
 
-2. Access the Motia Workbench:
+2. Access the Mota Workbench:
    ```
    http://localhost:3000
    ```
@@ -202,6 +202,6 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Mota Framework](https://mota.dev) for the event-driven workflow engine
 - [OpenAI](https://platform.openai.com/) for AI analysis 
 - [Firecrawl](https://www.firecrawl.dev/) for Web search and content extraction API

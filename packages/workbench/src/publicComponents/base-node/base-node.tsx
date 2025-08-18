@@ -1,5 +1,5 @@
 import { useHandlePositions } from '@/hooks/use-update-handle-positions'
-import { Button, cn } from '@motiadev/ui'
+import { Button, cn } from '@imoogle/ui'
 import { ScanSearch } from 'lucide-react'
 import React, { PropsWithChildren, useCallback, useEffect, useState } from 'react'
 import { BaseNodeProps } from '../node-props'

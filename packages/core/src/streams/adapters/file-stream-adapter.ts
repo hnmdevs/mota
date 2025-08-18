@@ -13,7 +13,7 @@ export class FileStreamAdapter<TData> extends StreamAdapter<TData> {
 
   constructor(filePath: string, streamName: string) {
     super()
-    this.streamsDir = path.join(filePath, '.motia', 'streams')
+    this.streamsDir = path.join(filePath, '.mota', 'streams')
     this.filePath = path.join(this.streamsDir, `${streamName}.stream.json`)
   }
 

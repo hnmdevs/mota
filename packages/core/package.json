@@ -1,6 +1,6 @@
 {
-  "name": "@motiadev/core",
-  "description": "Core functionality for the Motia framework, providing the foundation for building event-driven workflows.",
+  "name": "@imoogle/core",
+  "description": "Core functionality for the Mota framework, providing the foundation for building event-driven workflows.",
   "main": "dist/index.js",
   "version": "0.5.9-beta.117",
   "scripts": {

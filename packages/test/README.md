@@ -1,15 +1,15 @@
-# @motiadev/test
+# @imoogle/test
 
-A testing utility package for Motia workflows that provides tools for mocking, testing, and simulating Motia components.
+A testing utility package for Mota workflows that provides tools for mocking, testing, and simulating Mota components.
 
 ## Installation
 
 ```bash
-npm install @motiadev/test --save-dev
+npm install @imoogle/test --save-dev
 # or
-yarn add @motiadev/test --dev
+yarn add @imoogle/test --dev
 # or
-pnpm add @motiadev/test --save-dev
+pnpm add @imoogle/test --save-dev
 ```
 
 ## Features
@@ -25,7 +25,7 @@ pnpm add @motiadev/test --save-dev
 ### Creating a Tester
 
 ```typescript
-import { createTester } from '@motiadev/test';
+import { createTester } from '@imoogle/test';
 
 // Create a tester instance
 const tester = createTester();
@@ -42,7 +42,7 @@ expect(response.status).toBe(200);
 ### Capturing Events
 
 ```typescript
-import { createTester } from '@motiadev/test';
+import { createTester } from '@imoogle/test';
 
 const tester = createTester();
 
@@ -63,7 +63,7 @@ expect(events[0].data).toEqual({ result: 'success' });
 ### Mocking Flow Context
 
 ```typescript
-import { createMockFlowContext } from '@motiadev/test';
+import { createMockFlowContext } from '@imoogle/test';
 
 // Create a mock context for testing a step handler
 const mockContext = createMockFlowContext();
@@ -81,7 +81,7 @@ expect(mockContext.emit).toHaveBeenCalledWith({
 ### Using Mock Logger
 
 ```typescript
-import { createMockLogger } from '@motiadev/test';
+import { createMockLogger } from '@imoogle/test';
 
 // Create a mock logger
 const logger = createMockLogger();
@@ -97,10 +97,10 @@ expect(logger.messages.info).toContain('Test message');
 
 ### `createTester()`
 
-Creates a tester instance for testing Motia workflows.
+Creates a tester instance for testing Mota workflows.
 
 **Returns:**
-- `MotiaTester`: A tester instance with methods for testing workflows.
+- `MotaTester`: A tester instance with methods for testing workflows.
 
 ### `createMockFlowContext()`
 
@@ -116,7 +116,7 @@ Creates a mock logger for testing logging functionality.
 **Returns:**
 - `MockLogger`: A mock logger with methods for logging and tracking messages.
 
-### `MotiaTester` Methods
+### `MotaTester` Methods
 
 - `request()`: Returns a supertest instance for making HTTP requests.
 - `watchEvents(topic)`: Creates a watcher for capturing events on a specific topic.
@@ -129,7 +129,7 @@ Creates a mock logger for testing logging functionality.
 ## Example: Testing a Complete Flow
 
 ```typescript
-import { createTester } from '@motiadev/test';
+import { createTester } from '@imoogle/test';
 import { expect, test } from 'vitest';
 
 test('complete order flow works correctly', async () => {
@@ -172,4 +172,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This package is part of the Motia framework and is licensed under the same terms.
+This package is part of the Mota framework and is licensed under the same terms.

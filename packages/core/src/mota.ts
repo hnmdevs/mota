@@ -4,7 +4,7 @@ import { EventManager, InternalStateManager } from './types'
 import { LockedData } from './locked-data'
 import { LoggerFactory } from './logger-factory'
 
-export type Motia = {
+export type Mota = {
   loggerFactory: LoggerFactory
   eventManager: EventManager
   state: InternalStateManager

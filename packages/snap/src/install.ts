@@ -21,8 +21,8 @@ export const pythonInstall = async ({
   const venvPath = path.join(baseDir, 'python_modules')
   console.log('📦 Installing Python dependencies...', venvPath)
 
-  const coreRequirementsPath = path.join(baseDir, 'node_modules', 'motia', 'dist', 'requirements-core.txt')
-  const snapRequirementsPath = path.join(baseDir, 'node_modules', 'motia', 'dist', 'requirements-snap.txt')
+  const coreRequirementsPath = path.join(baseDir, 'node_modules', 'mota', 'dist', 'requirements-core.txt')
+  const snapRequirementsPath = path.join(baseDir, 'node_modules', 'mota', 'dist', 'requirements-snap.txt')
   const localRequirements = path.join(baseDir, 'requirements.txt')
 
   const requirementsList = [coreRequirementsPath, snapRequirementsPath, localRequirements]

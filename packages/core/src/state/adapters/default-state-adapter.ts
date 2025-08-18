@@ -12,12 +12,12 @@ export class FileStateAdapter implements StateAdapter {
   private readonly filePath: string
 
   constructor(config: FileAdapterConfig) {
-    this.filePath = path.join(config.filePath, 'motia.state.json')
+    this.filePath = path.join(config.filePath, 'mota.state.json')
     this.init()
   }
 
   init() {
-    const dir = this.filePath.replace('motia.state.json', '')
+    const dir = this.filePath.replace('mota.state.json', '')
     try {
       fs.realpathSync(dir)
     } catch {

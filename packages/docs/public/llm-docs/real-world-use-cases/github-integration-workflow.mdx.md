@@ -81,7 +81,7 @@ Make sure you have:
 ### Clone the Repository
 
 ```bash
-git clone git@github.com:MotiaDev/motia-examples.git
+git clone git@github.com:MotaDev/mota-examples.git
 cd examples/github-integration-workflow
 ```
 
@@ -110,7 +110,7 @@ OPENAI_API_KEY=your_openai_api_key
 
 1. Go to your GitHub repository settings
 2. Navigate to Webhooks and add a new webhook
-3. Set the Payload URL to your Motia server endpoint
+3. Set the Payload URL to your Mota server endpoint
 4. Select content type as `application/json`
 5. Choose which events to trigger the webhook (Issues, Pull requests)
 6. Save the webhook
@@ -132,5 +132,5 @@ npm run dev
 
 <Callout type="info">
   For more detailed setup instructions and configuration options, check out the [full
-  documentation](https://github.com/MotiaDev/motia-examples/tree/main/examples/github-integration-workflow).
+  documentation](https://github.com/MotaDev/mota-examples/tree/main/examples/github-integration-workflow).
 </Callout> 

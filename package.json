@@ -1,5 +1,5 @@
 {
-  "name": "motia-monorepo",
+  "name": "mota-monorepo",
   "private": true,
   "scripts": {
     "dev:docs": "pnpm -r --filter=docs start",
@@ -9,10 +9,10 @@
     "lint": "pnpm run -r --no-bail lint",
     "lint:fix": "pnpm run -r --no-bail lint --fix",
     "test": "pnpm -r run test",
-    "test:e2e": "pnpm --filter=@motiadev/e2e test",
-    "test:e2e:ui": "pnpm --filter=@motiadev/e2e test:ui",
-    "test:e2e:headed": "pnpm --filter=@motiadev/e2e test:headed",
-    "e2e:install": "pnpm --filter=@motiadev/e2e install && pnpm --filter=@motiadev/e2e install:deps",
+    "test:e2e": "pnpm --filter=@imoogle/e2e test",
+    "test:e2e:ui": "pnpm --filter=@imoogle/e2e test:ui",
+    "test:e2e:headed": "pnpm --filter=@imoogle/e2e test:headed",
+    "e2e:install": "pnpm --filter=@imoogle/e2e install && pnpm --filter=@imoogle/e2e install:deps",
     "clean": "rm -rf node_modules pnpm-lock.yaml dist .turbo .next"
   },
   "devDependencies": {

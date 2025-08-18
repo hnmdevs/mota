@@ -1,6 +1,6 @@
 {
-  "name": "@motiadev/ui",
-  "description": "Shared React UI components library for the Motia ecosystem",
+  "name": "@imoogle/ui",
+  "description": "Shared React UI components library for the Mota ecosystem",
   "version": "0.5.9-beta.117",
   "license": "MIT",
   "type": "module",

@@ -1,6 +1,6 @@
 {
-  "name": "@motiadev/workbench",
-  "description": "A web-based interface for building and managing Motia workflows.",
+  "name": "@imoogle/workbench",
+  "description": "A web-based interface for building and managing Mota workflows.",
   "version": "0.5.9-beta.117",
   "main": "dist/index.js",
   "scripts": {
@@ -12,9 +12,9 @@
   },
   "dependencies": {
     "@monaco-editor/react": "^4.6.1",
-    "@motiadev/stream-client-react": "workspace:*",
-    "@motiadev/ui": "workspace:*",
-    "@motiadev/tutorial": "workspace:*",
+    "@imoogle/stream-client-react": "workspace:*",
+    "@imoogle/ui": "workspace:*",
+    "@imoogle/tutorial": "workspace:*",
     "@radix-ui/react-collapsible": "^1.1.10",
     "@radix-ui/react-dialog": "^1.1.13",
     "@radix-ui/react-dropdown-menu": "^2.1.15",

@@ -33,7 +33,7 @@ export const useThemeStore = create<ThemeState>()(
       },
     }),
     {
-      name: 'motia-theme-storage',
+      name: 'mota-theme-storage',
       storage: createJSONStorage(() => localStorage),
     },
   ),

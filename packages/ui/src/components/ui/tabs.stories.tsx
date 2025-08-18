@@ -39,8 +39,8 @@ export const Default: Story = {
       <TabsContent value="flows">
         <div className="space-y-4">
           <div className="rounded-lg border p-4">
-            <h4 className="text-sm font-medium">Motia Hub receives update</h4>
-            <p className="text-sm text-muted-foreground mt-1">Motia Hub receives update</p>
+            <h4 className="text-sm font-medium">Mota Hub receives update</h4>
+            <p className="text-sm text-muted-foreground mt-1">Mota Hub receives update</p>
           </div>
         </div>
       </TabsContent>

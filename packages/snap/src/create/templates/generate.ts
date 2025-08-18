@@ -26,7 +26,7 @@ export const generateTemplateSteps = (templateFolder: string): Generator => {
         }
 
         const sanitizedFileName = fileName.replace('.txt', '')
-        const isWorkbenchConfig = fileName.match('motia-workbench.json')
+        const isWorkbenchConfig = fileName.match('mota-workbench.json')
         const generateFilePath = path.join(
           ...(isWorkbenchConfig ? [rootDir, sanitizedFileName] : [rootDir, templateFolder, sanitizedFileName]),
         )

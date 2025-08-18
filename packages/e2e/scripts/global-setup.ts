@@ -2,7 +2,7 @@ import { execSync, exec } from 'child_process'
 import { existsSync, rmSync } from 'fs'
 import path from 'path'
 
-const TEST_PROJECT_NAME = 'motia-e2e-test-project'
+const TEST_PROJECT_NAME = 'mota-e2e-test-project'
 const TEST_PROJECT_PATH = path.join(process.cwd(), TEST_PROJECT_NAME)
 
 async function globalSetup() {
@@ -14,11 +14,11 @@ async function globalSetup() {
       rmSync(TEST_PROJECT_PATH, { recursive: true, force: true })
     }
 
-    const motiaVersion = process.env.MOTIA_VERSION || 'pre-release'
+    const motaVersion = process.env.MOTIA_VERSION || 'pre-release'
     const template = process.env.TEST_TEMPLATE || 'nodejs'
 
-    console.log(`📦 Creating test project with Motia CLI ${motiaVersion} and template ${template}...`)
-    let createCommand = `npx motia@${motiaVersion} create -n ${TEST_PROJECT_NAME}`
+    console.log(`📦 Creating test project with Mota CLI ${motaVersion} and template ${template}...`)
+    let createCommand = `npx mota@${motaVersion} create -n ${TEST_PROJECT_NAME}`
     if (template === 'python') {
       createCommand += ' -t python'
     }
@@ -27,7 +27,7 @@ async function globalSetup() {
       stdio: 'pipe',
       cwd: process.cwd()
     })
-    execSync(`npm install --save motia@${motiaVersion}`, { cwd: TEST_PROJECT_PATH })
+    execSync(`npm install --save mota@${motaVersion}`, { cwd: TEST_PROJECT_PATH })
 
     console.log('🌟 Starting test project server...')
     const serverProcess = exec('npm run dev', { cwd: TEST_PROJECT_PATH, env: {

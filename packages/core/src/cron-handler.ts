@@ -2,7 +2,7 @@ import * as cron from 'node-cron'
 import { callStepFile } from './call-step-file'
 import { generateTraceId } from './generate-trace-id'
 import { globalLogger } from './logger'
-import { Motia } from './motia'
+import { Mota } from './mota'
 import { CronConfig, Step } from './types'
 
 export type CronManager = {
@@ -11,7 +11,7 @@ export type CronManager = {
   close: () => void
 }
 
-export const setupCronHandlers = (motia: Motia) => {
+export const setupCronHandlers = (mota: Mota) => {
   const cronJobs = new Map<string, cron.ScheduledTask>()
 
   const createCronJob = (step: Step<CronConfig>) => {
@@ -34,11 +34,11 @@ export const setupCronHandlers = (motia: Motia) => {
 
     const task = cron.schedule(cronExpression, async () => {
       const traceId = generateTraceId()
-      const logger = motia.loggerFactory.create({ traceId, flows, stepName })
-      const tracer = await motia.tracerFactory.createTracer(traceId, step, logger)
+      const logger = mota.loggerFactory.create({ traceId, flows, stepName })
+      const tracer = await mota.tracerFactory.createTracer(traceId, step, logger)
 
       try {
-        await callStepFile({ contextInFirstArg: true, step, traceId, tracer, logger }, motia)
+        await callStepFile({ contextInFirstArg: true, step, traceId, tracer, logger }, mota)
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (error: any) {
@@ -66,7 +66,7 @@ export const setupCronHandlers = (motia: Motia) => {
     cronJobs.clear()
   }
 
-  motia.lockedData.cronSteps().forEach(createCronJob)
+  mota.lockedData.cronSteps().forEach(createCronJob)
 
   return { createCronJob, removeCronJob, close }
 }

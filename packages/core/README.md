@@ -1,20 +1,20 @@
-# @motiadev/core
+# @imoogle/core
 
-Core functionality for the Motia framework, providing the foundation for building event-driven workflows.
+Core functionality for the Mota framework, providing the foundation for building event-driven workflows.
 
 ## Installation
 
 ```bash
-npm install @motiadev/core
+npm install @imoogle/core
 # or
-yarn add @motiadev/core
+yarn add @imoogle/core
 # or
-pnpm add @motiadev/core
+pnpm add @imoogle/core
 ```
 
 ## Overview
 
-`@motiadev/core` is the foundation of the Motia framework, providing:
+`@imoogle/core` is the foundation of the Mota framework, providing:
 
 - Event-driven architecture with pub/sub capabilities
 - Multi-language support (TypeScript, Python, Ruby)
@@ -30,7 +30,7 @@ pnpm add @motiadev/core
 Create and manage an HTTP server for handling API requests:
 
 ```typescript
-import { createServer } from '@motiadev/core'
+import { createServer } from '@imoogle/core'
 
 const server = createServer(lockedData, eventManager, stateAdapter, config)
 ```
@@ -40,7 +40,7 @@ const server = createServer(lockedData, eventManager, stateAdapter, config)
 Publish and subscribe to events across your application:
 
 ```typescript
-import { createEventManager } from '@motiadev/core'
+import { createEventManager } from '@imoogle/core'
 
 const eventManager = createEventManager()
 
@@ -68,7 +68,7 @@ eventManager.emit({
 Create handlers for different types of steps (API, Event, Cron):
 
 ```typescript
-import { createStepHandlers } from '@motiadev/core'
+import { createStepHandlers } from '@imoogle/core'
 
 const stepHandlers = createStepHandlers(lockedData, eventManager, state, config)
 ```
@@ -78,7 +78,7 @@ const stepHandlers = createStepHandlers(lockedData, eventManager, state, config)
 Manage application state with different adapters:
 
 ```typescript
-import { createStateAdapter } from '@motiadev/core'
+import { createStateAdapter } from '@imoogle/core'
 
 const stateAdapter = createStateAdapter({
   adapter: 'redis',
@@ -96,14 +96,14 @@ const value = await state.get(traceId, 'key')
 Schedule and manage cron jobs:
 
 ```typescript
-import { setupCronHandlers } from '@motiadev/core'
+import { setupCronHandlers } from '@imoogle/core'
 
 const cronManager = setupCronHandlers(lockedData, eventManager, state, loggerFactory)
 ```
 
 ## Multi-language Support
 
-Motia supports writing step handlers in multiple languages:
+Mota supports writing step handlers in multiple languages:
 
 - TypeScript/JavaScript
 - Python
@@ -116,9 +116,9 @@ Each language has its own runner that communicates with the core framework.
 The package exports TypeScript types for all components:
 
 ```typescript
-import { Event, FlowContext, ApiRouteConfig, EventConfig, CronConfig } from '@motiadev/core'
+import { Event, FlowContext, ApiRouteConfig, EventConfig, CronConfig } from '@imoogle/core'
 ```
 
 ## License
 
-This package is part of the Motia framework and is licensed under the same terms.
+This package is part of the Mota framework and is licensed under the same terms.

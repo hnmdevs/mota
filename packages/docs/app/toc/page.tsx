@@ -22,7 +22,7 @@ export default function TermsPage() {
             Terms and Conditions
           </Title>
           <p className="text-center text-[20px] text-white/80 leading-[140%] font-sans mt-[24px]">
-            These terms govern your use of <span className={gradientText}>Motia</span> and related services. By using Motia, you agree to these terms.
+            These terms govern your use of <span className={gradientText}>Mota</span> and related services. By using Mota, you agree to these terms.
           </p>
         </div>
         <div className="my-[72px] h-[1px] w-full bg-white/20"></div>
@@ -31,14 +31,14 @@ export default function TermsPage() {
           <section className={normalText}>
             <h2 className={headingText}>Acceptance of Terms</h2>
             <p>
-              By accessing or using Motia, you agree to be bound by these Terms and Conditions. If you disagree with any part of these terms, <span className={gradientText}>please contact us.</span>
+              By accessing or using Mota, you agree to be bound by these Terms and Conditions. If you disagree with any part of these terms, <span className={gradientText}>please contact us.</span>
             </p>
           </section>
 
           <section className={normalText}>
             <h2 className={headingText}>Description of Service</h2>
             <p>
-              Motia is a <span className={gradientText}>software development framework</span> that unifies API endpoints, automations, workflows, background tasks, queues, and AI agents into a single, coherent system. The service includes developer tools, cloud infrastructure, and related documentation.
+              Mota is a <span className={gradientText}>software development framework</span> that unifies API endpoints, automations, workflows, background tasks, queues, and AI agents into a single, coherent system. The service includes developer tools, cloud infrastructure, and related documentation.
             </p>
           </section>
 
@@ -52,7 +52,7 @@ export default function TermsPage() {
           <section className={normalText}>
             <h2 className={headingText}>Acceptable Use</h2>
             <p>
-              You may use Motia for lawful purposes only. You agree not to use the service:
+              You may use Mota for lawful purposes only. You agree not to use the service:
             </p>
             <ul className="list-disc space-y-[12px] ml-[20px] mt-[16px]">
               <li>For any unlawful purpose or to solicit others to perform unlawful acts</li>
@@ -76,11 +76,11 @@ export default function TermsPage() {
               <h2 className={headingText}>Intellectual Property Rights</h2>
 
               <p>
-                The Service and its original content, features and functionality are and will remain the exclusive property of <span className={gradientText}>Motia and its licensors</span>. The Service is protected by copyright, trademark, and other laws.
+                The Service and its original content, features and functionality are and will remain the exclusive property of <span className={gradientText}>Mota and its licensors</span>. The Service is protected by copyright, trademark, and other laws.
               </p>
 
               <p>
-                <span className={gradientTextBlue}>Your License:</span> Subject to these Terms, we grant you a limited, non-exclusive, non-transferable license to use Motia for your development projects.
+                <span className={gradientTextBlue}>Your License:</span> Subject to these Terms, we grant you a limited, non-exclusive, non-transferable license to use Mota for your development projects.
               </p>
             </div>
           </section>
@@ -95,14 +95,14 @@ export default function TermsPage() {
           <section className={normalText}>
             <h2 className={headingText}>Service Availability</h2>
             <p>
-              We strive to keep Motia available, but we cannot guarantee uninterrupted access. <span className={gradientTextBlue}>We may modify, suspend, or discontinue</span> any part of the service at any time with reasonable notice.
+              We strive to keep Mota available, but we cannot guarantee uninterrupted access. <span className={gradientTextBlue}>We may modify, suspend, or discontinue</span> any part of the service at any time with reasonable notice.
             </p>
           </section>
 
           <section className={normalText}>
             <h2 className={headingText}>Limitation of Liability</h2>
             <p>
-              In no event shall Motia, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the service.
+              In no event shall Mota, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the service.
             </p>
           </section>
 
@@ -129,10 +129,10 @@ export default function TermsPage() {
 
           <section className={`${normalText} mt-[-10px]`}>
             <p>
-              These terms help us create a safe, productive environment for all developers using Motia. We&apos;re committed to <span className={gradientText}>building tools that empower</span> software engineering teams while respecting your rights and privacy.
+              These terms help us create a safe, productive environment for all developers using Mota. We&apos;re committed to <span className={gradientText}>building tools that empower</span> software engineering teams while respecting your rights and privacy.
             </p>
             <p className="mt-[20px]">
-              Questions about these terms? Contact at <span className={gradientTextBlue}>mike@motia.dev</span>
+              Questions about these terms? Contact at <span className={gradientTextBlue}>mike@mota.imoogle.com</span>
             </p>
             <p className="mt-[16px] text-[16px] text-white/40">
               Last updated: July 2025

@@ -1,4 +1,4 @@
-import { EventConfig, Handlers } from 'motia'
+import { EventConfig, Handlers } from 'mota'
 import { z } from 'zod'
 
 const stepSchema = z.object({ msg: z.string(), timestamp: z.number() })

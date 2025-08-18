@@ -1,73 +1,119 @@
 ---
-title: Welcome to Motia
-description: Get started with Motia, a powerful framework for building event-driven workflows
+title: Welcome to Mota
+description: Mota is an all-in-one framework for modern backend systems. Out of the box support for API endpoints, background jobs, scheduled tasks and agentic workflow orchestration through a unified runtime. Thanks to its event driven architecture you can run tasks in parallel, stream data to clients, or allow for seamless orchestration of flows. What used to take 5 frameworks to build now comes out of the box with Mota.
 ---
 
-# Unified Backend Framework for APIs, Events and AI Agents
+## Why use Mota
 
-Motia is a **code-first framework** designed to empower developers to build robust, scalable, and observable event-driven workflows with unparalleled ease. We handle the infrastructure complexities, so you can focus on your business logic.
+Today, backend engineers and software architects face several recurring problems. Mota was created to simplify these common backend engineering challenges in a flexible and elegant way to provide world class developer experience while ensuring robust, event-driven infrastructure.
 
-## Why Choose Motia?
+- Unified vs. Fragmented backend
+  - Working with multiple Languages
+- Scalability
+- Observability
+- Fault tolerance
+- Building and shipping
+  - Rollbacks and deployment strategies
+- Real-time data streaming
 
-Motia is built with the developer in mind, offering a unique blend of simplicity and power. Here's why Motia stands out:
+## How Mota simplifies all of this?
 
-- 🚀 **Zero Infrastructure Setup:** Say goodbye to the complexities of message queues and event brokers! Motia handles the underlying infrastructure, allowing you to focus solely on building your workflows.
-- 🔌 **Plug-and-Play Steps in Your Language:** Develop your workflow logic using the languages you love: JavaScript, TypeScript, and Python. Mix and match languages within the same flow for ultimate flexibility.
-- 📊 **Built-in Observability:** Gain deep insights into your workflows with real-time logs, traces, and interactive flow visualizations right in the Motia Workbench. Debugging and monitoring have never been easier.
-- ⚡ **Out-of-the-Box API & Scheduling:** Instantly expose your workflows as HTTP endpoints and schedule tasks with cron expressions – no extra configuration needed.
-- ✨ **Flexible and Extensible Architecture:** Motia is designed to be easily extended and customized. Create custom steps, UI components, and adapt the framework to your specific needs.
-- 🧑‍💻 **Developer-First Experience:** From intuitive APIs and a powerful CLI to comprehensive documentation and a visual workbench, Motia prioritizes developer productivity and a smooth, enjoyable development experience.
+Similar to how React simplified frontend development where everything is a component, Mota simplifies backend development where everything is a Step. In Mota, every backend pattern becomes a group of compensable steps with unified state, events and observability. In this way, engineers only have to learn a few concepts about how a Mota Step works, and they get an enterprise-grade event-driven system out of the box.
 
-## Motia Workbench: Your Development Control Center
+- Steps represent a distinct entry point
+- Steps can have different triggers
+  - API Call _(Triggered by an HTTP request)_
+  - Event _(Triggered by an event from another Step)_
+  - CRON Job _(Triggered by a cron schedule)_
+  - More will come soon (Check the [Roadmap](https://github.com/orgs/MotaDev/projects/2?pane=issue&itemId=121129696&issue=MotaDev%7Cmota%7C477))
+- Steps are composable and can be chained together
 
-Motia Workbench is a built-in, browser-based development platform that acts as your central hub for building, testing, and debugging Motia flows. Key features include:
+![Mota](./img/what-is-mota/mota.gif)
 
-- **Interactive Flow Visualization:** See your workflows come to life as dynamic diagrams, making it easy to understand complex event flows and step interactions.
+## Unified vs. Fragmented backend
 
-- **Real-time Flow Testing:** Trigger API endpoints and monitor event propagation through your steps, all within the Workbench UI. Inspect data at each stage to ensure your flows are behaving as expected.
+Modern software engineering is splintered. APIs live in one framework, background jobs in another, queues have their own tooling, and AI agents are springing up in yet more isolated runtimes. Mota exists to unify all of these concerns API endpoints, automations & workflows, background tasks, queues, and AI agents into a single, coherent system with shared observability and developer experience.
 
-- **Live Log Streaming:** Access detailed, real-time logs directly in the Workbench. Filter and search logs to quickly pinpoint issues and monitor workflow execution.
+To read more about this, check out our [manifesto](/manifesto).
 
-- **Step-Level Customization:** Create custom UI components for your steps to enhance visualization and provide context-specific information directly within the flow diagram.
+### Working with multiple Languages
 
-<div className="my-8">![Motia Workbench Interface](./img/workbench-presentation.png)</div>
+The rapid advancement of AI has reshaped the software industry—many cutting-edge AI tools are available only in specific programming languages, this forces companies to decide if they either change their team's skillset to a different language or not leveraging these technologies at all.
 
-## Unlock Powerful Use Cases
+Mota removes this limitation by allowing each Step to be written in any language, while still sharing a common state.
 
-Motia empowers you to build a wide range of sophisticated applications, including:
+![Multi-language](./img/what-is-mota/multi-language.png)
 
-- 🌐 **API Integrations & Microservices:** Effortlessly connect disparate systems, create event-driven microservices, and build real-time API-powered applications.
+_Each rectangle in the diagram above represents a Step, some of them are in TypeScript and others in Python._
 
-- 🤖 **Intelligent & Agentic Workflows:** Design complex, AI-driven workflows, orchestrate intricate business processes, and build advanced data pipelines.
+## Scalability
 
-- 📊 **Data Transformation & Processing:** Build scalable ETL/ELT pipelines, implement real-time data streaming, and transform data with ease.
+One of the biggest dilemmas in backend development is choosing between scalability and development velocity. In startup environments, speed often takes priority, resulting in systems that don't scale well and become problematic under increased load.
 
-- 🚀 **Rapid Prototyping & Iteration:** Quickly bring your ideas to life, test new workflows, and iterate rapidly with Motia's visual design and development tools.
+Mota addresses scalability by leveraging the core primitive of **Steps**: Each step can scale independently avoiding the bottlenecks common in monolithic architectures.
 
-### Real-World Industry Applications
+![Scalable](./img/what-is-mota/scalable.png)
 
-Motia is versatile and can be applied across various industries and use cases, such as:
+## Observability
 
-- **E-commerce:** Order processing, inventory synchronization, fraud detection, customer communication automation.
-- **Finance:** Trade settlement, risk analysis, compliance monitoring, automated reporting.
-- **Healthcare:** Clinical trial management, claims processing, patient monitoring, appointment scheduling.
-- **Marketing:** Lead scoring, personalized campaign orchestration, sentiment analysis, social media automation.
-- **And much more!**
+Observability in traditional backends often demands significant engineering effort to implement logging, alerting, and tracing. Typically, these tools are only configured for cloud environments, local development is generally neglected—leading to low productivity and poor dev experience.
 
-## Ready to Get Started?
+Mota offers a complete observability toolkit available in both cloud and local environments, including:
 
-Embark on your Motia journey and start building powerful workflows today:
+- Logs visualization
+- Tracing tool to quickly visualize the flow of requests through the system
+- State visualization
+- Diagram representation of dependencies between steps and how they are connected
 
-1.  **Quick Start Guide:** Follow our [Quick Start](/docs/getting-started/quick-start) to set up your first Motia project and create a minimal workflow.
-2.  **Explore Examples:** Dive into practical [Examples](/docs/examples) to understand common patterns and real-world use cases.
-3.  **Dive into Concepts:** Delve deeper into Motia's [Core Concepts](/docs/getting-started/core-concepts) to gain a solid understanding of the framework's architecture and principles.
+_The image below shows the Workbench interface available when you run `mota dev`. On the top panel you can see a workflow diagram with multiple steps connected.
+On the bottom panel you can see the trace view of a single request and what happened in each step._
 
-## Join the Motia Community
+![Mota Workbench](./img/new-workbench.png)
 
-Become part of a growing community of developers and automation enthusiasts!
+## Fault tolerance
 
-- 💬 **Join our Discord:** Connect with the Motia team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
-- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motiadev/motia).
-- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motiadev)](https://twitter.com/motiadev)
+With the rise of AI, many backend tasks have become less deterministic and more error-prone. These scenarios require robust error handling and retry mechanisms. In traditional systems, developers often need to set up and maintain queue infrastructures to ensure resilience, especially when dealing with unreliable responses from LLMs.
 
-We're excited to see what you'll build with Motia!
+Mota provides fault tolerance out of the box, eliminating the need to manually spin up queue infrastructure.
+
+- Using Event Steps, you get retry mechanisms out of the box
+- Configuration of queue infrastructure is abstracted away
+
+## Building and Shipping
+
+Building and deploying backends is inherently complex—especially in polyglot environments. Shipping production systems requires tight collaboration between developers and operations, and automation often takes weeks to get right.
+
+Beyond that, cloud provider lock-in, complicated deployment strategies (e.g., rollbacks, blue/green deployments), and a lack of deployment tooling increase the risk of failure.
+
+Mota abstracts these concerns by providing:
+
+- True cloud-provider agnosticism
+- Atomic blue/green deployments and one-click rollbacks via Mota Cloud (canary support coming soon)
+- First-class polyglot backend support (currently Node.js and Python, with more on the way)
+
+![Deployments](./img/what-is-mota/deployments.png)
+
+_The image above shows several Steps being build to a single Mota deployable that are ultimately deployed to a cloud provider of your choice. 
+Currently we're supporting AWS and Kubernetes, more Cloud providers coming soon. Check our [roadmap](https://github.com/orgs/MotaDev/projects/2/views/4?filterQuery=title%3A+BYOC) for more details._
+
+### Rollbacks and deployment strategies
+
+Deploying cloud-native, fault-tolerant applications often involves modifying queue systems and other infrastructure components. 
+These changes can introduce incompatibilities and lead to runtime failures.
+
+Mota Cloud solves this with **Atomic Deployments**, which:
+
+- Each deployment spins up a new isolated service that shares the same data layer
+- Ensures safe, rollback-capable deployments without risking service downtime
+- Instant rollbacks with one click since each deployment is isolated
+
+## Real-time data streaming
+
+Handling real-time data is one of the most common—and complex—challenges in backend development. It's necessary when building event-driven applications, 
+and it typically requires setting up and maintaining a significant amount of infrastructure.
+
+Mota provides what we call _Streams_: Developers define the structure of the data—any changes to these objects are streamed to all subscribed clients in real-time.
+
+![Real-time data streaming](./img/what-is-mota/streams.png)
+
+_The image above shows a Stream definition, a Node.js Step mutating the data and a client subscribing to the stream receiving real-time updates._

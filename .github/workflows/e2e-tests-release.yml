@@ -4,7 +4,7 @@ name: E2E Tests (Release)
 # - Ubuntu (Linux)
 # - Windows 
 # - macOS
-# Ensures cross-platform compatibility of the Motia framework
+# Ensures cross-platform compatibility of the Mota framework
 
 permissions:
   contents: read
@@ -104,7 +104,7 @@ jobs:
 
       - name: Install pre-release packages globally
         run: |
-          npm install -g motia@${{ needs.prepare.outputs.version }} --tag pre-release
+          npm install -g mota@${{ needs.prepare.outputs.version }} --tag pre-release
 
       - name: Get Playwright version
         id: playwright-version
@@ -134,19 +134,19 @@ jobs:
           cd packages/e2e
           pnpm clean
 
-      - name: Verify Motia CLI installation (Unix)
+      - name: Verify Mota CLI installation (Unix)
         if: runner.os != 'Windows'
         run: |
-          which motia || echo "Motia CLI not found in PATH"
-          npx motia --version || echo "Motia CLI version check failed"
+          which mota || echo "Mota CLI not found in PATH"
+          npx mota --version || echo "Mota CLI version check failed"
           node --version
           npm --version
 
-      - name: Verify Motia CLI installation (Windows)
+      - name: Verify Mota CLI installation (Windows)
         if: runner.os == 'Windows'
         run: |
-          where motia 2>nul || echo "Motia CLI not found in PATH"
-          npx motia --version || echo "Motia CLI version check failed"
+          where mota 2>nul || echo "Mota CLI not found in PATH"
+          npx mota --version || echo "Mota CLI version check failed"
           node --version
           npm --version
         shell: cmd
@@ -159,7 +159,7 @@ jobs:
           MOTIA_API_URL: http://localhost:3000
         run: |
           cd packages/e2e
-          echo "Starting Release E2E tests with Motia version: $MOTIA_VERSION"
+          echo "Starting Release E2E tests with Mota version: $MOTIA_VERSION"
           pnpm test:release --reporter=line,html,github
         continue-on-error: true
 
@@ -171,7 +171,7 @@ jobs:
           MOTIA_API_URL: http://localhost:3000
         run: |
           cd packages/e2e
-          echo "Starting Release E2E tests with Motia version: $MOTIA_VERSION"
+          echo "Starting Release E2E tests with Mota version: $MOTIA_VERSION"
           pnpm test:release:python --reporter=line,html,github
         continue-on-error: true
 

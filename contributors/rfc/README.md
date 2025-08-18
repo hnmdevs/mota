@@ -1,7 +1,7 @@
 # RFC Process
 
 ## Overview
-The RFC (Request for Comments) process provides a consistent and collaborative path for proposing substantial changes to Motia. This ensures that major decisions are well-documented, thoroughly reviewed, and benefit from community input.
+The RFC (Request for Comments) process provides a consistent and collaborative path for proposing substantial changes to Mota. This ensures that major decisions are well-documented, thoroughly reviewed, and benefit from community input.
 
 ## When to Write an RFC
 - New features that create public API surface area
@@ -28,7 +28,7 @@ The RFC (Request for Comments) process provides a consistent and collaborative p
 ## Review Criteria
 RFCs are evaluated based on:
 - Technical soundness and feasibility
-- Alignment with Motia's vision and roadmap
+- Alignment with Mota's vision and roadmap
 - Impact on existing users and workflows
 - Implementation complexity and maintenance burden
 - Quality of documentation and examples

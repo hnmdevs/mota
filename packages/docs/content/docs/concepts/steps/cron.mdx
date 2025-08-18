@@ -22,7 +22,7 @@ The following examples showcase how to configure an **CRON Step**
 <Tabs  items={['TS', 'JS', 'Python']}>
   <Tab value="TS">
     ```typescript
-    import { CronConfig, Handlers } from 'motia'
+    import { CronConfig, Handlers } from 'mota'
 
     export const config: CronConfig = {
       type: 'cron' as const,

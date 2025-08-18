@@ -1,4 +1,4 @@
-import { createServer, MotiaServer } from '../server'
+import { createServer, MotaServer } from '../server'
 import { createEventManager } from '../event-manager'
 import { LockedData } from '../locked-data'
 import { ApiRouteConfig, Step } from '../types'
@@ -17,7 +17,7 @@ describe('Server', () => {
 
   describe('CORS', () => {
     const baseDir = path.join(__dirname, 'steps')
-    let server: MotiaServer
+    let server: MotaServer
 
     beforeEach(async () => {
       const lockedData = new LockedData(baseDir, 'memory', new NoPrinter())
@@ -37,7 +37,7 @@ describe('Server', () => {
 
   describe('API With multiple languages', () => {
     const baseDir = path.join(__dirname, 'steps')
-    let server: MotiaServer
+    let server: MotaServer
 
     beforeEach(async () => {
       const lockedData = new LockedData(baseDir, 'memory', new NoPrinter())

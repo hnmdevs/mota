@@ -1,5 +1,5 @@
 import { useGlobalStore } from '@/stores/use-global-store'
-import { cn } from '@motiadev/ui'
+import { cn } from '@imoogle/ui'
 import { useMemo } from 'react'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table'
 import { StateItem, useGetStateItems } from './hooks/states-hooks'

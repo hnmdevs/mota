@@ -1,22 +1,22 @@
-# Deploy Configuration for Motia Framework
+# Deploy Configuration for Mota Framework
 # This file centralizes deploy settings and package information
 
 packages:
-  - name: '@motiadev/core'
+  - name: '@imoogle/core'
     critical: true
-  - name: '@motiadev/workbench'
+  - name: '@imoogle/workbench'
     critical: true
-  - name: '@motiadev/stream-client'
+  - name: '@imoogle/stream-client'
     critical: false
-  - name: '@motiadev/stream-client-browser'
+  - name: '@imoogle/stream-client-browser'
     critical: false
-  - name: '@motiadev/stream-client-node'
+  - name: '@imoogle/stream-client-node'
     critical: false
-  - name: '@motiadev/stream-client-react'
+  - name: '@imoogle/stream-client-react'
     critical: false
-  - name: 'motia'
+  - name: 'mota'
     critical: true
-  - name: '@motiadev/test'
+  - name: '@imoogle/test'
     critical: false
 
 npm_tags:
@@ -26,14 +26,14 @@ npm_tags:
 environments:
   test:
     name: 'staging'
-    url: 'https://staging.motia.dev'
+    url: 'https://staging.mota.dev'
   production:
     name: 'production'
-    url: 'https://motia.dev'
+    url: 'https://mota.dev'
 
 notifications:
   teams:
-    - '@motiadev/core-team'
+    - '@imoogle/core-team'
   labels:
     success: ['release', 'deployed']
     failure: ['release-failure', 'high-priority', 'bug']

@@ -1,18 +1,18 @@
 ---
 title: Deployment
-description: Learn how to deploy your Motia workflows to production
+description: Learn how to deploy your Mota workflows to production
 ---
 
 # Deployment
 
-Motia provides a robust deployment system that allows you to deploy your workflows to various environments. This guide explains the deployment architecture, process, and how to use the Motia CLI for deployments.
+Mota provides a robust deployment system that allows you to deploy your workflows to various environments. This guide explains the deployment architecture, process, and how to use the Mota CLI for deployments.
 
 ## Deployment Architecture
 
-The Motia deployment system follows a three-step process:
+The Mota deployment system follows a three-step process:
 
 1. **Upload Files**: Each zip file is uploaded individually with its relative path information
-2. **Upload Configuration**: The `motia.steps.json` configuration is uploaded
+2. **Upload Configuration**: The `mota.steps.json` configuration is uploaded
 3. **Start Deployment**: A request is sent to start the deployment process with the uploaded files and configuration
 
 This approach provides several benefits:
@@ -22,12 +22,12 @@ This approach provides several benefits:
 - More efficient server-side processing
 - Ensures all files are successfully uploaded before proceeding
 
-## Using the Motia CLI for Deployment
+## Using the Mota CLI for Deployment
 
-The simplest way to deploy your Motia workflows is using the CLI command:
+The simplest way to deploy your Mota workflows is using the CLI command:
 
 ```bash
-motia deploy --api-key <api-key> --environment <environment> --version <version>
+mota deploy --api-key <api-key> --environment <environment> --version <version>
 ```
 
 ### Command Options
@@ -43,20 +43,20 @@ motia deploy --api-key <api-key> --environment <environment> --version <version>
 Deploy to the development environment with an auto-generated version:
 
 ```bash
-motia deploy --api-key your-api-key-here
+mota deploy --api-key your-api-key-here
 ```
 
 Deploy to production with a specific version:
 
 ```bash
-motia deploy --environment production --version 1.2.3 --api-key your-api-key-here
+mota deploy --environment production --version 1.2.3 --api-key your-api-key-here
 ```
 
 ## Deployment Results
 
 After deployment, two files are generated in your project directory:
 
-### 1. motia.deployments.json
+### 1. mota.deployments.json
 
 Contains detailed information about each deployment attempt, including:
 - Bundle path
@@ -70,7 +70,7 @@ Contains detailed information about each deployment attempt, including:
 - Success status
 - Error message (if any)
 
-### 2. motia.deployments.summary.json
+### 2. mota.deployments.summary.json
 
 A more human-readable summary organized by flows:
 - Total steps deployed
@@ -83,11 +83,11 @@ A more human-readable summary organized by flows:
 
 ## Deployment Process
 
-When you run `motia deploy`, the CLI performs the following actions:
+When you run `mota deploy`, the CLI performs the following actions:
 
 1. **Preparation**: Validates your project structure and configuration
 2. **File Collection**: Gathers all workflow step zip files from your project
-3. **File Upload**: Uploads each zip file to the Motia platform
+3. **File Upload**: Uploads each zip file to the Mota platform
 4. **Configuration Upload**: Uploads your workflow configuration
 5. **Deployment Initiation**: Starts the deployment process on the server
 6. **Status Reporting**: Provides feedback on deployment progress and results
@@ -100,7 +100,7 @@ If you encounter issues during deployment, try these steps:
 
 1. Check the generated deployment files for specific error messages
 2. Ensure your API key has the correct permissions
-3. Verify your project structure follows Motia's requirements
+3. Verify your project structure follows Mota's requirements
 4. Check that all required files are present and correctly formatted
 
 ## Next Steps

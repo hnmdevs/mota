@@ -10,15 +10,15 @@ interface ParamId {
 }
 
 export const flowsConfigEndpoint = (app: Express, baseDir: string, lockedData: LockedData) => {
-  const configPath = path.join(baseDir, 'motia-workbench.json')
+  const configPath = path.join(baseDir, 'mota-workbench.json')
   const stream = new FlowsConfigStream(configPath)
 
   lockedData.createStream(
     {
-      filePath: '__motia.flowsConfig',
+      filePath: '__mota.flowsConfig',
       hidden: true,
       config: {
-        name: '__motia.flowsConfig',
+        name: '__mota.flowsConfig',
         schema: z.object({ name: z.string(), steps: z.any(), edges: z.any() }),
         baseConfig: { storageType: 'custom', factory: () => stream },
       },

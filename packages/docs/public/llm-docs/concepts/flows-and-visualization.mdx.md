@@ -48,7 +48,7 @@ exports.config = {
 
 ### Visualizing Your Flows
 
-After you've defined your flows, you can visualize them in [Motia Workbench](/docs/workbench/overview).
+After you've defined your flows, you can visualize them in [Mota Workbench](/docs/workbench/overview).
 
 <Steps>
   <Step>
@@ -63,8 +63,8 @@ After you've defined your flows, you can visualize them in [Motia Workbench](/do
 
   </Step>
   <Step>
-    [Open](http://localhost:3000) Motia Workbench in your browser (typically at `http://localhost:3000` or `http://127.0.0.1:3000`).
-    ![Flow Visualization in Workbench](./../img/demo-workbench.png)
+    [Open](http://localhost:3000) Mota Workbench in your browser (typically at `http://localhost:3000` or `http://127.0.0.1:3000`).
+    ![Flow Visualization in Workbench](./../img/mota-build-your-app.gif)
   </Step>
   <Step>
     **Navigate** to your flow name on the left sidebar and click it. You'll see a visual graph where each [**step**](/docs/concepts/steps/defining-steps) is represented as a node, with connecting lines showing event flow patterns.
@@ -74,6 +74,6 @@ After you've defined your flows, you can visualize them in [Motia Workbench](/do
   </Step>
 </Steps>
 
-Checkout the [Motia Workbench](/docs/workbench/overview) docs for more information.
+Checkout the [Mota Workbench](/docs/workbench/overview) docs for more information.
 
-<Callout>New to Motia? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>
+<Callout>New to Mota? Follow the **[quick start](/docs/getting-started/quick-start)** guide to get set up.</Callout>

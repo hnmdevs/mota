@@ -1,4 +1,4 @@
-import { EventConfig, Handlers } from 'motia'
+import { EventConfig, Handlers } from 'mota'
 import { z } from 'zod'
 import { petStoreService } from './services/pet-store'
 

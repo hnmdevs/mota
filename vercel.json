@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm --filter=@imoogle/core --filter=@imoogle/ui --filter=@imoogle/stream-client --filter=@imoogle/stream-client-browser --filter=@imoogle/stream-client-react --filter=@imoogle/tutorial run build && cd packages/docs && pnpm run build",
+  "outputDirectory": "packages/docs/.next",
+  "installCommand": "pnpm install",
+  "framework": null
+}

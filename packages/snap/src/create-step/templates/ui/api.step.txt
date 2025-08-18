@@ -1,6 +1,6 @@
 import React from 'react'
-import { BaseNode, NoopNodeProps } from 'motia/workbench'
-import { Button } from '@motiadev/ui'
+import { BaseNode, NoopNodeProps } from 'mota/workbench'
+import { Button } from '@imoogle/ui'
 
 export const Node: React.FC<ApiNodeProps> = ({ data }) => {
   const doSomething = () => {

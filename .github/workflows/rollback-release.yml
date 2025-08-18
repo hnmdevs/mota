@@ -87,25 +87,25 @@ jobs:
 
       - name: Remove pre-release packages from NPM
         run: |
-          npm unpublish motia@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motiadev/workbench@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motiadev/stream-client-react@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motiadev/stream-client-browser@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motiadev/test@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motiadev/core@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
-          npm unpublish @motiadev/ui@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish mota@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/workbench@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/stream-client-react@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/stream-client-browser@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/test@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/core@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
+          npm unpublish @imoogle/ui@${{ needs.prepare.outputs.version }} --force || echo "Package not found or already removed"
 
       - name: Remove pre-release tags
         run: |
-          npm dist-tag rm motia pre-release || true
-          npm dist-tag rm @motiadev/workbench pre-release || true
-          npm dist-tag rm @motiadev/stream-client-react pre-release || true
-          npm dist-tag rm @motiadev/stream-client-browser pre-release || true
-          npm dist-tag rm @motiadev/stream-client-node pre-release || true
-          npm dist-tag rm @motiadev/stream-client pre-release || true
-          npm dist-tag rm @motiadev/test pre-release || true
-          npm dist-tag rm @motiadev/core pre-release || true
-          npm dist-tag rm @motiadev/ui pre-release || true
+          npm dist-tag rm mota pre-release || true
+          npm dist-tag rm @imoogle/workbench pre-release || true
+          npm dist-tag rm @imoogle/stream-client-react pre-release || true
+          npm dist-tag rm @imoogle/stream-client-browser pre-release || true
+          npm dist-tag rm @imoogle/stream-client-node pre-release || true
+          npm dist-tag rm @imoogle/stream-client pre-release || true
+          npm dist-tag rm @imoogle/test pre-release || true
+          npm dist-tag rm @imoogle/core pre-release || true
+          npm dist-tag rm @imoogle/ui pre-release || true
 
       - name: Delete Git tag
         run: |
@@ -168,7 +168,7 @@ jobs:
 
             **Related Workflow Run:** https://github.com/${{ github.repository }}/actions/runs/${{ needs.prepare.outputs.triggered_by }}
 
-            cc: @motiadev/core-team`;
+            cc: @imoogle/core-team`;
 
             try {
               const issue = await github.rest.issues.create({
@@ -216,7 +216,7 @@ jobs:
 
             **Related Workflow Run:** https://github.com/${{ github.repository }}/actions/runs/${{ needs.prepare.outputs.triggered_by }}
 
-            cc: @motiadev/core-team`;
+            cc: @imoogle/core-team`;
 
             try {
               const issue = await github.rest.issues.create({

@@ -37,12 +37,12 @@ const waitForElement = (xpath: string, onElementFound: () => void, onTimeoutExpi
 }
 
 export const startTutorial = (config?: TutorialConfig) => {
-  if (window.localStorage.getItem('motia-tutorial-skipped') && !config?.resetSkipState) {
+  if (window.localStorage.getItem('mota-tutorial-skipped') && !config?.resetSkipState) {
     return
   }
 
   if (config?.resetSkipState) {
-    window.localStorage.removeItem('motia-tutorial-skipped')
+    window.localStorage.removeItem('mota-tutorial-skipped')
   }
 
   const tutorialId = config?.tutorialId ?? 'basic'
@@ -72,7 +72,7 @@ export const startTutorial = (config?: TutorialConfig) => {
 
         secondButton.addEventListener('click', () => {
           tutorialDriver?.destroy()
-          window.localStorage.setItem('motia-tutorial-skipped', 'true')
+          window.localStorage.setItem('mota-tutorial-skipped', 'true')
         })
 
         container.appendChild(secondButton)
@@ -98,7 +98,7 @@ export const startTutorial = (config?: TutorialConfig) => {
           position: step.position,
           onNextClick: () => {
             if (tutorialDriver?.isLastStep()) {
-              window.localStorage.setItem('motia-tutorial-skipped', 'true')
+              window.localStorage.setItem('mota-tutorial-skipped', 'true')
             }
 
             if (step.runScriptBeforeNext) {
@@ -161,7 +161,7 @@ export const startTutorial = (config?: TutorialConfig) => {
       })),
       onDestroyStarted: () => {
         if (tutorialDriver?.isLastStep()) {
-          window.localStorage.setItem('motia-tutorial-skipped', 'true')
+          window.localStorage.setItem('mota-tutorial-skipped', 'true')
         }
 
         closeTutorial(true)

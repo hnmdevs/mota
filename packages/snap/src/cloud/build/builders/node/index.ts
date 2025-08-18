@@ -1,4 +1,4 @@
-import { ApiRouteConfig, Step } from '@motiadev/core'
+import { ApiRouteConfig, Step } from '@imoogle/core'
 import colors from 'colors'
 import * as esbuild from 'esbuild'
 import fs from 'fs'

@@ -1,9 +1,9 @@
-import { MotiaServer, StateAdapter } from '@motiadev/core'
+import { MotaServer, StateAdapter } from '@imoogle/core'
 
-export const stateEndpoints = (server: MotiaServer, stateAdapter: StateAdapter) => {
+export const stateEndpoints = (server: MotaServer, stateAdapter: StateAdapter) => {
   const { app } = server
 
-  app.get('/motia/state', async (req, res) => {
+  app.get('/mota/state', async (req, res) => {
     try {
       const groupId = req.query.groupId as string | undefined
       const filter = req.query.filter ? JSON.parse(req.query.filter as string) : undefined
@@ -16,7 +16,7 @@ export const stateEndpoints = (server: MotiaServer, stateAdapter: StateAdapter) 
     }
   })
 
-  app.post('/motia/state', async (req, res) => {
+  app.post('/mota/state', async (req, res) => {
     try {
       const { key, groupId, value } = req.body
       await stateAdapter.set(groupId, key, value)

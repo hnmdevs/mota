@@ -1,5 +1,5 @@
 ---
-description: Motia Typescript Types
+description: Mota Typescript Types
 globs: 
 alwaysApply: false
 ---
@@ -115,7 +115,7 @@ type Step<TConfig extends StepConfig = StepConfig> = {
 };
 ```
 
-// This file outlines core TypeScript type definitions used within the Motia framework.
+// This file outlines core TypeScript type definitions used within the Mota framework.
 // These types help ensure code quality, provide autocompletion, and define the contracts
 // for step configurations, handlers, and the execution context.
 
@@ -123,7 +123,7 @@ type Step<TConfig extends StepConfig = StepConfig> = {
 
 /**
  * FlowContext is provided to step handlers and contains utilities for interacting
- * with the Motia environment during the execution of a flow instance.
+ * with the Mota environment during the execution of a flow instance.
  */
 type FlowContext = {
     /** Function to emit events to topics. */
@@ -392,7 +392,7 @@ type UnsubscribeConfig = {
 type StepConfig = EventConfig<ZodObject<any>> | NoopConfig | ApiRouteConfig | CronConfig;
 
 /**
- * Represents a generic Motia Step, including its file path, version, and configuration.
+ * Represents a generic Mota Step, including its file path, version, and configuration.
  * @template TConfig - The specific configuration type for this step.
  */
 type Step<TConfig extends StepConfig = StepConfig> = {

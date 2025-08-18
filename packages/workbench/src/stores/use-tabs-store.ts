@@ -15,6 +15,6 @@ export const useTabsStore = create(persist<TabsState>((set) => ({
   setTopTab: (tab) => set((state) => ({ tab: { ...state.tab, top: tab } })),
   setBottomTab: (tab) => set((state) => ({ tab: { ...state.tab, bottom: tab } })),
 }), {
-  name: 'motia-tabs-storage',
+  name: 'mota-tabs-storage',
   storage: createJSONStorage(() => localStorage),
 }))

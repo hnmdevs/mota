@@ -1,4 +1,4 @@
-import { NoopConfig } from 'motia'
+import { NoopConfig } from 'mota'
 
 /**
  * NOOP Steps don't hold any logic in code, it's a
@@ -6,7 +6,7 @@ import { NoopConfig } from 'motia'
  * like representing a man in the loop or a manual operation that can
  * happen between one step and another.
  *
- * For more information, refer to the documentation: https://www.motia.dev/docs/workbench/noop-steps
+ * For more information, refer to the documentation: https://www.mota.imoogle.com/docs/workbench/noop-steps
  */
 export const config: NoopConfig = {
   type: 'noop',

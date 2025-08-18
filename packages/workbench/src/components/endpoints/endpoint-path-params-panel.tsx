@@ -1,5 +1,5 @@
 import { ApiEndpoint } from '@/types/endpoint'
-import { Input, Panel } from '@motiadev/ui'
+import { Input, Panel } from '@imoogle/ui'
 import { FC, Fragment, useState } from 'react'
 import { usePathParams } from './hooks/use-path-params'
 

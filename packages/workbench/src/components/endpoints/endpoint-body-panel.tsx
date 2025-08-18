@@ -1,6 +1,6 @@
 import { useJsonSchemaToJson } from './hooks/use-json-schema-to-json'
 import { ApiEndpoint } from '@/types/endpoint'
-import { Panel } from '@motiadev/ui'
+import { Panel } from '@imoogle/ui'
 import { FC } from 'react'
 import { JsonEditor } from './json-editor'
 import ReactJson from 'react18-json-view'

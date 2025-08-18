@@ -15,7 +15,7 @@ interface RiveAnimationProps {
 }
 
 const RiveAnimation: React.FC<RiveAnimationProps> = ({
-  src = '/rive/motiaBeam.riv',
+  src = '/rive/motaBeam.riv',
   autoplay = true,
   className = 'w-full',
   alignment = Alignment.BottomLeft,

@@ -4,7 +4,7 @@ import { callStepFile } from '../call-step-file'
 import { createEventManager } from '../event-manager'
 import { LockedData } from '../locked-data'
 import { Logger } from '../logger'
-import { Motia } from '../motia'
+import { Mota } from '../mota'
 import { NoPrinter } from '../printer'
 import { MemoryStateAdapter } from '../state/adapters/memory-state-adapter'
 import { createCronStep } from './fixtures/step-fixtures'
@@ -24,7 +24,7 @@ describe('callStepFile', () => {
     const traceId = randomUUID()
     const logger = new Logger()
     const tracer = new NoTracer()
-    const motia: Motia = {
+    const mota: Mota = {
       eventManager,
       state,
       printer,
@@ -35,13 +35,13 @@ describe('callStepFile', () => {
 
     jest.spyOn(eventManager, 'emit').mockImplementation(() => Promise.resolve())
 
-    await callStepFile({ step, traceId, logger, contextInFirstArg: true, tracer }, motia)
+    await callStepFile({ step, traceId, logger, contextInFirstArg: true, tracer }, mota)
 
     expect(eventManager.emit).toHaveBeenCalledWith(
       {
         topic: 'TEST_EVENT',
         data: { test: 'data' },
-        flows: ['motia-server'],
+        flows: ['mota-server'],
         traceId,
         logger: expect.anything(),
         tracer: expect.anything(),

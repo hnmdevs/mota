@@ -1,4 +1,4 @@
-import type { Event, FlowContext, InternalStateManager, Logger } from '@motiadev/core'
+import type { Event, FlowContext, InternalStateManager, Logger } from '@imoogle/core'
 import type { Response } from 'supertest'
 
 export type Watcher<TData = unknown> = {
@@ -7,7 +7,7 @@ export type Watcher<TData = unknown> = {
   getCapturedEvent(index: number): CapturedEvent<TData> | undefined
 }
 
-export interface MotiaTester {
+export interface MotaTester {
   post(path: string, options: RequestOptions): Promise<Response>
   get(path: string, options: RequestOptions): Promise<Response>
   emit(event: Event): Promise<void>

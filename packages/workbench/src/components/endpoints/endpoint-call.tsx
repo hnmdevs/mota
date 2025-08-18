@@ -1,5 +1,5 @@
 import { ApiEndpoint } from '@/types/endpoint'
-import { Button } from '@motiadev/ui'
+import { Button } from '@imoogle/ui'
 import { Loader2, Play } from 'lucide-react'
 import { FC, useEffect, useMemo, useState } from 'react'
 import { EndpointBodyPanel } from './endpoint-body-panel'

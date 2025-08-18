@@ -1,7 +1,7 @@
 from typing import Any, Union
-from motia_communication_factory import create_communication
-from motia_rpc_communication import RpcCommunication
-from motia_ipc_communication import IpcCommunication
+from mota_communication_factory import create_communication
+from mota_rpc_communication import RpcCommunication
+from mota_ipc_communication import IpcCommunication
 
 def serialize_for_json(obj: Any) -> Any:
     """Convert Python objects to JSON-serializable types"""

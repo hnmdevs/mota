@@ -56,10 +56,10 @@ class ApiEndpointsStream extends StreamAdapter<ApiEndpoint> {
 
 export const apiEndpoints = (lockedData: LockedData) => {
   const stream = lockedData.createStream({
-    filePath: '__motia.api-endpoints.ts',
+    filePath: '__mota.api-endpoints.ts',
     hidden: true,
     config: {
-      name: '__motia.api-endpoints',
+      name: '__mota.api-endpoints',
       baseConfig: { storageType: 'custom', factory: () => new ApiEndpointsStream(lockedData) },
       schema: null as never,
     },

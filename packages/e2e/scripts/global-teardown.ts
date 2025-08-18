@@ -9,7 +9,7 @@ async function globalTeardown() {
     console.log('🛑 Stopping test project server...')
 
     const isWindows = platform() === 'win32'
-    const motiaTestPid = process.env.MOTIA_TEST_PID
+    const motaTestPid = process.env.MOTIA_TEST_PID
 
     if (!isWindows) {
       try {
@@ -20,9 +20,9 @@ async function globalTeardown() {
         execSync('netstat -ano | findstr :3000 | for /f "tokens=5" %a in (\'more\') do taskkill /f /pid %a', { stdio: 'ignore' })
       } catch (error) {}
       
-      if (motiaTestPid) {
+      if (motaTestPid) {
         try {
-          execSync(`taskkill /f /pid ${motiaTestPid} 2>nul`, { stdio: 'ignore' })
+          execSync(`taskkill /f /pid ${motaTestPid} 2>nul`, { stdio: 'ignore' })
         } catch (error) {}
       }
     }

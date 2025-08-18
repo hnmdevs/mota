@@ -3,7 +3,7 @@ import { CliContext } from '../config-utils'
 import { cloudApi } from './cloud-api'
 import { cloudApiWsUrl } from './cloud-api/endpoints'
 import { DeployData, DeployListener } from './listeners/listener.types'
-import { Stream } from '@motiadev/stream-client-node'
+import { Stream } from '@imoogle/stream-client-node'
 
 export type DeployInput = {
   envVars: Record<string, string>

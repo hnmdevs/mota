@@ -4,7 +4,7 @@ const Navbar = dynamic(() => import('@/components/ui/Navbar'))
 const AgentsExplorer = dynamic(() => import('@/components/AgentsExplorer'))
 const Bento = dynamic(() => import('@/components/Bento'))
 const Footer = dynamic(() => import('@/components/Footer'))
-const MotiaCloud = dynamic(() => import('@/components/MotiaCloud'))
+const MotaCloud = dynamic(() => import('@/components/MotaCloud'))
 const SuperchargeAI = dynamic(() => import('@/components/SuperchargeAI'))
 const Comparison = dynamic(() => import('@/components/Comparison'))
 const CTASection = dynamic(() => import('@/components/CTASection'))
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: '/og-image-updated.jpg',
         width: 1200,
         height: 630,
-        alt: 'Motia - Unified Backend Framework for APIs, Events and AI Agents',
+        alt: 'Mota - Unified Backend Framework for APIs, Events and AI Agents',
         type: 'image/jpeg',
       },
     ],
@@ -38,7 +38,7 @@ export default async function Home() {
         <Bento />
         <AgentsExplorer initialData={agentsData} />
         <SuperchargeAI />
-        <MotiaCloud />
+        <MotaCloud />
         <Comparison />
         <CTASection />
         <Footer />

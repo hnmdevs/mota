@@ -2,16 +2,16 @@
 
 import React from 'react'
 import Image from 'next/image'
-import motiaCloudHeading from '@/public/images/landing/motiaCloudHeading.svg'
-import bgMotiaCloud from '@/public/images/landing/bgMotiaCloud.svg'
+import motaCloudHeading from '@/public/images/landing/motaCloudHeading.svg'
+import bgMotaCloud from '@/public/images/landing/bgMotaCloud.svg'
 import bgCloudCard1 from '@/public/images/landing/bgCloudCard1.svg'
-import motiaCloudFlow from '@/public/images/landing/motiaCloudFlow.webp'
-import { chevronRightCircle, liveCircle, motiaCloud } from './Icons'
+import motaCloudFlow from '@/public/images/landing/motaCloudFlow.webp'
+import { chevronRightCircle, liveCircle, motaCloud } from './Icons'
 import SectionAppearAnimation from './SectionAppearAnimation'
 import RiveAnimation from './RiveAnimation'
 import logoFull from '@/public/images/logoFull.png'
-import motiaCloudNavLinks from '@/public/images/landing/motiaCloudNavLinks.svg'
-import motiaCloudNavSettings from '@/public/images/landing/motiaCloudNavSettings.png'
+import motaCloudNavLinks from '@/public/images/landing/motaCloudNavLinks.svg'
+import motaCloudNavSettings from '@/public/images/landing/motaCloudNavSettings.png'
 import ModalCTA from './ModalCTA'
 
 const chevronDownIcon = (
@@ -25,16 +25,16 @@ const chevronDownIcon = (
  * Dashboard background Navbar
  *
  */
-const MotiaNav: React.FC = () => {
+const MotaNav: React.FC = () => {
   return (
     <div className="flex h-[42px] w-full shrink-0 items-center justify-between rounded-t-[12px] border-b-[1px] border-b-blue-50/20 px-[26px]">
       <div className="flex gap-[32px]">
-        <Image width={64} src={logoFull} alt="Motia Logo" className="w-[64px] object-contain" />
-        <Image src={motiaCloudNavLinks} alt="Motia Dashboard Mockup" className="h-[45px] max-md:hidden" />
+        <Image width={64} src={logoFull} alt="Mota Logo" className="w-[64px] object-contain" />
+        <Image src={motaCloudNavLinks} alt="Mota Dashboard Mockup" className="h-[45px] max-md:hidden" />
       </div>
 
       <div className="flex items-center justify-end space-x-[10px] text-[12px] tracking-[0.36px] text-white/40">
-        <Image src={motiaCloudNavSettings} alt="Motia Dashboard Mockup Settings" className="w-[110px] max-w-full" />
+        <Image src={motaCloudNavSettings} alt="Mota Dashboard Mockup Settings" className="w-[110px] max-w-full" />
       </div>
     </div>
   )
@@ -88,8 +88,8 @@ const CardFlow: React.FC = () => {
     <Card className="relative flex h-[full] min-h-[235px] w-full items-end justify-center max-md:h-fit md:max-w-[356px]">
       <Image src={bgCloudCard1} alt="bg explorer" className="absolute top-0 left-0 h-full w-full object-cover" />
       <Image
-        src={motiaCloudFlow}
-        alt="Motia Cloud Flow"
+        src={motaCloudFlow}
+        alt="Mota Cloud Flow"
         className="object-fit relative h-[235px] w-auto object-bottom max-md:h-[330px]"
       />
     </Card>
@@ -135,7 +135,7 @@ const CardInvocations: React.FC = () => {
           +15%
         </div>
       </div>
-      <RiveAnimation className="w-full max-md:h-[calc(45vw)] md:h-[170px]" src={'/rive/motiaCloudGraphBlue.riv'} />
+      <RiveAnimation className="w-full max-md:h-[calc(45vw)] md:h-[170px]" src={'/rive/motaCloudGraphBlue.riv'} />
     </Card>
   )
 }
@@ -148,7 +148,7 @@ const CardStateUsage: React.FC = () => {
           +0.05%
         </div>
       </div>
-      <RiveAnimation className="w-full max-md:h-[calc(45vw)] md:h-[174px]" src={'/rive/motiaCloudGraphYellow.riv'} />
+      <RiveAnimation className="w-full max-md:h-[calc(45vw)] md:h-[174px]" src={'/rive/motaCloudGraphYellow.riv'} />
     </Card>
   )
 }
@@ -181,11 +181,11 @@ const CardStats: React.FC = () => {
  * MAIN RETURN FUNCTION
  *
  */
-export default function MotiaCloud() {
+export default function MotaCloud() {
   return (
-    <div id="motia-cloud" className="w-full max-w-[1200px] px-[16px] max-md:pt-[80px]">
+    <div id="mota-cloud" className="w-full max-w-[1200px] px-[16px] max-md:pt-[80px]">
       <SectionAppearAnimation>
-        <Image priority={true} src={motiaCloudHeading} className="mx-auto w-[990px] max-w-[full]" alt="Motia Cloud" />
+        <Image priority={true} src={motaCloudHeading} className="mx-auto w-[990px] max-w-[full]" alt="Mota Cloud" />
       </SectionAppearAnimation>
 
       <div className="relative w-full">
@@ -193,14 +193,14 @@ export default function MotiaCloud() {
          * *Background
          *
          */}
-        <Image src={bgMotiaCloud} alt="bg explorer" className="motia-cloud-shadow absolute top-0 left-0 w-full" />
+        <Image src={bgMotaCloud} alt="bg explorer" className="mota-cloud-shadow absolute top-0 left-0 w-full" />
         {/**
          *
          * Dashboard Layout
          *
          * */}
         <div className="relative flex h-full w-full flex-col items-center rounded-[12px] p-[1px] pt-[2px] pr-[2px]">
-          <MotiaNav />
+          <MotaNav />
           <div className="h-full w-full max-w-[944px] px-[16px] pt-[45px] pb-[80px]">
             {/**
              *
@@ -256,7 +256,7 @@ export default function MotiaCloud() {
               <CardStats />
             </div>
           </div>
-          <ModalCTA variant="primary" text="Get early access to Motia Cloud" icon={chevronRightCircle} />
+          <ModalCTA variant="primary" text="Get early access to Mota Cloud" icon={chevronRightCircle} />
         </div>
       </div>
     </div>

@@ -1,1 +1,1 @@
-export * from '@motiadev/workbench'
+export * from '@imoogle/workbench'

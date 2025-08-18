@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://motia.dev',
+  siteUrl: 'https://mota.imoogle.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
 }

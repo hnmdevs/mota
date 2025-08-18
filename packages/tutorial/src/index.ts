@@ -1,7 +1,7 @@
 import { closeTutorial } from './close'
 import { startTutorial } from './start'
 
-export const MotiaTutorial = {
+export const MotaTutorial = {
   start: startTutorial,
   close: closeTutorial,
 }

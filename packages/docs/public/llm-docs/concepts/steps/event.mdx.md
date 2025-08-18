@@ -23,7 +23,7 @@ The following examples showcase how to configure an **Event Step**
 <Tabs  items={['TS', 'JS', 'Python']}>
   <Tab value="TS">
     ```typescript
-    import { EventConfig, Handlers } from 'motia'
+    import { EventConfig, Handlers } from 'mota'
     import { z } from 'zod'
 
     export const config: EventConfig = {

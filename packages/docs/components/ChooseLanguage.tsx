@@ -18,7 +18,7 @@ export default function ChooseLanguage() {
         </div>
         <CardText
           title="Multi-Language Workflows"
-          subtitle="Mix TypeScript, Python, JavaScript, and more in the same workflow. Build polyglot backends, all as unified Motia Steps."
+          subtitle="Mix TypeScript, Python, JavaScript, and more in the same workflow. Build polyglot backends, all as unified Mota Steps."
         />
       </BentoCard>
     </div>

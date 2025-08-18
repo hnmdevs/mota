@@ -1,9 +1,9 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import * as readline from 'readline'
-import { printMotiaDockerIntro } from './utils/print-intro'
+import { printMotaDockerIntro } from './utils/print-intro'
 import { identifyUser } from '../utils/analytics'
-import { getProjectIdentifier, trackEvent } from '@motiadev/core'
+import { getProjectIdentifier, trackEvent } from '@imoogle/core'
 
 const updatePackageJson = (): void => {
   const packageJsonPath = path.join(process.cwd(), 'package.json')
@@ -12,7 +12,7 @@ const updatePackageJson = (): void => {
     if (!packageJson.scripts) {
       packageJson.scripts = {}
     }
-    packageJson.scripts.start = 'motia start'
+    packageJson.scripts.start = 'mota start'
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
     console.log('Updated package.json with start script')
   }
@@ -42,7 +42,7 @@ const createDockerfile = async () => {
     }
   }
 
-  const dockerfileContent = fs.readFileSync(path.join(__dirname, './templates', 'MotiaDockerSample'), 'utf-8')
+  const dockerfileContent = fs.readFileSync(path.join(__dirname, './templates', 'MotaDockerSample'), 'utf-8')
 
   try {
     fs.writeFileSync(dockerfilePath, dockerfileContent)
@@ -94,7 +94,7 @@ const createDockerignore = async () => {
 }
 
 export const setup = async (): Promise<void> => {
-  printMotiaDockerIntro()
+  printMotaDockerIntro()
 
   await createDockerfile()
   await createDockerignore()

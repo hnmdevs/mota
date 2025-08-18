@@ -41,7 +41,7 @@ We're going to add an image on the side and show the description.
     ```tsx
     // myStep.step.tsx
 
-    import { EventNode, EventNodeProps } from 'motia/workbench'
+    import { EventNode, EventNodeProps } from 'mota/workbench'
     import React from 'react'
 
     export const Node: React.FC<EventNodeProps> = (props) => {
@@ -51,7 +51,7 @@ We're going to add an image on the side and show the description.
             <div className="text-sm text-gray-400 font-mono">{props.data.description}</div>
             <img
               style={{ width: '64px', height: '64px' }}
-              src="https://www.motia.dev/icon.png"
+              src="https://www.mota.dev/icon.png"
             />
           </div>
         </EventNode>
@@ -64,7 +64,7 @@ We're going to add an image on the side and show the description.
     ```jsx
     // myStep.step.jsx
 
-    import { EventNode } from 'motia/workbench'
+    import { EventNode } from 'mota/workbench'
     import React from 'react'
 
     export const Node = (props) => {
@@ -74,7 +74,7 @@ We're going to add an image on the side and show the description.
             <div className="text-sm text-gray-400 font-mono">{props.data.description}</div>
             <img
               style={{ width: '64px', height: '64px' }}
-              src="https://www.motia.dev/icon.png"
+              src="https://www.mota.dev/icon.png"
             />
           </div>
         </EventNode>
@@ -89,7 +89,7 @@ We're going to add an image on the side and show the description.
 
 ## Components
 
-Motia Workbench provides out of the box components that you can use to create custom UI steps, which apply to different types of steps.
+Mota Workbench provides out of the box components that you can use to create custom UI steps, which apply to different types of steps.
 
 
 | Component   | Props Type     | Description                                                                    |
@@ -107,7 +107,7 @@ Let's draw the following node.
 ![Custom Ideator Agent Node](./../img/custom-ideator-agent-node.png)
 
 ```tsx
-import { BaseHandle, EventNodeProps, Position } from 'motia/workbench'
+import { BaseHandle, EventNodeProps, Position } from 'mota/workbench'
 import React from 'react'
 
 export const Node: React.FC<EventNodeProps> = (props) => {
@@ -184,7 +184,7 @@ export const Node: React.FC<EventNodeProps> = (props) => {
 | Use Tailwind's utility classes only | Stick to Tailwind CSS utilities for consistent styling        |
 | Avoid arbitrary values              | Use predefined scales from the design system                  |
 | Keep components responsive          | Ensure UI elements adapt well to different screen sizes       |
-| Follow Motia's design system        | Maintain consistency with Motia's established design patterns |
+| Follow Mota's design system        | Maintain consistency with Mota's established design patterns |
 
 
 

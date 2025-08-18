@@ -1,9 +1,9 @@
-import { expect, test } from '../fixtures/motia-fixtures'
+import { expect, test } from '../fixtures/mota-fixtures'
 
 test.describe('Traces tests', () => {
   test.beforeEach(async ({ page }) => {
     await page.addInitScript(() => {
-      localStorage.setItem('motia-tutorial-skipped', 'true')
+      localStorage.setItem('mota-tutorial-skipped', 'true')
     })
   })
 

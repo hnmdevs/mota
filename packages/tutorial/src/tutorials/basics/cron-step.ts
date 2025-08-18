@@ -8,7 +8,7 @@ export const cronStepSteps: TutorialStep[] = [
     elementXpath: `//div[@data-testid="node-stateauditjob"]`,
     segmentId,
     title: 'Cron Step',
-    description: `Let's do a recap of what you've learned, thus far you've become familiar with three Motia primitives <b>API</b>, <b>event</b>, and <b>NOOP</b> steps.<br/><br/> You've also started to learn how to navigate around Workbench. Let's wrap up Motia's primitives with the last one the <b>CRON</b> step. Let's take a deeper look at its definition.`,
+    description: `Let's do a recap of what you've learned, thus far you've become familiar with three Mota primitives <b>API</b>, <b>event</b>, and <b>NOOP</b> steps.<br/><br/> You've also started to learn how to navigate around Workbench. Let's wrap up Mota's primitives with the last one the <b>CRON</b> step. Let's take a deeper look at its definition.`,
     id: uuidv4(),
     clickSelectorBeforeNext: `//button[@data-testid="open-code-preview-button-stateauditjob"]`,
     waitForSelector: `(//span[contains(text(), 'cron')])[2]`,
@@ -24,7 +24,7 @@ export const cronStepSteps: TutorialStep[] = [
     elementXpath: `//span[contains(text(), "handler")]`,
     segmentId,
     title: 'Cron Step Handler',
-    description: `The <b>CRON</b> step handler only receives one argument, which is the Motia context, if you recall the Motia context gives you access to utilities to emit <i>topics</i>, <i>log</i>, <i>manage state</i>, and it provides the <i>trace id</i> associated to your step's execution.<br/><br/> In this CRON step example we are evaluating orders persisted in state, and emitting warnings through a topic for each order that hasn't been processed and has a shipping date in the past.`,
+    description: `The <b>CRON</b> step handler only receives one argument, which is the Mota context, if you recall the Mota context gives you access to utilities to emit <i>topics</i>, <i>log</i>, <i>manage state</i>, and it provides the <i>trace id</i> associated to your step's execution.<br/><br/> In this CRON step example we are evaluating orders persisted in state, and emitting warnings through a topic for each order that hasn't been processed and has a shipping date in the past.`,
     id: uuidv4(),
   },
 ]

@@ -1,4 +1,4 @@
-import type { SocketAdapter } from '@motiadev/stream-client'
+import type { SocketAdapter } from '@imoogle/stream-client'
 
 export class StreamSocketAdapter implements SocketAdapter {
   private ws: WebSocket

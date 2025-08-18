@@ -70,7 +70,7 @@ export default function StateAndLogging() {
         </div>
         <CardText
           title="Observability baked-in"
-          subtitle="Motia workbench comes with a built-in observability tool to help you track and visualize all your steps, events, and state changes. See exactly what happened after an endpoint is triggered, all the subsequent steps that were emitted, track the time it took to execute each step, and more."
+          subtitle="Mota workbench comes with a built-in observability tool to help you track and visualize all your steps, events, and state changes. See exactly what happened after an endpoint is triggered, all the subsequent steps that were emitted, track the time it took to execute each step, and more."
         />
       </BentoCard>
     </motion.div>

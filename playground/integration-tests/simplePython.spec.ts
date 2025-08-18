@@ -1,9 +1,9 @@
-import { createMotiaTester } from '@motiadev/test'
+import { createMotaTester } from '@imoogle/test'
 
 describe('simplePython', () => {
-  let server: ReturnType<typeof createMotiaTester>
+  let server: ReturnType<typeof createMotaTester>
 
-  beforeEach(async () => (server = createMotiaTester()))
+  beforeEach(async () => (server = createMotaTester()))
   afterEach(async () => server.close())
 
   it('should run steps concurrently', async () => {

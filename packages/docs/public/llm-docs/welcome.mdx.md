@@ -1,31 +1,31 @@
 ---
-title: Welcome to Motia
-description: Get started with Motia, a powerful framework for building event-driven workflows
+title: Welcome to Mota
+description: Get started with Mota, a powerful framework for building event-driven workflows
 ---
 
 # Unified Backend Framework for APIs, Events and AI Agents
 
-Motia is a **code-first framework** designed to empower developers to build robust, scalable, and observable event-driven workflows with unparalleled ease. We handle the infrastructure complexities, so you can focus on your business logic.
+Mota is a **code-first framework** designed to empower developers to build robust, scalable, and observable event-driven workflows with unparalleled ease. We handle the infrastructure complexities, so you can focus on your business logic.
 
-## Why Choose Motia?
+## Why Choose Mota?
 
-Motia is built with the developer in mind, offering a unique blend of simplicity and power. Here's why Motia stands out:
+Mota is built with the developer in mind, offering a unique blend of simplicity and power. Here's why Mota stands out:
 
-- 🚀 **Zero Infrastructure Setup:** Say goodbye to the complexities of message queues and event brokers! Motia handles the underlying infrastructure, allowing you to focus solely on building your workflows.
+- 🚀 **Zero Infrastructure Setup:** Say goodbye to the complexities of message queues and event brokers! Mota handles the underlying infrastructure, allowing you to focus solely on building your workflows.
 
 - 🔌 **Plug-and-Play Steps in Your Language:**  Develop your workflow logic using the languages you love: JavaScript, TypeScript, and Python. Mix and match languages within the same flow for ultimate flexibility.
 
-- 📊 **Built-in Observability:** Gain deep insights into your workflows with real-time logs, traces, and interactive flow visualizations right in the Motia Workbench. Debugging and monitoring have never been easier.
+- 📊 **Built-in Observability:** Gain deep insights into your workflows with real-time logs, traces, and interactive flow visualizations right in the Mota Workbench. Debugging and monitoring have never been easier.
 
 - ⚡ **Out-of-the-Box API & Scheduling:**  Instantly expose your workflows as HTTP endpoints and schedule tasks with cron expressions – no extra configuration needed.
 
-- ✨ **Flexible and Extensible Architecture:**  Motia is designed to be easily extended and customized. Create custom steps, UI components, and adapt the framework to your specific needs.
+- ✨ **Flexible and Extensible Architecture:**  Mota is designed to be easily extended and customized. Create custom steps, UI components, and adapt the framework to your specific needs.
 
-- 🧑‍💻 **Developer-First Experience:**  From intuitive APIs and a powerful CLI to comprehensive documentation and a visual workbench, Motia prioritizes developer productivity and a smooth, enjoyable development experience.
+- 🧑‍💻 **Developer-First Experience:**  From intuitive APIs and a powerful CLI to comprehensive documentation and a visual workbench, Mota prioritizes developer productivity and a smooth, enjoyable development experience.
 
-## Motia Workbench: Your Development Control Center
+## Mota Workbench: Your Development Control Center
 
-Motia Workbench is a built-in, browser-based development platform that acts as your central hub for building, testing, and debugging Motia flows. Key features include:
+Mota Workbench is a built-in, browser-based development platform that acts as your central hub for building, testing, and debugging Mota flows. Key features include:
 
 - **Interactive Flow Visualization:**  See your workflows come to life as dynamic diagrams, making it easy to understand complex event flows and step interactions.
 
@@ -36,12 +36,12 @@ Motia Workbench is a built-in, browser-based development platform that acts as y
 - **Step-Level Customization:**  Create custom UI components for your steps to enhance visualization and provide context-specific information directly within the flow diagram.
 
 <div className="my-8">
-  ![Motia Workbench Interface](./img/workbench-presentation.png)
+  ![Mota Workbench Interface](./img/workbench-presentation.png)
 </div>
 
-## Core Concepts: Building Blocks of Motia
+## Core Concepts: Building Blocks of Mota
 
-Motia workflows are built using a few core concepts that work together harmoniously:
+Mota workflows are built using a few core concepts that work together harmoniously:
 
 | Concept    | Description                                                                                                |
 | ---------- | ---------------------------------------------------------------------------------------------------------- |
@@ -52,7 +52,7 @@ Motia workflows are built using a few core concepts that work together harmoniou
 
 ## Unlock Powerful Use Cases
 
-Motia empowers you to build a wide range of sophisticated applications, including:
+Mota empowers you to build a wide range of sophisticated applications, including:
 
 - 🌐 **API Integrations & Microservices:**  Effortlessly connect disparate systems, create event-driven microservices, and build real-time API-powered applications.
 
@@ -60,11 +60,11 @@ Motia empowers you to build a wide range of sophisticated applications, includin
 
 - 📊 **Data Transformation & Processing:**  Build scalable ETL/ELT pipelines, implement real-time data streaming, and transform data with ease.
 
-- 🚀 **Rapid Prototyping & Iteration:**  Quickly bring your ideas to life, test new workflows, and iterate rapidly with Motia's visual design and development tools.
+- 🚀 **Rapid Prototyping & Iteration:**  Quickly bring your ideas to life, test new workflows, and iterate rapidly with Mota's visual design and development tools.
 
 ### Real-World Industry Applications
 
-Motia is versatile and can be applied across various industries and use cases, such as:
+Mota is versatile and can be applied across various industries and use cases, such as:
 
 - **E-commerce:** Order processing, inventory synchronization, fraud detection, customer communication automation.
 - **Finance:** Trade settlement, risk analysis, compliance monitoring, automated reporting.
@@ -74,18 +74,18 @@ Motia is versatile and can be applied across various industries and use cases, s
 
 ## Ready to Get Started?
 
-Embark on your Motia journey and start building powerful workflows today:
+Embark on your Mota journey and start building powerful workflows today:
 
-1.  **Quick Start Guide:** Follow our [Quick Start](/docs/getting-started/quick-start) to set up your first Motia project and create a minimal workflow.
+1.  **Quick Start Guide:** Follow our [Quick Start](/docs/getting-started/quick-start) to set up your first Mota project and create a minimal workflow.
 2.  **Explore Examples:** Dive into practical [Examples](/docs/examples) to understand common patterns and real-world use cases.
-3.  **Dive into Concepts:**  Delve deeper into Motia's [Core Concepts](/docs/concepts) to gain a solid understanding of the framework's architecture and principles.
+3.  **Dive into Concepts:**  Delve deeper into Mota's [Core Concepts](/docs/concepts) to gain a solid understanding of the framework's architecture and principles.
 
-## Join the Motia Community
+## Join the Mota Community
 
 Become part of a growing community of developers and automation enthusiasts!
 
-- 💬 **Join our Discord:**  Connect with the Motia team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
-- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motiadev/motia).
-- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motiadev)](https://twitter.com/motiadev)
+- 💬 **Join our Discord:**  Connect with the Mota team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
+- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motadev/mota).
+- 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@imoogle)](https://twitter.com/motadev)
 
-We're excited to see what you'll build with Motia!
+We're excited to see what you'll build with Mota!

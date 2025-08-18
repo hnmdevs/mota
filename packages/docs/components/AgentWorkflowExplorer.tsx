@@ -66,13 +66,13 @@ export const AgentWorkflowExplorer: React.FC<AgentWorkflowExplorer> = ({ agent, 
     setSelectedFolder(currentFolder)
   }, [selectedFile])
 
-  const MotiaNav = () => {
+  const MotaNav = () => {
     const href = `${GITHUB_REPO_BASE}/${folderMap[agent]}/${selectedFolder}/${selectedFile}`
 
     return (
       <div className="flex h-[42px] w-full shrink-0 items-center justify-between rounded-t-[12px] border-b-[1px] border-b-blue-50/20 bg-[#081755] px-[26px]">
         <div className="flex items-center gap-[16px]">
-          <Image src={logoFull} width={64} alt="Motia Logo" className="w-[64px] object-contain" />
+          <Image src={logoFull} width={64} alt="Mota Logo" className="w-[64px] object-contain" />
           <Link
             href={href}
             target="_blank"
@@ -99,7 +99,7 @@ export const AgentWorkflowExplorer: React.FC<AgentWorkflowExplorer> = ({ agent, 
       <Image src={bgWorkflowExplorer} width={1440} alt="bg explorer" className="absolute top-0 left-0 w-full" />
 
       <div className="relative flex h-full w-full flex-col rounded-[12px] p-[1px] pt-[2px] pr-[2px] max-lg:h-fit">
-        <MotiaNav />
+        <MotaNav />
 
         <div className="flex h-full w-full max-lg:h-fit max-md:flex-col">
           <div className="custom-scroll fade-bottom flex h-full w-[285px] shrink-0 flex-col gap-[6px] overflow-auto border-r-[1px] border-r-white/40 bg-black/40 px-[16px] py-[33px] max-lg:border-r-0 max-md:h-[220px] max-md:w-full">

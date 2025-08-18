@@ -1,3 +1,3 @@
-import { MotiaStream } from '../types-stream'
+import { MotaStream } from '../types-stream'
 
-export type StreamFactory<TData> = () => MotiaStream<TData>
+export type StreamFactory<TData> = () => MotaStream<TData>

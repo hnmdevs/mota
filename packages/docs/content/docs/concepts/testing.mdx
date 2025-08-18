@@ -1,15 +1,15 @@
 ---
 title: Testing
-description: Learn how to write and run tests for your Motia components
+description: Learn how to write and run tests for your Mota components
 ---
 
 # Testing
 
-Testing is an essential part of building reliable and maintainable Motia applications. Motia provides built-in support for writing and running tests to ensure the correctness of your steps, flows, and event handling logic.
+Testing is an essential part of building reliable and maintainable Mota applications. Mota provides built-in support for writing and running tests to ensure the correctness of your steps, flows, and event handling logic.
 
-## Writing Tests for Motia Components
+## Writing Tests for Mota Components
 
-Motia uses [Jest](https://jestjs.io/) as its testing framework. You can write tests for your Motia components using Jest's syntax and assertions.
+Mota uses [Jest](https://jestjs.io/) as its testing framework. You can write tests for your Mota components using Jest's syntax and assertions.
 
 ### Step Tests
 
@@ -19,7 +19,7 @@ Here's an example of a step test:
 
 ```typescript
 // my-step.step.test.ts
-import { createTestContext } from '@motiadev/testing'
+import { createTestContext } from '@imoogle/testing'
 import { handler } from './my-step.step'
 
 describe('MyStep', () => {
@@ -38,7 +38,7 @@ describe('MyStep', () => {
 })
 ```
 
-In this example, we use the `createTestContext` function from `@motiadev/testing` to create a test context with mocked `emit` and `done` functions. We then call the step's `handler` function with test input and the mocked context. Finally, we assert that the `emit` function was called with the expected event type and data.
+In this example, we use the `createTestContext` function from `@imoogle/testing` to create a test context with mocked `emit` and `done` functions. We then call the step's `handler` function with test input and the mocked context. Finally, we assert that the `emit` function was called with the expected event type and data.
 
 ### Flow Tests
 
@@ -48,7 +48,7 @@ Here's an example of a flow test:
 
 ```typescript
 // my-flow.test.ts
-import { createTestFlow } from '@motiadev/testing'
+import { createTestFlow } from '@imoogle/testing'
 import { handler as stepAHandler } from './step-a.step'
 import { handler as stepBHandler } from './step-b.step'
 
@@ -62,13 +62,13 @@ describe('MyFlow', () => {
 
     expect(result).toEqual({
       greeting: 'Hello, Alice!',
-      message: 'Welcome to Motia!',
+      message: 'Welcome to Mota!',
     })
   })
 })
 ```
 
-In this example, we use the `createTestFlow` function from `@motiadev/testing` to create a test flow with the specified steps. We then execute the flow with test input and assert that the final result matches the expected output.
+In this example, we use the `createTestFlow` function from `@imoogle/testing` to create a test flow with the specified steps. We then execute the flow with test input and assert that the final result matches the expected output.
 
 ## Running Tests Locally
 
@@ -94,4 +94,4 @@ pnpm test --watch
 - Keep your tests focused and independent to make them easier to maintain.
 - Use mocks and stubs to isolate dependencies and improve test reliability.
 
-By following these best practices and regularly running tests, you can catch bugs early, maintain code quality, and ensure the reliability of your Motia application. 
+By following these best practices and regularly running tests, you can catch bugs early, maintain code quality, and ensure the reliability of your Mota application. 

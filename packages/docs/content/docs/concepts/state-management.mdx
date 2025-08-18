@@ -1,9 +1,9 @@
 ---
 title: State Management
-description: Learn how to manage state within your Motia.dev workflows for persistent data and cross-step communication.
+description: Learn how to manage state within your Mota.dev workflows for persistent data and cross-step communication.
 ---
 
-State management is fundamental to building robust and dynamic workflows in Motia.dev. Our system is designed to be powerful yet simple, providing you with everything you need to maintain state across your flows and steps:
+State management is fundamental to building robust and dynamic workflows in Mota.dev. Our system is designed to be powerful yet simple, providing you with everything you need to maintain state across your flows and steps:
 
 ✨ **Zero Configuration (Default):** In-memory storage out of the box for quick setup. <br />
 🔌 **Flexible Storage Options:** Choose from Memory, File, and Redis adapters to suit your persistence needs. <br />
@@ -26,7 +26,7 @@ The `state` object, accessible within your step handlers via the `ctx` context, 
 
 ### State Scope and Isolation
 
-Each flow execution in Motia.dev is assigned a unique `traceId` (a UUID). Using this `traceId` as the **scope** for state management provides automatic isolation, ensuring: _(Revised to clarify `traceId` as scope)_
+Each flow execution in Mota.dev is assigned a unique `traceId` (a UUID). Using this `traceId` as the **scope** for state management provides automatic isolation, ensuring: _(Revised to clarify `traceId` as scope)_
 
 | Feature        | Description                                                                                                         |
 | -------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -41,7 +41,7 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
 ```typescript
 // Example state structure (internal representation) - using traceId as scope
 {
-  "motia:state:{traceId-123}": {  // State for flow execution with traceId 'traceId-123' (scope)
+  "mota:state:{traceId-123}": {  // State for flow execution with traceId 'traceId-123' (scope)
     "booking": {                 // Namespaced key 'booking'
       "customer": { ... },
       "venue": { ... }
@@ -51,7 +51,7 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
       "amount": 100
     }
   },
-  "motia:state:{traceId-456}": {  // State for another flow execution with traceId 'traceId-456' (different scope)
+  "mota:state:{traceId-456}": {  // State for another flow execution with traceId 'traceId-456' (different scope)
     // ... different state data for this flow ...
   }
 }
@@ -65,7 +65,7 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
   <Tab label="TypeScript">
     
   ```typescript
-  import { Handlers } from 'motia'
+  import { Handlers } from 'mota'
 
   interface BookingData {
     customer: { name: string; email: string };
@@ -95,7 +95,7 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
   <Tab label="JavaScript">
     
   ```javascript
-  import { Handlers } from 'motia'
+  import { Handlers } from 'mota'
 
   export const handler: Handlers['StepName'] = async (input, { state, traceId }) => { // Get traceId from context
     // Store state (using traceId as scope)
@@ -151,14 +151,14 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
   </Tab>
   <Tab label="File">
   
-  To inspect state stored in the **File Adapter**, you can directly view the contents of the state file using the Motia CLI:
+  To inspect state stored in the **File Adapter**, you can directly view the contents of the state file using the Mota CLI:
 
   ```bash
   # View state file contents
-  motia state list
+  mota state list
   ```
 
-  This command will output the entire state file (motia.state.json) content in JSON format to your console, allowing you to examine the stored state data.
+  This command will output the entire state file (mota.state.json) content in JSON format to your console, allowing you to examine the stored state data.
 
   </Tab>
   <Tab label="Redis">
@@ -166,11 +166,11 @@ State data is stored as key-value pairs, namespaced under a scope string. When u
   To inspect state stored in **Redis Adapter**, you can use the `redis-cli` command-line tool to interact with your Redis server:
 
   ```bash
-  # List all state keys (under the motia:state prefix)
-  redis-cli KEYS "motia:state:*"
+  # List all state keys (under the mota:state prefix)
+  redis-cli KEYS "mota:state:*"
 
   # Get specific state for a given traceId and key
-  redis-cli GET "motia:state:{traceId}:booking"
+  redis-cli GET "mota:state:{traceId}:booking"
   ```
   **Note:** Replace `{traceId}` in the `redis-cli GET` command with the actual `traceId` of the flow execution you are debugging. Replace `booking` with the specific `key` you want to inspect.
 
@@ -367,7 +367,7 @@ Always clean up state when you're done with it:
 ### Custom State Adapters
 
 ```typescript title="Custom State Adapter Example"
-import { StateAdapter } from 'motia'
+import { StateAdapter } from 'mota'
 
 class CustomStateAdapter extends StateAdapter {
   async get<T>(traceId: string, key: string): Promise<T | null> {
@@ -395,9 +395,9 @@ class CustomStateAdapter extends StateAdapter {
 
 ### Storage Adapters
 
-Motia.dev offers three built-in storage adapters:
+Mota.dev offers three built-in storage adapters:
 
-- 📁 **File (Default):** Persists state to a JSON file in your project (`.motia/motia.state.json`). No configuration needed for basic use.
+- 📁 **File (Default):** Persists state to a JSON file in your project (`.mota/mota.state.json`). No configuration needed for basic use.
 - 💾 **Memory:** Stores state in-memory. Fastest option, but state is not persistent across server restarts. Useful for development and non-critical data.
 - ⚡ **Redis:** Leverages Redis for persistent and scalable state storage. Ideal for production environments and flows requiring high availability and data durability.
 
@@ -413,7 +413,7 @@ my-project/
 
 **File Adapter (Default)**
 
-> Default, no configuration required, state is stored into .motia/motia.state.json in your project root
+> Default, no configuration required, state is stored into .mota/mota.state.json in your project root
 
 **Memory Adapter**
 
@@ -423,7 +423,7 @@ state:
 ```
 
 > **Warning: Memory Adapter**
-> State is stored in-memory and will be lost when the Motia.dev server restarts. Suitable for development and testing.
+> State is stored in-memory and will be lost when the Mota.dev server restarts. Suitable for development and testing.
 
 **Redis Adapter**
 

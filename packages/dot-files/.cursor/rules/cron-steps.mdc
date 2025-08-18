@@ -1,5 +1,5 @@
 ---
-description: What are Motia Cron Steps and examples using Typescript, Python and Ruby
+description: What are Mota Cron Steps and examples using Typescript, Python and Ruby
 globs: 
 alwaysApply: false
 ---
@@ -64,7 +64,7 @@ config = {
 }
 
 # The handler function is an asynchronous function that executes the cron job's logic.
-# 'context' is an object providing access to Motia functionalities like 'emit'.
+# 'context' is an object providing access to Mota functionalities like 'emit'.
 async def handler(context):
     # The 'context.emit' method is used to send a message.
     await context.emit({
@@ -96,7 +96,7 @@ def config
 end
  
 # The handler function contains the logic to be executed.
-# 'context' is an object providing access to Motia functionalities like 'emit'.
+# 'context' is an object providing access to Mota functionalities like 'emit'.
 def handler(context)
   # The 'context.emit' method is used to send a message.
   context.emit({

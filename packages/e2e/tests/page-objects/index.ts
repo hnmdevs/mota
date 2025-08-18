@@ -1,4 +1,4 @@
-export { MotiaApplicationPage } from './MotiaApplicationPage'
+export { MotaApplicationPage } from './MotaApplicationPage'
 export { WorkbenchPage } from './WorkbenchPage'
 export { LogsPage } from './LogsPage'
 export { ApiHelpers } from './ApiHelpers'

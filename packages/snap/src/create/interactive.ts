@@ -19,7 +19,7 @@ interface CreateInteractiveArgs {
 }
 
 export const createInteractive = async (_args: CreateInteractiveArgs, context: CliContext): Promise<void> => {
-  context.log('welcome', (message) => message.append('\n🚀 ' + colors.bold('Welcome to Motia Project Creator!')))
+  context.log('welcome', (message) => message.append('\n🚀 ' + colors.bold('Welcome to Mota Project Creator!')))
 
   const answers: InteractiveAnswers = await inquirer.prompt([
     {
@@ -58,7 +58,7 @@ export const createInteractive = async (_args: CreateInteractiveArgs, context: C
     return
   }
 
-  context.log('creating', (message) => message.append('\n🔨 Creating your Motia project...\n'))
+  context.log('creating', (message) => message.append('\n🔨 Creating your Mota project...\n'))
 
   await create({
     projectName: answers.projectName || '.',

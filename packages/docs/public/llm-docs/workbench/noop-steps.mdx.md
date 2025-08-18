@@ -2,7 +2,7 @@
 title: NOOP Steps
 ---
 
-NOOP (No Operation) steps are a powerful feature in Motia that serve multiple purposes:
+NOOP (No Operation) steps are a powerful feature in Mota that serve multiple purposes:
 
 1. Modeling external processes, webhooks and integrations
 2. Representing human-in-the-loop activities
@@ -21,7 +21,7 @@ NOOP steps require two files with the same base name:
   <Tab value="TS">
     ```typescript
     // myStep.step.ts
-    import { NoopConfig } from 'motia'
+    import { NoopConfig } from 'mota'
 
     export const config: NoopConfig = {
       type: 'noop',
@@ -57,7 +57,7 @@ NOOP steps require two files with the same base name:
     ```typescript
     // myStep.step.tsx
     import React from 'react'
-    import { BaseHandle, Position } from 'motia/workbench'
+    import { BaseHandle, Position } from 'mota/workbench'
 
     export default function MyStep() {
       return (
@@ -74,7 +74,7 @@ NOOP steps require two files with the same base name:
     ```javascript
     // myStep.step.jsx
     import React from 'react'
-    import { BaseHandle, Position } from 'motia/workbench'
+    import { BaseHandle, Position } from 'mota/workbench'
 
     export default function MyStep() {
       return (
@@ -97,7 +97,7 @@ Here's a complete example of a NOOP step that simulates webhook events:
   <Tab value="TS">
     ```typescript
     // test-webhook.step.ts
-    import { NoopConfig } from 'motia'
+    import { NoopConfig } from 'mota'
 
     export const config: NoopConfig = {
       type: 'noop',
@@ -131,7 +131,7 @@ Here's a complete example of a NOOP step that simulates webhook events:
     ```typescript
     // test-webhook.step.tsx
     import React from 'react'
-    import { BaseHandle, Position } from 'motia/workbench'
+    import { BaseHandle, Position } from 'mota/workbench'
 
     export default function WebhookSimulator() {
       return (
@@ -159,7 +159,7 @@ Here's a complete example of a NOOP step that simulates webhook events:
     ```javascript
     // test-webhook.step.jsx
     import React from 'react'
-    import { BaseHandle, Position } from 'motia/workbench'
+    import { BaseHandle, Position } from 'mota/workbench'
 
     export default function WebhookSimulator() {
       return (
@@ -307,7 +307,7 @@ NOOP steps represent parts of your workflow that happen outside your system. Com
 
 ## Visualization in Workbench
 
-NOOP steps are visually represented in the Motia Workbench with the following characteristics:
+NOOP steps are visually represented in the Mota Workbench with the following characteristics:
 
 - Distinct node representation with clear input/output handles
 - Visual indicators for virtual event connections
@@ -323,7 +323,7 @@ You can enhance your NOOP steps with custom React components for better visualiz
     ```tsx
     // customNode.step.tsx
     import React from 'react'
-    import { BaseHandle, EventNodeProps, Position } from 'motia/workbench'
+    import { BaseHandle, EventNodeProps, Position } from 'mota/workbench'
 
     export default (_: EventNodeProps) => {
       return (
@@ -349,7 +349,7 @@ You can enhance your NOOP steps with custom React components for better visualiz
     ```jsx
     // customNode.step.jsx
     import React from 'react'
-    import { BaseHandle, EventNodeProps, Position } from 'motia/workbench'
+    import { BaseHandle, EventNodeProps, Position } from 'mota/workbench'
 
     export default (_: EventNodeProps) => {
       return (

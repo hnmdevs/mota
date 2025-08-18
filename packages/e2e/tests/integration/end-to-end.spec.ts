@@ -1,16 +1,16 @@
-import { test, expect } from '../fixtures/motia-fixtures'
+import { test, expect } from '../fixtures/mota-fixtures'
 
 test.describe('End-to-End Integration Tests', () => {
   test.beforeEach(async ({ page }) => {
     await page.addInitScript(() => {
-      localStorage.setItem('motia-tutorial-skipped', 'true')
+      localStorage.setItem('mota-tutorial-skipped', 'true')
     })
   })
 
-  test('complete user journey from API to logs', async ({ motiaApp, workbench, logsPage, api }) => {
+  test('complete user journey from API to logs', async ({ motaApp, workbench, logsPage, api }) => {
     await test.step('Verify application is healthy', async () => {
       await workbench.open()
-      await motiaApp.isApplicationLoaded()
+      await motaApp.isApplicationLoaded()
     })
 
     await test.step('Trigger flow via API', async () => {
@@ -70,11 +70,11 @@ test.describe('End-to-End Integration Tests', () => {
     })
   })
 
-  test('cross-platform compatibility check', async ({ motiaApp, workbench, api }) => {
+  test('cross-platform compatibility check', async ({ motaApp, workbench, api }) => {
     await test.step('Verify application loads on current platform', async () => {
       await workbench.open()
-      await motiaApp.hasTitle()
-      await motiaApp.isApplicationLoaded()
+      await motaApp.hasTitle()
+      await motaApp.isApplicationLoaded()
     })
 
     await test.step('Test API endpoints work', async () => {
@@ -96,7 +96,7 @@ test.describe('End-to-End Integration Tests', () => {
     })
 
     await test.step('Check for critical console errors', async () => {
-      const errors = await motiaApp.collectConsoleErrors()
+      const errors = await motaApp.collectConsoleErrors()
 
       // Allow for minor errors but flag critical ones
       const criticalErrors = errors.filter(

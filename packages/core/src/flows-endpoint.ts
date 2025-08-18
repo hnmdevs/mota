@@ -6,10 +6,10 @@ import { generateFlow } from './helper/flows-helper'
 export const flowsEndpoint = (lockedData: LockedData) => {
   const flowsStream = lockedData.createStream(
     {
-      filePath: '__motia.flows',
+      filePath: '__mota.flows',
       hidden: true,
       config: {
-        name: '__motia.flows',
+        name: '__mota.flows',
         schema: z.object({ id: z.string(), name: z.string(), steps: z.any(), edges: z.any() }),
         baseConfig: { storageType: 'custom', factory: () => new FlowsStream(lockedData) },
       },

@@ -45,7 +45,7 @@ module.exports = {
     ],
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(@motiadev/stream-client-react|@motiadev/stream-client-browser)/)',
+    'node_modules/(?!(@imoogle/stream-client-react|@imoogle/stream-client-browser)/)',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testEnvironmentOptions: {

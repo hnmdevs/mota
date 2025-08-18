@@ -1,8 +1,8 @@
 import { EnrichmentPlugin, Event } from '@amplitude/analytics-types'
 import os from 'os'
 
-export class MotiaEnrichmentPlugin implements EnrichmentPlugin {
-  name = 'motia-enrichment'
+export class MotaEnrichmentPlugin implements EnrichmentPlugin {
+  name = 'mota-enrichment'
   type = 'enrichment' as const
 
   async setup(): Promise<undefined> {
@@ -16,7 +16,7 @@ export class MotiaEnrichmentPlugin implements EnrichmentPlugin {
       event.extra = {}
     }
 
-    event.extra.motia_version = process.env.npm_package_dependencies_motia || 'unknown'
+    event.extra.mota_version = process.env.npm_package_dependencies_mota || 'unknown'
     event.extra.source = 'backend'
     event.os_name = os.platform() === 'darwin' ? 'macOS' : os.platform() === 'win32' ? 'Windows' : 'Linux'
     event.os_version = os.release()

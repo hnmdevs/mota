@@ -82,7 +82,6 @@ export default function Navbar() {
         y: 0,
         opacity: 1,
         backdropFilter: scrolled ? 'blur(10px)' : 'blur(0px)',
-        WebkitBackdropFilter: scrolled ? 'blur(10px)' : 'blur(0px)',
       }}
       className="fixed top-0 z-30 flex w-full justify-center border-b-[1px] border-white/20"
     >
@@ -111,7 +110,7 @@ export default function Navbar() {
                *
                **/}
               <div className="flex w-full flex-col gap-[16px] border-b-[1px] border-white/20 pb-[28px]">
-                <Link href="https://blog.motia.dev" target="_blank" className="text-[16px] text-white">
+                <Link href="https://blog.mota.imoogle.com" target="_blank" className="text-[16px] text-white">
                   Blog
                 </Link>
                 {/**
@@ -129,7 +128,7 @@ export default function Navbar() {
                   Manifesto
                 </Link>
                 {/**
-                 * Motia Cloud Sign up
+                 * Mota Cloud Sign up
                  *
                  **/}
                 <ModalCTA variant={ModalCTAVariants.CLOUD_NAVBAR} />
@@ -140,7 +139,7 @@ export default function Navbar() {
                  * Vercel OSS Link
                  **/}
                 <Link
-                  href="https://vercel.com/blog/summer-2025-oss-program#motia"
+                  href="https://vercel.com/blog/summer-2025-oss-program#mota"
                   target="_blank"
                   className="vercel-oss-button gap-2"
                 >
@@ -202,7 +201,7 @@ export default function Navbar() {
           <div className="flex w-[94px] flex-col">
             <Link href="/" aria-label="Go To Home">
               {' '}
-              <Image priority src={logoFull} alt="Motia Logo" />
+              <Image priority src={logoFull} alt="Mota Logo" />
             </Link>
 
             <div className="relative bottom-[-24px] flex items-center gap-[4px]">
@@ -216,7 +215,7 @@ export default function Navbar() {
              *
              **/}
             <Link
-              href="https://blog.motia.dev"
+              href="https://blog.mota.imoogle.com"
               target="_blank"
               className="text-[16px] text-white/60 transition-colors ease-in-out hover:text-white"
             >
@@ -240,7 +239,7 @@ export default function Navbar() {
               Manifesto
             </Link>
             {/**
-             * Motia Cloud Sign up
+             * Mota Cloud Sign up
              **/}
             <ModalCTA variant={ModalCTAVariants.CLOUD_NAVBAR} />
           </div>
@@ -251,7 +250,7 @@ export default function Navbar() {
            * Vercel OSS Link - Desktop Only
            **/}
           <Link
-            href="https://vercel.com/blog/summer-2025-oss-program#motia"
+            href="https://vercel.com/blog/summer-2025-oss-program#mota"
             target="_blank"
             className="vercel-oss-button inline-flex items-center gap-2 max-md:hidden mr-3 leading-none"
           >

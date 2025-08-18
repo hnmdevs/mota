@@ -29,9 +29,9 @@ const Title: React.FC<TitleProps> = ({ children, className, delay = 0 }) => {
       filter: 'blur(0px)',
       transition:
         delay > 0
-          ? { delay, type: 'spring', mass: 0.15, damping: 20, stiffness: 200 }
+          ? { delay, type: 'spring' as const, mass: 0.15, damping: 20, stiffness: 200 }
           : {
-              type: 'spring',
+              type: 'spring' as const,
               mass: 0.15,
               damping: 20,
               stiffness: 200,

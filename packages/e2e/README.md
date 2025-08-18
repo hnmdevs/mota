@@ -1,6 +1,6 @@
-# Motia E2E Testing with Page Object Models
+# Mota E2E Testing with Page Object Models
 
-This document describes the improved E2E testing structure for Motia using Playwright and Page Object Models (POM).
+This document describes the improved E2E testing structure for Mota using Playwright and Page Object Models (POM).
 
 ## 🏗️ Architecture
 
@@ -11,7 +11,7 @@ Our E2E tests follow the [Playwright Page Object Model pattern](https://playwrig
 ```
 tests/
 ├── page-objects/           # Page Object Models
-│   ├── MotiaApplicationPage.ts    # Base application functionality
+│   ├── MotaApplicationPage.ts    # Base application functionality
 │   ├── WorkbenchPage.ts           # Workbench interface
 │   ├── LogsPage.ts               # Logs functionality
 │   ├── ApiHelpers.ts             # API testing helpers
@@ -27,7 +27,7 @@ tests/
 
 ## 🎯 Page Object Models
 
-### MotiaApplicationPage
+### MotaApplicationPage
 
 Base class providing common application functionality:
 
@@ -38,7 +38,7 @@ Base class providing common application functionality:
 
 ### WorkbenchPage
 
-Extends MotiaApplicationPage with workbench-specific functionality:
+Extends MotaApplicationPage with workbench-specific functionality:
 
 - Workbench navigation
 - Flow management
@@ -121,7 +121,7 @@ test('integration test', async ({ motiaApp, api }) => {
 
 // ❌ Bad - Manual instantiation
 test('integration test', async ({ page }) => {
-  const motiaApp = new MotiaApplicationPage(page)
+  const motiaApp = new MotaApplicationPage(page)
   const api = new ApiHelpers(page)
   // ...
 })
@@ -235,7 +235,7 @@ Before:
 test('old test', async ({ page }) => {
   const helpers = new TestHelpers(page)
   await page.goto('/')
-  await helpers.waitForMotiaApplication()
+  await helpers.waitForMotaApplication()
   await page.locator('[data-testid="logs-link"]').click()
   await helpers.waitForLogEntry('message')
 })

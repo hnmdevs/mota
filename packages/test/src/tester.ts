@@ -1,11 +1,11 @@
-import { createServer, createStateAdapter, Event, Logger } from '@motiadev/core'
-import { generateLockedData } from 'motia'
+import { createServer, createStateAdapter, Event, Logger } from '@imoogle/core'
+import { generateLockedData } from 'mota'
 import path from 'path'
 import request from 'supertest'
 import { createEventManager } from './event-manager'
-import { CapturedEvent, MotiaTester } from './types'
+import { CapturedEvent, MotaTester } from './types'
 
-export const createMotiaTester = (): MotiaTester => {
+export const createMotaTester = (): MotaTester => {
   const eventManager = createEventManager()
   const logger = new Logger()
 

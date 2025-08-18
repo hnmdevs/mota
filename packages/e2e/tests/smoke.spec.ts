@@ -1,13 +1,13 @@
 import { test, expect } from '@playwright/test'
-import { MotiaApplicationPage, WorkbenchPage, ApiHelpers } from './page-objects'
+import { MotaApplicationPage, WorkbenchPage, ApiHelpers } from './page-objects'
 
 test.describe('CLI Generated Project - Smoke Tests', () => {
-  let motiaApp: MotiaApplicationPage
+  let motaApp: MotaApplicationPage
   let workbench: WorkbenchPage
   let api: ApiHelpers
 
   test.beforeEach(async ({ page }) => {
-    motiaApp = new MotiaApplicationPage(page)
+    motaApp = new MotaApplicationPage(page)
     workbench = new WorkbenchPage(page)
     api = new ApiHelpers(page)
   })
@@ -15,8 +15,8 @@ test.describe('CLI Generated Project - Smoke Tests', () => {
   test('CLI generated project loads successfully', async ({ page }) => {
     await workbench.open()
 
-    await motiaApp.hasTitle()
-    await motiaApp.isApplicationLoaded()
+    await motaApp.hasTitle()
+    await motaApp.isApplicationLoaded()
   })
 
   test('CLI generated project has basic API endpoints', async ({ page }) => {
@@ -45,9 +45,9 @@ test.describe('CLI Generated Project - Smoke Tests', () => {
 
       if (href && !href.startsWith('http') && href !== '/') {
         await firstLink.click()
-        await motiaApp.waitForApplication()
+        await motaApp.waitForApplication()
 
-        await expect(motiaApp.body).toBeVisible()
+        await expect(motaApp.body).toBeVisible()
       }
     }
 
@@ -55,7 +55,7 @@ test.describe('CLI Generated Project - Smoke Tests', () => {
   })
 
   test('CLI generated project has no critical console errors', async ({ page }) => {
-    const errors = await motiaApp.collectConsoleErrors()
+    const errors = await motaApp.collectConsoleErrors()
 
     await workbench.open()
 

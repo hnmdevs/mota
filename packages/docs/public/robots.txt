@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://motia.dev
+Host: https://mota.imoogle.com

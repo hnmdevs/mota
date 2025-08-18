@@ -31,7 +31,7 @@ export default function ManifestoPage() {
             <p>
               Modern software engineering is splintered. APIs live in one framework, background jobs in another, queues
               have their own tooling, and complex workflows require separate orchestration engines. <span
-                className={gradientText}>Motia</span> exists to <span className={gradientText}>unify</span>{' '}
+                className={gradientText}>Mota</span> exists to <span className={gradientText}>unify</span>{' '}
               all of these concerns, <span className={gradientText}>API endpoints, scheduled tasks, background
               jobs, message queues, and workflow orchestration into a single, coherent system with shared observability and developer
               experience.</span>
@@ -98,7 +98,7 @@ export default function ManifestoPage() {
 
           <section className={normalText}>
             <p>
-              <span className={gradientTextBlue}>Motia is designed to fill that missing piece</span>, providing a
+              <span className={gradientTextBlue}>Mota is designed to fill that missing piece</span>, providing a
               <span className={gradientTextBlue}> unified backend framework that replaces the need for multiple tools. </span> We looked
               at the lessons learned from past paradigm shifts, particularly React's success with its simple core
               primitive.
@@ -117,7 +117,7 @@ export default function ManifestoPage() {
               <h2 className={headingText}>We Declare: The Step is Our Core Primitive</h2>
 
               <p>
-                Drawing inspiration from the power of simple, elegant primitives like React's 'component', Motia
+                Drawing inspiration from the power of simple, elegant primitives like React's 'component', Mota
                 introduces the <span className="font-medium text-white">"step"</span>. This core concept distills
                 complexity into four fundamental, easy-to-understand elements:
               </p>
@@ -139,11 +139,11 @@ export default function ManifestoPage() {
               </ul>
 
               <p className="mb-[10px]">
-                With just these four concepts, software engineers can build anything they need in Motia, particularly <span className={gradientTextBlue}>with Steps being language and runtime agnostic.</span>
+                With just these four concepts, software engineers can build anything they need in Mota, particularly <span className={gradientTextBlue}>with Steps being language and runtime agnostic.</span>
               </p>
 
               <p className="mb-[18px]">
-                But the power of Motia isn't just in its simplicity; it's in what it abstracts away, mirroring React's
+                But the power of Mota isn't just in its simplicity; it's in what it abstracts away, mirroring React's
                 abstraction of the DOM.
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function ManifestoPage() {
           <section className={normalText}>
             <p>
               Setting up powerful, resilient event-based microservice systems is incredibly difficult to do correctly.{' '}
-              <span className={gradientTextBlue}>Motia builds this foundation for you</span>, providing the
+              <span className={gradientTextBlue}>Mota builds this foundation for you</span>, providing the
               necessary resiliency without requiring engineers to worry about the underlying complexity. They can instead focus on building workflows, and writing business logic.
             </p>
           </section>
@@ -160,21 +160,21 @@ export default function ManifestoPage() {
             <p>
               We have <span className={gradientTextBlue}>25 years of knowledge</span> about event-based systems and
               microservices. We don't need new ways to connect workflows when we have strong patterns already
-              established. Motia leverages this knowledge to build a unified system that joins the functions previously spread across disconnected silos — API servers, background job processors, cron schedulers, and workflow orchestration engines.
+              established. Mota leverages this knowledge to build a unified system that joins the functions previously spread across disconnected silos — API servers, background job processors, cron schedulers, and workflow orchestration engines.
             </p>
           </section>
 
           <section className={normalText}>
             <p>
-              Motia has been built from the ground up as <span className={gradientTextBlue}> a highly scalable enterprise solution</span>, solving
+              Mota has been built from the ground up as <span className={gradientTextBlue}> a highly scalable enterprise solution</span>, solving
               key problems that other systems miss. It addresses the hidden yet critical challenges that emerge as codebases grow, problems that are difficult to grasp without experiencing them firsthand yourself.
             </p>
           </section>
 
           <section className={normalText}>
             <p>
-              A developer-focused event-driven system is needed and will become a tool of choice. Whether Motia becomes the main choice or not, a solution that brings these concerns together and gives a clear, developer-focused approach is the natural next step in how software engineering will change with AI. {' '}
-              <span className={gradientTextBlue}>Motia is that system.</span>
+              A developer-focused event-driven system is needed and will become a tool of choice. Whether Mota becomes the main choice or not, a solution that brings these concerns together and gives a clear, developer-focused approach is the natural next step in how software engineering will change with AI. {' '}
+              <span className={gradientTextBlue}>Mota is that system.</span>
             </p>
           </section>
         </div>

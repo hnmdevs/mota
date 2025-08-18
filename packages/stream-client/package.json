@@ -1,6 +1,6 @@
 {
-  "name": "@motiadev/stream-client",
-  "description": "Motia Stream Client Package – Responsible for managing streams of data.",
+  "name": "@imoogle/stream-client",
+  "description": "Mota Stream Client Package – Responsible for managing streams of data.",
   "version": "0.5.9-beta.117",
   "license": "MIT",
   "main": "dist/cjs/index.js",

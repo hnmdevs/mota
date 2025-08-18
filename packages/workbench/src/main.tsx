@@ -1,8 +1,8 @@
-import { MotiaStreamProvider } from '@motiadev/stream-client-react'
+import { MotaStreamProvider } from '@imoogle/stream-client-react'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { RootMotia } from './components/root-motia'
-import '@motiadev/ui/globals.css'
+import { RootMota } from './components/root-mota'
+import '@imoogle/ui/globals.css'
 import './index.css'
 import { App } from './App'
 
@@ -13,11 +13,11 @@ if (!rootElement.innerHTML) {
 
   root.render(
     <StrictMode>
-      <MotiaStreamProvider address={address}>
-        <RootMotia>
+      <MotaStreamProvider address={address}>
+        <RootMota>
           <App />
-        </RootMotia>
-      </MotiaStreamProvider>
+        </RootMota>
+      </MotaStreamProvider>
     </StrictMode>,
   )
 }

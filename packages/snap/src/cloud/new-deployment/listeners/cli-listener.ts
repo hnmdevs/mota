@@ -1,5 +1,5 @@
-import { Step } from '@motiadev/core'
-import { Stream } from '@motiadev/core/dist/src/types-stream'
+import { Step } from '@imoogle/core'
+import { Stream } from '@imoogle/core/dist/src/types-stream'
 import colors from 'colors'
 import { BuildStepConfig } from '../../build/builder'
 import { BuildPrinter } from './build-printer'
@@ -55,7 +55,7 @@ export class CliListener implements DeploymentListener {
 
   onBuildErrors(errors: ValidationError[]) {
     this.context.log('build-failed', (message) => {
-      message.box(['Unable to deploy to Motia Cloud, please fix the following errors'], 'red')
+      message.box(['Unable to deploy to Mota Cloud, please fix the following errors'], 'red')
     })
 
     const errorTag = colors.red('✗ [ERROR]')

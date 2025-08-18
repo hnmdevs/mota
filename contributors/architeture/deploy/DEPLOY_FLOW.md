@@ -1,6 +1,6 @@
-# Deploy Flow - Motia Framework
+# Deploy Flow - Mota Framework
 
-This document describes the complete automated deploy flow for the Motia framework.
+This document describes the complete automated deploy flow for the Mota framework.
 
 ## Overview
 
@@ -28,12 +28,12 @@ git push origin v1.0.0
 - Trigger E2E tests workflow
 
 **Published packages:**
-- `@motiadev/core@version` (tag: pre-release)
-- `@motiadev/workbench@version` (tag: pre-release)
-- `@motiadev/stream-client-browser@version` (tag: pre-release)
-- `@motiadev/stream-client-react@version` (tag: pre-release)
+- `@imoogle/core@version` (tag: pre-release)
+- `@imoogle/workbench@version` (tag: pre-release)
+- `@imoogle/stream-client-browser@version` (tag: pre-release)
+- `@imoogle/stream-client-react@version` (tag: pre-release)
 - `motia@version` (tag: pre-release)
-- `@motiadev/test@version` (tag: pre-release)
+- `@imoogle/test@version` (tag: pre-release)
 
 ### 3. E2E Tests (e2e-tests.yml)
 **Trigger:** Triggered by deploy.yml
@@ -161,8 +161,8 @@ git push origin v1.0.1
 ## Required Configuration
 
 ### GitHub Secrets
-- `MOTIA_CI_APP_ID`: App ID for authentication
-- `MOTIA_CI_APP_PRIVATE_KEY`: App private key
+- `MOTA_CI_APP_ID`: App ID for authentication
+- `MOTA_CI_APP_PRIVATE_KEY`: App private key
 - `NPM_TOKEN`: Token for NPM publishing
 
 ### Required Permissions
