@@ -82,7 +82,6 @@ export default function Navbar() {
         y: 0,
         opacity: 1,
         backdropFilter: scrolled ? 'blur(10px)' : 'blur(0px)',
-        WebkitBackdropFilter: scrolled ? 'blur(10px)' : 'blur(0px)',
       }}
       className="fixed top-0 z-30 flex w-full justify-center border-b-[1px] border-white/20"
     >

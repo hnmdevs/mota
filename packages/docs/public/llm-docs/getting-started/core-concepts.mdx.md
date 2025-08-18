@@ -5,7 +5,7 @@ description: Understand the fundamental concepts behind Mota.
 
 # Building Blocks of Mota
 
-To effectively build and utilize Mota, it's essential to grasp its foundational concepts. Mota workflows are built upon three building blocks that work together to create powerful and flexible automation solutions: **API**, **Event**, **Cron**, **Noop**. They're all represented as **Steps**.
+To effectively build and utilize Mota, it's essential to grasp its foundational concepts. Mota workflows are built upon four building blocks that work together to create powerful and flexible automation solutions: **API**, **Event**, **Cron**, **Noop**. They're all represented as **Steps**.
 
 ## Everything is a Step
 
