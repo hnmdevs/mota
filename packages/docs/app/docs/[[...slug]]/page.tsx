@@ -36,7 +36,7 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
         <LLMCopyButton markdownUrl={`/docs/${docPath}.mdx`} />
         <ViewOptions
           markdownUrl={`/docs/${docPath}.mdx`}
-          githubUrl={undefined}
+          githubUrl="#"
         />
       </div>
       <DocsBody>
