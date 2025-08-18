@@ -132,5 +132,5 @@ npm run dev
 
 <Callout type="info">
   For more detailed setup instructions and configuration options, check out the [full
-  documentation]().
+  documentation in the local docs.
 </Callout> 

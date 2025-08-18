@@ -57,7 +57,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone 
+   # Contact our team for example code
    cd examples/finance-agent
    ```
 
@@ -84,7 +84,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 The workflow consists of several specialized steps that work together to provide comprehensive financial analysis:
 
-![Finance Agent](../img/finance-agent.png)
+![Finance Agent](../img/finance-agent.gif)
 
 
 ## 🚦 API Endpoints
@@ -149,7 +149,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](#) for the event-driven workflow engine
+- Motia Framework for the event-driven workflow engine
 - [Alpha Vantage](https://www.alphavantage.co/) for financial data
 - [SerperDev](https://serper.dev/) for web search capabilities
 - [OpenAI](https://platform.openai.com/) for AI analysis 

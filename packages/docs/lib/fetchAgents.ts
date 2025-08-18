@@ -38,30 +38,10 @@ const data: Record<string, FolderMap> = { steps: folderMapSteps, services: folde
 const REVALIDATE_TIME = 60 * 60 * 24 * 7 // Refresh the cache every week
 
 export async function fetchAgents(): Promise<AgentData> {
-  // Skip API calls if GitHub API base is a placeholder
-  
-  // Skip API calls if GitHub API base is a placeholder
-  if (GITHUB_API_BASE === '#') {
-    return result
-  }
-  // Skip API calls if GitHub API base is a placeholder
-  if (GITHUB_API_BASE === "#") {
-    return result
-  }
-
-  if (GITHUB_API_BASE === '#') {
-    return result
-  }
-
   const result: AgentData = { steps: {}, services: {} }
   
   // Skip API calls if GitHub API base is a placeholder
-  if (GITHUB_API_BASE === "#") {
-    return result
-  }
-  
-  // Skip API calls if GitHub API base is a placeholder
-  if (GITHUB_API_BASE === "#") {
+  if (GITHUB_API_BASE === '#') {
     return result
   }
   for (const agent of AGENT_TABS) {

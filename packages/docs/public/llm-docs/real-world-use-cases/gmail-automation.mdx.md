@@ -121,7 +121,7 @@ The Gmail Account Manager workflow consists of the following steps:
 
 1. **Clone this repository**
    ```bash
-   git clone 
+   # Contact our team for example code
    cd gmail-flow
    ```
 
