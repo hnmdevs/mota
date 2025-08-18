@@ -5,7 +5,7 @@ description: A powerful research assistant that leverages the Motia Framework to
 
 import { CodeFetcher } from '../../../components/CodeFetcher'
 
-## Let's build a finance agent that:
+## Let's build a AI Deep Research Agent that:
 
 - **Deep Web Research**: Automatically searches the web, extracts content, and synthesizes findings
 - **Iterative Research Process**: Supports multiple layers of research depth for comprehensive exploration
@@ -61,7 +61,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone 
+   # Contact our team for example code
    cd examples/ai-deep-research-agent
    ```
 
