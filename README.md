@@ -1,42 +1,11 @@
-<a href="https://motia.dev">
-  <img src="assets/github-readme-banner.png" alt="Motia Banner" width="100%">
-</a>
-
-<p align="center">
-  <a href="https://trendshift.io/repositories/14032" style="margin-right:8px;">
-    <img src="https://trendshift.io/api/badge/repositories/14032" alt="Motia" style="width: 250px; height: 55px; margin-right:8px;" width="250" height="55"/>
-  </a>
-  <a href="https://vercel.com/blog/summer-2025-oss-program#motia" target="_blank" style="margin-left:8px;">
-    <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" style="width: 250px; height: 55px; margin-left:8px;" width="250" height="55"/>
-  </a>
-</p>
+<img src="assets/github-readme-banner.png" alt="Motia Banner" width="100%">
 
 <p align="center">
   <strong>🔥 A Modern Unified Backend Framework for APIs, background jobs, workflows, and Agents 🔥</strong>
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/motia">
-    <img src="https://img.shields.io/npm/v/motia?style=flat&logo=npm&logoColor=white&color=CB3837&labelColor=000000" alt="npm version">
-  </a>
-  <a href="https://github.com/MotiaDev/motia/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-green?style=flat&logo=opensourceinitiative&logoColor=white&labelColor=000000" alt="license">
-  </a>
-  <a href="https://github.com/MotiaDev/motia">
-    <img src="https://img.shields.io/github/stars/MotiaDev/motia?style=flat&logo=github&logoColor=white&color=yellow&labelColor=000000" alt="GitHub stars">
-  </a>
-  <a href="https://twitter.com/motiadev" target="_blank">
-    <img src="https://img.shields.io/badge/Follow-@motiadev-1DA1F2?style=flat&logo=twitter&logoColor=white&labelColor=000000" alt="Twitter Follow">
-  </a>
-  <a href="https://discord.gg/motia" target="_blank">
-    <img src="https://img.shields.io/discord/1322278831184281721?style=flat&logo=discord&logoColor=white&color=5865F2&label=Discord&labelColor=000000" alt="Discord">
-  </a>
-</p>
-<p align="center">
-  <a href="https://www.motia.dev/manifesto">💡 Motia Manifesto</a> •
-  <a href="https://www.motia.dev/docs/getting-started/quick-start">🚀 Quick Start</a> •
-  <a href="https://www.motia.dev/docs/concepts/steps/defining-steps">📋 Defining Steps</a> •
-  <a href="https://www.motia.dev/docs">📚 Docs</a>
+  <em>Powered by imoogle</em>
 </p>
 
 ---
@@ -47,7 +16,7 @@ Motia is a **modern backend framework** that unifies APIs, background jobs, work
 
 Motia brings cohesion to the fragmented backend world with our core primitive: the **Step**.
 
-[![Motia combines APIs, background queues, and AI agents into one system](assets/Motia_Github_Repository_GIF.gif)](https://motia.dev)
+![Motia combines APIs, background queues, and AI agents into one system](assets/Motia_Github_Repository_GIF.gif)
 
 ## 🚀 Quickstart
 
@@ -197,13 +166,13 @@ Every execution generates a full trace, capturing step timelines, state operatio
 
 ## 🗂 Examples
 
-| [Finance Agent](https://github.com/MotiaDev/motia-examples/tree/main/examples/finance-agent) | [GitHub Agent](https://github.com/MotiaDev/motia-examples/tree/main/examples/github-integration-workflow) | [Gmail Manager](https://github.com/MotiaDev/motia-examples/tree/main/examples/gmail-workflow) |
-| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| ![Finance](assets/examples/finance-agent.png)                          | ![GitHub](assets/examples/github-pr-management.png)                                      | ![Gmail](assets/examples/gmail-flow.png)                                |
+| Finance Agent | GitHub Agent | Gmail Manager |
+| ------------- | ------------ | ------------- |
+| ![Finance](assets/examples/finance-agent.png) | ![GitHub](assets/examples/github-pr-management.png) | ![Gmail](assets/examples/gmail-flow.png) |
 
-| [Trello Automation](https://github.com/MotiaDev/motia-examples/tree/main/examples/trello-flow) | [RAG Agent](https://github.com/MotiaDev/motia-examples/tree/main/examples/rag_example) | [AI Image Gen](https://github.com/MotiaDev/motia-examples/tree/main/examples/vision-example) |
-| ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| ![Trello](assets/examples/trello-manager.png)                               | ![RAG](assets/examples/parse-embed-rag.png)                     | ![AI Image](assets/examples/generate-image.png)                          |
+| Trello Automation | RAG Agent | AI Image Gen |
+| ----------------- | --------- | ------------ |
+| ![Trello](assets/examples/trello-manager.png) | ![RAG](assets/examples/parse-embed-rag.png) | ![AI Image](assets/examples/generate-image.png) |
 
 ---
 
@@ -224,10 +193,8 @@ Write steps in your preferred language:
 
 ### 💬 **Get Help**
 
-- **📋 Questions**: Use our [Discord community](https://discord.gg/motia)
-- **🐛 Bug Reports**: [GitHub Issues](https://github.com/MotiaDev/motia/issues)
-- **📖 Documentation**: [Official Docs](https://motia.dev/docs)
-- **🎥 Blog**: [Motia Blog](https://blog.motia.dev)
+- **📋 Questions**: Contact our support team
+- **📖 Documentation**: Check the local documentation
 
 ### 🤝 **Contributing**
 
@@ -239,55 +206,38 @@ We welcome contributions! Whether it's:
 - 🌍 Language support additions
 - 🎨 Workbench UI enhancements
 
-Check out our [Contributing Guide](https://github.com/MotiaDev/motia/blob/main/CONTRIBUTING.md) to get started.
-
 ---
 
 <div align="center">
 
 **🌟 Ready to unify your backend?**
 
-[🚀 **Get Started Now**](https://motia.dev) • [📖 **Read the Docs**](https://motia.dev/docs) • [💬 **Join Discord**](https://discord.com/invite/nJFfsH5d6v)
-
-</div>
-
----
-
-<div align="center">
-
-[![Star History Chart](https://api.star-history.com/svg?repos=motiadev/motia&type=Date)](https://www.star-history.com/#motiadev/motia&Date)
-
-<sub>Built with ❤️ by the Motia team • **Star us if you find [Motia](https://github.com/orgs/MotiaDev/motia) useful!** ⭐</sub>
+<em>Powered by imoogle</em>
 
 </div>
 
 ### 🚧 Roadmap
 
-We have a public roadmap for Motia, you can view it [here](https://github.com/orgs/MotiaDev/projects/2/views/4).
-
-Feel free to add comments to the issues, or create a new issue if you have a feature request.
-
-| Feature                               | Status  | Link                                                 | Description                            |
-| ------------------------------------- | ------- | ---------------------------------------------------- | -------------------------------------- |
-| Python Types                          | Planned | [#485](https://github.com/MotiaDev/motia/issues/485) | Add support for Python types           |
-| Streams: RBAC                         | Planned | [#495](https://github.com/MotiaDev/motia/issues/495) | Add support for RBAC                   |
-| Streams: Workbench UI                 | Planned | [#497](https://github.com/MotiaDev/motia/issues/497) | Add support for Workbench UI           |
-| Queue Strategies                      | Planned | [#476](https://github.com/MotiaDev/motia/issues/476) | Add support for Queue Strategies       |
-| Reactive Steps                        | Planned | [#477](https://github.com/MotiaDev/motia/issues/477) | Add support for Reactive Steps         |
-| Allow cloud configuration             | Planned | [#478](https://github.com/MotiaDev/motia/issues/478) | Add support for cloud configuration    |
-| BYOC: Bring your own Cloud: AWS       | Planned | [#479](https://github.com/MotiaDev/motia/issues/479) | Add support for AWS                    |
-| Point in time triggers                | Planned | [#480](https://github.com/MotiaDev/motia/issues/480) | Add support for Point in time triggers |
-| Workbench plugins                     | Planned | [#481](https://github.com/MotiaDev/motia/issues/481) | Add support for Workbench plugins      |
-| Rewrite our Core in either Go or Rust | Planned | [#482](https://github.com/MotiaDev/motia/issues/482) | Rewrite our Core in either Go or Rust  |
-| Decrease deployment time              | Planned | [#483](https://github.com/MotiaDev/motia/issues/483) | Decrease deployment time               |
-| Built-in database support             | Planned | [#484](https://github.com/MotiaDev/motia/issues/484) | Add support for built-in database      |
-| BYOC: Google Cloud Platform           | Planned | [#486](https://github.com/MotiaDev/motia/issues/486) | Add support for Google Cloud Platform  |
-| BYOC: Microsoft Azure                 | Planned | [#487](https://github.com/MotiaDev/motia/issues/487) | Add support for Microsoft Azure        |
-| BYOC: Vercel                          | Planned | [#488](https://github.com/MotiaDev/motia/issues/488) | Add support for Vercel                 |
-| BYOC: Cloudflare                      | Planned | [#489](https://github.com/MotiaDev/motia/issues/489) | Add support for Cloudflare             |
-| New languages: Go                     | Planned | [#490](https://github.com/MotiaDev/motia/issues/490) | Add support for Go                     |
-| New languages: Rust                   | Planned | [#491](https://github.com/MotiaDev/motia/issues/491) | Add support for Rust                   |
-| New languages: Java                   | Planned | [#492](https://github.com/MotiaDev/motia/issues/492) | Add support for Java                   |
-| New languages: Ruby                   | Planned | [#493](https://github.com/MotiaDev/motia/issues/493) | Add support for Ruby                   |
-| New languages: C#                     | Planned | [#494](https://github.com/MotiaDev/motia/issues/494) | Add support for C#                     |
-| BYOC: Kubernetes                      | Planned | [#496](https://github.com/MotiaDev/motia/issues/496) | Add support for Kubernetes             |
+| Feature                               | Status  | Description                            |
+| ------------------------------------- | ------- | -------------------------------------- |
+| Python Types                          | Planned | Add support for Python types           |
+| Streams: RBAC                         | Planned | Add support for RBAC                   |
+| Streams: Workbench UI                 | Planned | Add support for Workbench UI           |
+| Queue Strategies                      | Planned | Add support for Queue Strategies       |
+| Reactive Steps                        | Planned | Add support for Reactive Steps         |
+| Allow cloud configuration             | Planned | Add support for cloud configuration    |
+| BYOC: Bring your own Cloud: AWS       | Planned | Add support for AWS                    |
+| Point in time triggers                | Planned | Add support for Point in time triggers |
+| Workbench plugins                     | Planned | Add support for Workbench plugins      |
+| Rewrite our Core in either Go or Rust | Planned | Rewrite our Core in either Go or Rust  |
+| Decrease deployment time              | Planned | Decrease deployment time               |
+| Built-in database support             | Planned | Add support for built-in database      |
+| BYOC: Google Cloud Platform           | Planned | Add support for Google Cloud Platform  |
+| BYOC: Microsoft Azure                 | Planned | Add support for Microsoft Azure        |
+| BYOC: Cloudflare                      | Planned | Add support for Cloudflare             |
+| New languages: Go                     | Planned | Add support for Go                     |
+| New languages: Rust                   | Planned | Add support for Rust                   |
+| New languages: Java                   | Planned | Add support for Java                   |
+| New languages: Ruby                   | Planned | Add support for Ruby                   |
+| New languages: C#                     | Planned | Add support for C#                     |
+| BYOC: Kubernetes                      | Planned | Add support for Kubernetes             |

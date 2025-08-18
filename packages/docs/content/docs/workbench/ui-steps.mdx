@@ -51,7 +51,7 @@ We're going to add an image on the side and show the description.
             <div className="text-sm text-gray-400 font-mono">{props.data.description}</div>
             <img
               style={{ width: '64px', height: '64px' }}
-              src="https://www.motia.dev/icon.png"
+              src="/icon.png"
             />
           </div>
         </EventNode>
@@ -74,7 +74,7 @@ We're going to add an image on the side and show the description.
             <div className="text-sm text-gray-400 font-mono">{props.data.description}</div>
             <img
               style={{ width: '64px', height: '64px' }}
-              src="https://www.motia.dev/icon.png"
+              src="/icon.png"
             />
           </div>
         </EventNode>

@@ -1,17 +1,8 @@
-[![Motia Banner](https://github.com/MotiaDev/motia/raw/main/assets/github-readme-banner.png)](https://motia.dev/)
-
-[![npm version](https://img.shields.io/npm/v/motia?style=flat&logo=npm&logoColor=white&color=CB3837&labelColor=000000)](https://www.npmjs.com/package/motia)
-[![license](https://img.shields.io/badge/license-MIT-green?style=flat&logo=opensourceinitiative&logoColor=white&labelColor=000000)](https://github.com/MotiaDev/motia/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/MotiaDev/motia?style=flat&logo=github&logoColor=white&color=yellow&labelColor=000000)](https://github.com/MotiaDev/motia)
-[![Twitter Follow](https://img.shields.io/badge/Follow-@motiadev-1DA1F2?style=flat&logo=twitter&logoColor=white&labelColor=000000)](https://twitter.com/motiadev)
-[![Discord](https://img.shields.io/discord/1322278831184281721?style=flat&logo=discord&logoColor=white&color=5865F2&label=Discord&labelColor=000000)](https://discord.gg/motia)
+![Motia Banner](assets/github-readme-banner.png)
 
 **🔥 A Modern Unified Backend Framework for APIs, background jobs, workflows, and Agents 🔥**
 
-[💡 Motia Manifesto](https://www.motia.dev/manifesto) •
-[🚀 Quick Start](https://www.motia.dev/docs/getting-started/quick-start) •
-[📋 Defining Steps](https://www.motia.dev/docs/concepts/steps/defining-steps) •
-[📚 Docs](https://www.motia.dev/docs)
+*Powered by imoogle*
 
 ---
 
@@ -21,7 +12,7 @@ Motia is a **modern backend framework** that unifies APIs, background jobs, work
 
 Motia brings cohesion to the fragmented backend world with our core primitive: the **Step**.
 
-![Motia combines APIs, background queues, and AI agents into one system](https://github.com/MotiaDev/motia/raw/main/assets/Motia_Github_Repository_GIF.gif)
+![Motia combines APIs, background queues, and AI agents into one system](assets/Motia_Github_Repository_GIF.gif)
 
 ---
 
@@ -47,7 +38,7 @@ npx motia dev # ➜ http://localhost:3000
 
 This spins up the Motia Workbench – a local UI for building, testing & observing your backend in real-time.
 
-![motia-terminal](https://github.com/MotiaDev/motia/raw/main/assets/motia-terminal.gif)
+![motia-terminal](assets/motia-terminal.gif)
 
 ### 3. Hit Your First Endpoint
 
@@ -65,7 +56,7 @@ You should see the JSON response:
 
 ### 4. Explore the Workbench UI
 
-![new-workbench](https://github.com/MotiaDev/motia/raw/main/assets/new-workbench.png)
+![new-workbench](assets/new-workbench.png)
 
 The Workbench is your command centre:
 
@@ -208,7 +199,7 @@ Every execution generates a full trace, capturing step timelines, state operatio
 
 ## 🔧 CLI Commands
 
-Motia comes with a range of [powerful CLI commands](https://www.motia.dev/docs/concepts/cli) to help you manage your projects:
+Motia comes with a range of powerful CLI commands to help you manage your projects:
 
 ### `npx motia create [options]`
 Create a new Motia project in a fresh directory or the current one.
@@ -276,10 +267,8 @@ motia <command> --help
 ```
 
 ### 💬 **Get Help**
-- **📋 Questions**: Use our [Discord community](https://discord.gg/motia)
-- **🐛 Bug Reports**: [GitHub Issues](https://github.com/MotiaDev/motia/issues)
-- **📖 Documentation**: [Official Docs](https://motia.dev/docs)
-- **🎥 Blog**: [Motia Blog](https://blog.motia.dev/)
+- **📋 Questions**: Contact our support team
+- **📖 Documentation**: Check the local documentation
 
 ### 🤝 **Contributing**
 
@@ -290,14 +279,8 @@ We welcome contributions! Whether it's:
 - 🌍 Language support additions
 - 🎨 Workbench UI enhancements
 
-Check out our [Contributing Guide](https://github.com/MotiaDev/motia/blob/main/CONTRIBUTING.md) to get started.
-
 ---
 
 **🌟 Ready to unify your backend?**
 
-[🚀 **Get Started Now**](https://motia.dev) • [📖 **Read the Docs**](https://motia.dev/docs) • [💬 **Join Discord**](https://discord.gg/motia)
-
----
-
-Built with ❤️ by the Motia team • **Star us if you find [Motia](https://github.com/MotiaDev/motia) useful!** ⭐
+*Powered by imoogle*

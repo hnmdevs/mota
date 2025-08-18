@@ -3,10 +3,7 @@
   "description": "A Modern Unified Backend Framework for APIs, Events and Agents",
   "version": "0.5.9-beta.117",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/motiadev/motia.git"
-  },
+
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",

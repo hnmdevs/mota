@@ -81,7 +81,7 @@ Make sure you have:
 ### Clone the Repository
 
 ```bash
-git clone git@github.com:MotiaDev/motia-examples.git
+# Contact our team for example code
 cd examples/github-integration-workflow
 ```
 
@@ -132,5 +132,5 @@ npm run dev
 
 <Callout type="info">
   For more detailed setup instructions and configuration options, check out the [full
-  documentation](https://github.com/MotiaDev/motia-examples/tree/main/examples/github-integration-workflow).
+  documentation]().
 </Callout> 

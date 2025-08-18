@@ -57,7 +57,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone 
    cd examples/finance-agent
    ```
 
@@ -149,7 +149,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Motia Framework](#) for the event-driven workflow engine
 - [Alpha Vantage](https://www.alphavantage.co/) for financial data
 - [SerperDev](https://serper.dev/) for web search capabilities
 - [OpenAI](https://platform.openai.com/) for AI analysis 

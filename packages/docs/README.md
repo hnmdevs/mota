@@ -6,9 +6,9 @@
 </div>
 
 <div align="center">
-  <a href="https://motia.dev"><img src="https://img.shields.io/badge/PROJECT-PAGE-FFE165?style=for-the-badge&labelColor=555555" alt="Project Page"></a>
+  <a href="#
   <a href="https://discord.gg/nJFfsH5d6v"><img src="https://img.shields.io/badge/DISCORD-JOIN%20US-9146FF?style=for-the-badge&labelColor=555555" alt="Discord"></a>
-  <a href="https://motia.dev/docs"><img src="https://img.shields.io/badge/DOCS-READ%20NOW-000000?style=for-the-badge&labelColor=555555" alt="Documentation"></a>
+  <a href="#
   <a href="https://www.npmjs.com/package/motia"><img src="https://img.shields.io/npm/v/motia?style=for-the-badge&label=NPM&labelColor=555555&color=CB3837" alt="NPM Version"></a>
   <a href="https://www.npmjs.com/package/motia"><img src="https://img.shields.io/npm/dt/motia?style=for-the-badge&label=DOWNLOADS&labelColor=555555&color=CB3837" alt="NPM Downloads"></a>
   <a href="#"><img src="https://img.shields.io/badge/STATUS-BETA-FFE165?style=for-the-badge&labelColor=555555" alt="Status Beta"></a>
@@ -23,8 +23,8 @@ Motia is a modern backend framework that combines APIs, background jobs, event s
 
 ## 📝 Motia Documentation
 
-Welcome to the source code of [the official Motia docs](http://motia.dev/docs/).
-Motia documentation has been created with [Create Fumadocs](https://github.com/fuma-nama/fumadocs). Join [the Motia community](https://discord.gg/m3XN23Kp) and follow along to see how you can contribute.
+Welcome to the source code of [the official Motia docs](the local documentation).
+Motia documentation has been created with [Create Fumadocs](#). Join [the Motia community](https://discord.gg/m3XN23Kp) and follow along to see how you can contribute.
 
 1. Join [the Motia community](https://discord.gg/m3XN23Kp) to ask questions, interact with the core Motia team and your fellow community members! ❤️
 2. Fork the Motia repository and clone your fork to your local machine. 🖥️
@@ -59,7 +59,7 @@ Motia documentation has been created with [Create Fumadocs](https://github.com/f
   - Adding missing sections
   - Clarify a guide or write a tutorial
   - Adding new examples and finding/fixing bugs in existing ones
-- Start by checking out [open issues](https://github.com/MotiaDev/motia/labels/documentation) or suggest your own!
+- Start by checking out [open issues](#) or suggest your own!
 - Always make changes in your branch only. And once you're satisfied with the results, raise a PR.
 - Use proper formatting and follow the document style.
 

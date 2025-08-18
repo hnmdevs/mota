@@ -67,7 +67,7 @@ Embark on your Motia journey and start building powerful workflows today:
 Become part of a growing community of developers and automation enthusiasts!
 
 - 💬 **Join our Discord:** Connect with the Motia team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
-- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motiadev/motia).
+- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository]().
 - 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motiadev)](https://twitter.com/motiadev)
 
 We're excited to see what you'll build with Motia!

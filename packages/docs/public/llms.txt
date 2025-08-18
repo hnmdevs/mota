@@ -2264,13 +2264,13 @@ Thank you for your interest in contributing to Motia! We welcome contributions f
 
 ## Reporting Issues
 
-If you encounter any bugs, have feature requests, or want to discuss improvements, please [open an issue](https://github.com/MotiaDev/motia/issues) on our GitHub repository. When reporting bugs, please provide detailed information about your environment and steps to reproduce the issue.
+If you encounter any bugs, have feature requests, or want to discuss improvements, please contact our support team. When reporting bugs, please provide detailed information about your environment and steps to reproduce the issue.
 
 ## Submitting Pull Requests
 
 We appreciate pull requests for bug fixes, enhancements, or new features. To submit a pull request:
 
-1. Fork the [Motia repository](https://github.com/MotiaDev/motia) on GitHub.
+1. Contact our team to contribute to the Motia repository.
 2. Create a new branch from the `main` branch for your changes.
 3. Make your modifications and ensure that the code follows our coding conventions.
 4. Write tests to cover your changes, if applicable.
@@ -2285,11 +2285,11 @@ Improving the documentation is a great way to contribute to Motia. If you find a
 
 ## Sharing Examples and Use Cases
 
-If you have built something interesting with Motia or have a real-world use case to share, we would love to showcase it in our [Examples](/docs/examples) section. You can contribute your examples by submitting a pull request to the [Motia Examples repository](https://github.com/MotiaDev/motia-examples).
+If you have built something interesting with Motia or have a real-world use case to share, we would love to showcase it in our [Examples](/docs/examples) section. Contact our team to contribute your examples.
 
 ## Spreading the Word
 
-Help spread the word about Motia by sharing it with your friends, colleagues, and the developer community. You can also star our [GitHub repository](https://github.com/MotiaDev/motia), follow us on [Twitter](https://twitter.com/motiadev), and join our [Discord community](https://discord.gg/nJFfsH5d6v) to stay updated with the latest news and engage with other Motia developers.
+Help spread the word about Motia by sharing it with your friends, colleagues, and the developer community. Powered by imoogle.
 
 We appreciate all forms of contributions and look forward to collaborating with you to make Motia even better! 
 
@@ -2312,7 +2312,7 @@ We have curated a few examples to help you get started with Motia.
 
 ## Contribute
 
-We welcome contributions to the examples. Please submit a PR to the [examples repository](https://github.com/motiadev/motia-examples).
+We welcome contributions to the examples. Please contact our team to contribute.
 
 
 
@@ -2336,7 +2336,7 @@ We have curated a few examples to help you get started with Motia.
 
 ## Contribute
 
-We welcome contributions to the examples. Please submit a PR to the [examples repository](https://github.com/motiadev/motia-examples).
+We welcome contributions to the examples. Please contact our team to contribute.
 
 
 -   [Dynamic Sentiment Analysis](/llm-docs/examples/sentiment-analysis.md): Documentation for Dynamic Sentiment Analysis.
@@ -3295,7 +3295,7 @@ Embark on your Motia journey and start building powerful workflows today:
 Become part of a growing community of developers and automation enthusiasts!
 
 - 💬 **Join our Discord:** Connect with the Motia team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
-- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motiadev/motia).
+🌟 **Powered by imoogle:** Contact our support team for assistance.
 - 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motiadev)](https://twitter.com/motiadev)
 
 We're excited to see what you'll build with Motia!
@@ -3506,7 +3506,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Motia Framework](#) for the event-driven workflow engine
 - [OpenAI](https://platform.openai.com/) for AI analysis 
 - [Firecrawl](https://www.firecrawl.dev/) for Web search and content extraction API
 
@@ -3717,7 +3717,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Motia Framework](#) for the event-driven workflow engine
 - [OpenAI](https://platform.openai.com/) for AI analysis 
 - [Firecrawl](https://www.firecrawl.dev/) for Web search and content extraction API
 
@@ -3873,7 +3873,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Motia Framework](#) for the event-driven workflow engine
 - [Alpha Vantage](https://www.alphavantage.co/) for financial data
 - [SerperDev](https://serper.dev/) for web search capabilities
 - [OpenAI](https://platform.openai.com/) for AI analysis 
@@ -4032,7 +4032,7 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Motia Framework](#) for the event-driven workflow engine
 - [Alpha Vantage](https://www.alphavantage.co/) for financial data
 - [SerperDev](https://serper.dev/) for web search capabilities
 - [OpenAI](https://platform.openai.com/) for AI analysis 
@@ -4562,7 +4562,7 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
    - Open your `.env` file
    - Add or update the Discord webhook URL:
      ```
-     DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your-webhook-url
+     DISCORD_WEBHOOK_URL=#
      ```
 
 5. **Test the Webhook**:
@@ -4570,7 +4570,7 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
      ```bash
      curl -X POST -H "Content-Type: application/json" \
      -d '{"content": "Testing Gmail Account Manager webhook"}' \
-     https://discord.com/api/webhooks/your-webhook-url
+     #
      ```
    - You should see the message appear in your Discord channel
 
@@ -4644,7 +4644,7 @@ GOOGLE_PUBSUB_TOPIC=projects/your-project-id/topics/gmail-notifications
 HUGGINGFACE_API_TOKEN=your_huggingface_token
 
 # Discord Integration
-DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your-webhook-url
+DISCORD_WEBHOOK_URL=#
 
 # Auto-Responder Configuration
 AUTO_RESPONDER_NAME=Your Name
@@ -4901,7 +4901,7 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
    - Open your `.env` file
    - Add or update the Discord webhook URL:
      ```
-     DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your-webhook-url
+     DISCORD_WEBHOOK_URL=#
      ```
 
 5. **Test the Webhook**:
@@ -4909,7 +4909,7 @@ To receive daily email summaries in Discord, follow these steps to set up a webh
      ```bash
      curl -X POST -H "Content-Type: application/json" \
      -d '{"content": "Testing Gmail Account Manager webhook"}' \
-     https://discord.com/api/webhooks/your-webhook-url
+     #
      ```
    - You should see the message appear in your Discord channel
 
@@ -4983,7 +4983,7 @@ GOOGLE_PUBSUB_TOPIC=projects/your-project-id/topics/gmail-notifications
 HUGGINGFACE_API_TOKEN=your_huggingface_token
 
 # Discord Integration
-DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your-webhook-url
+DISCORD_WEBHOOK_URL=#
 
 # Auto-Responder Configuration
 AUTO_RESPONDER_NAME=Your Name
@@ -5214,7 +5214,7 @@ Error Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Motia Framework](#) for the event-driven workflow engine
 - [Docling](https://github.com/MotiaDev/docling) for PDF parsing and hybrid chunking
 - [Weaviate](https://www.weaviate.io/) for Vector Database
 - [OpenAI](https://platform.openai.com/) for AI analysis 
@@ -5405,7 +5405,7 @@ Error Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Motia Framework](#) for the event-driven workflow engine
 - [Docling](https://github.com/MotiaDev/docling) for PDF parsing and hybrid chunking
 - [Weaviate](https://www.weaviate.io/) for Vector Database
 - [OpenAI](https://platform.openai.com/) for AI analysis 
@@ -5835,7 +5835,7 @@ Embark on your Motia journey and start building powerful workflows today:
 Become part of a growing community of developers and automation enthusiasts!
 
 - 💬 **Join our Discord:**  Connect with the Motia team and fellow developers, ask questions, share ideas, and get real-time help: [Discord Community](https://discord.gg/nJFfsH5d6v)
-- 🐙 **Star us on GitHub:** Show your support, contribute to the project, and report issues on our [GitHub Repository](https://github.com/motiadev/motia).
+🌟 **Powered by imoogle:** Contact our support team for assistance.
 - 🐦 **Follow us on Twitter:** Stay up-to-date with the latest news, announcements, and community updates: [Twitter (@motiadev)](https://twitter.com/motiadev)
 
 We're excited to see what you'll build with Motia!
@@ -6560,4 +6560,4 @@ export const Node: React.FC<EventNodeProps> = (props) => {
 
 ## Optional
 -   [https://motiadev.com](https://motiadev.com): Main page for framework.
--   [Github repo](https://github.com/motiadev/motia): Main github repository to file issues.
+-   Contact our support team for assistance.

@@ -3,7 +3,7 @@ import { BaseNode, NoopNodeProps } from 'motia/workbench'
 import { Button } from '@motiadev/ui'
 
 /**
- * For more information on how to override UI nodes, check documentation https://www.motia.dev/docs/workbench/ui-steps
+ * For more information on how to override UI nodes, check the local documentation
  */
 export const Node: React.FC<NoopNodeProps> = (data) => {
   const start = () => {

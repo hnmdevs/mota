@@ -13,4 +13,4 @@ Explore these practical examples of Motia in action:
 - [Finance Agent](./real-world-use-cases/finance-agent) - A powerful event-driven financial analysis workflow that combines web search, financial data, and AI analysis
 - [AI Deep Research Agent](./real-world-use-cases/ai-deep-research-agent) - A powerful research assistant that leverages the Motia Framework to perform comprehensive web research
 
-Have a great use case to share? [Contribute it here](https://github.com/MotiaDev/motia-examples/tree/main/examples). 
+Have a great use case to share? [Contribute it here](). 

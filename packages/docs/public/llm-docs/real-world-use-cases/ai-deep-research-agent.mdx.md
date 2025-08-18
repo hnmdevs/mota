@@ -61,7 +61,7 @@ import { CodeFetcher } from '../../../components/CodeFetcher'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MotiaDev/motia-examples
+   git clone 
    cd examples/ai-deep-research-agent
    ```
 
@@ -202,6 +202,6 @@ Response:
    ```
 ## 🙏 Acknowledgments
 
-- [Motia Framework](https://motia.dev) for the event-driven workflow engine
+- [Motia Framework](#) for the event-driven workflow engine
 - [OpenAI](https://platform.openai.com/) for AI analysis 
 - [Firecrawl](https://www.firecrawl.dev/) for Web search and content extraction API
